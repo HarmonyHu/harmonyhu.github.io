@@ -2,7 +2,7 @@
 layout: post
 title:  Git学习整理
 date:   2015-05-10
-categories: 技术类 Git/Github
+categories: 技术类 Git
 excerpt: Git学习整理
 ---
 
