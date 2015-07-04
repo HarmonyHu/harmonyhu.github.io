@@ -9,6 +9,9 @@ excerpt: 文章样板
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/Buddha.jpg)  
 
+##《心经》  
+*---玄奘译本*  
+
 观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。  
 舍利子，色不异空，空不异色，色即是空，空即是色，受想行识，亦复如是。  
 舍利子，是诸法空相，不生不灭，不垢不净，不增不减。  
