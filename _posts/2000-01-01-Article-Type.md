@@ -6,6 +6,8 @@ categories: 技术类 非技术
 excerpt: 文章样板
 ---
 
+* content
+{:toc}
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/Buddha.jpg)  
 
