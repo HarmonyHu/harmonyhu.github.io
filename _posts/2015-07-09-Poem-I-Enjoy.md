@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 文章样板
+title: 那些我喜爱的诗词
 date: 2000-01-01 00:00
 categories: 非技术 随感
-excerpt: 文章样板
+excerpt: 那些我喜爱的诗词
 ---
 
 * content
