@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 那些我喜爱的诗词
-date: 2000-01-01 00:00
+date: 2015-07-09 00:00
 categories: 非技术 随感
 excerpt: 那些我喜爱的诗词
 ---
