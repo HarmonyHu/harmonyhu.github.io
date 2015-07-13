@@ -40,3 +40,21 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 
 从广义来说，这整个世界都是加密的，我们听到的，看到的。有的人善于解密，所以他们能通情达理，能洞若明火，甚至能顿悟人生。解密的关键，我觉得就是用心去感受，不懂用心去感受的人，就只能糊涂一世。
 
+###星际穿越 Interstellar  
+
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/interstellar.JPG)  
+
+>**Teacher:** Murph is a great kid. She's really bright.But she's been having a little trouble lately.She brought this in to show the students. The section on the lunar landings.  
+>**Cooper:** Yeah, it's one of my old textbooks.She always loved the pictures.  
+>**Teacher:** It's an old federal textbook. We've replaced them with the corrected versions.  
+>**Cooper:** Corrected?  
+>**Teacher:** Explaining how the Apollo missions were faked to bankrupt the Soviet Union.  
+>**Cooper:** You don't believe we went to the moon?  
+>**Teacher:** It was a brilliant piece of propaganda.The Soviets bankrupted themselves pouring resources...Into rockets and other useless machines.  
+>**Cooper:** "Useless machines."  
+>**Teacher:** If we don't want a repeat of the excess and wastefulness of the 20th century, then...we need to teach our kids about this planet, not tales of leaving it.  
+>**Cooper:** One of those useless machines they used to make was called an MRI.If we had any of those left, the doctors would've been able to find...the cyst in my wife's brain before she died instead of afterwards.Then she'd have been the one listening to this instead of me...which would have been a good thing, because she was always...the calmer one.  
+>**Teacher:** I'm sorry about your wife, Mr. Cooper.But Murph got into a fistfight with several of her classmates over this Apollo nonsense.So we thought it best to bring you in and see what ideas...you might have for dealing with her behavior on the home front.  
+>**Cooper:** Yeah, you know what? Um, there's a game tomorrow night.She's going through a bit of a baseball phase.Her favorite team is playing. There's gonna be candy and soda and...I think I'll take her to that.  
+
+虽然是科幻片，但个人非常喜欢的是剧中人物情感的表达，不论是家庭生活的温情脉脉，还是生死离别的感人肺腑。该片没有特别喜欢的台词，但是几乎每一句从马修说出来的对白都喜欢，个人比较喜欢这种幽默。
