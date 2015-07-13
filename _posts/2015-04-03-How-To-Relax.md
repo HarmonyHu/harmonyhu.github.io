@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  读书心得-如何活得轻松自在
+title:  读《Getting Things Done》
 date:   2015-04-03
-categories: 非技术 读书心得
-excerpt: 读书心得-如何活得轻松自在
+categories: 非技术 读书
+excerpt: 读《Getting Things Done》
 ---
 
 
