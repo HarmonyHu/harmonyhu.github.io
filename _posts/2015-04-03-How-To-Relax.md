@@ -6,8 +6,7 @@ categories: 非技术 读书
 excerpt: 读《Getting Things Done》
 ---
 
-
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/chan.jpg)  
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/GettingThingsDone.jpg)  
 
 前阵子精神状态很不好，感觉身上每根毛发都散发着消极的气息，像是有无数的烦恼每天反复的穿心而过，越来越喘不过气来。过年放假几天，没有做什么事情，但天天都感觉没有气力，天天都只想睡觉。 
 
