@@ -42,7 +42,7 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 
 ###星际穿越 Interstellar  
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/interstellar.JPG)  
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/interstellar.jpg)  
 
 >**Teacher:** Murph is a great kid. She's really bright.But she's been having a little trouble lately.She brought this in to show the students. The section on the lunar landings.  
 >**Cooper:** Yeah, it's one of my old textbooks.She always loved the pictures.  
