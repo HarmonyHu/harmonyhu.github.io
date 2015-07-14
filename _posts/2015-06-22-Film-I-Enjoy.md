@@ -58,3 +58,16 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 >**Cooper:** Yeah, you know what? Um, there's a game tomorrow night.She's going through a bit of a baseball phase.Her favorite team is playing. There's gonna be candy and soda and...I think I'll take her to that.  
 
 虽然是科幻片，但个人非常喜欢的是剧中人物情感的表达，不论是家庭生活的温情脉脉，还是生死离别的感人肺腑。该片没有特别喜欢的台词，但是几乎每一句从马修说出来的对白都喜欢，个人比较喜欢这种幽默。
+
+###少年时代 Boyhood  
+
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/boyhood.jpg)  
+
+>-I feel like there's so many things that I could be doing and probably I want to be doing that I’m just not.  
+>-Why aren’t you?  
+>-I mean, I guess it’s just being afraid of what people would think.  
+>-I guess it’s really easy to say like, “I don’t care what anyone else thinks", But everyone does. You know?  
+>-Exactly.  
+
+该片似乎没有什么跌宕起伏的剧情，就像是日常生活的纪录片一下。随着梅森的渐渐长大，我作为一个观众，感觉像是和他一起长大了一样。那些他经历的事情，就像是我也经历了一遍。  
+
