@@ -63,10 +63,10 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/boyhood.jpg)  
 
->-I feel like there's so many things that I could be doing and probably I want to be doing that I’m just not.  
->-Why aren’t you?  
->-I mean, I guess it’s just being afraid of what people would think.  
->-I guess it’s really easy to say like, “I don’t care what anyone else thinks", But everyone does. You know?  
+>-I feel like there's so many things that I could be doing and probably I want to be doing that I'm just not.  
+>-Why aren't you?  
+>-I mean, I guess it's just being afraid of what people would think.  
+>-I guess it's really easy to say like, "I don't care what anyone else thinks", But everyone does. You know?  
 >-Exactly.  
 
 该片似乎没有什么跌宕起伏的剧情，就像是日常生活的纪录片一下。随着梅森的渐渐长大，我作为一个观众，感觉像是和他一起长大了一样。那些他经历的事情，就像是我也经历了一遍。  
