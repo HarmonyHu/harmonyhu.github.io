@@ -71,3 +71,8 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 
 该片似乎没有什么跌宕起伏的剧情，就像是日常生活的纪录片一下。随着梅森的渐渐长大，我作为一个观众，感觉像是和他一起长大了一样。那些他经历的事情，就像是我也经历了一遍。  
 
+###周星驰系类
+
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/zhouxingchi.jpg)  
+
+《食神》《国产凌凌漆》《大话西游》《唐伯虎点秋香》《喜剧之王》《回魂夜》《西游降魔》
