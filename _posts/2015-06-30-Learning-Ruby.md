@@ -124,3 +124,95 @@ break与next用于终止循环和直接下一次循环
 定义函数，部分实现用yield代替，执行时加入{}取代yield部分代码  
 如：`3.upto(9){|i| print i}`  *#3456789*  
 {}也可以改成do...end  
+
+###六、方法
+
+####1. 语法  
+{:.lang-rb}
+	def method_name [( [arg [= default]]...[, * arg [, &expr ]])]
+	   expr
+	end
+
+####2. 返回值  
+
+* 最后一个语句作为返回值
+* return返回1个或多个值
+
+####3. 举例
+{:.lang-rb}
+	def myinfo (name,height=1.7,weight=120)
+		print "My name is #{name},height:#{height},weight:#{weight}"
+	end
+	myinfo "HarmonyHu",1.74
+	#My name is HarmonyHu,height:1.74,weight:120
+
+###七、文件操作
+
+####1. File操作
+
+* **方法**
+
+{:.lang-rb}
+	#新建文件test.txt，r/r+/w/w+/a/a+
+	file = File.new("test.txt","w")
+	#打开文件test.txt
+	file = File.new("test.txt")
+	#关闭文件
+	file.close
+
+	#写入数据puts
+	file.puts("hello,world")
+	#写入数据syswrite
+	file.syswrite("new line,hello,world2")
+
+
+	#读取文件一行内容
+	puts file.gets
+	puts file.readline
+	#读取文件若干字符
+	puts file.sysread(10)
+
+	#调整当前位置，回到文件头
+	file.rewind
+	#调整当前位置，指定位置
+	file.seek(10)
+	file.seek(-10,IO:SEEK_END)
+	file.seek(1,IO:SEEK_CUR)
+	#读取当前位置,tell与pos等同
+	puts file.tell
+	puts file.pos
+	#获取当前文件大小
+	puts file.size
+
+	#stat成员访问
+	puts file.stat.size
+	puts file.stat.ctime
+
+	#迭代器操作，字节操作
+	file.each_byte{|ch|
+		putc ch
+	}
+	#迭代器操作，逐行操作
+	file.foreach{|line|
+		puts line
+	}
+
+* **类方法**  
+
+File.delete(filename)  #删除文件  
+File.dirname(filename) #返回文件所在目录，字串  
+File.extname(filename) #返回文件的扩展名，字串  
+File.stat(filename)    #返回文件的信息，字串  
+File.size(file.name)   #返回文件大小，数值  
+File.exist?(filename)  #判断文件是否存在，布尔  
+File.rename(oldname,newname) #文件重命名  
+
+####2. Dir操作  
+
+* **类方法**  
+
+Dir.mkdir("MyDir")  #创建目录  
+Dir.rmdir("MyDir")  #删除目录  
+Dir[pat]            #返回文件名数组  
+如：`Dir["foo.*"]` #["foo.c","foo.rb","foo.h"]  
+如：`Dir["foo.?"]` #["foo.c","foo.h"]  
