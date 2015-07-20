@@ -71,6 +71,15 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 
 该片似乎没有什么跌宕起伏的剧情，就像是日常生活的纪录片一下。随着梅森的渐渐长大，我作为一个观众，感觉像是和他一起长大了一样。那些他经历的事情，就像是我也经历了一遍。  
 
+###这个杀手不太冷 Leon
+
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/leon.jpg)  
+
+>Mathilda： Is life always this hard, or is it just when you're a kid?  
+>Léon： Always like this. 
+
+剧情挺有意思的。
+
 ###周星驰系类
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/zhouxingchi.jpg)  
