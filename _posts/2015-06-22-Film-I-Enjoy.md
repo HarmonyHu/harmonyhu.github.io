@@ -73,7 +73,7 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 
 ###这个杀手不太冷 Leon
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/leon.jpg)  
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/leon.JPG)  
 
 >Mathilda： Is life always this hard, or is it just when you're a kid?  
 >Léon： Always like this. 
