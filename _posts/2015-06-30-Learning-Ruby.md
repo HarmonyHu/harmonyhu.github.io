@@ -110,30 +110,34 @@ excerpt: Ruby学习整理
 3.2 字符串.gsub(regex,replace) 替换所有匹配  
 如：`"I love my home".gsub(/\b\w/,"I")` *#返回I Iove Iy Iome*  
 
-3.3 sub和gsub都可以使用块操作，块内$&表示匹配字串，$1/$2/..表示匹配子字串
+3.3 sub和gsub都可以使用块操作，块内$&表示匹配字串，$1/$2/..表示匹配子字串  
 如：`"I love my home".gsub(/\b\w/){$&.upcase}` *#返回I Love My Home*  
 
 3.4 sub!和gsub!表示变量本身也会因替换而改变  
 
+----------
 
-###五、控制语句
-1. **条件判断语句**  
+###五、控制语句  
+
+####1. 条件判断语句  
 if ... elsif ... else ... end  
 (...)if...  
 case ... when ... when ... else ...end  
 unless = if not  
 
-2. **循环控制语句**  
+####2. 循环控制语句  
 while...end  
 (...) while ...  
 until = while not  
 for ... in ... end  *#可以是区间、数组*  
 break与next用于终止循环和直接下一次循环  
 
-3. **迭代器**  
+####3. 迭代器  
 定义函数，部分实现用yield代替，执行时加入{}取代yield部分代码  
 如：`3.upto(9){|i| print i}`  *#3456789*  
 {}也可以改成do...end  
+
+----------
 
 ###六、方法
 
@@ -155,6 +159,8 @@ break与next用于终止循环和直接下一次循环
 	end
 	myinfo "HarmonyHu",1.74
 	#My name is HarmonyHu,height:1.74,weight:120
+
+----------
 
 ###七、文件操作
 
