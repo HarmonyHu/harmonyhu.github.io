@@ -26,9 +26,9 @@ excerpt: Git学习整理
 * 创建SSH key  
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
 
->Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]**直接回车**  
->Enter passphrase (empty for no passphrase): [Type a passphrase]**这里不要输密码,不然每次都要输密码认证**  
->Enter same passphrase again: [Type passphrase again]**直接回车**  
+>Enter file in which to save the key (/Users/you/.ssh/id_rsa):**直接回车**  
+>Enter passphrase (empty for no passphrase):**直接回车,不然每次都要输密码**  
+>Enter same passphrase again:**直接回车**  
 
 * 将SSH key添加到ssh-agent  
 `eval $(ssh-agent -s)`  
