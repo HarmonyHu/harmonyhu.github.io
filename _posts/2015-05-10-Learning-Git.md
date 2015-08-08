@@ -17,7 +17,7 @@ excerpt: Git学习整理
 
 ##二、命令操作（常用）  
 
-#####1. 环境配置  
+####1. 环境配置  
 
 * 配置邮箱和用户名:  
 `git config --global user.email "you@example.com"`  
@@ -26,15 +26,15 @@ excerpt: Git学习整理
 * 创建SSH key  
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
 
-```
+```  
 Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  
 Enter passphrase (empty for no passphrase): [Type a passphrase]  
 Enter same passphrase again: [Type passphrase again]  
-Your identification has been saved in /Users/you/.ssh/id_rsa.
-Your public key has been saved in /Users/you/.ssh/id_rsa.pub.
-The key fingerprint is:
-01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
-```
+Your identification has been saved in /Users/you/.ssh/id_rsa.  
+Your public key has been saved in /Users/you/.ssh/id_rsa.pub.  
+The key fingerprint is:  
+01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com  
+```  
 
 * 将SSH key添加到ssh-agent  
 `eval $(ssh-agent -s)`  
@@ -44,7 +44,7 @@ The key fingerprint is:
 `clip < ~/.ssh/id_rsa.pub`  
 然后在服务器账户上粘贴到SSH Key中
 
-#####2. 本地仓库操作  
+####2. 本地仓库操作  
 
 `git init`：将当前目录创建成本地仓库  
 `git add`：标记文件，且该文件被管理  
@@ -57,7 +57,7 @@ The key fingerprint is:
 └──`git commit -a -m "注释"`：将所有管理文件的修改提交到本地仓库  
 
 
-#####3. 远程仓库操作  
+####3. 远程仓库操作  
 
 `git remote`：远程仓库管理  
 ├──`git remote -v`：查看远程仓库  
@@ -70,7 +70,7 @@ The key fingerprint is:
 `git clone`：下载远程仓库到本地  
 
 
-#####4. 分支及历史版本操作  
+####4. 分支及历史版本操作  
 
 `git branch`：查看当前本地分支  
 └──`git branch local`：本地创建local分支  
