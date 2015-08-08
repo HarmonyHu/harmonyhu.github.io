@@ -17,6 +17,34 @@ excerpt: Git学习整理
 
 ###命令操作（常用）  
 
+######环境配置  
+
+1. 配置邮箱和用户名:  
+`git config --global user.email "you@example.com"`  
+`git config --global user.name "Your Name"`  
+
+2. 创建SSH key  
+`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
+
+	Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  
+
+	Enter passphrase (empty for no passphrase): [Type a passphrase]  
+
+	Enter same passphrase again: [Type passphrase again]  
+
+	Your identification has been saved in /Users/you/.ssh/id_rsa.
+	Your public key has been saved in /Users/you/.ssh/id_rsa.pub.
+	The key fingerprint is:
+	01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
+
+3. 将SSH key添加到ssh-agent
+`eval $(ssh-agent -s)`  
+`ssh-add ~/.ssh/id_rsa`  
+
+4. 将SSH key添加到服务器账户(如github)
+`clip < ~/.ssh/id_rsa.pub`  
+然后在服务器账户上粘贴到SSH Key中
+
 ######本地仓库操作  
 
 `git init`：将当前目录创建成本地仓库  
