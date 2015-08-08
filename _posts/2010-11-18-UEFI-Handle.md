@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  UEFI Handle的来龙去脉
+title:  GDB使用整理
 date:   2010-11-18
 categories: 技术类 BIOS
 excerpt: UEFI Handle的来龙去脉
