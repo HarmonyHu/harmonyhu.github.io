@@ -27,7 +27,7 @@ excerpt: Git学习整理
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
 
 >Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  
->Enter passphrase (empty for no passphrase): [Type a passphrase]  
+>Enter passphrase (empty for no passphrase): [Type a passphrase] *这里不要输密码,不然每次都要输密码认证* 
 >Enter same passphrase again: [Type passphrase again]  
 >Your identification has been saved in /Users/you/.ssh/id_rsa.  
 >Your public key has been saved in /Users/you/.ssh/id_rsa.pub.  
