@@ -15,9 +15,7 @@ excerpt: Git学习整理
 *   `local repository`：本地仓库，通过commit命令保存的各个版本  
 *   `remote repository`：远程仓库，通过push命令提交的各个版本
 
-##二、命令操作（常用）  
-
-####1. 环境配置  
+##二、环境配置  
 
 * 配置邮箱和用户名:  
 `git config --global user.email "you@example.com"`  
@@ -38,7 +36,9 @@ excerpt: Git学习整理
 `clip < ~/.ssh/id_rsa.pub`  
 然后在服务器账户上粘贴到SSH Key中
 
-####2. 本地仓库操作  
+##三、命令操作（常用）  
+
+####1. 本地仓库操作  
 
 `git init`：将当前目录创建成本地仓库  
 `git add`：标记文件，且该文件被管理  
@@ -51,7 +51,7 @@ excerpt: Git学习整理
 └──`git commit -a -m "注释"`：将所有管理文件的修改提交到本地仓库  
 
 
-####3. 远程仓库操作  
+####2. 远程仓库操作  
 
 `git remote`：远程仓库管理  
 ├──`git remote -v`：查看远程仓库  
@@ -63,8 +63,7 @@ excerpt: Git学习整理
 `git pull`：将远程仓库更新到本地仓库  
 `git clone`：下载远程仓库到本地  
 
-
-####4. 分支及历史版本操作  
+####3. 分支及历史版本操作  
 
 `git branch`：查看当前本地分支  
 └──`git branch local`：本地创建local分支  
