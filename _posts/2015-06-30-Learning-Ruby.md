@@ -70,10 +70,7 @@ excerpt: Ruby学习整理
 
 {:.lang-rb}
 	#迭代器,打印散列  
-	myhash.each {|key,value|  
-	    puts key.to_s+":"+value.to_s  
-	}  
-	
+	myhash.each {|key,value| puts key.to_s+":"+value.to_s}    
 	#迭代器,散列排序  
 	hash={"0012"=>["Lily","Female",18],"0011"=>["Jack","Male",19]}  
 	#按工号从小到大排序  
