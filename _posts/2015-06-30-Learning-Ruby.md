@@ -69,10 +69,17 @@ excerpt: Ruby学习整理
 `myhash.keys`                     |[\"name\",\"age\",:height]
 
 {:.lang-rb}
-	#迭代器  
+	#迭代器,打印散列  
 	myhash.each {|key,value|  
 	    puts key.to_s+":"+value.to_s  
 	}  
+	
+	#迭代器,散列排序  
+	hash={"0012"=>["Lily","Female",18],"0011"=>["Jack","Male",19]}  
+	#按工号从小到大排序  
+	hash.sort{|a,b| a[0].to_i - b[0].to_i}  
+	#按年龄从大到小排序  
+	hash.sort{|a,b| b[1][2] - a[1][2]}  
 
 ----
 
