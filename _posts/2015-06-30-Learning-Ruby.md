@@ -77,9 +77,11 @@ excerpt: Ruby学习整理
 	#迭代器,散列排序  
 	hash={"0012"=>["Lily","Female",18],"0011"=>["Jack","Male",19]}  
 	#按工号从小到大排序  
-	hash.sort{|a,b| a[0].to_i - b[0].to_i}  
+	hash.sort{|a,b| a[0] <=> b[0]}  
+	#按名字字符表排列
+	hash.sort{|a,b| a[1][0] <=> b[1][0]}
 	#按年龄从大到小排序  
-	hash.sort{|a,b| b[1][2] - a[1][2]}  
+	hash.sort{|a,b| b[1][2] <=> a[1][2]}  
 
 ----
 
