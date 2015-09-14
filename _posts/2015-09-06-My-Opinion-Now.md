@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 步入28岁时我当下的领悟
-date: 2000-01-01 00:00
+date: 2015-09-06 00:00
 categories: 非技术
 excerpt: 步入28岁时我当下的领悟
 ---
