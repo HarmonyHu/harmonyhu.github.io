@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 23种设计模式回顾整理
+title: 23种设计模式回顾整理(未完)
 date: 2015-07-18 00:00
 categories: 技术类 设计模式
 excerpt: 23种设计模式回顾整理
