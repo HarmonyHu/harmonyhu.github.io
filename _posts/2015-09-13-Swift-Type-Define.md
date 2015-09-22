@@ -2,7 +2,7 @@
 layout: post
 title: Swift学习之变量与常量的定义
 date: 2015-09-13 00:00
-categories: 技术类 iOS
+categories: 技术类 Swift
 ---
 
 * content
