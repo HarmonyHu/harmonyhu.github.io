@@ -13,8 +13,8 @@ categories: 技术类 iOS
 	var today:Int = 5  
 	let week:Int = 7  
 
-1.var是变量关键字，today是变量名，Int是变量类型，5是初始值。 
-2.let是常量关键字，所以week初始化后不能修改 
+1.var是变量关键字，today是变量名，Int是变量类型，5是初始值。  
+2.let是常量关键字，所以week初始化后不能修改  
 3.右值可以推导时类型可以省略，该句等价于`var today = 5`和`let week = 7`  
 4.如果一条语句结尾换行则不用带上分号  
 5.必须赋初值  
