@@ -35,6 +35,18 @@ categories: 技术类 Swift
 
 ##布尔
 
-- 类型关键字为Bool
+- 关键字Bool
 - 值为true和fasle
 - if和while语句只能传入Bool类型
+
+##字符
+
+- 关键字Character  
+> 
+	let aChar:Character = "a"
+	var bChar:Character = "b"
+	//这里有个疑问，如果let aChar = "a"，那么aChar是String类型?
+    
+
+##元组  
+
