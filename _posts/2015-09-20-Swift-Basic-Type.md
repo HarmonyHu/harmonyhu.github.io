@@ -42,10 +42,12 @@ categories: 技术类 Swift
 ##字符
 
 - 关键字Character  
-> 
+>
+
 	let aChar:Character = "a"
 	var bChar:Character = "b"
-	//这里有个疑问，如果let aChar = "a"，那么aChar是String类型?
+	//疑问1，如果let aChar = "a"，那么aChar是String类型?
+	//疑问2，是否可写成let aChar = Character("a")
     
 
 ##元组  
