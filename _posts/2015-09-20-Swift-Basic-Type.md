@@ -10,10 +10,9 @@ categories: 技术类 Swift
 
 ##整型  
 
-- Int与UInt，其中Int是默认且推荐类型，具体长度根据编译器决定  
-- Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64  
-  
-----------  
+> Int与UInt，其中Int是默认且推荐类型，具体长度根据编译器决定  
+> Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64  
+   
 	17 //类型为Int  
 	UInt(17) //类型为UInt  
 	0b10001 //二进制，类型为Int  
@@ -23,8 +22,7 @@ categories: 技术类 Swift
 
 ##浮点数  
 
-- Double，默认类型
-- Float  
+> 关键字：Double，默认类型； Float  
 
 ----------  
 	125.0  //类型为Double  
@@ -35,20 +33,20 @@ categories: 技术类 Swift
 
 ##布尔
 
-- 关键字Bool
-- 值为true和fasle
-- if和while语句只能传入Bool类型
+> 关键字Bool，值为true和fasle  
+> if和while语句只能传入Bool类型  
 
 ##字符
 
-- 关键字Character  
->
+>关键字Character  
 
 	let aChar:Character = "a"
 	var bChar:Character = "b"
 	//疑问1，如果let aChar = "a"，那么aChar是String类型?
 	//疑问2，是否可写成let aChar = Character("a")
     
+##字符串  
+
 
 ##元组  
 
