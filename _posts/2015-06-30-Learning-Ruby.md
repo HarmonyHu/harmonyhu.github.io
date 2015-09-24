@@ -2,8 +2,7 @@
 layout: post
 title:  Ruby学习整理
 date:   2015-06-30
-categories: 技术类 Ruby
-excerpt: Ruby学习整理
+categories: 技术类
 ---
 
 * content

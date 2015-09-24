@@ -25,8 +25,7 @@ categories: 技术类 Swift
 ###浮点数  
 
 > 关键字：Double，默认类型； Float  
-
-----------  
+ 
 	125.0  //类型为Double  
 	Float(125.0)  //类型为Float  
 	1.25e2 //1.25x(10^2)，Double  
@@ -75,7 +74,44 @@ categories: 技术类 Swift
 	let mul = 3
 	let message = "\(mul) times 2.5 is \(Double(mul)*2.5)"
 	//"3 times 2.5 is 7.5"
+
+	for char in welcome.characters{...} //遍历各个字符
 	
 
 ##元组  
+
+	let one = (1,"One") //多值复合，不要求同类型
+	println("The code is \(one.0)") //访问元组，1
+	println("The message is \(one.1)") //One
+	let (oneNum,oneDesc) = one  //元组分解赋值
+	let (oneNum,_) = one //用下划线忽略部分元组值
+	let one2 = (num:1,desc:"One") //可以给元素命名
+	println("\(one2.num) -> \(one2.desc)") //用元素名访问
+
+**注意：**临时结构用元组，复杂结构或使用频繁的结构用结构体或类
+
+##集合类型-Array
+
+关键字Array,简写用[]
+
+	var someInts = [Int]() //Int空数组，var someInts=Array<Int>()  
+	someInts.append(3)  //方法append,插入3  
+	someInts = [] //空，此时不需要标注类型，可以推断  
+	var threeDoubles = [0.0,0,0,0,0]  
+	//等价于[Double](count:3,repeatedValue:0.0)
+	var sixDoubles = threeDoubles + [2.5,2.5,2.5]
+	//[0.0,0.0,0.0,2.5,2.5,2.5]
+	var shopList = ["Eggs","Milk"]
+	//等价于var shopList:[String] = ["Eggs","Milk"]
+	shopList.count //属性count，数组数据项数量
+	shopList.isEmpty //属性isEmpty，是否为空
+	shopList[0]  //"Eggs"
+	shopList[0] = "Six eggs"  //修改
+	shopList.insert("Apple",atIndex:0) //在指定位置插入元素
+	shopList.removeAtIndex(0) //移除指定位置元素
+
+	for item in shopList{...} //数组元素遍历
+	for (index,value) in shopList.enumerate(){...} //含索引遍历
+
+##集合类型-Set
 
