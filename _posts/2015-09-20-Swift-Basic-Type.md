@@ -34,8 +34,7 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 
 ###布尔-Bool
 
-> 关键字Bool，值为true和fasle  
-> if和while语句只能传入Bool类型  
+**注意：**值为true和fasle，在if和while语句判断中只能传入Bool类型  
 
 ----------
 
@@ -50,8 +49,7 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
     
 ###字符串-String  
 
->关键字String，强调字符串是值类型  
->由于uniCode码,没有确切索引位置，需要具体属性方法来索引
+**注意：**字符串是值类型，由于uniCode码,没有确切索引位置，需要具体属性方法来索引
 
 	var empty = ""  //空字符串  
 	var empty2 = String() //空字符串 
@@ -83,6 +81,8 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 
 ##元组  
 
+**注意：**临时结构用元组，复杂结构或使用频繁的结构用结构体或类
+
 	let one = (1,"One") //多值复合，不要求同类型
 	println("The code is \(one.0)") //访问元组，1
 	println("The message is \(one.1)") //One
@@ -90,8 +90,6 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 	let (oneNum,_) = one //用下划线忽略部分元组值
 	let one2 = (num:1,desc:"One") //可以给元素命名
 	println("\(one2.num) -> \(one2.desc)") //用元素名访问
-
-**注意：**临时结构用元组，复杂结构或使用频繁的结构用结构体或类
 
 ----------
 
