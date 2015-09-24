@@ -2,8 +2,7 @@
 layout: post
 title: 步入28岁时我当下的领悟(未完)
 date: 2015-09-06 00:00
-categories: 非技术
-excerpt: 步入28岁时我当下的领悟
+categories: 非技术 随感
 ---
 
 * content
