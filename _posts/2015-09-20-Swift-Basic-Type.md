@@ -79,7 +79,7 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 	
 ----------
 
-##元组  
+###元组  
 
 **注意：**临时结构用元组，复杂结构或使用频繁的结构用结构体或类
 
@@ -93,14 +93,14 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 
 ----------
 
-##集合类型-Array
+###集合类型-Array
 
 Array<T>，可以简写用[T]，T为具体类型
 
 	var someInts = [Int]() //Int空数组，=Array<Int>()  
 	someInts.append(3)  //方法append,插入3  
 	someInts = [] //空，此时不需要标注类型，可以推断  
-	var threeDoubles = [0.0,0,0,0,0]  
+	var threeDoubles = [0.0,0.0,0.0]  
 	//等价于[Double](count:3,repeatedValue:0.0)
 	var sixDoubles = threeDoubles + [2.5,2.5,2.5]
 	//[0.0,0.0,0.0,2.5,2.5,2.5]
@@ -118,5 +118,27 @@ Array<T>，可以简写用[T]，T为具体类型
 
 ----------
 
-##集合类型-Set
+###集合类型-Set
 
+Set<T>，没有等价简写，无序不重复集合
+
+	var letters = Set<Character>() //空Set
+	letters.insert("a") //插入元素
+	letters = [] //类型确定后，可以赋值空Set
+	var letters:Set = ["a","b","c"]
+	//复杂写法，var letters:Set<Character> = ["a","b","c"]
+	letters.count //元素数量
+	letters.isEmpty //是否为空
+	letters.remove("b") //删除"b"，还有"a","c"
+	letters.contains("b") //判断是否存在某元素，false
+	letters.sort()  //按顺序排列
+
+	for char in letters{...} //遍历
+
+Set基本操作
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/SetOperate.jpg)  
+
+
+----------
+
+###集合类型-Dictionary
