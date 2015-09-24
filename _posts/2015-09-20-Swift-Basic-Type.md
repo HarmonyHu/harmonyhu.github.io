@@ -8,10 +8,9 @@ categories: 技术类 Swift
 * content
 {:toc}
 
-###整型  
-
-> Int与UInt，其中Int是默认且推荐类型，具体长度根据编译器决定  
-> Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64  
+###整型-Int  
+Int与UInt，其中Int是默认且推荐类型，具体长度根据编译器决定  
+Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64  
    
 	17 //类型为Int  
 	UInt(17) //类型为UInt  
@@ -22,31 +21,34 @@ categories: 技术类 Swift
 	Int8.min //Int8类型属性min，最小值-128
 
 
-###浮点数  
+----------
 
-> 关键字：Double，默认类型； Float  
+###浮点数-Double  
  
 	125.0  //类型为Double  
 	Float(125.0)  //类型为Float  
 	1.25e2 //1.25x(10^2)，Double  
 	1.25e-2 //1.25x(10^-2)，Double
 
+----------
 
-###布尔
+###布尔-Bool
 
 > 关键字Bool，值为true和fasle  
 > if和while语句只能传入Bool类型  
 
-###字符
+----------
 
->关键字Character,uniCode编码  
+###字符-Character
 
 	let aChar:Character = "a"
 	var bChar:Character = "\u{E9}"  //é
 	//疑问1，如果let aChar = "a"，那么aChar是String类型?
 	//疑问2，是否可写成let aChar = Character("a")
+
+----------
     
-###字符串  
+###字符串-String  
 
 >关键字String，强调字符串是值类型  
 >由于uniCode码,没有确切索引位置，需要具体属性方法来索引
@@ -77,6 +79,7 @@ categories: 技术类 Swift
 
 	for char in welcome.characters{...} //遍历各个字符
 	
+----------
 
 ##元组  
 
@@ -90,11 +93,13 @@ categories: 技术类 Swift
 
 **注意：**临时结构用元组，复杂结构或使用频繁的结构用结构体或类
 
+----------
+
 ##集合类型-Array
 
-关键字Array,简写用[]
+Array<T>，可以简写用[T]，T为具体类型
 
-	var someInts = [Int]() //Int空数组，var someInts=Array<Int>()  
+	var someInts = [Int]() //Int空数组，=Array<Int>()  
 	someInts.append(3)  //方法append,插入3  
 	someInts = [] //空，此时不需要标注类型，可以推断  
 	var threeDoubles = [0.0,0,0,0,0]  
@@ -112,6 +117,8 @@ categories: 技术类 Swift
 
 	for item in shopList{...} //数组元素遍历
 	for (index,value) in shopList.enumerate(){...} //含索引遍历
+
+----------
 
 ##集合类型-Set
 
