@@ -95,7 +95,7 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 
 ###集合类型-Array
 
-Array<T>，可以简写用[T]，T为具体类型
+Array<T>，可以简写用[T]，T为具体类型，可理解成数组
 
 	var someInts = [Int]() //Int空数组，=Array<Int>()  
 	someInts.append(3)  //方法append,插入3  
@@ -141,4 +141,25 @@ Set基本操作
 
 ----------
 
-###集合类型-Dictionary
+###集合类型-Dictionary  
+
+Dictionary<key,Value>，可以理解成散列
+
+	var namesOfInts = [Int:String]() //空字典  
+	nameOfInts[16] = "Sixteen" //插入或修改键值对  
+	nameOfInts = [:] //赋值成空字典  
+	var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]  
+	//完整写法var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]  
+	airports.count //数据项  
+	airports.isEmpty //判断是否空
+	airports.updateValue(_:forkey:) //新增或修改，返回可选原值  
+	airports["DUB"] //返回可选值，如果不存在则为nil  
+	airports["DUB"]=nil //去掉"DUB"项  
+	airports.removeValueForKey(_:) //去掉某项，返回可选原值  
+	
+	for (airportCode, airportName) in airports {//遍历
+		print("\(airportCode): \(airportName)")
+	}
+
+	airports.keys //keys数组  
+	airports.varlues //值数组  
