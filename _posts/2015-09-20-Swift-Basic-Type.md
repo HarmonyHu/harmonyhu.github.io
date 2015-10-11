@@ -81,15 +81,23 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 
 ###元组  
 
-**注意：**临时结构用元组，复杂结构或使用频繁的结构用结构体或类
+1.多值复合，不要求同类型，用.0、.1访问元素    
 
-	let one = (1,"One") //多值复合，不要求同类型
+	let one = (1,"One") 
 	println("The code is \(one.0)") //访问元组，1
 	println("The message is \(one.1)") //One
+
+2.元组可以分解赋值，并且可以省略部分元组值  
+
 	let (oneNum,oneDesc) = one  //元组分解赋值
 	let (oneNum,_) = one //用下划线忽略部分元组值
+
+3.可以给元组元素命名，用名称访问  
+
 	let one2 = (num:1,desc:"One") //可以给元素命名
 	println("\(one2.num) -> \(one2.desc)") //用元素名访问
+
+**注意：**临时结构用元组，复杂结构或使用频繁的结构用结构体或类  
 
 ----------
 
