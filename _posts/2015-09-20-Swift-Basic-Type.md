@@ -166,7 +166,7 @@ Dictionary<key,Value>，可以理解成散列
 	airports.removeValueForKey(_:) //去掉某项，返回可选原值  
 	
 	for (airportCode, airportName) in airports {//遍历
-		print("\(airportCode): \(airportName)")
+	  print("\(airportCode): \(airportName)")
 	}
 
 	airports.keys //keys数组  

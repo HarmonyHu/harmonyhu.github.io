@@ -68,13 +68,13 @@ categories: 技术类 Swift
 	let approximateCount = 62
 	switch approximateCount {
 	case 0:
-		println("no")
+	  println("no")
 	case 1..<5:
-		println("a few")
+	  println("a few")
 	case 5..<100:
-		println("several")
+	  println("several")
 	default:
-		println("many")
+	  println("many")
 	}
 
 3.switch可以判断元组，且可以用_表默认   
@@ -110,11 +110,11 @@ categories: 技术类 Swift
 	let yetAnotherPoint = (1, -1)
 	switch yetAnotherPoint {
 	case let (x, y) where x == y:
-		print("(\(x),\(y)) is on x == y")
+	  print("(\(x),\(y)) is on x == y")
 	case let (x, y) where x == -y:
-		print("(\(x),\(y)) is on x == -y")
+	  print("(\(x),\(y)) is on x == -y")
 	case let (x, y):
-		print("(\(x),\(y)) is some arbitrary point")
+	  print("(\(x),\(y)) is some arbitrary point")
 	}
 	
 ##控制转移语句

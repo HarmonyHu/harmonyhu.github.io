@@ -12,8 +12,8 @@ categories: 技术类 Swift
 以sayHello(_:)函数为例，注意参数和返回值的写法  
 
 	func sayHello(personName: String) -> String {
-		let greeting = "Hello, " + personName + "!"
-		return greeting
+	  let greeting = "Hello, " + personName + "!"
+	  return greeting
 	}
 
 参数和返回值都可以是元组  
@@ -110,12 +110,12 @@ categories: 技术类 Swift
 	
 	//函数类型为()->void
 	func printHelloWorld() {
-		print("hello, world")
+	  print("hello, world")
 	}
 
 	//函数类型为(Int,Int)->Int
 	func addTwoInts(a: Int, _ b: Int) -> Int {
-		return a + b
+	  return a + b
 	}
 
 2.使用函数类型，接近于C语言的函数指针的意思  
