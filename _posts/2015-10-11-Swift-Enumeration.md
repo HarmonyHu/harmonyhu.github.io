@@ -14,16 +14,16 @@ categories: 技术类 Swift
 枚举概念类似C语言，语法不同，而且可以不用定义类型（C语言为int型），举例如下：
 
 	enum CompassPoint {
-		case North
-		case South
-		case East
-		case West
+	  case North
+	  case South
+	  case East
+	  case West
 	}
 
 也可以定义成一行，用,隔开：
 
 	enum CompassPoint {
-		case North,South,East,West
+	  case North,South,East,West
 	}
 
 调用方法如下：
@@ -47,9 +47,9 @@ categories: 技术类 Swift
 
 	//原始值类型为Character
 	enum ASCIIControlCharacter: Character {
-		case Tab = "\t"
-		case LineFeed = "\n"
-		case CarriageReturn = "\r"
+	  case Tab = "\t"
+	  case LineFeed = "\n"
+	  case CarriageReturn = "\r"
 	}
 
 	let tabChar = ASCIIControlCharacter.Tab.rawValue
@@ -59,7 +59,7 @@ categories: 技术类 Swift
 整型第一个原始值默认为0，后续值默认依次增1；
 
 	enum CompassPoint:Int{
-		case North=1,South,East,West
+	  case North=1,South,East,West
 	}
 	let sunsetDirection = CompassPoint.West.rawValue
 	// sunsetDirection 值为 4
@@ -67,7 +67,7 @@ categories: 技术类 Swift
 String默认原始值为对应成员的名称：
 
 	enum CompassPointS: String {
-		case North, South, East, West
+	  case North, South, East, West
 	}
 	let sunsetDirection = CompassPointS.West.rawValue
 	// sunsetDirection 值为 "West"
