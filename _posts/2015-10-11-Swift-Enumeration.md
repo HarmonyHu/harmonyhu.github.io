@@ -107,14 +107,9 @@ String默认原始值为对应成员的名称：
 	}
 	// 输出 "QR code: ABCDEFGHIJKLMNOP."
 	
-当所有相关值提取成变量或常量，可以整体提取，上例可以简写如下：
-	switch productBarcode {
-	case let .UPCA(numberSystem, manufacturer, product, check):
-	  print("UPC-A: \(numberSystem), \(manufacturer), \(product), \(check).")
-	case let .QRCode(productCode):
-	  print("QR code: \(productCode).")
-	}
-	// 输出 "QR code: ABCDEFGHIJKLMNOP."
+当所有相关值提取成变量或常量，可以整体提取，上例第一个case可以简写如下：  
+
+	case let .UPCA(numberSystem, manufacturer, product, check)
 
 ##递归枚举(Recursive Enumerations)
 
