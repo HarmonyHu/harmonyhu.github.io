@@ -143,3 +143,26 @@ String默认原始值为对应成员的名称：
 	// 输出 "18"
 
 **个人看法：**递归枚举有点泛型的味道，但是极难理解和使用，不建议写这样的语句编程。
+
+##定义方法  
+
+具体方法与结构体中的方法概念相同，以下举例：  
+
+	enum TriStateSwitch {
+	  case Off, Low, High
+	  mutating func next() {
+	    switch self {
+	    case Off:
+	      self = Low
+	    case Low:
+	      self = High
+	    case High:
+	      self = Off
+	    }
+	  }
+	}
+	var ovenLight = TriStateSwitch.Low
+	ovenLight.next()
+	// ovenLight 现在等于 .High
+	ovenLight.next()
+	// ovenLight 现在等于 .Off
