@@ -144,7 +144,7 @@ categories: 技术类 Swift
 
 	//注意类的类型方法关键字是class
 	class SomeClass {
-	    class func someTypeMethod() {//implementation goes here}
+	    class func someTypeMethod() {...}
 	}
 	SomeClass.someTypeMethod()
 
@@ -172,3 +172,84 @@ categories: 技术类 Swift
 	print("3的6倍是\(threeTimesTable[6])")
 	//输出"3的6倍是18"
 
+##构造函数init
+class、struct、enum都可以有构造函数  
+
+####关键字init，基本可以按照C++理解
+
+	//init也可以有多个参数，以下为无参数情况
+	init() {
+	    // 在此处执⾏构造过程
+	}
+
+举例如下：  
+
+	struct Fahrenheit {
+	    var temperature: Double
+        init() {
+            temperature = 32.0
+        }
+    }
+	var f = Fahrenheit()
+
+	//以上写法等同，不实现init()，则会默认存在该构造器
+	struct Fahrenheit {
+	    var temperature = 32.0
+	}
+	var f = Fahrenheit()
+
+####参数外部名称与内部名称  
+
+没有默认外部名称，如果不写外部名称，这该名称即坐外部名称也做内部名称。用_可以定义不带外部名称的参数。
+
+	struct Celsius {
+	    var temperatureInCelsius: Double = 0.0
+	    init(fromFahrenheit fahrenheit: Double) {
+	        temperatureInCelsius = (fahrenheit-32.0)/1.8
+	    }
+	    init(fromKelvin kelvin: Double) {
+	        temperatureInCelsius = kelvin - 273.15
+	    }
+	    init(_ celsius: Double){
+	        temperatureInCelsius = celsius
+	    }
+	}
+	let bodyTemperature = Celsius(37.0)
+	//bodyTemperature.temperatureInCelsius 为 37.0
+
+####在继承中构造器的规则
+
+常量可在构造函数中修改，不可在子类中修改；  
+子类通过super.init调用父类的指定构造器；  
+子类不继承父类构造器，convenience便利构造器，可以继承；  
+子类如果要有父类一样的构造器，则需要加上override重载
+
+	//*************基类Food**************
+	//如下init调用init(name:),需要声明convenience
+	class Food {
+	    var name: String
+	    init(name: String) {
+	        self.name = name
+	    }
+	    convenience init() {
+	        self.init(name: "[Unnamed]")
+	    }
+	}
+
+	let namedMeat = Food(name: "Bacon")
+	// namedMeat 的名字是 "Bacon"
+	let mysteryMeat = Food()
+	// mysteryMeat 的名字是 [Unnamed]
+
+	//**********子类RecipeIngredient*************
+	//子类可以调用父类的指定构造器,但不能调用父类便利构造器
+	class RecipeIngredient: Food {
+	    var quantity: Int
+	    init(name: String, quantity: Int) {
+	        self.quantity = quantity
+	        super.init(name: name)
+	    }
+	    override convenience init(name: String) {
+	        self.init(name: name, quantity: 1)
+	    }
+	}
