@@ -32,10 +32,6 @@ categories: 技术类 Swift
 ##属性
 
 基本按照C++理解，以下列举的都是一些特别的地方  
-  
-####结构体有默认构造器  
-
-	let vga = Resolution(width:640, height: 480)
 
 ####类是引用类型  
 
@@ -175,9 +171,9 @@ categories: 技术类 Swift
 ##构造函数init
 class、struct、enum都可以有构造函数  
 
-####关键字init，基本可以按照C++理解
+####基本可以按照C++理解
+init可以有多个参数，或无参数；
 
-	//init也可以有多个参数，以下为无参数情况
 	init() {
 	    // 在此处执⾏构造过程
 	}
@@ -192,37 +188,38 @@ class、struct、enum都可以有构造函数
     }
 	var f = Fahrenheit()
 
+####默认构造器
+**基类或结构体**所有存储属性已有默认值且没有定义构造器，则有默认构造器
+
 	//以上写法等同，不实现init()，则会默认存在该构造器
 	struct Fahrenheit {
 	    var temperature = 32.0
 	}
 	var f = Fahrenheit()
 
-####参数外部名称与内部名称  
+####结构体逐一成员构造器  
+**结构体**如果自定义了构造器，则没有该逐一成员构造器  
 
-没有默认外部名称，如果不写外部名称，这该名称即坐外部名称也做内部名称。用_可以定义不带外部名称的参数。
+	let g = Fahrenheit(temperature:10.0)
 
-	struct Celsius {
-	    var temperatureInCelsius: Double = 0.0
-	    init(fromFahrenheit fahrenheit: Double) {
-	        temperatureInCelsius = (fahrenheit-32.0)/1.8
-	    }
-	    init(fromKelvin kelvin: Double) {
-	        temperatureInCelsius = kelvin - 273.15
-	    }
-	    init(_ celsius: Double){
-	        temperatureInCelsius = celsius
-	    }
+####结构体构造器内部可以互相调用
+
+	init(){
+	    self.init(...)
 	}
-	let bodyTemperature = Celsius(37.0)
-	//bodyTemperature.temperatureInCelsius 为 37.0
 
-####在继承中构造器的规则
+####类指定构造器与便利构造器convenience
 
-常量可在构造函数中修改，不可在子类中修改；  
-子类通过super.init调用父类的指定构造器；  
-子类不继承父类构造器，convenience便利构造器，可以继承；  
-子类如果要有父类一样的构造器，则需要加上override重载
+类的普通构造器成为指定构造器；convenience关键字表便利构造器。   
+1.指定构造器只能调用**父类**的指定构造器，便利构造器只能调用**本类**的构造器   
+2.如不是基类，指定构造器 **必须初始化完** 本类新引入的存储属性，且之后 **必须调用** 父类的指定构造器    
+3.便利构造器 **必须调用** 同类其他构造器，并以调用指定构造器结束  
+
+####类构造器继承规则
+1.子类默认不继承父类构造器，如果子类要实现与父类相同的构造器，则需要override重载构造器  
+2.如果子类没有定义任何指定构造器，则它将继承所有父类指定构造器  
+3.如果子类实现了所有父类的指定构造器（包括继承的指定构造器），则父类便利构造器将自动继承到子类  
+  
 
 	//*************基类Food**************
 	//如下init调用init(name:),需要声明convenience
@@ -243,6 +240,7 @@ class、struct、enum都可以有构造函数
 
 	//**********子类RecipeIngredient*************
 	//子类可以调用父类的指定构造器,但不能调用父类便利构造器
+	//注意：由于RecipeIngredient实现了父类指定构造器init(name: String,所以父类便利构造器init()被自动继承  
 	class RecipeIngredient: Food {
 	    var quantity: Int
 	    init(name: String, quantity: Int) {
@@ -251,5 +249,111 @@ class、struct、enum都可以有构造函数
 	    }
 	    override convenience init(name: String) {
 	        self.init(name: name, quantity: 1)
+	    }
+	}
+	let oneMysteryItem = RecipeIngredient()
+	let oneBacon = RecipeIngredient(name: "Bacon")
+	let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)
+
+	//***********ShoppingListItem*************
+	//注意：该类没有任何指定构造器，所以继承所有父类构造器  
+	class ShoppingListItem: RecipeIngredient {
+	    var purchased = false
+	    var description: String {
+	        var output = "\(quantity) x \(name.lowercaseString)"
+	        output += purchased ? " ✔" : " ✘"
+	        return output
+	    }
+	}
+
+
+####必要构造器required
+修饰符required表明所有子类必须实现该构造器，且都要加上required
+
+	class SomeClass {
+	    required init() {...}
+	}
+
+	class SomeSubclass: SomeClass {
+	    required init() {...}
+	}
+
+####闭包或全局函数设置属性默认值
+注意：闭包初始化属性时，实例其他部分还没有初始化  
+
+	class SomeClass {
+	    let someProperty: SomeType = {
+	        // 在这个闭包中给 someProperty 创建⼀个默认值
+	        // someValue 必须和 SomeType 类型相同
+	        return someValue
+	        }()
+	}
+
+####参数外部名称与内部名称  
+
+没有默认外部名称，如果不写外部名称，这该名称即坐外部名称也做内部名称。用_可以定义不带外部名称的参数。
+
+	struct Celsius {
+	    var temperatureInCelsius: Double = 0.0
+	    init(fromFahrenheit fahrenheit: Double) {
+	        temperatureInCelsius = (fahrenheit-32.0)/1.8
+	    }
+	    init(fromKelvin kelvin: Double) {
+	        temperatureInCelsius = kelvin - 273.15
+	    }
+	    init(_ celsius: Double){
+	        temperatureInCelsius = celsius
+	    }
+	}
+	let bodyTemperature = Celsius(37.0)
+	//bodyTemperature.temperatureInCelsius 为 37.0
+
+####可失败构造器init?
+类、结构体、枚举，构造函数失败时return nil
+
+	struct Animal {
+	    let species: String
+	    init?(species: String) {
+	        if species.isEmpty { return nil }
+	        self.species = species
+	    }
+	}
+
+	enum TemperatureUnit {
+	    case Kelvin, Celsius, Fahrenheit
+	    init?(symbol: Character) {
+	        switch symbol {
+	        case "K":
+	            self = .Kelvin
+	        case "C":
+	            self = .Celsius
+	        case "F":
+	            self = .Fahrenheit
+	        default:
+	            return nil
+	        }
+	    }
+	}
+
+####带原始值的枚举类型自带init?(rawValue:)
+
+	enum TemperatureUnit: Character {
+	    case Kelvin = "K", Celsius = "C", Fahrenheit = "F"
+	}
+	let fahrenheitUnit = TemperatureUnit(rawValue: "F")
+	if fahrenheitUnit != nil {
+	    print("This is a defined temperature unit, so initialization succeeded.")
+	}
+
+####类可失败构造器
+1.必须在存储属性全部初始化后才能触发  
+2.子类可以重载父类可失败构造器，成为可失败构造器或不是；子类也可以重载父类非可失败构造器成可失败构造器  
+
+	//注意：下例中name如果是String?或者String!则不能反映该原则，因为它有默认值nil
+	class Product {
+	    let name: String
+	    init?(name: String) {
+	        self.name = name
+	        if name.isEmpty { return nil }
 	    }
 	}
