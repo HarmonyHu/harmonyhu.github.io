@@ -215,3 +215,65 @@ categories: 技术类 Swift
 
 在方法、属性、下标脚本前加上final，则不能重写；在class前加final，则该类不能继承。例如： final var , final func , final class func , 以及 final
 subscript
+
+
+##可空链式调用? 
+
+	class Person {
+	  var residence: Residence?
+	}
+	class Residence {
+	  var numberOfRooms = 1
+	}
+	let john = Person()
+	let roomCount = john.residence!.numberOfRooms
+
+如上调用，当john.residence为nil时，用!强制展开会有运行时错误；可空链式调用作用就产生了，用?代替!表示可空链展开
+
+**1.可空链调用属性** 
+
+	if let roomCount = john.residence?.numberOfRooms {
+	  print("John's residence has \(roomCount) room(s).")
+	}
+
+虽然numberOfRooms为Int，但经过可空链后，得到的类型为Int?
+
+对可空链最后赋值语法可行，但最终还是nil，如下：
+	
+	//赋值无效
+	john.residence?.numberOfRooms = 2
+
+**2.可空链调用方法**
+
+上例反映的是可空链调用属性。下例中printNumberOfRooms返回Void，在可空链中就返回Void?
+	
+	if john.residence?.printNumberOfRooms() != nil {
+	  print("It was possible to print the number of rooms.")
+	}
+	// prints "It was not possible to print the number of rooms."
+
+**3.可空链调用下标**  
+	
+	//访问可空链下标
+	if let firstRoomName = john.residence?[0].name {
+	  print("The first room name is \(firstRoomName).")
+	}
+	//赋值无效
+	john.residence?[0] = Room(name: "Bathroom")
+
+**4.可空链访问可空类型的下标**  
+
+	var testScores = ["Dave": [86, 82, 84], "Bev": [79, 94, 81]]
+	testScores["Dave"]?[0] = 91
+	//以下赋值无效
+	testScores["Brian"]?[0] = 72
+
+**5.多重可空链**
+
+	if let johnsStreet = john.residence?.address?.street {
+	  print("John's street name is \(johnsStreet).")
+	} 
+
+	if let buildingIdentifier = john.residence?.address?.buildingIdentifier() {
+	  print("John's building identifier is \(buildingIdentifier).")
+	}
