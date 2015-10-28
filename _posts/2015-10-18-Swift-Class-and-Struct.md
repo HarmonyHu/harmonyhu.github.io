@@ -13,7 +13,8 @@ categories: 技术类 Swift
 
 基本可以按照C++理解
 
-	//成员可以没有默认值，常量成员只能初始化一次
+	//成员必须有默认值，要么直接赋值，要么构建函数中赋初值；
+	//常量成员只能初始化一次,同上
 	struct Resolution {
 	    var width = 0
 	    var height = 0
