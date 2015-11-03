@@ -104,3 +104,29 @@ categories: 技术类 Swift
 	    }
 	  }
 	}
+
+##扩展协议类型
+
+	protocol TextRepresentable {
+	  func asText() -> String
+	}
+	
+	//给已有类型增加协议，且实现遵从的所有属性方法
+	extension Int:TextRepresentable {
+	  func asText() -> String {
+	    return "\(self)"
+	  }
+	}
+
+##扩展补充协议声明
+
+表明某类、结构体、枚举符合某协议，如下举例：
+
+	struct Hamster {
+	  var name: String
+	  func asText() -> String {
+	    return "A hamster named \(name)"
+	  }
+	}
+	extension Hamster: TextRepresentable {}
+	//这样Hamster可以作为TextRepresentable调用
