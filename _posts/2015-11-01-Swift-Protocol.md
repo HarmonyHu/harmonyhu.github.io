@@ -108,6 +108,26 @@ categories: 技术类 Swift
 	  }
 	}
 
+表明一个遵从多个protocol的protocol类型：
+`protocol<SomeProtocol,AnotherProtocol>`
+	
+	//举例
+	protocol Named {
+	  var name: String { get }
+	}
+	protocol Aged {
+	  var age: Int { get }
+	}
+	func wishHappyBirthday(celebrator: protocol<Named, Aged>) {
+	  print(" \(celebrator.name) - \(celebrator.age)!")
+	}
+	struct Person: Named, Aged {
+	  var name: String
+	  var age: Int
+	}
+	let birthdayPerson = Person(name: "Malcolm", age: 21)
+	wishHappyBirthday(birthdayPerson)
+
 ##集合中协议类型成员
 
 1.集合中每个成员都遵从某协议。用法等同于继承同一父类的各种子类的集合。  
@@ -126,22 +146,12 @@ class关键字，表明遵从者必须是类，不能是结构体或枚举：
 	protocol SomeClassOnlyProtocol: class, SomeInheritedProtocol {
 	}
 	
-表明一个遵从多个protocol的protocol类型：
+##协议可选成员optional
 
-	protocol<SomeProtocol,AnotherProtocol>
-	//举例
-	protocol Named {
-	  var name: String { get }
+表明遵从者可以不用实现该成员，调用时需要使用可选链调用。语法如下例子：
+
+	@objc protocol CounterDataSource {
+	  optional func incrementForCount(count: Int) -> Int
+	  optional var fixedIncrement: Int { get }
 	}
-	protocol Aged {
-	  var age: Int { get }
-	}
-	func wishHappyBirthday(celebrator: protocol<Named, Aged>) {
-	  print(" \(celebrator.name) - \(celebrator.age)!")
-	}
-	struct Person: Named, Aged {
-	  var name: String
-	  var age: Int
-	}
-	let birthdayPerson = Person(name: "Malcolm", age: 21)
-	wishHappyBirthday(birthdayPerson)
+

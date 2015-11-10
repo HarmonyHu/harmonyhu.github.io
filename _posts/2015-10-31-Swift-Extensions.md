@@ -105,7 +105,9 @@ categories: 技术类 Swift
 	  }
 	}
 
-##扩展协议类型
+##扩展协议
+
+#####扩展协议类型
 
 	protocol TextRepresentable {
 	  func asText() -> String
@@ -118,7 +120,7 @@ categories: 技术类 Swift
 	  }
 	}
 
-##扩展补充协议声明
+#####扩展补充协议声明
 
 表明某类、结构体、枚举符合某协议，如下举例：
 
@@ -130,3 +132,25 @@ categories: 技术类 Swift
 	}
 	extension Hamster: TextRepresentable {}
 	//这样Hamster可以作为TextRepresentable调用
+
+#####扩展协议本身
+可以扩展协议的方法和属性，使所有遵从者都具有该方法和属性，不用都实现一遍。如下举例
+
+	//所有该协议的遵从者都具备了randomBool方法
+	extension RandomNumberGenerator {
+	  func randomBool() -> Bool {
+	    return random() > 0.5
+	  }
+	}
+
+通过放方法也可以为协议提供默认实现，如果遵从者也实现了，则以遵从者的实现为准。
+
+#####为协议扩展添加限制条件where
+只有满足条件的遵从者才能获得扩展的属性或者方法
+
+	extension CollectionType where Generator.Element : TextRepresentable {
+	  func asList() -> String {
+	    return "(" + ", ".join(map({$0.asText()})) + ")"
+	  }
+	}
+
