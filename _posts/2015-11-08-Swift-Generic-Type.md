@@ -61,7 +61,7 @@ categories: 技术类 Swift
 
 对泛型的类型进行一定的约束条件  
 
-#####类型遵循协议或继承类
+####类型遵循协议或继承类
 
 语法：`<T: SomeClass, U: SomeProtocol>`  
 使泛型遵循某协议或者继承某类，比如函数泛型：  
@@ -82,7 +82,7 @@ categories: 技术类 Swift
 	  return nil
 	}
 
-#####where语句添加约束条件
+####where语句添加约束条件
 
 	func allItemsMatch<
 	C1: Container, C2: Container
