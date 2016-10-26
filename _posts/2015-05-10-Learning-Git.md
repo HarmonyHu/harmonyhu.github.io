@@ -104,7 +104,7 @@ eval `ssh-agent -s`
 `git apply new.patch`：本地目录合入补丁  
 `git am new.patch`：本地仓库和目录都合入补丁  
 
-###5. 其他  
+####5. 其他  
 * 忽略文件  
 将其添加到.gitignore或者.git/info/exclude中  
 * 删除所有不被跟踪的文件  
