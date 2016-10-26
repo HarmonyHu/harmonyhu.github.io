@@ -24,10 +24,3 @@ kramdown:
 # paginate
 gems: [jekyll-paginate]
 paginate: 12
-paginate_path: "page:num"
-
-# highlight
-# 本地用rouge, github上用pygments
-# highlighter: pygments
-# highlighter: rouge
-# highlighter: false
