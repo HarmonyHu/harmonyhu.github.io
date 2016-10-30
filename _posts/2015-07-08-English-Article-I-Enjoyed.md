@@ -11,7 +11,7 @@ excerpt: 那些我喜欢的英语文章
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/article.jpg)  
 
-###《True Nobility》真实的高贵  
+### 《True Nobility》真实的高贵  
 *---Hemingway 海明威*  
 
 In a calm sea every man is a pilot.  
@@ -31,7 +31,7 @@ To regret one's errors to the point of not repeating them is true repentance.The
 
 ----------
 
-###《Seven times I have despised my soul》  
+### 《Seven times I have despised my soul》  
 *---Kahlil Gibran 纪伯伦*  
 
 The first time when I saw her being meek that she might attain height.   

@@ -9,7 +9,7 @@ categories: 技术类 Swift
 {:toc}
 
 
-##定义与调用
+## 定义与调用
 
 枚举概念类似C语言，语法不同，而且可以不用定义类型（C语言为int型），举例如下：
 
@@ -41,7 +41,7 @@ categories: 技术类 Swift
 	}
 	//输出"Direction East"
 
-##原始值(Raw Values)
+## 原始值(Raw Values)
 
 1.枚举类型也可以指定原始类型，如下例子：
 
@@ -86,7 +86,7 @@ String默认原始值为对应成员的名称：
 	}
     // 输出 "Not Direction East"
 	
-##相关值(Associated Values)
+## 相关值(Associated Values)
 
 可以理解成枚举类型有额外的属性，如下举例
 	
@@ -111,7 +111,7 @@ String默认原始值为对应成员的名称：
 
 	case let .UPCA(numberSystem, manufacturer, product, check)
 
-##递归枚举(Recursive Enumerations)
+## 递归枚举(Recursive Enumerations)
 
 可以理解成相关值得扩展，相关值类型不确定，根据实际传入值而定，这样就可以方便扩展，如下：
 
@@ -144,7 +144,7 @@ String默认原始值为对应成员的名称：
 
 **个人看法：**递归枚举有点泛型的味道，但是极难理解和使用，不建议写这样的语句编程。
 
-##定义方法  
+## 定义方法  
 
 具体方法与结构体中的方法概念相同，以下举例：  
 

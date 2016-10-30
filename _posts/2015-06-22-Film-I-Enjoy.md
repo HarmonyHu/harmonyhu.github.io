@@ -9,7 +9,7 @@ excerpt: 那些我喜爱的电影
 * content
 {:toc}
 
-###怦然心动 FLIPPED  
+### 怦然心动 FLIPPED  
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/flipped.JPG)  
 
@@ -17,7 +17,7 @@ excerpt: 那些我喜爱的电影
 
 我多么希望能遇到一个人，告诉她：You are the one nothing will ever compare。
 
-###心灵捕手 Good Will Hunting  
+### 心灵捕手 Good Will Hunting  
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/goodwillhunting.JPG)  
 
@@ -27,7 +27,7 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 
 这部电影经典的对白很多，篇幅原因就只列这一段话。我们平日的对话通常都是传达信息，甚至打发时间。但是当我们卸下防卫，将对话用于心灵的交流时，我们能够感受到对方的感受，达到一语胜千言的畅快。以前我总觉得自己不善表达，是因为文字功底差。现在我的体会是，只要是发自内心真切的感受，任何表达出来的语句都必将动人。而我恰恰是一个沉浮于世、极少用心去感受的人。我看不见天空，看不见树叶。所以做不到。  
 
-###模仿游戏 The Imitation Game  
+### 模仿游戏 The Imitation Game  
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/theimitationgame.JPG)  
 
@@ -40,7 +40,7 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 
 从广义来说，这整个世界都是加密的，我们听到的，看到的。有的人善于解密，所以他们能通情达理，能洞若明火，甚至能顿悟人生。解密的关键，我觉得就是用心去感受，不懂用心去感受的人，就只能糊涂一世。
 
-###星际穿越 Interstellar  
+### 星际穿越 Interstellar  
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/interstellar.jpg)  
 
@@ -59,7 +59,7 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 
 虽然是科幻片，但个人非常喜欢的是剧中人物情感的表达，不论是家庭生活的温情脉脉，还是生死离别的感人肺腑。该片没有特别喜欢的台词，但是几乎每一句从马修说出来的对白都喜欢，个人比较喜欢这种幽默。
 
-###少年时代 Boyhood  
+### 少年时代 Boyhood  
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/boyhood.jpg)  
 
@@ -71,7 +71,7 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 
 该片似乎没有什么跌宕起伏的剧情，就像是日常生活的纪录片一下。随着梅森的渐渐长大，我作为一个观众，感觉像是和他一起长大了一样。那些他经历的事情，就像是我也经历了一遍。  
 
-###这个杀手不太冷 Leon
+### 这个杀手不太冷 Leon
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/leon.JPG)  
 
@@ -80,7 +80,7 @@ Sean与Will在公园里的促膝长谈,Sean讲了下面一段话
 
 剧情挺有意思的。
 
-###周星驰系类
+### 周星驰系类
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/zhouxingchi.jpg)  
 

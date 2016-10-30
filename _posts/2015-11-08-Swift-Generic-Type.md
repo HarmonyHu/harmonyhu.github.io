@@ -9,11 +9,11 @@ categories: 技术类 Swift
 {:toc}
 
 
-##定义`<T>`
+## 定义`<T>`
 
 通过`<T>`表示通用类型，避免重复代码，可以按照C++泛型来理解。其中可以是T，或任何大写开头的命名。
 
-##泛型函数
+## 泛型函数
 
 语法参考下例：
 
@@ -31,7 +31,7 @@ categories: 技术类 Swift
 	var anotherString = "world"
 	swapTwoValues(&someString, &anotherString)
 
-##泛型类型
+## 泛型类型
 
 语法如下例子：
 
@@ -57,11 +57,11 @@ categories: 技术类 Swift
 	}
 
 
-##泛型约束
+## 泛型约束
 
 对泛型的类型进行一定的约束条件  
 
-####类型遵循协议或继承类
+#### 类型遵循协议或继承类
 
 语法：`<T: SomeClass, U: SomeProtocol>`  
 使泛型遵循某协议或者继承某类，比如函数泛型：  
@@ -82,7 +82,7 @@ categories: 技术类 Swift
 	  return nil
 	}
 
-####where语句添加约束条件
+#### where语句添加约束条件
 
 	func allItemsMatch<
 	C1: Container, C2: Container
@@ -102,7 +102,7 @@ categories: 技术类 Swift
 	}
 
 
-##协议定义关联类型typealias
+## 协议定义关联类型typealias
 
 用typealias在协议中定义一个关联类型，等同于泛型，如下例子：
 

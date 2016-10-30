@@ -8,7 +8,7 @@ categories: 技术类 Swift
 * content
 {:toc}
 
-##变量常量定义  
+## 变量常量定义  
 
 	var today:Int = 5  
 	let week:Int = 7  
@@ -19,7 +19,7 @@ categories: 技术类 Swift
 4.如果一条语句结尾换行则不用带上分号  
 5.必须赋初值  
 
-##可选类型定义  
+## 可选类型定义  
 	
 	var today:Int? = 5  //显式可选类型  
 	var tomorrow:Int! = 6  //隐式可选类型

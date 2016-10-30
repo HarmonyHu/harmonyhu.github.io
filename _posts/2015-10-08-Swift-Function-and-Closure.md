@@ -8,7 +8,7 @@ categories: 技术类 Swift
 * content
 {:toc}
 
-##函数的定义  
+## 函数的定义  
 关键字func，以sayHello(_:)函数为例，注意参数和返回值的写法  
 
 	func sayHello(personName: String) -> String {
@@ -34,7 +34,7 @@ categories: 技术类 Swift
 	print("min is \(bounds.min) and max is \(bounds.max)")
 	// prints "min is -6 and max is 109"
 
-##函数的参数
+## 函数的参数
 
 1.通常第一个参数省略外部参数名，之后的参数使用外部参数名  
 
@@ -104,7 +104,7 @@ categories: 技术类 Swift
 	var anotherInt = 107
 	swapTwoInts(&someInt, &anotherInt)
 
-##函数类型
+## 函数类型
 
 1.当看到->标志的类型，都是函数类型
 	
@@ -149,7 +149,7 @@ categories: 技术类 Swift
 	  return backwards ? stepBackward : stepForward
 	}
 
-##嵌套函数
+## 嵌套函数
 
 可以理解成函数内部定义函数，仅函数内部使用。嵌套函数可以捕获外层函数的值，当作为返回值时，它是一个引用。  
 
@@ -171,7 +171,7 @@ categories: 技术类 Swift
 	incrementBySeven() // 返回的值为7
 	incrementByTen() // 返回的值为40
 
-##闭包
+## 闭包
 1.函数作为参数时可以用闭包代替，可以理解成Ruby语言中的块。闭包表达式如下：
 
 	{ (parameters) -> returnType in

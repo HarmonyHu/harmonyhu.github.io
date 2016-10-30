@@ -8,7 +8,7 @@ categories: 技术类 Swift
 * content
 {:toc}
 
-###整型-Int  
+### 整型-Int  
 Int与UInt，其中Int是默认且推荐类型，具体长度根据编译器决定  
 Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64  
    
@@ -23,7 +23,7 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 
 ----------
 
-###浮点数-Double  
+### 浮点数-Double  
  
 	125.0  //类型为Double  
 	Float(125.0)  //类型为Float  
@@ -32,13 +32,13 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 
 ----------
 
-###布尔-Bool
+### 布尔-Bool
 
 **注意：**值为true和fasle，在if和while语句判断中只能传入Bool类型  
 
 ----------
 
-###字符-Character
+### 字符-Character
 
 	let aChar:Character = "a"
 	var bChar:Character = "\u{E9}"  //é
@@ -47,7 +47,7 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 
 ----------
     
-###字符串-String  
+### 字符串-String  
 
 **注意：**字符串是值类型，由于uniCode码,没有确切索引位置，需要具体属性方法来索引
 
@@ -79,7 +79,7 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 	
 ----------
 
-###元组  
+### 元组  
 
 1.多值复合，不要求同类型，用.0、.1访问元素    
 
@@ -101,7 +101,7 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 
 ----------
 
-###集合类型-Array
+### 集合类型-Array
 
 Array<T>，可以简写用[T]，T为具体类型，可理解成数组
 
@@ -126,7 +126,7 @@ Array<T>，可以简写用[T]，T为具体类型，可理解成数组
 
 ----------
 
-###集合类型-Set
+### 集合类型-Set
 
 Set<T>，没有等价简写，无序不重复集合
 
@@ -149,7 +149,7 @@ Set基本操作
 
 ----------
 
-###集合类型-Dictionary  
+### 集合类型-Dictionary  
 
 Dictionary<key,Value>，可以理解成散列
 

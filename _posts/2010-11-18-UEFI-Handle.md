@@ -13,7 +13,7 @@ excerpt: UEFI Handle的来龙去脉
 
 本文说明：本人刚学习UEFI不久，写该文一是为了将学到的东西做一个规范化的总结，二是为了给初学UEFI的兄弟起到借鉴作用。同样地，错误的地方肯定很多，还望能得到各位弟兄指正。要理解本文，您至少应该是读过UEFI Spec，不然请先阅读UEFI Spec。  
 
-##一、一些概念的理解  
+## 一、一些概念的理解  
 
 UEFI中会有很多抽象概念，像service、protocol、handle等等，如果将这些抽象的概念放到实际的代码中理解的话，会有更清晰地认识，有了清晰的认识之后再把它们作为抽象来理解，就遂心应手的多了。  
 
@@ -23,7 +23,7 @@ UEFI中会有很多抽象概念，像service、protocol、handle等等，如果�
 
 接着本文重点说明handle。
        
-##二、`EFI_HANDLE`的定义  
+## 二、`EFI_HANDLE`的定义  
 
 `EFI_HANDLE`定义是这样的：
 
@@ -41,7 +41,7 @@ UEFI中会有很多抽象概念，像service、protocol、handle等等，如果�
 
 比如定义一个变量`EFI_HANDLE hExample`，当你将它作为参数传递给service的时候，在service内部是这样使用它的：`IHANDLE * Handle=(IHANDLE*)hExample`。也就是说`IHANDLE*`才是handle的本来面目。为什么要弄的这么复杂呢？一是为了抽象以隐藏细节，二可能是为了安全。  
         
-##三、关于`EFI_LIST_ENTRY`  
+## 三、关于`EFI_LIST_ENTRY`  
 
 要明白IHANDLE这个结构体，就要明白`EFI_LIST_ENTRY`是如何被使用的。`EFI_LIST_ENTRY`定义如下（`EDK\Foundation\Library\Dxe\Include\LinkedList.h`):  
 
@@ -69,7 +69,7 @@ UEFI中会有很多抽象概念，像service、protocol、handle等等，如果�
 
 关于`EFI_LIST_ENTRY`就说的这里了。总结一点就是只要看到`EFI_LIST_ENTRY`，就应该联想到它的链表。像IHANDLE结构体中有两个`EFI_LIST_ENTRY`成员，就应该联想到每个IHANDLE实例处在两条链表中。
       
-##四、各种链表的引出  
+## 四、各种链表的引出  
 
 **（1）由IHANDLE中AllHandles引出的链表**  
 与IHANDLE相关的链表有很多，后面一一牵扯出来。IHANDLE中的AllHandles成员用来链接IHANDLE实例的。这个链表的头部是一个空结点，  
@@ -148,7 +148,7 @@ Driver会为handle添加多个protocol实例，这些实例也是链表的形式
 
 对比之前的链表图，是否对这个图有更清晰的认识呢？  
          
-##五、以InstallProtocolInterface为例来看handle的内部运作
+## 五、以InstallProtocolInterface为例来看handle的内部运作
 有了上面的准备后，我就以InstallProtocolInterface这个service来讲述handle的内部运作了。
 经过一番顺藤摸瓜后，就会发现InstallProtocolInterface最终的形式是(`EDK\Foundation\Core\Dxe\Hand\Handle.c`):  
 

@@ -9,13 +9,13 @@ excerpt: Git学习整理
 * content
 {:toc}
 
-##一、存储分为4个阶段  
+## 一、存储分为4个阶段  
 *   `workspace`: 当前可见的工作目录  
 *   `stage(index)`：标记被Git管理的文件  
 *   `local repository`：本地仓库，通过commit命令保存的各个版本  
 *   `remote repository`：远程仓库，通过push命令提交的各个版本
 
-##二、环境配置  
+## 二、环境配置  
 
 * 配置邮箱和用户名:  
 `git config --global user.email "you@example.com"`  
@@ -43,9 +43,9 @@ eval `ssh-agent -s`
 然后在服务器账户上粘贴到SSH Key中
 
 
-##三、命令操作（常用）  
+## 三、命令操作（常用）  
 
-####1. 本地仓库操作  
+#### 1. 本地仓库操作  
 
 `git init`：将当前目录创建成本地仓库  
 `git add`：标记文件，且该文件被管理  
@@ -58,7 +58,7 @@ eval `ssh-agent -s`
 └──`git commit -a -m "注释"`：将所有跟踪的文件的修改提交到本地仓库  
 
 
-####2. 远程仓库操作  
+#### 2. 远程仓库操作  
 
 `git remote`：远程仓库管理  
 ├──`git remote -v`：查看远程仓库  
@@ -78,7 +78,7 @@ eval `ssh-agent -s`
 `git clone`：下载远程仓库到本地
 └──`git clone git@github.com:abc.git abc`：下载到abc文件夹  
 
-####3. 分支及历史版本操作  
+#### 3. 分支及历史版本操作  
 
 `git branch`：查看当前本地分支  
 ├──`git branch -a`：查看本地和远程所有分支  
@@ -98,13 +98,13 @@ eval `ssh-agent -s`
 `git log`：查看历史记录  
 `git show <SHA>`：查看某次修改的详细信息  
 
-####4. 对比和补丁操作  
+#### 4. 对比和补丁操作  
 `git diff HEAD`：本地目录对比本地仓库的修改  
 `git format-patch -n`：将前n次的提交生成patch  
 `git apply new.patch`：本地目录合入补丁  
 `git am new.patch`：本地仓库和目录都合入补丁  
 
-####5. 其他  
+#### 5. 其他  
 * 忽略文件  
 将其添加到.gitignore或者.git/info/exclude中  
 * 删除所有不被跟踪的文件  

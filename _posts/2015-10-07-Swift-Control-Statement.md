@@ -8,7 +8,7 @@ categories: 技术类 Swift
 * content
 {:toc}
 
-##for-in循环  
+## for-in循环  
 1.for-in循环可以遍历的对象：区间、数组（Array）、字典（Dictionary）、集合（Set）  
 
 	for index in 1...5 {
@@ -21,14 +21,14 @@ categories: 技术类 Swift
 	  println("hello, five times")
 	}
 
-##for循环  
+## for循环  
 可以按照C语言理解，例子的index仅循环内有效，除非循环外定义。  
 
 	for var index = 0; index < 3; ++index {
 	  print("index is \(index)")
 	}
 
-##while循环
+## while循环
 可以按照C语言理解  
 
 	var index = 0;
@@ -36,7 +36,7 @@ categories: 技术类 Swift
 	  printf("index is \(index)");index++
 	}
 
-##repeat-while循环
+## repeat-while循环
 可以按照C语言do-while循环理解  
 
 	var index = 0;
@@ -44,7 +44,7 @@ categories: 技术类 Swift
 	  printf("index is \(index)");index++
 	}while index < 3
 
-##if判断语句
+## if判断语句
 可以按照C语言理解，更多判断用if...else if...else  
 
 	var temperatureInFahrenheit = 30
@@ -52,7 +52,7 @@ categories: 技术类 Swift
 	  print("It's very cold. Consider wearing a scarf.")
 	}
 
-##switch语句
+## switch语句
 1.类似C语言，switch...{case value1:...case value2:...default:...} ;不能贯穿，不同于C语言用break防止贯穿  ；case分支必须至少有一条语句，哪怕是break语句； case语句可以包含多个模式，用,隔开,如`case value1,value2:`。举例如下： 
 
 	let anotherCharacter: Character = "a"
@@ -117,7 +117,7 @@ categories: 技术类 Swift
 	  print("(\(x),\(y)) is some arbitrary point")
 	}
 	
-##控制转移语句
+## 控制转移语句
 1.continue和break按照C语言理解  
 2.fallthrough用于switch中贯穿  
 3.循环或switch前，可以用上标签，方便用continue和break明确继续或终止的循环对象  

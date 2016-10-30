@@ -9,7 +9,7 @@ categories: 技术类 Swift
 {:toc}
 
 
-##大小写
+## 大小写
 
 类型的定义用UpperCamelCase，其余全用lowerCamelCase。  
 类型定义包括：
@@ -24,6 +24,6 @@ categories: 技术类 Swift
 
 其余包括：变量、常量、结构体或类的成员 等等
 
-##引用类型与值类型
+## 引用类型与值类型
 
 类、函数是引用类型，其余如String/Array/枚举/结构体 等等都是值类型

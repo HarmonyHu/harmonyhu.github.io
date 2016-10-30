@@ -9,12 +9,12 @@ excerpt: UEFI Application入门
 
 本文说明：关于UEFI Application编写及测试，论坛里的很多帖子及其回复都有说过，过程并不复杂，但是如果不知道的话可能也会像我一样折腾很久很久的时间。自然很多弟兄都已经轻车熟路了，写本文希望对不知道的弟兄做一个引导作用。我觉得先了解Application，再来学习UEFI是很有帮助的，可以写写小程序来亲身体会像Service或者Protocol的运作。小弟我还是一如既往的唠唠叨叨的写的很长，希望已经把关键地方都说明白了。
    
-##一.环境配置  
+## 一.环境配置  
 
-###1．VS2008  
+### 1．VS2008  
 为避免一些奇怪的问题，切记完整安装，我的是安装的默认路径。
    
-###2．UDK    
+### 2．UDK    
 下载完UDK(<http://sourceforge.net/projects/edk2/files/>)后，把它放在D:\MyWorkspace目录下面。安装Release Notes里面“HOW TO BUILD NT32”所说方法进行编译，步骤简单，我就翻译过来：  
 第一步，打开VS2008命令行，进入D:\MyWorkspace。  
 第二步，运行edksetup.bat。  
@@ -26,7 +26,7 @@ excerpt: UEFI Application入门
 
 其中fsnt0对应的目录是D:\MyWorkspace\Build\NT32\DEBUG_MYTOOLS\IA32，fsnt1对应的目录是D:\MyWorkspace\EdkShellBinPkg\Bin\Ia32\Apps。
       
-###3.EFI_Toolkit
+### 3.EFI_Toolkit
 下载`EFI_Toolkit`(<http://sourceforge.net/projects/efi-toolkit/files/>)后，我的是把它放在`D:\EFI_Toolkit_2.0`下面。然后就修改一下配置：
 一是build.cmd里面`SDK_INSTALL_DIR=D:\EFI_Toolkit_2.0`，`SDK_BUILD_ENV=bios32`。
 二是build\bios32\sdk.env里面将/Gs8192改为/GS-，然后为了以后方便修改`SDK_BIN_DIR`：`SDK_BIN_DIR=D:\MyWorkspace\Build\NT32\DEBUG_MYTOOLS\IA32\MyProject`，这样编译后的程序就到了这个目录下面，在UDK模拟器中对应的也就是fsnt0\MyProject。
@@ -37,7 +37,7 @@ excerpt: UEFI Application入门
 
 这样就编译完成了，所有的efi程序都生成到指定的目录下面了，可以在模拟器上运行。
    
-##二.几个简单的Application例子
+## 二.几个简单的Application例子
 
 在`EFI_Toolkit_2.0\apps`下面建立目录hello，并在该目录下新建hello.c和hello.mak。  
 
