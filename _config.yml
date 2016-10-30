@@ -17,9 +17,6 @@ permalink: /:year/:month/:day/:title/
 # Build settings
 markdown: kramdown
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 
 # port
 # port: 1234
