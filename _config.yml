@@ -17,9 +17,17 @@ permalink: /:year/:month/:day/:title/
 # Build settings
 markdown: kramdown
 
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+
 # paginate
 gems: [jekyll-paginate]
-paginate: 12
+paginate: 6
 paginate_path: "page:num"
 
 # highlight
