@@ -10,7 +10,7 @@ categories: 技术类 非技术
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/Buddha.jpg)  
 
-##《心经》  
+##《心经》
 *---玄奘译本*  
 
 观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。  
