@@ -36,10 +36,11 @@ categories: 技术类
 `"a"<<"bc"`   |\"abc\"   |`012`  |10    |`"f"<<2`              |[\"f\",2]
 `"ab"*3`      |\"ababab\"|`0x12` |18    |`["f"]+[2]`           |[\"f\",2]
 `x=5;"x=#{x}"`|\"x=5\"   |`0b11` |3     |`["f"]<<[2]`          |[[\"f\"],[2]]
-`65.chr`      |\"A\"     |
+`65.chr`      |\"A\"     |       |      |`array.to_s`          |转换成字串
 `"A".ord`     |65        |
 `"0x%x"%65`   |\"0x41\"  |
 `"123".to_i`  |123       |
+`"123".to_f`  |123.0
 
 #### 2. 区间  
 
@@ -66,6 +67,7 @@ categories: 技术类
 `myhash[:height]=1.7`             |添加:height=>1.7
 `myhash.delete("weight")`         |去掉\"weight\"=>120
 `myhash.keys`                     |[\"name\",\"age\",:height]
+`myhash.key?("age")`              |yes
 
 {:.lang-rb}
 	#迭代器,打印散列  
@@ -214,7 +216,7 @@ break与next用于终止循环和直接下一次循环
 		putc ch
 	}
 	#迭代器操作，逐行操作
-	file.foreach{|line|
+	file.each{|line|
 		puts line
 	}
 
