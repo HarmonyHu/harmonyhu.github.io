@@ -92,7 +92,7 @@ eval `ssh-agent -s`
 `git pull`：将远程仓库更新到本地仓库  
 ├──`git pull origin`：将origin库所有分支更新到本地  
 └──`git pull origin branch1`：将origin库的branch1分支更新到本地  
-`git clone`：下载远程仓库到本地
+`git clone`：下载远程仓库到本地  
 └──`git clone git@github.com:abc.git abc`：下载到abc文件夹  
 
 #### 3. 分支及历史版本操作  
@@ -115,7 +115,7 @@ eval `ssh-agent -s`
 `git cherry-pick <SHA>`：合入其他分支的某次修改  
 `git log`：查看历史记录  
 ├──`git log -p -2`：-p代表查看修改内容，-2代表最近两条  
-└──`git log --stat`：查看日志，且报告修改的简要信息
+└──`git log --stat`：查看日志，且报告修改的简要信息  
 `git show <SHA>`：查看某次修改的详细信息  
 
 #### 4. 对比和补丁操作  
