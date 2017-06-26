@@ -20,6 +20,7 @@ excerpt: Git学习整理
 * 配置邮箱和用户名:  
 `git config --global user.email "you@example.com"`  
 `git config --global user.name "Your Name"`  
+(查看配置：`git config --global -l`)  
 
 * 创建SSH key  
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
