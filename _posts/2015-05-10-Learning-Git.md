@@ -73,8 +73,8 @@ eval `ssh-agent -s`
 `git status`：查看工作目录状态  
 `git rm --cached <filename>`：取消跟踪的文件  
 `git commit -m "注释"`：将标记文件的修改提交到本地仓库  
-└──`git commit -a -m "注释"`：将所有跟踪的文件的修改提交到本地仓库  
-
+├──`git commit -a -m "注释"`：将所有跟踪的文件的修改提交到本地仓库  
+└──`git commit --amend`：修改上一次提交  
 
 #### 2. 远程仓库操作  
 
