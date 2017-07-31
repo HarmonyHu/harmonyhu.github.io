@@ -92,7 +92,8 @@ eval `ssh-agent -s`
 └──`git push origin --delete branch1`:删除远程分支  
 `git pull`：将远程仓库更新到本地仓库  
 ├──`git pull origin`：将origin库所有分支更新到本地  
-└──`git pull origin branch1`：将origin库的branch1分支更新到本地  
+├──`git pull origin branch1`：将origin库的branch1分支更新到本地  
+└──`git pull -r`：等同于fetch+rebase(不过单个fetch可以下载全部远程分支)  
 `git clone`：下载远程仓库到本地  
 └──`git clone git@github.com:abc.git abc`：下载到abc文件夹  
 
