@@ -3,6 +3,7 @@ layout: post
 title: 再读仓央嘉措
 date: 2017-08-04 00:00
 categories: 非技术
+image: https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/Buddha.jpg
 ---
 
 * content
