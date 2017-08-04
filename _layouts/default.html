@@ -1,39 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-  {% include head.html %}
+{% include head.html %}
 
- <!--  <body data-spy="scroll" data-target="#myAffix"> -->
-  <body>
-
-    {% include header.html %}
-
-
-    <div id="main" class="container main">
-      {{ content }}
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        {% include sidebar.html %}
+      </div>
     </div>
-
-    
-    <div id="top" data-toggle="tooltip" data-placement="left" title="回到顶部">
-      <a href="javascript:;">
-        <div class="arrow"></div>
-        <div class="stick"></div>
-      </a>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        {{ content }}
+        {% include footer.html %}
+      </div>
     </div>
-
-    {% include footer.html %}
-
-<!-- 在新窗口中打开 -->
-  <script type="text/javascript">
-    function addBlankTargetForLinks () {
-      $('a[href^="http"]').each(function(){
-          $(this).attr('target', '_blank');
-      });
-    }
-    //每次在有DOM插入时触发
-    $(document).bind('DOMNodeInserted', function(event) {
-      addBlankTargetForLinks();
-    });
-  </script>
-  </body>
+  </div>
+  {% include js.html %}
+</body>
 </html>

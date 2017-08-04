@@ -1,34 +1,70 @@
-# Site settings
+#
+###################################
+# Site wide configuration
+####################################
+#
 title: HarmonyHu's Blog
-author: HarmonyHu
-email: harmonyhu@foxmail.com
-description: HarmonyHu's Blog
-# > # this means to ignore newlines until "baseurl:"
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
-
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
-# twitter_username: jekyllrb
-github_username:  HarmonyHu
-permalink: /:year/:month/:day/:title/
-
-# Build settings
-markdown: kramdown
+email:
+description: 日日行不惧万里路
+url: # the base hostname & protocol for your site
 
 
-# port
-# port: 1234
+#
+###################################
+# Jekyll configuration
+####################################
+#
+timezone:          Asia/Shanghai
+markdown:          kramdown
+highlighter:       rouge
+excerpt_separator: <!--more-->
+permalink:         /articles/:year-:month/:title
 
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
 
-# paginate
-gems: [jekyll-paginate]
-paginate: 12
-paginate_path: "page:num"
-
-# highlight
-# 本地用rouge, github上用pygments
-# highlighter: pygments
-# highlighter: rouge
-# highlighter: false
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: HarmonyHu
+  avatar: avatar.jpg
+  job: "软件工程师"
+  bio: "多思不如养志，多言不如守静，多才不如蓄德"
+  email: harmonyhu@foxmail.com
+  disqus-shortname:
+  twitter: #username
+  facebook: #username
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: HarmonyHu
+  gitlab: #username
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: #username
+  skype: #username
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  500px: #username
+  codepen: #username
+  reddit: #username

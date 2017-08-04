@@ -1,14 +1,21 @@
 ---
 layout: default
 ---
-<div class="post-area post">
+
+  <div id="page">
+    <header class="page-header">
+      <h2>{{ page.title }}</h2>
+    </header>
+
     <article class="page-content">
-        {{ content }}
+      {{ content }}
     </article>
-</div>
-<div class="post-area post comment">
-	<!-- UY BEGIN -->
-	<div id="uyan_frame"></div>
-	<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2139878"></script>
-	<!-- UY END -->
-</div>
+
+
+  </div><!-- end page content -->
+
+
+  {% if site.owner.disqus-shortname and page.comments == true %}
+  <div id="disqus_thread"></div>
+  {% include disqus.html %}
+  {% endif %}
