@@ -2,8 +2,10 @@
 layout: post
 title: 再读仓央嘉措
 date: 2017-08-04 00:00
+excerpt: "世间安得双全法， 不负如来不负卿。"
 categories: 非技术
-image: https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/Buddha.jpg
+image: 
+  feature: https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/Buddha.jpg
 ---
 
 * content
