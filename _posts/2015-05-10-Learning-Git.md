@@ -105,6 +105,7 @@ eval `ssh-agent -s`
 ├──`git branch mybranch <SHA>`：基于某个历史版本建立mybranch分支
 ├──`git branch -D branch1`:删除本地branch1分支  
 ├──`git branch -r -d origin/branch`：删除远程分支  
+├──`git branch -m branch1 branch2`：将branch1重命名为branch2  
 └──`git branch branch1 -u origin/branch`：将本地分支对应到远程分支  
 `git checkout local`：切换到local分支  
 ├──`git checkout file_name`：放弃file_name的修改  
