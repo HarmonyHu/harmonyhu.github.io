@@ -144,4 +144,15 @@ eval `ssh-agent -s`
 `git fetch origin`  
 `git reset --hard origin/mybranch`  
 `git pull origin mybranch`  
-
+* 如何管理多个git账号  
+1)生成多个key,放在`~/.ssh/`目录;并用前文方法添加到`ssh-agent`  
+2)设置配置文件，内容如下:  
+```
+Host github
+HostName github.com
+IdentityFile ~/.ssh/id_rsa
+Host github2
+HostName github.com
+IdentityFile ~/.ssh/id_rsa2
+```  
+3)github2对应的仓库名为`git@github2:test/test.git`  
