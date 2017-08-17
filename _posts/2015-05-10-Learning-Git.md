@@ -151,10 +151,12 @@ eval `ssh-agent -s`
 2)设置配置文件，内容如下:  
 ```
 Host github
-HostName github.com
-IdentityFile ~/.ssh/id_rsa
+    HostName github.com
+    User username1
+    IdentityFile ~/.ssh/id_rsa
 Host github2
-HostName github.com
-IdentityFile ~/.ssh/id_rsa2
+    HostName github.com
+    User username2
+    IdentityFile ~/.ssh/id_rsa2
 ```  
 3)github2对应的仓库名为`git@github2:test/test.git`  
