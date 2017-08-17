@@ -131,7 +131,28 @@ eval `ssh-agent -s`
 `git apply new.patch`：本地目录合入补丁  
 `git am new.patch`：本地仓库和目录都合入补丁  
 
-#### 5. 其他  
+#### 5. 如何管理多个git账号  
+该方法适用于同一个git服务器的不同账号，也适用于不同git服务器的不同账号  
+1)将各个git账号添加到ssh-agent，如下  
+`eval $(ssh-agent -s)`  
+`ssh-add ~/.ssh/id_rsa1`  
+`ssh-add ~/.ssh/id_rsa2`  
+2)设置~/.ssh/config配置文件(不存在则新增)，内容如下: 
+```
+Host name1
+    HostName github.com
+    User username1
+    IdentityFile ~/.ssh/id_rsa
+Host name2
+    HostName test2.com
+    User username2
+    IdentityFile ~/.ssh/id_rsa2
+```  
+3)对应远程库路径修改为对应的Host名  
+比如原路径为`git@test2.com:test/test.git`  
+修改后路径为`git@name2:test/test.git`  
+
+#### 6. 其他  
 * 忽略文件  
 将其添加到.gitignore或者.git/info/exclude中  
 * 删除所有不被跟踪的文件  
@@ -144,19 +165,3 @@ eval `ssh-agent -s`
 `git fetch origin`  
 `git reset --hard origin/mybranch`  
 `git pull origin mybranch`  
-* 如何管理多个git账号  
-1)生成多个key,放在`~/.ssh/`目录;并用前文方法添加到`ssh-agent`  
-`eval $(ssh-agent -s)`  
-`ssh-add ~/.ssh/id_rsa`  
-2)设置配置文件，内容如下:  
-```
-Host github
-    HostName github.com
-    User username1
-    IdentityFile ~/.ssh/id_rsa
-Host github2
-    HostName github.com
-    User username2
-    IdentityFile ~/.ssh/id_rsa2
-```  
-3)github2对应的仓库名为`git@github2:test/test.git`  
