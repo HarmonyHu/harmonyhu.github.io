@@ -146,6 +146,8 @@ eval `ssh-agent -s`
 `git pull origin mybranch`  
 * 如何管理多个git账号  
 1)生成多个key,放在`~/.ssh/`目录;并用前文方法添加到`ssh-agent`  
+`eval $(ssh-agent -s)`  
+`ssh-add ~/.ssh/id_rsa`  
 2)设置配置文件，内容如下:  
 ```
 Host github
