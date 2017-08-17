@@ -32,7 +32,7 @@ excerpt: Git学习整理
 * 将SSH key添加到ssh-agent  
 先执行：  
 `eval $(ssh-agent -s)`   
-*如果是在linux上的git操作，则SSH Key命令是：*
+*如果执行不成功，尝试如下命令：*
 ```
 eval `ssh-agent -s`  
 ```  
