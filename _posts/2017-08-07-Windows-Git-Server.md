@@ -3,6 +3,7 @@ layout: post
 title: Windows下用gogs搭建Git服务器
 date: 2017-08-07 00:00
 categories: 技术类 Git
+tags: Git gogs
 ---
 
 * content
