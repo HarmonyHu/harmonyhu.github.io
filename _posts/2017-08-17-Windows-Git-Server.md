@@ -9,11 +9,11 @@ categories: 技术类 Git
 {:toc}
 
 #### 需要的软件及官网  
-[MySQL](https://www.mysql.com)  
-[git](https://git-scm.com)  
-[nssm](http://nssm.cc)  
-[gogs](https://gogs.io)  
-[freesshd](http://www.freesshd.com)  
+MySQL(https://www.mysql.com)  
+git(https://git-scm.com)  
+nssm(http://nssm.cc)  
+gogs(https://gogs.io)  
+freesshd(http://www.freesshd.com)  
 
 #### 搭建过程  
 1. 安装MySQL，并创建gogs数据库:`create database gogs;`  
@@ -23,7 +23,7 @@ categories: 技术类 Git
 5. 安装gogs，过程如下：
 * 将gogs解压，比如解压后路径为D:/gogs  
 * `gogs/scripts/windows/install-as-service.bat`文件中路径更新:  
-`SET gogspath=C:/gogs`  
+`SET gogspath=D:/gogs`  
 * cmd命令到gogs目录，执行gogs web  
 6. 浏览器地址输入127.0.1.1:3000，进入配置界面。完成配置后，对应gogs/custom/conf的app.ini文件。后续改配置可以直接修改该文件。
 
