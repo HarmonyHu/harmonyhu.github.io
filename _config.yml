@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: HarmonyHu's Blog
-brief-intro: IT爱好者
+title: HarmonyHu
+brief-intro: 多思不如养志，多言不如守静，多才不如蓄德
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://harmonyhu.github.io" # the base hostname & protocol for your site
 
@@ -23,7 +23,7 @@ zhihu_username: HarmonyHu
 linkedIn_username: 
 dribbble_username:
 
-description_footer: 多思不如养志，多言不如守静，多才不如蓄德
+description_footer: 
 
 # comments
 # two ways to comment, only choose one, and use your own short name
