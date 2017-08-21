@@ -2,7 +2,8 @@
 layout: post
 title: Swift学习之枚举
 date: 2015-10-11 00:00
-categories: 技术类 Swift
+categories: Swift
+tags: Swift iOS
 ---
 
 * content

@@ -2,8 +2,8 @@
 layout: post
 title:  那些我喜爱的电影(未完)
 date:   2015-06-22
-categories: 非技术 个人喜好
-excerpt: 那些我喜爱的电影
+categories: 个人喜好
+tags: 电源
 ---
 
 * content

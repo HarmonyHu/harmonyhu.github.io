@@ -2,8 +2,8 @@
 layout: post
 title:  SMBus读取从设备数据总结
 date:   2010-09-01
-categories: 技术类 BIOS
-excerpt: SMBus读取从设备数据总结
+categories: BIOS
+tags: BIOS SMBus
 ---
 
 * content

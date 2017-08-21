@@ -2,7 +2,8 @@
 layout: post
 title: 有关理财的一些见解(待补充)
 date: 2017-03-18 00:00
-categories: 非技术 随感
+categories: 随感
+tags: 随感
 ---
 
 * content

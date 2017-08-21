@@ -2,7 +2,8 @@
 layout: post
 title: 再读仓央嘉措
 date: 2017-08-04 00:00
-categories: 非技术
+categories: 个人喜好
+tags: 诗词
 ---
 
 * content

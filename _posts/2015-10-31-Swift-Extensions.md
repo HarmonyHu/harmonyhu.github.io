@@ -2,7 +2,8 @@
 layout: post
 title: Swift学习之扩展extension
 date: 2015-10-31 00:00
-categories: 技术类 Swift
+categories: Swift
+tags: Swift iOS
 ---
 
 * content

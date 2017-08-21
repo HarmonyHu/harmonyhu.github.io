@@ -2,7 +2,8 @@
 layout: post
 title: 看《奇葩说》决赛有感
 date: 2015-09-20 00:00
-categories: 非技术
+categories: 随感
+tags: 随感
 ---
 
 * content

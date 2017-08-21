@@ -2,7 +2,8 @@
 layout: post
 title: 真得要学习英语了
 date: 2017-04-18 00:00
-categories: 英语
+categories: 随感
+tags: 随感
 ---
 
 * content

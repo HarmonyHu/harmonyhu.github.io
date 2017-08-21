@@ -2,7 +2,8 @@
 layout: post
 title: 学车记录
 date: 2016-11-21 00:00
-categories: 日常生活
+categories: 随感
+tags: 随感
 ---
 
 * content

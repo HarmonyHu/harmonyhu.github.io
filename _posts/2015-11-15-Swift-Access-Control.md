@@ -2,7 +2,8 @@
 layout: post
 title: Swift学习之访问控制
 date: 2015-11-15 00:00
-categories: 技术类 Swift
+categories: Swift
+tags: Swift iOS
 ---
 
 * content

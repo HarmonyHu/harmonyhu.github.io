@@ -2,7 +2,8 @@
 layout: post
 title: Swift学习之高级运算符
 date: 2015-11-19 00:00
-categories: 技术类 Swift
+categories: Swift
+tags: Swift iOS
 ---
 
 * content

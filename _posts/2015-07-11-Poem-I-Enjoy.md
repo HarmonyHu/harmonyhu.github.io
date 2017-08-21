@@ -2,8 +2,8 @@
 layout: post
 title: 那些我喜爱的诗词
 date: 2015-07-11 00:00
-categories: 非技术 个人喜好
-excerpt: 那些我喜爱的诗词
+categories: 个人喜好
+tags: 诗词
 ---
 
 * content

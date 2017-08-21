@@ -2,8 +2,8 @@
 layout: post
 title: 那些我喜爱的英语文章
 date: 2015-07-08 00:00
-categories: 非技术 个人喜好
-excerpt: 那些我喜欢的英语文章
+categories: 个人喜好
+tags: 英语 文章
 ---
 
 * content

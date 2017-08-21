@@ -2,8 +2,8 @@
 layout: post
 title:  UEFI Application入门
 date:   2010-12-04
-categories: 技术类 BIOS
-excerpt: UEFI Application入门
+categories: BIOS
+tags: BIOS UEFI
 ---
 >本文最初是2010-11-18发表于[BiosRen论坛](http://www.biosren.com/thread-3515-1-1.html), 现在挪到本人自己的域名博客  
 

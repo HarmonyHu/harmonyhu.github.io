@@ -2,7 +2,8 @@
 layout: post
 title: 文章样板《心经》
 date: 2000-01-01 00:00
-categories: 技术类 非技术
+categories: 个人喜好
+tags: 诗词
 ---
 
 * content

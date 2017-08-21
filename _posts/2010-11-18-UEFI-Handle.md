@@ -2,8 +2,8 @@
 layout: post
 title:  UEFI Handle的来龙去脉
 date:   2010-11-18
-categories: 技术类 BIOS
-excerpt: UEFI Handle的来龙去脉
+categories: BIOS
+tags: BIOS UEFI
 ---
 
 * content

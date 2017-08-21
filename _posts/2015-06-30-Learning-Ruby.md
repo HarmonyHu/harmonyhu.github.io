@@ -2,7 +2,8 @@
 layout: post
 title:  Ruby学习整理
 date:   2015-06-30
-categories: 技术类
+categories: Ruby
+tags: Ruby
 ---
 
 * content

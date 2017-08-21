@@ -2,8 +2,8 @@
 layout: post
 title:  读《Getting Things Done》
 date:   2015-04-03
-categories: 非技术 读书
-excerpt: 读《Getting Things Done》
+categories: 阅读
+tags: 阅读
 ---
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/GettingThingsDone.jpg)  

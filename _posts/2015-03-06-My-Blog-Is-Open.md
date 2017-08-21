@@ -2,8 +2,8 @@
 layout: post
 title:  我的独立域名博客开通了
 date:   2015-03-06
-categories: 技术类 Git
-excerpt: 我的独立域名博客开通了
+categories: Git
+tags: Git 博客 域名
 ---
 
 * content
