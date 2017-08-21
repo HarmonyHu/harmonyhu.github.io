@@ -2,8 +2,8 @@
 layout: post
 title: Linux Yum命令整理
 date: 2017-07-17 00:00
-categories: yum
-tags: yum Linux
+categories: Yum
+tags: Yum Linux
 ---
 
 * content

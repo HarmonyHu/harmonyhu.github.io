@@ -2,8 +2,8 @@
 layout: post
 title: 配置Linux的yum源(RHEL7.3 x64为例)
 date: 2017-08-18 00:00
-categories: yum
-tags: Linux yum
+categories: Yum
+tags: Linux Yum
 ---
 
 * content
