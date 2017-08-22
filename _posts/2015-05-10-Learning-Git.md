@@ -102,7 +102,7 @@ eval `ssh-agent -s`
 `git branch`：查看当前本地分支  
 ├──`git branch -a`：查看本地和远程所有分支  
 ├──`git branch branch1 origin/branch`：本地创建branch1分支，基于origin/branch分支  
-├──`git branch mybranch <SHA>`：基于某个历史版本建立mybranch分支
+├──`git branch mybranch <SHA>`：基于某个历史版本建立mybranch分支  
 ├──`git branch -D branch1`:删除本地branch1分支  
 ├──`git branch -r -d origin/branch`：删除远程分支  
 ├──`git branch -m branch1 branch2`：将branch1重命名为branch2  
@@ -110,7 +110,7 @@ eval `ssh-agent -s`
 `git checkout local`：切换到local分支  
 ├──`git checkout file_name`：放弃file_name的修改  
 ├──`git checkout -b mybranch origin/mybranch`：新建分支mybranch并切过去  
-└──`git checkout --track origin/mybranch`:新建分支mybranch并切过去(--track==-t)  
+└──`git checkout --track origin/mybranch`:新建分支mybranch并切过去(`--track==-t`)  
 `git reset`：恢复操作  
 ├──`git reset --hard <SHA>`：强制回退到某个历史版本  
 └──`git reset --soft <SHA>`：回退到某个历史版本，但文件修改不变  
