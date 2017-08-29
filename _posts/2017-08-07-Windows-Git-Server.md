@@ -11,24 +11,24 @@ tags: Git gogs
 
 #### 需要的软件及官网  
 [MySQL](https://www.mysql.com)  
-[git](https://git-scm.com)  
-[nssm](http://nssm.cc)  
+[git](https://git-scm.com)    
 [gogs](https://gogs.io)   
 
 #### 搭建过程  
-1. 安装MySQL，并创建gogs数据库:`create database gogs;`  
-2. 安装git，并将安装路径下的Git/bin和Git/usr/bin路径添加到系统变量Path中  
-3. 将nssm.exe放到`%PATH%`路径，比如system32  
-4. 安装gogs，过程如下：
-* 将gogs解压，比如解压后路径为D:/gogs  
-* `gogs/scripts/windows/install-as-service.bat`文件中内容更新:`SET gogspath=D:/gogs`  
-5. 开启gogs：cmd命令到gogs目录，执行gogs web  
-6. 浏览器地址输入127.0.1.1:3000，进入配置界面。完成配置后，对应gogs/custom/conf的app.ini文件。后续改配置可以直接修改该文件，[配置参考说明](https://gogs.io/docs/advanced/configuration_cheat_sheet)。
+1. 安装MySQL，并创建gogs数据库:`create database gogs;`。  
+2. 安装git，并将git安装路径下的bin和usr/bin路径添加到系统变量Path中。  
+3. 解压gogs，cmd命令到gogs目录，执行gogs web。  
+4. 浏览器地址输入127.0.1.1:3000，进入配置界面配置。  
+5. 将gogs配置为系统服务。  
+创建服务：`sc create gogs start= auto binPath= ""G:\gogs\gogs.exe" web"`  
+启动服务：`sc start gogs`  
+停止服务：`sc stop gogs`  
+删除服务：`sc delete gogs`
 
 #### 注意事项  
-1. 尽量都用管理员权限安装和运行  
-2. 如果浏览器打开地址无法访问，在Windows防火墙入栈规则里面添加3000端口  
-3. app.ini文件如下几个配置比较有用：  
+1. 请都用管理员权限安装和运行。  
+2. 如果浏览器打开地址无法访问，在Windows防火墙入栈规则里面添加3000端口。  
+3. 完成配置后，对应gogs/custom/conf的app.ini文件。后续改配置可以直接修改该文件，[配置参考说明](https://gogs.io/docs/advanced/configuration_cheat_sheet)。如下几个配置比较有用：  
 ```
 [repository]
 DISABLE_HTTP_GIT = true (注：关闭git http访问库）
