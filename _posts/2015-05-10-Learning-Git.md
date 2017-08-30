@@ -9,13 +9,7 @@ tags: Git
 * content
 {:toc}
 
-## 一、存储分为4个阶段  
-*   `workspace`: 当前可见的工作目录  
-*   `stage(index)`：标记被Git管理的文件  
-*   `local repository`：本地仓库，通过commit命令保存的各个版本  
-*   `remote repository`：远程仓库，通过push命令提交的各个版本
-
-## 二、环境配置  
+## 环境配置  
 
 * 配置邮箱和用户名:  
 `git config --global user.email "you@example.com"`  
@@ -43,15 +37,47 @@ eval `ssh-agent -s`
 `clip < ~/.ssh/id_rsa.pub`  
 然后在服务器账户上粘贴到SSH Key中
 
-## 三、文件状态的变迁  
+## 通用配置
+通过命令`git config --global XXXX`配置，或者编辑`~/.gitconfig`进行配置。  
+* 配置邮箱和用户名  
+`git config --global user.email "you@example.com"`  
+`git config --global user.name "Your Name"`  
+* 配置编辑器为notepad++  
+```
+git config --global core.editor '"C:/Program Files (x86)/Notepad++/notepad++.exe" -multiInst -notabbar -nosession -noPlugin'
+```
+* 配置提交模板
+`git config --global commit.template ~/.gittemplate.txt`
+`.gittemplate.txt`的内容比如：
+```
+修改描述：
+修改人：
+检视人：
+```  
+* 配置比较与合并工具  
+```
+git config --global merge.tool bc4
+git config --global mergetool.bc4.cmd '"D:/Tools/Beyond Compare 4/BComp.exe" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"'
+git config --global diff.tool bc4
+git config --global difftool.bc4.cmd '"D:/Tools/Beyond Compare 4/BComp.exe" "$LOCAL" "$REMOTE"'
+```
+* 配置换行符修正  
+`git config --global core.autocrlf false`  
 
-#### 1. 文件的4种状态  
+## 文件状态的变迁  
+#### 存储的4个位置  
+* `workspace`: 当前可见的工作目录  
+* `stage(index)`：标记被Git管理的文件  
+* `local repository`：本地仓库，通过commit命令保存的各个版本  
+* `remote repository`：远程仓库，通过push命令提交的各个版本
+
+#### 文件的4种状态  
 * **untrack**: 代表没有被跟踪的文件，比如新放进git目录下的文件  
 * **modified**: 代表被跟踪，且被修改的文件  
 * **staged**: 代表待提交的文件(包括标记修改的、或者新增的、或者被解决冲突的文件）  
 * **unmodified**: 代表被跟踪，且没有被修改的文件  
 
-#### 2. 文件状态的变迁  
+#### 文件状态的变迁  
 * `git add`操作，可以将untrack和modified状态转换成staged状态  
 * `git commit`操作，可以将staged状态的文件提交到本地仓库，文件状态变为unmodifed    
 * `git reset HEAD <file>`操作，可以将staged状态的文件回到modified状态  
@@ -61,9 +87,9 @@ eval `ssh-agent -s`
 * `git reset --soft <SHA>`操作，回退历史版本，基于其修改的文件变为staged状态  
 * `git reset --hard <SHA>`操作，回退历史版本，基于其修改的文件被删除  
 
-## 四、命令操作（常用）  
+## 常用命令操作  
 
-#### 1. 本地仓库操作  
+#### 本地仓库操作  
 
 `git init`：将当前目录创建成本地仓库  
 `git add`：标记文件，且该文件被管理  
@@ -76,7 +102,7 @@ eval `ssh-agent -s`
 ├──`git commit -a -m "注释"`：将所有跟踪的文件的修改提交到本地仓库  
 └──`git commit --amend`：修改上一次提交  
 
-#### 2. 远程仓库操作  
+#### 远程仓库操作  
 
 `git remote`：远程仓库管理  
 ├──`git remote -v`：查看远程仓库  
@@ -97,7 +123,7 @@ eval `ssh-agent -s`
 `git clone`：下载远程仓库到本地  
 └──`git clone git@github.com:abc.git abc`：下载到abc文件夹  
 
-#### 3. 分支及历史版本操作  
+#### 分支及历史版本操作  
 
 `git branch`：查看当前本地分支  
 ├──`git branch -a`：查看本地和远程所有分支  
@@ -122,7 +148,7 @@ eval `ssh-agent -s`
 └──`git log --stat`：查看日志，且报告修改的简要信息  
 `git show <SHA>`：查看某次修改的详细信息  
 
-#### 4. 对比和补丁操作  
+#### 对比和补丁操作  
 `git diff`：查看修改但没有staged的文件  
 ├──`git diff --staged`：查看修改且staged的文件  
 ├──`git difftool`：可以在.gitconfig文件中配置BeyondCompare工具对比差异  
@@ -131,7 +157,10 @@ eval `ssh-agent -s`
 `git apply new.patch`：本地目录合入补丁  
 `git am new.patch`：本地仓库和目录都合入补丁  
 
-## 五、如何管理多个git账号  
+#### 其他命令
+`git clean -df`：删除所有不被跟踪的文件 
+
+## 如何管理多个git账号  
 该方法适用于同一个git服务器的不同账号，也适用于不同git服务器的不同账号  
 1. 将各个git账号添加到ssh-agent，参考如下：  
 `eval $(ssh-agent -s)`  
@@ -152,13 +181,9 @@ Host name2
 比如原路径为`git@test2.com:test/test.git`  
 修改后路径为`git@name2:test/test.git`  
 
-## 六、其他  
+## 其他  
 * 忽略文件  
-将其添加到.gitignore或者.git/info/exclude中  
-* 删除所有不被跟踪的文件  
-`git clean -df`  
-* 修改git配置  
-`vi ~/.gitconfig`  
+将其添加到.gitignore或者.git/info/exclude中     
 * 合并最近几次提交  
 `git rebase -i <SHA>`，然后将第2个及之后的pick改成s，达到的效果是：将SHA之后（不包括SHA本身)的所有修改合并到SHA之后的一次修改  
 * 强制pull  
