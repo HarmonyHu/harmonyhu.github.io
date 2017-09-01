@@ -20,7 +20,7 @@ tags: Git gogs
 3. 解压gogs，cmd命令到gogs目录，执行gogs web。  
 4. 浏览器地址输入127.0.1.1:3000，进入配置界面配置。  
 5. 将gogs配置为系统服务，如下gogs路径为D:\gogs，  
-创建服务：`sc create gogs start= auto binPath= ""D:\gogs\gogs.exe" web"`  
+创建服务：`sc create gogs start= delayed-auto binPath= ""D:\gogs\gogs.exe" web"`  
 启动服务：`sc start gogs`  
 停止服务：`sc stop gogs`  
 删除服务：`sc delete gogs`
