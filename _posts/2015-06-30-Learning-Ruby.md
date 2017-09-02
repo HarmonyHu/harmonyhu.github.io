@@ -222,7 +222,6 @@ file.puts("hello,world")
 #写入数据syswrite
 file.syswrite("new line,hello,world2")
 
-
 #读取文件一行内容
 puts file.gets
 puts file.readline
@@ -266,11 +265,12 @@ File.exist?(filename)  #判断文件是否存在，布尔
 File.rename(oldname,newname) #文件重命名  
 File.open(filename,atr){} #新建/打开文件，支持块操作  
 
-{:.lang-rb}
-	File.open("hello.txt","w"){|file|
-		file.puts "hello,world"
-	}
-	#块结束自动关闭file
+```ruby
+File.open("hello.txt","w"){|file|
+	file.puts "hello,world"
+}
+#块结束自动关闭file
+```
 
 #### 2. Dir操作  
 
@@ -285,12 +285,12 @@ Dir[pat]            #返回文件名数组
 ### 八、其他
 #### 环境变量
 `puts ENV["Path"]`  
+
+```ruby
+puts ENV["Path"]
+#C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;D:\Program Files\TortoiseSVN\bin;d:\Program Files (x86)\010 Editor;D:\Program Files\TortoiseGit\bin;d:\Ruby24-x64\bin;C:\Users\HarmonyHu\AppData\Local\Microsoft\WindowsApps
 ```
-irb(main):015:0* puts ENV["Path"]
-C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;D:\Program Files\TortoiseSVN\bin;d:\Program Files (x86)\010 Editor;D:\Program Files\TortoiseGit\bin;d:\Ruby24-x64\bin;C:\Users\HarmonyHu\AppData\Local\Microsoft\WindowsApps
-=> nil
-irb(main):016:0>
-```
+
 #### 入参变量
 `puts ARGV[0]` #第一个参数  
 `puts ARGV[1]` #第二个参数
