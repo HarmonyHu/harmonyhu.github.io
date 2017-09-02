@@ -158,16 +158,16 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 ### 五、控制语句  
 
 #### 1. 条件判断语句  
-if ... elsif ... else ... end  
-(...)if...  
-case ... when ... when ... else ...end  
-unless = if not  
+`if ... elsif ... else ... end`  
+`(...)if...`  
+`case ... when ... when ... else ...end`  
+`unless = if not`  
 
 #### 2. 循环控制语句  
-while...end  
-(...) while ...  
-until = while not  
-for ... in ... end  *#可以是区间、数组*  
+`while...end`  
+`(...) while ...`  
+`until = while not`  
+`for ... in ... end`  *#可以是区间、数组*  
 break与next用于终止循环和直接下一次循环  
 
 #### 3. 迭代器  
@@ -180,10 +180,11 @@ break与next用于终止循环和直接下一次循环
 ### 六、方法
 
 #### 1. 语法  
-{:.lang-rb}
-	def method_name [( [arg [= default]]...[, * arg [, &expr ]])]
-	   expr
-	end
+```ruby
+def method_name [( [arg [= default]]...[, * arg [, &expr ]])]
+   expr
+end
+```
 
 #### 2. 返回值  
 
@@ -191,13 +192,15 @@ break与next用于终止循环和直接下一次循环
 * return返回1个或多个值
 
 #### 3. 举例
-{:.lang-rb}
-	def myinfo (name,height=1.7,weight=120)
-		print "My name is #{name},height:#{height},weight:#{weight}"
-	end
-	myinfo "HarmonyHu",1.74
-	#My name is HarmonyHu,height:1.74,weight:120
 
+```ruby
+def myinfo (name,height=1.7,weight=120)
+	print "My name is #{name},height:#{height},weight:#{weight}"
+end
+myinfo "HarmonyHu",1.74
+#My name is HarmonyHu,height:1.74,weight:120
+```
+	
 ----------
 
 ### 七、文件操作
@@ -206,51 +209,52 @@ break与next用于终止循环和直接下一次循环
 
 * **实例方法**
 
-{:.lang-rb}
-	#新建文件test.txt，r/r+/w/w+/a/a+
-	file = File.new("test.txt","w")
-	#打开文件test.txt
-	file = File.new("test.txt")
-	#关闭文件
-	file.close
+```ruby
+#新建文件test.txt，r/r+/w/w+/a/a+
+file = File.new("test.txt","w")
+#打开文件test.txt
+file = File.new("test.txt")
+#关闭文件
+file.close
 
-	#写入数据puts
-	file.puts("hello,world")
-	#写入数据syswrite
-	file.syswrite("new line,hello,world2")
+#写入数据puts
+file.puts("hello,world")
+#写入数据syswrite
+file.syswrite("new line,hello,world2")
 
 
-	#读取文件一行内容
-	puts file.gets
-	puts file.readline
-	#读取文件若干字符
-	puts file.sysread(10)
+#读取文件一行内容
+puts file.gets
+puts file.readline
+#读取文件若干字符
+puts file.sysread(10)
 
-	#调整当前位置，回到文件头
-	file.rewind
-	#调整当前位置，指定位置
-	file.seek(10)
-	file.seek(-10,IO:SEEK_END)
-	file.seek(1,IO:SEEK_CUR)
-	#读取当前位置,tell与pos等同
-	puts file.tell
-	puts file.pos
-	#获取当前文件大小
-	puts file.size
+#调整当前位置，回到文件头
+file.rewind
+#调整当前位置，指定位置
+file.seek(10)
+file.seek(-10,IO:SEEK_END)
+file.seek(1,IO:SEEK_CUR)
+#读取当前位置,tell与pos等同
+puts file.tell
+puts file.pos
+#获取当前文件大小
+puts file.size
 
-	#stat成员访问
-	puts file.stat.size
-	puts file.stat.ctime
+#stat成员访问
+puts file.stat.size
+puts file.stat.ctime
 
-	#迭代器操作，字节操作
-	file.each_byte{|ch|
-		putc ch
-	}
-	#迭代器操作，逐行操作
-	file.each{|line|
-		puts line
-	}
-
+#迭代器操作，字节操作
+file.each_byte{|ch|
+	putc ch
+}
+#迭代器操作，逐行操作
+file.each{|line|
+	puts line
+}
+```
+	
 * **类方法**  
 
 File.delete(filename)  #删除文件  
@@ -288,5 +292,5 @@ C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\Sy
 irb(main):016:0>
 ```
 #### 入参变量
-`puts ARGV[0]` #第一个参数
+`puts ARGV[0]` #第一个参数  
 `puts ARGV[1]` #第二个参数
