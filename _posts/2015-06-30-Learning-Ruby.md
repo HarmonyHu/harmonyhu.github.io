@@ -26,24 +26,46 @@ tags: Ruby
 
 ### 三、数据类型  
 
->数据类型有：字符串、数字、数组、区间、散列、正则表达式。正则表达式后文单独描述。  
+数据类型有：字符串、数字、数组、区间、散列、正则表达式。正则表达式后文单独描述。  
 
-#### 1. 常见类型 
+#### 字符串与数字
 
-字符串        |描述      |数字   |描述  |数组                  |描述
--------------:|:---------|------:|:-----|---------------------:|:---
-`str=""`      |空字符串  |`1e3`  |1000.0|`array=[]`            |空数组
-`"a"+"bc"`    |\"abc\"   |`1.0e3`|1000.0|`["OK",[1,2]]`        |可包含各类成员
-`"a"<<"bc"`   |\"abc\"   |`012`  |10    |`["f"]<<2`              |[\"f\",2]
-`"ab"*3`      |\"ababab\"|`0x12` |18    |`["f"]+[2]`           |[\"f\",2]
-`x=5;"x=#{x}"`|\"x=5\"   |`0b11` |3     |`["f"]<<[2]`          |[\"f\",[2]]
-`65.chr`      |\"A\"     |       |      |`array.to_s`          |转换成字串
-`"A".ord`     |65        |
-`"0x%x"%65`   |\"0x41\"  |
-`"123".to_i`  |123       |
-`"123".to_f`  |123.0
+字符串        |描述      |数字   |描述  
+-------------:|:---------|------:|:-----
+`str=""`      |空字符串  |`1e3`  |1000.0
+`"a"+"bc"`    |\"abc\"   |`1.0e3`|1000.0
+`"a"<<"bc"`   |\"abc\"   |`012`  |10    
+`"ab"*3`      |\"ababab\"|`0x12` |18    
+`x=5;"x=#{x}"`|\"x=5\"   |`0b11` |3     
+`65.chr`      |\"A\"     |       |      
+`"A".ord`     |65        |              
+`"0x%x"%65`   |\"0x41\"  |              
+`"123".to_i`  |123       |              
+`"123".to_f`  |123.0                    
 
-#### 2. 区间  
+#### 2. 数组
+
+数组                       |描述
+--------------------------:|:---------
+`["OK",[1,2]]`             |可包含各类成员
+`["f"]<<2`                 |`["f",2]`
+`["f"]+[2]`                |`["f",2]`
+`["f"]<<[2]`               |`["f",[2]]`
+`array=[]`                 |空数组
+`array=Array.new(20)`      |含20个空元素
+`array=Array.new(20,"ab")` |含20个"ab"元素
+`array.size`               |元素个数,length,count相同
+`array.to_s`               |转换成字串
+`array[0]`                 |第0个元素
+`array.clear`              |清空数组
+`array.delete("ab")        |删除所有内容为"ab"的元素
+`array.delete_at(2)`       |删除第2个元素(0开始)
+`array.empty?`             |如果为空，返回true
+`array.include?("ab")      |如果包含"ab"，返回true
+`array.each{ |item| block}`|遍历元素内容
+`array.each_index { |index| block }` |按Index遍历
+
+#### 3. 区间  
 
 -----------------|-------------
 `months = 1..12` |闭区间[1,12]
@@ -247,3 +269,16 @@ Dir.rmdir("MyDir")  #删除目录
 Dir[pat]            #返回文件名数组  
 如：`Dir["foo.*"]` #["foo.c","foo.rb","foo.h"]  
 如：`Dir["foo.?"]` #["foo.c","foo.h"]  
+
+### 八、其他
+#### 环境变量
+`puts ENV["Path"]`  
+```
+irb(main):015:0* puts ENV["Path"]
+C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;D:\Program Files\TortoiseSVN\bin;d:\Program Files (x86)\010 Editor;D:\Program Files\TortoiseGit\bin;d:\Ruby24-x64\bin;C:\Users\HarmonyHu\AppData\Local\Microsoft\WindowsApps
+=> nil
+irb(main):016:0>
+```
+#### 入参变量
+`puts ARGV[0]` #第一个参数
+`puts ARGV[1]` #第二个参数
