@@ -72,7 +72,7 @@ tags: Ruby
 `array.to_s`               |转换成字串
 `array[0]`                 |第0个元素
 `array.clear`              |清空数组
-`array.delete("ab")        |删除所有内容为"ab"的元素
+`array.delete("ab")`       |删除所有内容为"ab"的元素
 `array.delete_at(2)`       |删除第2个元素(0开始)
 `array.empty?`             |如果为空,返回true
 `array.include?("ab")`     |如果包含"ab",返回true
