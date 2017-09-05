@@ -16,6 +16,7 @@ yum groupinfo group1 显示程序组group1信息
 yum search string 根据关键字string查找安装包  
 yum deplist package1 查看程序package1依赖情况  
 
+
 2. 安装软件包  
 yum install 全部安装  
 yum install package1 安装指定的安装包package1  

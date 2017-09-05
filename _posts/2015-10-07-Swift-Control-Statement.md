@@ -16,6 +16,7 @@ tags: Swift iOS
 	  println("\(index) times 5 is \(index * 5)")
 	}
 
+
 2.如果不需要每一项的值，可以用_替代  
 
 	for _ in 1...5{

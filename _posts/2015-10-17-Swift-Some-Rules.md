@@ -9,7 +9,6 @@ tags: Swift iOS
 * content
 {:toc}
 
-
 ## 大小写
 
 类型的定义用UpperCamelCase，其余全用lowerCamelCase。  
@@ -22,6 +21,7 @@ tags: Swift iOS
 -  struct和class定义的结构体和类  
 	`class SomeClass {}`  
 	`struct SomeStructure {}`
+
 
 其余包括：变量、常量、结构体或类的成员 等等
 

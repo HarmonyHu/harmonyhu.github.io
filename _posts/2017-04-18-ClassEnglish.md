@@ -14,6 +14,7 @@ tags: 随感
 这次是来真的了，还专门弄了一个微信公众号：归纳英语。将平时常见的英语单词归纳总结，每周至少归纳总结一篇，并将单词全部都熟练应用起来。像水果一类的单词，就归纳到一类，以后去水果超市，就联想一下，用英语来表达各个水果。  
 这次是真的。
 
+
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/ClassEnglish.jpg)  
 
  

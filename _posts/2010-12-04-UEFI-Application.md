@@ -8,12 +8,13 @@ tags: BIOS UEFI
 >本文最初是2010-11-18发表于[BiosRen论坛](http://www.biosren.com/thread-3515-1-1.html), 现在挪到本人自己的域名博客  
 
 本文说明：关于UEFI Application编写及测试，论坛里的很多帖子及其回复都有说过，过程并不复杂，但是如果不知道的话可能也会像我一样折腾很久很久的时间。自然很多弟兄都已经轻车熟路了，写本文希望对不知道的弟兄做一个引导作用。我觉得先了解Application，再来学习UEFI是很有帮助的，可以写写小程序来亲身体会像Service或者Protocol的运作。小弟我还是一如既往的唠唠叨叨的写的很长，希望已经把关键地方都说明白了。
-   
+
 ## 一.环境配置  
 
 ### 1．VS2008  
 为避免一些奇怪的问题，切记完整安装，我的是安装的默认路径。
-   
+
+
 ### 2．UDK    
 下载完UDK(<http://sourceforge.net/projects/edk2/files/>)后，把它放在D:\MyWorkspace目录下面。安装Release Notes里面“HOW TO BUILD NT32”所说方法进行编译，步骤简单，我就翻译过来：  
 第一步，打开VS2008命令行，进入D:\MyWorkspace。  

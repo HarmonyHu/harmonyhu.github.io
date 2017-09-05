@@ -10,7 +10,7 @@ tags: Swift iOS
 {:toc}
 
 ## 语法
- 
+
 	public class SomePublicClass {}
 	internal class SomeInternalClass {}
 	private class SomePrivateClass {}
@@ -31,6 +31,7 @@ tags: Swift iOS
 	  var somePrivateProperty = 0 // 隐式的 private 类成员
 	  func somePrivateMethod() {} // 隐式的 private 类成员
 	}
+
 
 #### 要点1：只针对模块和源文件  
 模块： Framework或者Application，用import引入，类似C++中lib  

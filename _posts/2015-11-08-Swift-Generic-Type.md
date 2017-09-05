@@ -9,7 +9,6 @@ tags: Swift iOS
 * content
 {:toc}
 
-
 ## 定义`<T>`
 
 通过`<T>`表示通用类型，避免重复代码，可以按照C++泛型来理解。其中可以是T，或任何大写开头的命名。
@@ -31,6 +30,7 @@ tags: Swift iOS
 	var someString = "hello"
 	var anotherString = "world"
 	swapTwoValues(&someString, &anotherString)
+
 
 ## 泛型类型
 

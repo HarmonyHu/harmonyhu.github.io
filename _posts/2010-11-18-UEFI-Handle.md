@@ -17,6 +17,7 @@ tags: BIOS UEFI
 
 UEFI中会有很多抽象概念，像service、protocol、handle等等，如果将这些抽象的概念放到实际的代码中理解的话，会有更清晰地认识，有了清晰的认识之后再把它们作为抽象来理解，就遂心应手的多了。  
 
+
 首先说protocol，其实它就是一个由struct定义的结构体，这个结构体通常是由数据和函数指针组成，或其一。每个结构体的定义都有一个GUID与之对应。自然并不是所有的结构体都称之为protocol，protocol正如其名，它是一种规范，或称协议。比如要建立一个基于UEFI Driver Model的Driver，就必须要绑定一个`EFI_DRIVER_BINGING_PROTOCOL`的实例，并且要自定义且实现Support、Start、Stop函数以及填充实例中其他的数据成员。它就相当于已经规范了种种需求和步骤。  
 
 再说service，它就是UEFI定义的API函数，所有的service都被集中到`EFI_SYSTEM_TABLE`下面，都可以通过gST来调用(gST指向一个`EFI_SYSTEM_TABLE`的全局实例)。  

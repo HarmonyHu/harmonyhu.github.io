@@ -9,7 +9,6 @@ tags: Swift iOS
 * content
 {:toc}
 
-
 ## 定义
 
 定义类、结构体、枚举类型必须实现的属性或方法，语法如下：
@@ -27,6 +26,7 @@ tags: Swift iOS
 	class SomeClass: SomeSuperClass, FirstProtocol{
 	// 类的内容
 	}
+
 
 ## 协议属性
 

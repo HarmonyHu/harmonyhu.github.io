@@ -17,6 +17,7 @@ tags: Swift iOS
 	  return greeting
 	}
 
+
 参数和返回值都可以是元组  
 
 	func minMax(array: [Int]) -> (min: Int, max: Int) {

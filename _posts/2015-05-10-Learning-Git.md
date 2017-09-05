@@ -16,6 +16,7 @@ tags: Git
 `git config --global user.name "Your Name"`  
 (查看配置：`git config --global -l`)  
 
+
 * 创建SSH key  
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
 

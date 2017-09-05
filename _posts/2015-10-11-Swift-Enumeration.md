@@ -9,7 +9,6 @@ tags: Swift iOS
 * content
 {:toc}
 
-
 ## 定义与调用
 
 枚举概念类似C语言，语法不同，而且可以不用定义类型（C语言为int型），举例如下：
@@ -20,6 +19,7 @@ tags: Swift iOS
 	  case East
 	  case West
 	}
+
 
 也可以定义成一行，用,隔开：
 

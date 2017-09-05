@@ -9,7 +9,6 @@ tags: Swift iOS
 * content
 {:toc}
 
-
 ## 定义
 
 基本可以按照C++理解
@@ -30,6 +29,7 @@ tags: Swift iOS
 	let someVideoMode = VideoMode()
 	print("The width of someResolution is \(someResolution.width)")
 	print("The width of someVideoMode is \(someVideoMode.resolution.width)")
+
 
 ## 属性
 

@@ -13,6 +13,7 @@ tags: Git gogs
 [git](https://git-scm.com)    
 [gogs](https://gogs.io)   
 
+
 #### 搭建过程  
 1. 安装MySQL，并创建gogs数据库:`create database gogs;`。  
 2. 安装git，并将git安装路径下的bin和usr/bin路径添加到系统变量Path中。  

@@ -9,7 +9,6 @@ tags: Swift iOS
 * content
 {:toc}
 
-
 ## 定义
 
 向已有类、结构体、枚举类型、协议类型添加新功能，语法如下：
@@ -17,6 +16,7 @@ tags: Swift iOS
 	extension SomeType {
 	  // 加到SomeType的新功能
 	}
+
 
 ## 扩展计算型属性
 

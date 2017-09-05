@@ -17,6 +17,7 @@ wget http://mirrors.163.com/centos/7.3.1611/os/x86_64/Packages/yum-plugin-fastes
 wget http://mirrors.163.com/centos/7.3.1611/os/x86_64/Packages/yum-metadata-parser-1.1.4-10.el7.x86_64.rpm
 ```  
 
+
 2. 删除原有yum安装包
 ```
 rpm -qa|grep yum|xargs rpm -e --nodeps
