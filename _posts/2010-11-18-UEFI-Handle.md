@@ -172,4 +172,4 @@ Driver会为handle添加多个protocol实例，这些实例也是链表的形式
 *   533行到554行，对新创建的`PROTOCOL_INTERFACE`实例Prot进行初始化，对照链表结构库看仔细了，尤其是各种指针的去向（参数Interface挂接到了Prot下面）。初始化后将Prot插入到链表2中。  
 
 这样这个函数就介绍的差不多了，这也只是为了做一个引子，像其他有关handle的函数想必也都在这个文件中，头文件的定义很多都在`hand.h`中，只要有耐心，应该都能看的懂。  
-附件是EDK中的源码[Hand.rar](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/Hand.rar)
+附件是EDK中的源码[Hand.rar](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/other/Hand.rar)
