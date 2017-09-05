@@ -68,6 +68,7 @@ tags: Ruby
 `str.downcase!`  |str被修改
 `str.empty?`     |是否为空
 `str.eql?(other) |是否相等
+`str.encoding`   |编码,比如UTF-8
 
 * 单引号不转义，单引号内的单引号用`\'`表示
 * 如果要支持中文，需要开头添加`# -*- coding: UTF-8 -*-`或者`#coding=utf-8`，且文件编码为utf-8
@@ -234,6 +235,8 @@ myinfo "HarmonyHu",1.74
 file = File.new("test.txt","w")
 #打开文件test.txt
 file = File.new("test.txt")
+#打开文件，用UTF-8编码
+file = File.new("test.txt","r:utf-8")
 #关闭文件
 file.close
 
