@@ -25,10 +25,10 @@ tags: Git
 >Enter same passphrase again:**直接回车**  
 
 * 将SSH key添加到ssh-agent  
-先执行：  
-`eval $(ssh-agent -s)`   
-*如果执行不成功，尝试如下命令：*
+先执行：     
 ```
+eval $(ssh-agent -s)
+或者
 eval `ssh-agent -s`  
 ```  
 然后执行：  

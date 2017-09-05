@@ -67,11 +67,11 @@ tags: Ruby
 `str.downcase`   |返回小写字符串
 `str.downcase!`  |str被修改
 `str.empty?`     |是否为空
-`str.eql?(other) |是否相等
+`str.eql?(other)`|是否相等
 `str.encoding`   |编码,比如UTF-8
 
 * 单引号不转义，单引号内的单引号用`\'`表示
-* 如果要支持中文，需要开头添加`# -*- coding: UTF-8 -*-`或者`#coding=utf-8`，且文件编码为utf-8
+* 如果要支持中文，需要开头添加`# -*- coding: UTF-8 -*-`或者`#encoding: utf-8`，且文件编码为utf-8
 ```
 #!/usr/bin/ruby -w
 # -*- coding: UTF-8 -*-
