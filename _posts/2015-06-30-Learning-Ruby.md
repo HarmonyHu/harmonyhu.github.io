@@ -189,7 +189,11 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 `(...) while ...`  
 `until = while not`  
 `for ... in ... end`  *#可以是区间、数组*  
-break与next用于终止循环和直接下一次循环  
+
+* break: 跳出循环
+* next: 直接进入下一次循环
+* redo: 重新进入本次循环
+* retry: 重新从头开始循环 
 
 #### 3. 迭代器  
 定义函数，部分实现用yield代替，执行时加入{}取代yield部分代码  
