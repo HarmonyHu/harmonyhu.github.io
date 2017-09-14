@@ -31,9 +31,10 @@ SMART的目的是监控硬盘的可靠性、预测磁盘故障和执行各种类
 
 SMART功能不断从硬盘上的各个传感器收集信息，并把信息保存在硬盘的系统保留区(service area)内，这个区域一般位于硬盘0物理面的最前面几十个物理磁道，由厂商写入相关的内部管理程序。这里除了SMART信息表外还包括低级格式化程序、加密解密程序、自监控程序、自动修复程序等。用户使用的监测软件通过名为“SMART Return Status”的命令（命令代码为：B0h）对SMART信息进行读取，且不允许最终用户对信息进行修改。
 
-## 二、smart信息解读
+## 二、SMART信息解读
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/sata.jpg) 
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/sata.jpg)   
+linux下执行命令smartctl -A /dev/sdx查看
 
 * ID
 
