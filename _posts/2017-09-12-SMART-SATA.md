@@ -410,9 +410,3 @@ LBA读取数的累计。某些SMART读取工具会显示负的数据值，是因
 
 * FE（254）自由坠落保护 Free Fall Protection
 现在有些笔记本硬盘具有自由坠落保护功能，当硬盘内置的加速度探测装置检测到硬盘位移时，会立即停止读写操作，将磁头臂复位。这个措施防止了磁头与盘片之间发生摩擦撞击，提高了硬盘的抗震性能。这个参数的数据里记录了这一保护装置动作的次数。
-
-## 附：
-Windows下检测工具  
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/SATA2.jpg) 
-
-[HDTunePro工具下载](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/other/HDTunePro.zip) 
