@@ -383,5 +383,5 @@ exec 'rm -rf tmp.txt'
 file = "tmp.txt"
 system "rm -rf #{file}"
 puts $?
-同方式一
+#同方式一
 ```
