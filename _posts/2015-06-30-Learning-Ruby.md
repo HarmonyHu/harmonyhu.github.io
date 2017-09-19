@@ -362,3 +362,26 @@ puts ENV["Path"]
 #### 入参变量
 `puts ARGV[0]` #第一个参数  
 `puts ARGV[1]` #第二个参数
+
+#### 执行命令
+* 方式一
+```ruby
+file = "tmp.txt"
+`rm -rf #{file}`
+puts $? 
+#结果保存在$?中，此处正常打印pid 10284 exit 0或者错误打印pid 10284 exit 1
+```
+
+* 方式二
+```ruby
+exec 'rm -rf tmp.txt'
+#执行后会退出ruby进程
+```
+
+* 方式三
+```ruby
+file = "tmp.txt"
+system "rm -rf #{file}"
+puts $?
+同方式一
+```
