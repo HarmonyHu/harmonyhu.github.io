@@ -66,6 +66,8 @@ tags: Ruby
 `str.upcase!`    |str被修改
 `str.downcase`   |返回小写字符串
 `str.downcase!`  |str被修改
+`str.strip`      |去掉前尾空格
+`str.strip!`     |str被修改
 `str.empty?`     |是否为空
 `str.eql?(other)`|是否相等
 `str.encoding`   |编码,比如UTF-8
@@ -141,6 +143,7 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 #### 1.定义  
 `reg = /http:\/\//` *#能匹配http://*  
 `reg = %r(http://)` *#同上，不需要转义*  
+`var = "abc"; reg = /#{var}/`    *#支持变量*
 规则参见[正则表达式快速参考](http://harmonyhu.com/2015/06/10/Perl-RegEx-Quick-Reference/)  
 
 #### 2.匹配  
