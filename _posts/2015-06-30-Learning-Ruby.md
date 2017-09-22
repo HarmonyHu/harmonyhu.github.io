@@ -143,7 +143,7 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 #### 1.定义  
 `reg = /http:\/\//` *#能匹配http://*  
 `reg = %r(http://)` *#同上，不需要转义*  
-`var = "abc"; reg = /#{var}/`    *#支持变量*
+`var = "http://"; reg = /#{var}/`    *#支持变量，且不用转义*
 规则参见[正则表达式快速参考](http://harmonyhu.com/2015/06/10/Perl-RegEx-Quick-Reference/)  
 
 #### 2.匹配  
