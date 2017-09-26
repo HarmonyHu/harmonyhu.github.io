@@ -313,14 +313,12 @@ Dir[pat]            #返回文件名数组
 ```ruby
 #!/usr/bin/ruby -w
 # -*- coding: UTF-8 -*-
-puts "你好"
+puts "你好" #你好
 puts "abc".encoding #UTF-8
+puts (/abc/).encoding #US-ASCII
+puts (/abc/u).encoding #UTF-8
+puts "用于中文测试".match(/[\u4e00-\u9fa5]+/) #用于中文测试
 ```
-查看编码
-`puts (/abc/).encoding` #US-ASCII
-`puts (/abc/u).encoding` #UTF-8
-`puts ("abc").encoding` #由当前系统决定
-`puts "用于中文测试".match(/[\u4e00-\u9fa5]+/)` #用于中文测试
 
 #### 环境变量
 * 变量访问方法
