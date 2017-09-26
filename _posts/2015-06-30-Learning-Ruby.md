@@ -134,14 +134,14 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 
 ### 四、正则表达式  
 
-1. 定义  
+#### 1. 定义  
 `reg = /http:\/\//` *#能匹配http://*  
 `reg = %r(http://)` *#同上，不需要转义*  
 `var = "http://"; reg = /#{var}/`    *#支持变量，且不用转义*  
 规则参见[正则表达式快速参考](http://harmonyhu.com/2015/06/10/Perl-RegEx-Quick-Reference/)  
 
-2. 匹配  
-2.1  =~ 如果匹配，返回匹配位置，否则返回nil  
+#### 2. 匹配  
+2.1 =~ 如果匹配，返回匹配位置，否则返回nil  
 如：`">>http://www.baidu.com" =~ reg` *#返回2*  
 如：`">>www.baidu.com" =~ reg` *#返回nil*  
 
@@ -160,7 +160,7 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 2.5 字符串.scan(regex){...} 块操作  
 如：`"I love my home".scan(/\w*o\w*/){print $&.upcase}` *#打印LOVEHOME*  
 
-3. 替换  
+#### 3. 替换  
 3.1 字符串.sub(regex,replace) 替换第一个匹配，\1、\2...表示匹配的子字串    
 如：`"I love my home".sub(/home/,"family")` *#返回I love my family*  
 
