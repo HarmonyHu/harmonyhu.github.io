@@ -73,12 +73,6 @@ tags: Ruby
 `str.encoding`   |编码,比如UTF-8
 
 * 单引号不转义，单引号内的单引号用`\'`表示
-* 如果要支持中文，需要开头添加`# -*- coding: UTF-8 -*-`或者`#encoding: utf-8`，且文件编码为utf-8
-```
-#!/usr/bin/ruby -w
-# -*- coding: UTF-8 -*-
-puts "你好"
-```
 
 #### 3. 数组
 
@@ -140,13 +134,13 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 
 ### 四、正则表达式  
 
-#### 1.定义  
+1. 定义  
 `reg = /http:\/\//` *#能匹配http://*  
 `reg = %r(http://)` *#同上，不需要转义*  
-`var = "http://"; reg = /#{var}/`    *#支持变量，且不用转义*
+`var = "http://"; reg = /#{var}/`    *#支持变量，且不用转义*  
 规则参见[正则表达式快速参考](http://harmonyhu.com/2015/06/10/Perl-RegEx-Quick-Reference/)  
 
-#### 2.匹配  
+2. 匹配  
 2.1  =~ 如果匹配，返回匹配位置，否则返回nil  
 如：`">>http://www.baidu.com" =~ reg` *#返回2*  
 如：`">>www.baidu.com" =~ reg` *#返回nil*  
@@ -166,7 +160,7 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 2.5 字符串.scan(regex){...} 块操作  
 如：`"I love my home".scan(/\w*o\w*/){print $&.upcase}` *#打印LOVEHOME*  
 
-#### 3.替换  
+3. 替换  
 3.1 字符串.sub(regex,replace) 替换第一个匹配，\1、\2...表示匹配的子字串    
 如：`"I love my home".sub(/home/,"family")` *#返回I love my family*  
 
@@ -182,13 +176,13 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 
 ### 五、控制语句  
 
-#### 1. 条件判断语句  
+1. 条件判断语句  
 `if ... elsif ... else ... end`  
 `(...)if...`  
 `case ... when ... when ... else ...end`  
 `unless = if not`  
 
-#### 2. 循环控制语句  
+2. 循环控制语句  
 `while...end`  
 `(...) while ...`  
 `until = while not`  
@@ -199,7 +193,7 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 * redo: 重新进入本次循环
 * retry: 重新从头开始循环 
 
-#### 3. 迭代器  
+3. 迭代器  
 定义函数，部分实现用yield代替，执行时加入{}取代yield部分代码  
 如：`3.upto(9){|i| print i}`  *#3456789*  
 {}也可以改成do...end  
@@ -208,19 +202,19 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 
 ### 六、方法
 
-#### 1. 语法  
+1. 语法  
 ```ruby
 def method_name [( [arg [= default]]...[, * arg [, &expr ]])]
    expr
 end
 ```
 
-#### 2. 返回值  
+2. 返回值  
 
 * 最后一个语句作为返回值
 * return返回1个或多个值
 
-#### 3. 举例
+3. 举例
 
 ```ruby
 def myinfo (name,height=1.7,weight=120)
@@ -234,7 +228,7 @@ myinfo "HarmonyHu",1.74
 
 ### 七、文件操作
 
-#### 1. File操作
+1. File操作
 
 * **实例方法**
 
@@ -303,7 +297,7 @@ File.open("hello.txt","w"){|file|
 #块结束自动关闭file
 ```
 
-#### 2. Dir操作  
+2. Dir操作  
 
 * **类方法**  
 
@@ -314,6 +308,20 @@ Dir[pat]            #返回文件名数组
 如：`Dir["foo.?"]` #["foo.c","foo.h"]  
 
 ### 八、其他
+#### 中文支持
+如果要支持中文，需要开头添加`# -*- coding: UTF-8 -*-`或者`#encoding: utf-8`，且文件编码为utf-8  
+```ruby
+#!/usr/bin/ruby -w
+# -*- coding: UTF-8 -*-
+puts "你好"
+puts "abc".encoding #UTF-8
+```
+查看编码
+`puts (/abc/).encoding` #US-ASCII
+`puts (/abc/u).encoding` #UTF-8
+`puts ("abc").encoding` #由当前系统决定
+`puts "用于中文测试".match(/[\u4e00-\u9fa5]+/)` #用于中文测试
+
 #### 环境变量
 * 变量访问方法
 `puts ENV["Path"]`  
