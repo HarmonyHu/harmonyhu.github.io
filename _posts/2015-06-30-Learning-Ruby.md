@@ -145,7 +145,7 @@ hash.sort{|a,b| b[1][2] <=> a[1][2]}
 如：`">>http://www.baidu.com" =~ reg` *#返回2*  
 如：`">>www.baidu.com" =~ reg` *#返回nil*  
 
-2.2  !~ 如果匹配，返回false，否则返回true  
+2.2 !~ 如果匹配，返回false，否则返回true  
 如：`">>http://www.baidu.com" !~ reg` *#返回false*  
 如：`">>www.baidu.com" =~ reg` *#返回true*  
 
