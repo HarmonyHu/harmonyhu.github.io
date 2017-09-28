@@ -115,7 +115,12 @@ tags: Ruby
 `myhash.delete("weight")`         |去掉\"weight\"=>120
 `myhash.keys`                     |[\"name\",\"age\",:height]
 `myhash.key?("age")`              |yes
+`myhash.has_value?("hu")`         |是否存在给定的值
+`myhash.empty?`                   |是否空
 `myhash.inspect`                  |散列的字符串形式
+`myhash.each{|key,value| block}`  |传递key和value
+`myhash.each_key{|key| block}`    |传递key
+`myhash.each_value{|value| block}`|传递value
 
 ```ruby
 #迭代器,打印散列  
