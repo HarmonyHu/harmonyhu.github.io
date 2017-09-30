@@ -52,21 +52,19 @@ tags: Ruby
 
 ### 方法
 
-1. 语法  
+* 语法  
 ```ruby
 def method_name [( [arg [= default]]...[, * arg [, &expr ]])]
    expr
 end
 ```
 
-2. 返回值  
-
+* 返回值  
 最后一个语句作为返回值；  
 return返回1个或多个值;   
 块内不能使用return  
 
-3. 举例
-
+* 举例
 ```ruby
 def myinfo (name,height=1.7,weight=120)
 	print "My name is #{name},height:#{height},weight:#{weight}"
@@ -82,7 +80,6 @@ myinfo "HarmonyHu",1.74
 #### File操作
 
 * **实例方法**
-
 ```ruby
 #新建文件test.txt，r/r+/w/w+/a/a+
 file = File.new("test.txt","w")
@@ -131,7 +128,6 @@ file.each{|line|
 ```
 	
 * **类方法**  
-
 ```ruby
 File.delete(filename)  #删除文件  
 File.dirname(filename) #返回文件所在目录，字串  
@@ -151,7 +147,6 @@ File.open("hello.txt","w"){|file|
 #### Dir操作  
 
 * **类方法**  
-
 ```ruby
 Dir.mkdir("MyDir")  #创建目录MyDir  
 Dir.rmdir("MyDir")  #删除目录MyDir
@@ -169,20 +164,15 @@ Dir.foreach(foldername) { |filename|
 ### 其他
 
 #### 环境变量
-* 变量访问方法
-`puts ENV["Path"]`  
-
 ```ruby
+#访问某个环境变量
 puts ENV["Path"]
-#C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;D:\Program Files\TortoiseSVN\bin;d:\Program Files (x86)\010 Editor;D:\Program Files\TortoiseGit\bin;d:\Ruby24-x64\bin;C:\Users\HarmonyHu\AppData\Local\Microsoft\WindowsApps
-```
+#C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;D:\Program Files\TortoiseSVN\bin;d:\Program Files 
 
-* 查看所有的环境变量
+#查看所有的环境变量
 `puts ENV.inspect`
 
-* Windows下常用的系统变量
-
-```
+#Windows下常用的系统变量
 %ALLUSERSPROFILE% 局部 返回所有“用户配置文件”的位置。
 %APPDATA% 局部 返回默认情况下应用程序存储数据的位置。
 %CD% 局部 返回当前目录字符串。

@@ -116,7 +116,7 @@ puts "用于中文测试".match(/[\u4e00-\u9fa5]+/) #用于中文测试
 `myhash.each_key{|key| block}`    |传递key
 `myhash.each_value{|value| block}`|传递value
 `myhash.sort`                     |按key值从小到大排序，返回副本，不会修改自身
-`myhash.sort{|k1,k2| k1 <=> k2}   |按key值从小到大排序，返回副本，不会修改自身
+`myhash.sort{|k1,k2| k1 <=> k2}`  |按key值从小到大排序，返回副本，不会修改自身
 
 
 ## 正则表达式  
