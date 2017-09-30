@@ -68,6 +68,8 @@ tags: Ruby
 `str.downcase!`  |str被修改
 `str.strip`      |去掉前尾空格
 `str.strip!`     |str被修改
+`str.chomp`      |str移除尾部换行
+`str.chomp!`     |str被修改
 `str.empty?`     |是否为空
 `str.eql?(other)`|是否相等
 `str.encoding`   |编码,比如UTF-8
@@ -286,6 +288,7 @@ file.each{|line|
 	
 * **类方法**  
 
+```ruby
 File.delete(filename)  #删除文件  
 File.dirname(filename) #返回文件所在目录，字串  
 File.extname(filename) #返回文件的扩展名，字串  
@@ -295,7 +298,6 @@ File.exist?(filename)  #判断文件是否存在，布尔
 File.rename(oldname,newname) #文件重命名  
 File.open(filename,atr){} #新建/打开文件，支持块操作  
 
-```ruby
 File.open("hello.txt","w"){|file|
 	file.puts "hello,world"
 }
@@ -306,11 +308,19 @@ File.open("hello.txt","w"){|file|
 
 * **类方法**  
 
-Dir.mkdir("MyDir")  #创建目录  
-Dir.rmdir("MyDir")  #删除目录  
+```ruby
+Dir.mkdir("MyDir")  #创建目录MyDir  
+Dir.rmdir("MyDir")  #删除目录MyDir
+
 Dir[pat]            #返回文件名数组  
-如：`Dir["foo.*"]` #["foo.c","foo.rb","foo.h"]  
-如：`Dir["foo.?"]` #["foo.c","foo.h"]  
+Dir["foo.*"] #["foo.c","foo.rb","foo.h"]  
+Dir["foo.?"] #["foo.c","foo.h"]
+
+Dir.foreach(foldername) { |filename|
+#遍历目录fordername下的所有文件及文件夹（不包括子目录），包括.和..
+	puts foldername+filename
+}
+```
 
 ### 八、其他
 #### 中文支持
