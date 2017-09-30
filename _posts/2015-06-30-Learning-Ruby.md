@@ -127,7 +127,7 @@ file.each{|line|
 }
 ```
 	
-* **类方法**  
+* 类方法  
 ```ruby
 File.delete(filename)  #删除文件  
 File.dirname(filename) #返回文件所在目录，字串  
@@ -146,7 +146,7 @@ File.open("hello.txt","w"){|file|
 
 #### Dir操作  
 
-* **类方法**  
+* 类方法  
 ```ruby
 Dir.mkdir("MyDir")  #创建目录MyDir  
 Dir.rmdir("MyDir")  #删除目录MyDir
