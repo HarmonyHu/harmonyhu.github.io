@@ -89,18 +89,15 @@ file = File.new("test.txt")
 file = File.new("test.txt","r:utf-8")
 #关闭文件
 file.close
-
 #写入数据puts
 file.puts("hello,world")
 #写入数据syswrite
 file.syswrite("new line,hello,world2")
-
 #读取文件一行内容
 puts file.gets
 puts file.readline
 #读取文件若干字符
 puts file.sysread(10)
-
 #调整当前位置，回到文件头
 file.rewind
 #调整当前位置，指定位置
@@ -112,11 +109,9 @@ puts file.tell
 puts file.pos
 #获取当前文件大小
 puts file.size
-
 #stat成员访问
 puts file.stat.size
 puts file.stat.ctime
-
 #迭代器操作，字节操作
 file.each_byte{|ch|
 	putc ch
@@ -137,7 +132,6 @@ File.size(file.name)   #返回文件大小，数值
 File.exist?(filename)  #判断文件是否存在，布尔  
 File.rename(oldname,newname) #文件重命名  
 File.open(filename,atr){} #新建/打开文件，支持块操作  
-
 File.open("hello.txt","w"){|file|
 	file.puts "hello,world"
 }
@@ -150,11 +144,9 @@ File.open("hello.txt","w"){|file|
 ```ruby
 Dir.mkdir("MyDir")  #创建目录MyDir  
 Dir.rmdir("MyDir")  #删除目录MyDir
-
 Dir[pat]            #返回文件名数组  
 Dir["foo.*"] #["foo.c","foo.rb","foo.h"]  
 Dir["foo.?"] #["foo.c","foo.h"]
-
 Dir.foreach(foldername) { |filename|
 #遍历目录fordername下的所有文件及文件夹（不包括子目录），包括.和..
 	puts foldername+filename
@@ -168,10 +160,12 @@ Dir.foreach(foldername) { |filename|
 #访问某个环境变量
 puts ENV["Path"]
 #C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;D:\Program Files\TortoiseSVN\bin;d:\Program Files 
-
+```
+```ruby
 #查看所有的环境变量
 `puts ENV.inspect`
-
+```
+```
 #Windows下常用的系统变量
 %ALLUSERSPROFILE% 局部 返回所有“用户配置文件”的位置。
 %APPDATA% 局部 返回默认情况下应用程序存储数据的位置。
