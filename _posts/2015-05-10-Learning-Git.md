@@ -160,7 +160,8 @@ git config --global difftool.bc4.cmd '"D:/Tools/Beyond Compare 4/BComp.exe" "$LO
 `git am new.patch`：本地仓库和目录都合入补丁  
 
 #### 其他命令
-`git clean -df`：删除所有不被跟踪的文件 
+`git clean -df`：删除所有不被跟踪的文件  
+`git mv -f oldname newname`: 重命名文件或文件夹  
 
 ## 如何管理多个git账号  
 该方法适用于同一个git服务器的不同账号，也适用于不同git服务器的不同账号  
