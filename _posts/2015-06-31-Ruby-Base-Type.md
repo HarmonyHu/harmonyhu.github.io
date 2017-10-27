@@ -87,6 +87,7 @@ puts "用于中文测试".match(/[\u4e00-\u9fa5]+/) #用于中文测试
 `array.delete_at(2)`       |删除第2个元素(0开始)
 `array.empty?`             |如果为空,返回true
 `array.include?("ab")`     |如果包含"ab",返回true
+`array.grep /regex/`       |匹配正则，返回数组
 `array.each{ |item| block}`|遍历元素内容
 `array.each_index{ |index| block }` |按Index遍历
 
