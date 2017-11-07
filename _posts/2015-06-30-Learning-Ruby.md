@@ -39,10 +39,17 @@ tags: Ruby
 `redo`: 重新进入本次循环
 `retry`: 重新从头开始循环 
 
-3. 迭代器  
-定义函数，部分实现用yield代替，执行时加入{}取代yield部分代码  
-如：`3.upto(9){|i| print i}`  *#3456789*  
-{}也可以改成do...end  
+3. 块  
+定义函数，部分实现用yield代替，执行时加入{}取代yield部分代码;  
+通过块可以把函数内部的变量传递出来  
+用local_variables可以查看局部变量 
+```ruby
+def test_method(a)
+  a + yield(a,b)
+end
+#调用方法
+a_method(5,2) {|x,y| (x*y)} #15
+``` 
 
 ### 方法
 
@@ -217,4 +224,13 @@ file = "tmp.txt"
 system "rm -rf #{file}"
 puts $?
 #同方式一
+```
+
+#### 全局变量
+```ruby
+def func
+$x = 2
+end
+func
+puts $x #这里可以被调用，只要用$就是全局变量
 ```
