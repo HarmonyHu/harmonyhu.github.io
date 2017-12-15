@@ -94,14 +94,18 @@ git config --global difftool.bc4.cmd '"D:/Tools/Beyond Compare 4/BComp.exe" "$LO
 
 `git init`：将当前目录创建成本地仓库  
 `git add`：标记文件，且该文件被管理  
-├──`git add <filename>`  标记指定文件  
-├──`git add .` 标记当前目前所有文件，包括子目录文件  
+├──`git add <filename>`：  标记指定文件  
+├──`git add .`： 标记当前目前所有文件，包括子目录文件  
 └──`git add *`=`git add .`=`git add -A`  
 `git status`：查看工作目录状态  
 `git rm --cached <filename>`：取消跟踪的文件  
 `git commit -m "注释"`：将标记文件的修改提交到本地仓库  
 ├──`git commit -a -m "注释"`：将所有跟踪的文件的修改提交到本地仓库  
 └──`git commit --amend`：修改上一次提交  
+`git stash`：将本地修改临时压栈存放  
+├──`git stash list`：临时存放区的列表  
+├──`git stash pop`：临时存放区的修改恢复到本地  
+└──`git stash clear`：临时存放区清空  
 
 #### 远程仓库操作  
 
@@ -187,8 +191,17 @@ Host name2
 ## 其他  
 * 忽略文件  
 将其添加到.gitignore或者.git/info/exclude中     
+
 * 合并最近几次提交  
 `git rebase -i <SHA>`，然后将第2个及之后的pick改成s，达到的效果是：将SHA之后（不包括SHA本身)的所有修改合并到SHA之后的一次修改  
+
+* 修改中间的某次提交  
+`git rebase -i <SHA>`；  
+然后在想要修改的提交pick改成e，保存；  
+本地进行修改，修改后`git add .`；  
+`git commit --amend`；  
+`git rebase --continue`  
+
 * 强制pull  
 `git fetch origin`  
 `git reset --hard origin/mybranch`  
