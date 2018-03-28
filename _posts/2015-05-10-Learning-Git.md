@@ -120,7 +120,7 @@ git config --global difftool.bc4.cmd '"D:/Tools/Beyond Compare 4/BComp.exe" "$LO
 ├──`git push origin master`：将master分支更新到origin仓库的master分支  
 ├──`git push origin master:mymaster`：将本地master分支更新到origin的mymaster分支  
 ├──`git push --force`：将分支强制更新到远程库  
-└──`git push origin --delete branch1`:删除远程分支  
+└──`git push origin --delete branch1`:删除远程仓库的分支  
 `git pull`：将远程仓库更新到本地仓库  
 ├──`git pull origin`：将origin库所有分支更新到本地  
 ├──`git pull origin branch1`：将origin库的branch1分支更新到本地  
@@ -135,7 +135,7 @@ git config --global difftool.bc4.cmd '"D:/Tools/Beyond Compare 4/BComp.exe" "$LO
 ├──`git branch branch1 origin/branch`：本地创建branch1分支，基于origin/branch分支  
 ├──`git branch mybranch <SHA>`：基于某个历史版本建立mybranch分支  
 ├──`git branch -D branch1`:删除本地branch1分支  
-├──`git branch -r -d origin/branch`：删除远程分支  
+├──`git branch -r -d origin/branch`：删除本地仓库的远程分支  
 ├──`git branch -m branch1 branch2`：将branch1重命名为branch2  
 └──`git branch branch1 -u origin/branch`：将本地分支对应到远程分支  
 `git checkout local`：切换到local分支  
