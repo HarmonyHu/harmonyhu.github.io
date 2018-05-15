@@ -155,17 +155,17 @@ git config --global difftool.bc4.cmd '"D:/Tools/Beyond Compare 4/BComp.exe" "$LO
 
 #### 对比和补丁操作  
 `git diff`：查看修改但没有staged的文件  
-├──`git diff --staged`：查看修改且staged的文件  
-├──`git difftool`：可以在.gitconfig文件中配置BeyondCompare工具对比差异  
-└──`git difftool --staged`:同理  
-`git format-patch -n`：将前n次的提交分别生成n个patch  
+├──`git diff --staged`: 查看修改且staged的文件  
+├──`git difftool`: 可以在.gitconfig文件中配置BeyondCompare工具对比差异  
+└──`git difftool --staged`: 同理  
+`git format-patch -n`: 将前n次的提交分别生成n个patch  
 `git format-patch <sha_old>`: 将<sha_old>到最新修改生成n个patch，不含old  
 `git format-patch <sha_old>..<sha_new>`: 将两者之间的提交分别生成n个patch，不含old，包含new  
-`git apply new.patch`：本地目录合入补丁  
-`git am new.patch`：本地仓库和目录都合入补丁  
+`git apply new.patch`: 本地目录合入补丁  
+`git am new.patch`: 本地仓库和目录都合入补丁  
 
 #### 其他命令
-`git clean -df`：删除所有不被跟踪的文件  
+`git clean -df`: 删除所有不被跟踪的文件  
 `git mv -f oldname newname`: 重命名文件或文件夹  
 
 ## 如何管理多个git账号  
