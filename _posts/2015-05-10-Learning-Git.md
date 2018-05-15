@@ -159,6 +159,7 @@ git config --global difftool.bc4.cmd '"D:/Tools/Beyond Compare 4/BComp.exe" "$LO
 ├──`git difftool`：可以在.gitconfig文件中配置BeyondCompare工具对比差异  
 └──`git difftool --staged`:同理  
 `git format-patch -n`：将前n次的提交分别生成n个patch  
+`git format-patch <sha_old>`: 将<sha_old>到最新修改生成n个patch，不含old  
 `git format-patch <sha_old>..<sha_new>`: 将两者之间的提交分别生成n个patch，不含old，包含new  
 `git apply new.patch`：本地目录合入补丁  
 `git am new.patch`：本地仓库和目录都合入补丁  
