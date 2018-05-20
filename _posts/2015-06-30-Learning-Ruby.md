@@ -2,8 +2,8 @@
 layout: post
 title:  Ruby学习整理
 date:   2015-06-30
-categories: Ruby
-tags: Ruby
+categories: 编程
+tags: 编程 Ruby
 ---
 
 * content
@@ -49,7 +49,7 @@ def test_method(a)
 end
 #调用方法
 a_method(5,2) {|x,y| (x*y)} #15
-``` 
+```
 
 ### 方法
 
@@ -120,7 +120,7 @@ file.each{|line|
 	puts line
 }
 ```
-	
+
 * 类方法  
 ```ruby
 File.delete(filename)  #删除文件  
