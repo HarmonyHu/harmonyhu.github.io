@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Ruby基本数据类型
-categories: Ruby
-tags: Ruby
+categories: 编程
+tags: 编程 Ruby
 ---
 
 * content

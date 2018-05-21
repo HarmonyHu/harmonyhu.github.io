@@ -2,8 +2,8 @@
 layout: post
 title:  正则表达式快速参考
 date:   2015-06-10
-categories: 正则表达式
-tags: 正则表达式
+categories: 编程
+tags: 编程 正则
 ---
 
 这是我见过最好的正则表达式总结，参考起来很方便。感谢原作者Stephen B.Jenkins。  
