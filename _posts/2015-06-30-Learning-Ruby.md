@@ -30,7 +30,7 @@ tags: 编程 Ruby
 `unless = if not`  
 
 2. 循环控制语句  
-`while...end`  
+`while(...) do ... end`  
 `(...) while ...`  
 `until = while not`  
 `for ... in ... end`  *#可以是区间、数组*  
@@ -164,12 +164,12 @@ puts ENV["Path"]
 #查看所有的环境变量
 `puts ENV.inspect`
 ```
-```
+```powershell
 #Windows下常用的系统变量
 %ALLUSERSPROFILE% 局部 返回所有“用户配置文件”的位置。
 %APPDATA% 局部 返回默认情况下应用程序存储数据的位置。
 %CD% 局部 返回当前目录字符串。
-%CMDCMDLINE% 局部 返回用来启动当前的 Cmd.exe 的准确命令行。
+%CMDCMDLINE% 局部 返回用来启动当前的Cmd.exe的准确命令行。
 %CMDEXTVERSION% 系统 返回当前的“命令处理程序扩展”的版本号。
 %COMPUTERNAME% 系统 返回计算机的名称。
 %COMSPEC% 系统 返回命令行解释器可执行程序的准确路径。
