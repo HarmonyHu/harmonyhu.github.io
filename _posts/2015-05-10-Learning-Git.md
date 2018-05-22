@@ -174,12 +174,6 @@ tags: Git
 
 `git cherry-pick <SHA>`：合入其他分支的某次修改  
 
-`git log`：查看历史记录  
-├──`git log -p -2`：-p代表查看修改内容，-2代表最近两条  
-└──`git log --stat`：查看日志，且报告修改的简要信息  
-
-`git show <SHA>`：查看某次修改的详细信息  
-
 #### 对比和补丁操作  
 `git diff`：查看修改但没有staged的文件  
 ├──`git diff --staged`: 查看修改且staged的文件  
@@ -200,6 +194,18 @@ tags: Git
 `git clean -df`: 删除所有不被跟踪的文件
 
 `git mv -f oldname newname`: 重命名文件或文件夹 
+
+#### 日志查看
+
+`git log`：查看历史简要日志  
+├──`git log --stat`：查看历史日志，包含被修改文件名  
+├──`git log -p <SHA>`：查看某次历史日志，包含查看修改文件的内容  
+├──`git log -p -2`：-p代表查看修改文件的内容，-2代表最近两条  
+└──`git log --pretty=oneline <filename>`: 查看某文件的所有历史日志
+
+`git show`：查看最近一次日志，包含修改的文件内容  
+├──`git show <SHA>`：查看某次修改的详细信息，包含文件的内容  
+└──`git show <SHA> <filename>`: 查看某次修改某文件的改动
 
 
 
