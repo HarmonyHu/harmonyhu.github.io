@@ -10,11 +10,11 @@ tags: 数学 导数
 ## 导数定义
 
 $$
-f'(x) = \lim_{h->0}\frac{f(x)-f(x-h)}{h} = \lim_{x->x_0}\frac{f(x)-f(x_0)}{x-x_0} 
+f'(x) = \lim_{\Delta{x}->0}\frac{f(x+\Delta{x})- f(x)}{\Delta{x}} = \lim_{x->x_0}\frac{f(x)-f(x_0)}{x-x_0}
 $$
 
 $$
-f'(x)也常表示为：\frac{\alpha y}{\alpha x} 或者 \frac{\Delta y}{\Delta x} 或者 \frac{d y}{d x} 
+f'(x)也常表示为：\frac{\alpha y}{\alpha x} 或者 \frac{\Delta y}{\Delta x} 或者 \frac{d y}{d x}
 $$
 
 意义：
@@ -23,7 +23,7 @@ $$
 
 2. 可以反映y在x的某点上的变化率
 
-3. 可以表示运动曲线s=f(t)在t的某点上的速率
+3. 可以表示运动曲线`s=f(t)`在t的某点上的速率
 
     
 
@@ -79,7 +79,7 @@ $$
 $$
 
 $$
-(\log _a x)' = \frac{1}{x \ln a} => (\ln x)' = \frac{1}{x}
+(\log{_a}x)' = \frac{1}{x \ln a} => (\ln{x})' = \frac{1}{x}
 $$
 
 $$
