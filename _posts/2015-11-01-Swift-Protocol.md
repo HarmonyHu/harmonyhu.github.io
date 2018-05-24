@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之协议protocol
 date: 2015-11-01 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: Swift 编程
 ---
 
 * content
@@ -21,7 +21,7 @@ tags: Swift iOS
 	struct SomeStructure: FirstProtocol, AnotherProtocol {
 	  // 结构体内容
 	}
-
+	
 	//类可以继承父类且遵从多种协议
 	class SomeClass: SomeSuperClass, FirstProtocol{
 	// 类的内容
@@ -47,7 +47,7 @@ tags: Swift iOS
 	protocol FullyNamed {
 	  var fullName: String { get }
 	}
-
+	
 	struct Person: FullyNamed{
 	  var fullName: String
 	}
@@ -146,7 +146,7 @@ class关键字，表明遵从者必须是类，不能是结构体或枚举：
 
 	protocol SomeClassOnlyProtocol: class, SomeInheritedProtocol {
 	}
-	
+
 ## 协议可选成员optional
 
 表明遵从者可以不用实现该成员，调用时需要使用可选链调用。语法如下例子：

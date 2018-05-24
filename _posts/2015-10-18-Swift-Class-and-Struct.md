@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之类与结构体
 date: 2015-10-18 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: Swift 编程
 ---
 
 * content
@@ -154,7 +154,7 @@ tags: Swift iOS
 	    get {// 返回与入参匹配的Int类型的值}
 	    set {// 执行赋值操作}
 	}
-
+	
 	//只读索引如下
 	subscript(index: Int) -> Int {
 	    // 返回与⼊参匹配的Int类型的值
@@ -274,7 +274,7 @@ subscript
 	if let johnsStreet = john.residence?.address?.street {
 	  print("John's street name is \(johnsStreet).")
 	} 
-
+	
 	if let buildingIdentifier = john.residence?.address?.buildingIdentifier() {
 	  print("John's building identifier is \(buildingIdentifier).")
 	}

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 导数基本法则
-categories: 数学
-tags: 数学 导数
+categories: 深度学习
+tags: 深度学习 导数
 ---
 
 * content

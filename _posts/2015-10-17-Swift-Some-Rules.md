@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之细小规则整理(未完)
 date: 2015-10-17 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: Swift 编程
 ---
 
 * content

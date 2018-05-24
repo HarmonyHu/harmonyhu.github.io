@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之访问控制
 date: 2015-11-15 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: Swift 编程
 ---
 
 * content
@@ -17,7 +17,7 @@ tags: Swift iOS
 	public var somePublicVariable = 0
 	internal let someInternalConstant = 0
 	private func somePrivateFunction() {}
-
+	
 	public class SomePublicClass { // 显式的 public 类
 	  public var somePublicProperty = 0 // 显式的 public 类成员
 	  var someInternalProperty = 0 // 隐式的 internal 类成员
@@ -62,7 +62,7 @@ private: 只能被所在源文件调用，级别最低
 	    }
 	  }
 	}
-
+	
 	//另一个源文件调用
 	var stringToEdit = TrackedString()
 	stringToEdit.value = "This string will be tracked."

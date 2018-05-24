@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之类的构造和析构
 date: 2015-10-25 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: Swift 编程
 ---
 
 * content
@@ -26,10 +26,10 @@ init可以有多个参数，或无参数；
 
 	struct Fahrenheit {
 	    var temperature: Double
-        init() {
-            temperature = 32.0
-        }
-    }
+	    init() {
+	        temperature = 32.0
+	    }
+	}
 	var f = Fahrenheit()
 
 ----------
@@ -73,7 +73,7 @@ init可以有多个参数，或无参数；
 1.子类默认不继承父类构造器，如果子类要实现与父类相同的构造器，则需要override重载构造器  
 2.如果子类没有定义任何指定构造器，则它将继承所有父类指定构造器  
 3.如果子类实现了所有父类的指定构造器（包括继承的指定构造器），则父类便利构造器将自动继承到子类  
-  
+
 
 	//*************基类Food**************
 	//如下init调用init(name:),需要声明convenience
@@ -86,12 +86,12 @@ init可以有多个参数，或无参数；
 	        self.init(name: "[Unnamed]")
 	    }
 	}
-
+	
 	let namedMeat = Food(name: "Bacon")
 	// namedMeat 的名字是 "Bacon"
 	let mysteryMeat = Food()
 	// mysteryMeat 的名字是 [Unnamed]
-
+	
 	//**********子类RecipeIngredient*************
 	//子类可以调用父类的指定构造器,但不能调用父类便利构造器
 	//注意：由于RecipeIngredient实现了父类指定构造器init(name: String,所以父类便利构造器init()被自动继承  
@@ -108,7 +108,7 @@ init可以有多个参数，或无参数；
 	let oneMysteryItem = RecipeIngredient()
 	let oneBacon = RecipeIngredient(name: "Bacon")
 	let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)
-
+	
 	//***********ShoppingListItem*************
 	//注意：该类没有任何指定构造器，所以继承所有父类构造器  
 	class ShoppingListItem: RecipeIngredient {
@@ -120,7 +120,6 @@ init可以有多个参数，或无参数；
 	    }
 	}
 
-
 ----------
 
 #### 必要构造器required
@@ -129,7 +128,7 @@ init可以有多个参数，或无参数；
 	class SomeClass {
 	    required init() {...}
 	}
-
+	
 	class SomeSubclass: SomeClass {
 	    required init() {...}
 	}
@@ -182,7 +181,7 @@ init可以有多个参数，或无参数；
 	        self.species = species
 	    }
 	}
-
+	
 	enum TemperatureUnit {
 	    case Kelvin, Celsius, Fahrenheit
 	    init?(symbol: Character) {
@@ -258,7 +257,7 @@ init可以有多个参数，或无参数；
 	reference1 = Person(name: "John Appleseed")
 	reference2 = reference1  //被引用2次
 	reference3 = reference1  //被引用3次
-
+	
 	reference1 = nil  //引用还剩2次
 	reference2 = nil  //引用还剩1次
 	reference3 = nil  //此时deinit才会触发
@@ -277,14 +276,14 @@ init可以有多个参数，或无参数；
 	  var a: A?
 	  deinit {}
 	}
-
+	
 	var a: A? = A()
 	var b: B? = B()
 	
 	//如下便构成循环强引用
 	a!.b = b
 	b!.a = a
-
+	
 	//如下实现析构便无法触发
 	//a无法deinit，因为b!.a引用了a
 	a = nil  
@@ -304,14 +303,14 @@ init可以有多个参数，或无参数；
 	  weak var a: A?
 	  deinit {}
 	}
-
+	
 	var a: A? = A()
 	var b: B? = B()
 	
 	//如下便构成循环强引用
 	a!.b = b
 	b!.a = a
-
+	
 	a = nil  //a实例被销毁，疑问：此时b!.a=nil?
 	b = nil  //b实例被销毁
 
@@ -331,7 +330,7 @@ init可以有多个参数，或无参数；
 	}
 	var a:A? = A()
 	a.b = B(a)
-
+	
 	a=nil //此时A实例被销毁、B实例也被销毁
 
 **个人疑问**：假如a=nil之前`var b:B? = a.b!`,那么a=nil时B实现会被销毁吗？个人猜测不会，但是此时b.a的引用已经销毁了，就存在矛盾了。该如何理解？

@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之基础类型
 date: 2015-09-20 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: Swift 编程
 ---
 
 * content
@@ -12,7 +12,7 @@ tags: Swift iOS
 ### 整型-Int  
 Int与UInt，其中Int是默认且推荐类型，具体长度根据编译器决定  
 Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64  
-   
+
 	17 //类型为Int  
 	UInt(17) //类型为UInt  
 	0b10001 //二进制，类型为Int  
@@ -21,11 +21,10 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 	Int8.max //Int8类型属性max，最大值127
 	Int8.min //Int8类型属性min，最小值-128
 
-
 ----------
 
 ### 浮点数-Double  
- 
+
 	125.0  //类型为Double  
 	Float(125.0)  //类型为Float  
 	1.25e2 //1.25x(10^2)，Double  
@@ -47,7 +46,7 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 	//疑问2，是否可写成let aChar = Character("a")
 
 ----------
-    
+
 ### 字符串-String  
 
 **注意：**字符串是值类型，由于uniCode码,没有确切索引位置，需要具体属性方法来索引
@@ -75,9 +74,9 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 	let mul = 3
 	let message = "\(mul) times 2.5 is \(Double(mul)*2.5)"
 	//"3 times 2.5 is 7.5"
-
-	for char in welcome.characters{...} //遍历各个字符
 	
+	for char in welcome.characters{...} //遍历各个字符
+
 ----------
 
 ### 元组  
@@ -121,7 +120,7 @@ Array<T>，可以简写用[T]，T为具体类型，可理解成数组
 	shopList[0] = "Six eggs"  //修改
 	shopList.insert("Apple",atIndex:0) //在指定位置插入元素
 	shopList.removeAtIndex(0) //移除指定位置元素
-
+	
 	for item in shopList{...} //数组元素遍历
 	for (index,value) in shopList.enumerate(){...} //含索引遍历
 
@@ -141,12 +140,11 @@ Set<T>，没有等价简写，无序不重复集合
 	letters.remove("b") //删除"b"，还有"a","c"
 	letters.contains("b") //判断是否存在某元素，false
 	letters.sort()  //按顺序排列
-
+	
 	for char in letters{...} //遍历
 
 Set基本操作  
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/SetOperate.jpg)  
-
 
 ----------
 
@@ -169,6 +167,6 @@ Dictionary<key,Value>，可以理解成散列
 	for (airportCode, airportName) in airports {//遍历
 	  print("\(airportCode): \(airportName)")
 	}
-
+	
 	airports.keys //keys数组  
 	airports.varlues //值数组  

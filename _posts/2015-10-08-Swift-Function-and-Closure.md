@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之函数与闭包
 date: 2015-10-08 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: Swift 编程
 ---
 
 * content
@@ -51,7 +51,7 @@ tags: Swift iOS
 	  return "Hello \(person) and \(anotherPerson)!"
 	}
 	print(sayHello(to: "Bill", and: "Ted"))
-	
+
 3.用下划线忽略外部参数名  
 
 	func someFunction(firstParameterName: Int, _ secondParameterName: Int) {
@@ -114,7 +114,7 @@ tags: Swift iOS
 	func printHelloWorld() {
 	  print("hello, world")
 	}
-
+	
 	//函数类型为(Int,Int)->Int
 	func addTwoInts(a: Int, _ b: Int) -> Int {
 	  return a + b
@@ -168,7 +168,7 @@ tags: Swift iOS
 	incrementByTen() // 返回的值为10
 	incrementByTen() // 返回的值为20
 	incrementByTen() // 返回的值为30
-
+	
 	let incrementBySeven = makeIncrementor(forIncrement: 7)
 	incrementBySeven() // 返回的值为7
 	incrementByTen() // 返回的值为40

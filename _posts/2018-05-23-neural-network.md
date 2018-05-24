@@ -22,43 +22,50 @@ tags: 深度学习 反向推导
 
 首先正常传播，计算出总误差；反向传播就是为了计算总误差与待更新值得导数（权值）。而导数其实是反映权值对总误差的影响（变化率）。
 
-总误差公式：  
+###### 1. 总误差公式
+
 $$
-E_{total} = \frac{1}{2} [(0.01-out_{o1})^2 +(0.99 - out_{o2})^2] (0.01和0.99是预期值)
+E_{total} = \frac{1}{2} [(0.01-out_{o1})^2 +(0.99 - out_{o2})^2] _{(0.01和0.99是预期值)}
 $$
 
+###### 2. 总误差对w5求导
 
-总误差对w5求导：  
 $$
 \frac{\Delta E_{total}}{\Delta w5}  = \frac{\Delta E_{total}}{\Delta out_{o1}}  \times \frac{\Delta out_{o1}}{\Delta net_{o1}} \times \frac{\Delta net_{o1}}{\Delta w5}
 $$
 
+* 总误差对out_o1求导：
 
-总误差对out_o1求导：  
 $$
 \frac{\Delta E_{total}}{\Delta out_{o1}} = 2*\frac{1}{2} *(0.01 - out_{o1}) *(-1) = out_{o1} - 0.01
 $$
 
+* out_o1对net_o1求导：
 
-out_o1对net_o1求导：  
 $$
 \frac{\Delta out_{o1}}{\Delta net_{o1}} = out_{o1} \times (1 - out_{o1})
 $$
 
+* net_o1对w5求导：
 
-net_o1对w5求导：  
 $$
 \frac{\Delta net_{o1}}{\Delta w5} = out_{h1}
 $$
 
-
-于是可以算出总误差对w5的导数值R，假如学习率为0.5，则w5更新后为   
+根据以上过程得出
 $$
-w5_{new} = w5 - 0.5 \times R
+\frac{\Delta E_{total}}{\Delta w5}
+$$
+
+
+###### 3. 更新权值w5
+
+$$
+w5_{new} = w5 - 0.5 \times \frac{\Delta E_{total}}{\Delta w5} _{(假如学习率为0.5 )}
 $$
 以此类推，更新所有权值，之后重复。
 
-注意总误差对out_h1求导：  
+**注意：**总误差对out_h1求导为  
 $$
 \frac{\Delta E_{total}}{\Delta out_{h1}}  = \frac{\Delta E_{total}}{\Delta net_{o1}}  \times \frac{\Delta net_{o1}}{\Delta out_{h1}} + \frac{\Delta E_{total}}{\Delta net_{o2}}  \times \frac{\Delta net_{o2}}{\Delta out_{h1}}
 $$

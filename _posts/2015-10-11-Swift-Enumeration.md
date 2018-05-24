@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之枚举
 date: 2015-10-11 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: Swift 编程
 ---
 
 * content
@@ -32,7 +32,7 @@ tags: Swift iOS
 	var directionToHead = CompassPoint.West
 	//后面赋值时CompassPoint可以省略
 	directionToHead = .East
-
+	
 	//可以放在switch中进行匹配
 	switch directionToHead {
 	case .East:
@@ -52,7 +52,7 @@ tags: Swift iOS
 	  case LineFeed = "\n"
 	  case CarriageReturn = "\r"
 	}
-
+	
 	let tabChar = ASCIIControlCharacter.Tab.rawValue
 	//此时tabChar="\t"
 
@@ -85,8 +85,8 @@ String默认原始值为对应成员的名称：
 	} else {
 	  print("There isn't a correct direction")
 	}
-    // 输出 "Not Direction East"
-	
+	// 输出 "Not Direction East"
+
 ## 相关值(Associated Values)
 
 可以理解成枚举类型有额外的属性，如下举例
@@ -107,7 +107,7 @@ String默认原始值为对应成员的名称：
 	  print("QR code: \(productCode).")
 	}
 	// 输出 "QR code: ABCDEFGHIJKLMNOP."
-	
+
 当所有相关值提取成变量或常量，可以整体提取，上例第一个case可以简写如下：  
 
 	case let .UPCA(numberSystem, manufacturer, product, check)
@@ -134,7 +134,7 @@ String默认原始值为对应成员的名称：
 	    return evaluate(left) * evaluate(right)
 	  }
 	}
-
+	
 	// 计算 (5 + 4) * 2
 	let five = ArithmeticExpression.Number(5)
 	let four = ArithmeticExpression.Number(4)

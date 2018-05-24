@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之变量与常量的定义
 date: 2015-09-13 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: 编程 Swift
 ---
 
 * content
@@ -22,7 +22,7 @@ tags: Swift iOS
 
 
 ## 可选类型定义  
-	
+
 	var today:Int? = 5  //显式可选类型  
 	var tomorrow:Int! = 6  //隐式可选类型
 

@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之扩展extension
 date: 2015-10-31 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: Swift 编程
 ---
 
 * content
@@ -36,7 +36,7 @@ tags: Swift iOS
 	struct Size {
 	  var width = 0.0, height = 0.0
 	}
-
+	
 	extension Rect {
 	  init(width: Double, area: Double) {
 	    self.init(width:width,height:(area/width))

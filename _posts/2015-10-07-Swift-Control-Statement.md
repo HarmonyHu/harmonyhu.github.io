@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之控制语句
 date: 2015-10-07 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: Swift 编程
 ---
 
 * content
@@ -118,7 +118,7 @@ tags: Swift iOS
 	case let (x, y):
 	  print("(\(x),\(y)) is some arbitrary point")
 	}
-	
+
 ## 控制转移语句
 1.continue和break按照C语言理解  
 2.fallthrough用于switch中贯穿  

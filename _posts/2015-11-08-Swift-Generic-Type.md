@@ -2,8 +2,8 @@
 layout: post
 title: Swift学习之泛型
 date: 2015-11-08 00:00
-categories: Swift
-tags: Swift iOS
+categories: 编程
+tags: Swift 编程
 ---
 
 * content
@@ -22,7 +22,7 @@ tags: Swift iOS
 	  a = b
 	  b = temporaryA
 	}
-
+	
 	var someInt = 3
 	var anotherInt = 107
 	swapTwoValues(&someInt, &anotherInt)
@@ -45,7 +45,7 @@ tags: Swift iOS
 	    return items.removeLast()
 	  }
 	}
-
+	
 	var stackOfStrings = Stack<String>()
 	stackOfStrings.push("uno")
 
@@ -114,7 +114,7 @@ tags: Swift iOS
 	  var count: Int { get }
 	  subscript(i: Int) -> ItemType { get }
 	}
-
+	
 	//Stack遵循协议Container
 	struct Stack<T>: Container {
 	  // original Stack<T> implementation
