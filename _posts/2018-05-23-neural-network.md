@@ -52,18 +52,23 @@ $$
 \frac{\Delta net_{o1}}{\Delta w5} = out_{h1}
 $$
 
-根据以上过程得出
+* 根据以上过程得出：
+
 $$
 \frac{\Delta E_{total}}{\Delta w5}
 $$
 
 
+
 ###### 3. 更新权值w5
 
+
 $$
-w5_{new} = w5 - 0.5 \times \frac{\Delta E_{total}}{\Delta w5} _{(假如学习率为0.5 )}
+w5_{new} = w5 - 0.5 \times \frac{\Delta E_{total}}{\Delta w5}   _{(假如学习率为0.5 )}  
 $$
-以此类推，更新所有权值，之后重复。
+
+
+以此类推，更新所有权值。之后重复。
 
 **注意：**总误差对out_h1求导为  
 $$
