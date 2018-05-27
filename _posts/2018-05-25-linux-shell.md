@@ -18,24 +18,20 @@ tags: 编程 Shell
   echo "Hello world"
   ```
 
-* 脚本参数
-
-  ```bash
-  echo "$0" # 执行脚本名
-  echo "$1" # 第一个参数，以此类推
-  echo "$#" # 参数个数，从$1算起
-  echo "$*" # 参数排列字符串"$1 $2 $3 ... $n"
-  echo "$@" # 参数排列字符串"$1" "$2" "$3" ... "$n"
-  echo "$?" # 最后命令退出状态，0表示没有错误
-  ```
-
 * 用;号可以将多行语句写一行，可以不用空格
 
   ```bash
   a=10;b=20;c=30
   ```
 
+* 内部命令用``，或者$()
 
+  ```bash
+  `expr 1 + 1` #数学运算
+  $(expr 1 + 1) #同上
+  ```
+
+  
 
 
 
@@ -146,6 +142,13 @@ b=100
 #### if then fi
 
 ```bash
+# if用法1
+if condition1
+then
+  cmd
+fi
+
+# if用法2
 if condition1
 then
   cmd1
@@ -162,10 +165,15 @@ fi
 #### for in do done
 
 ```bash
+# for用法1
 for loop in 1 2 3 4
 do
   echo "value:$loop"
 done
+
+# for用法2 
+for loop in `seq 1 $#` #遍历参数个数
+for loop in {1..4} #从1到4遍历
 ```
 
 #### while do done
@@ -183,5 +191,28 @@ while true
 do
   command
 done
+```
+
+## 脚本参数
+
+#### 基本参数
+
+```bash
+echo "$0" # 执行脚本名
+echo "$1" # 第一个参数，以此类推
+echo "$#" # 参数个数，从$1算起
+echo "$*" # 参数排列字符串"$1 $2 $3 ... $n"
+echo "$@" # 参数排列字符串"$1" "$2" "$3" ... "$n"
+echo "$?" # 最后命令退出状态，0表示没有错误
+```
+
+#### shift操作
+
+```bash
+# shift实现参数左右，可用于不确定参数时确定参数
+while [ $# != 0 ];do  
+  echo "第一个参数为：$1,参数个数为：$#"  
+  shift  
+done 
 ```
 
