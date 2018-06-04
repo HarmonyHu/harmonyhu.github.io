@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 导数基本法则
+title: 微积分基础
 categories: 深度学习
 tags: 深度学习 导数
 ---
@@ -51,7 +51,7 @@ $$
 #### 链式法则（复合函数）
 
 $$
-若y = f(u) 且u = g(x)，则\frac{d y}{d x} = f'(u) \times g'(x) 或\frac{d y}{d u} \times \frac{d u}{d x} 
+若y = f(u) 且u = g(x)，则\frac{d y}{d x} = f'(u) \times g'(x) 或\frac{d y}{d u} \times \frac{d u}{d x}
 $$
 
 ## 初等函数的导数
@@ -94,15 +94,14 @@ $$
 
 #### 原函数
 
-F(x)是f(x)在区间I上的原函数，表示为：
 $$
-F'(x) = f(x)
+F'(x) = f(x), 称F(x)是f(x)在区间I上的原函数
 $$
 
 #### 不定积分公式
 
 $$
-\int{f(x)}dx = F(x) + C _{(C为常数)}
+\int{f(x)}dx = F(x) + C, (C为常数)
 $$
 
 #### 牛顿-莱布尼茨公式
