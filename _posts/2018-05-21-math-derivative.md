@@ -2,7 +2,7 @@
 layout: post
 title: 微积分基础
 categories: 深度学习
-tags: 深度学习 导数
+tags: 深度学习 数学
 ---
 
 * content
