@@ -89,7 +89,7 @@ echo ${#str} #11
 echo ${str:1:4} #ello
 echo ${str:1} #ello,world
 # 默认值
-var=${test:$str} #如果$test是空或者没有定义，则var=$str；否则var=$test
+var=${test:-$str} #如果$test是空或者没有定义，则var=$str；否则var=$test
 ```
 
 #### 数组
