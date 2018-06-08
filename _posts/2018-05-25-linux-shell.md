@@ -31,6 +31,15 @@ tags: 编程 Shell
   $(expr 1 + 1) #同上
   ```
 
+* 变量有效范围
+
+  ```bash
+  export VAR="abc" #该变量存在整个shell执行过程中
+  VAR2="123"
+  ./test.sh  #VAR有定义，VAR2无定义
+  . test.sh  #VAR有定义，VAR2有定义
+  ```
+
   
 
 
@@ -69,6 +78,9 @@ str2="str:\$str" #不会转成hello,world
 echo ${#str} #11
 # 提取字串
 echo ${str:1:4} #ello
+echo ${str:1} #ello,world
+# 默认值
+var=${test:$str} #如果$test是空或者没有定义，则var=$str；否则var=$test
 ```
 
 #### 数组

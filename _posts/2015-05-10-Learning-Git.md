@@ -198,18 +198,60 @@ tags: Git
 #### 日志查看
 
 `git log`：查看历史简要日志  
+├──`git log <filename>`：查看单个文件的修改日志
 ├──`git log --stat`：查看历史日志，包含被修改文件名  
 ├──`git log -p <SHA>`：查看某次历史日志，包含查看修改文件的内容  
 ├──`git log -p -2`：-p代表查看修改文件的内容，-2代表最近两条  
 └──`git log --pretty=oneline <filename>`: 查看某文件的所有历史日志
 
 `git show`：查看最近一次日志，包含修改的文件内容  
+├──`git show <filename>`：查看最近一次某文件的改动  
 ├──`git show <SHA>`：查看某次修改的详细信息，包含文件的内容  
 └──`git show <SHA> <filename>`: 查看某次修改某文件的改动
 
 
 
+## 子仓库
+
+#### 创建
+
+`git submodule add`：添加子仓库  
+└──`git submodule add ssh://git@github.com:abc.git abc`: 将远程库添加到本地abc目录中作为子仓库
+
+添加成功后父仓库增加了`.gitmodule`文件，内容如下：
+
+```ini
+[submodule "abc"]
+    path = abc
+    url = ssh://git@github.com:abc.git
+```
+
+并在`.git/config`中加入了submodule段，如下：
+
+```ini
+[submodule "abc"]
+    url = ssh://git@github.com:abc.git
+```
+
+#### 检出和更新
+
+`git submodule init`：父仓库clone下来后，执行该命令，初始化本地配置
+
+`git submodule update --rebase --remote`：更新子仓库到最新
+
+* 本地修改子仓库，进入子仓库提交后，再到主仓库提交
+
+#### 删除子仓库
+
+* 删除.gitsubmodule里相关部分
+
+- 删除.git/config 文件里相关字段
+- 删除子仓库目录`git rm --cached <本地子仓库路径>`
+
+
+
 ## 其他处理  
+
 #### 忽略文件  
 
 将其添加到`.gitignore`或者`.git/info/exclude`中     
