@@ -40,6 +40,15 @@ tags: 编程 Shell
   . test.sh  #VAR有定义，VAR2有定义
   ```
 
+* 判断当前是否为管理员
+
+  ```bash
+  if [ `id -u` -ne 0 ];then
+      echo "ERROR: must be run as root"
+      exit 1
+  fi
+  ```
+
   
 
 
@@ -126,6 +135,9 @@ b="cde"
 [ -z $a ] #判断是否长度为0
 [ -n $a ] #判断长度是否不为0
 [ $a ] #判断长度是否不为0
+#注意事项
+[ $a = $b ] #若$a为空，则语法错误
+[ "x$a" = "x$b" ] #加上辅助字符
 ```
 
 #### 逻辑运算
