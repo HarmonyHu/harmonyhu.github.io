@@ -11,6 +11,19 @@ tags: 编程 Shell
 
 * 注释用#
 
+* 脚本执行的三种方式  
+
+  ```bash
+  # 执行方式一，在子shell中执行，结束后变量函数都是消失
+  ./test/test.sh
+  # 执行方式二，同一
+  sh test/test.sh
+  # 执行方式三，脚本中的变量、函数都会在当前shell存在
+  source test/test.sh
+  . test/test.sh
+  # 执行方式四，同三
+  ```
+
 * 标头用#!表明解释器
 
   ```bash
@@ -38,6 +51,9 @@ tags: 编程 Shell
   VAR2="123"
   ./test.sh  #VAR有定义，VAR2无定义
   . test.sh  #VAR有定义，VAR2有定义
+  source test.sh #VAR有定义，VAR2有定义
+  export -n VAR #删除VAR的定义
+  unset VAR2    #删除VAR2的定义
   ```
 
 * 判断当前是否为管理员
@@ -47,6 +63,22 @@ tags: 编程 Shell
       echo "ERROR: must be run as root"
       exit 1
   fi
+  ```
+
+* test与[]等价
+
+  ```bash
+  if test `id -u` -ne 0; then
+      echo "ERROR: must be run as root"
+      exit 1
+  fi
+  ```
+
+* 得到当前执行脚本所在目录的全路径，不改变当前路径
+
+  ```bash
+  # 对source,bash,. 三种方式都适用
+  FOLDER_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   ```
 
   
@@ -150,6 +182,8 @@ a=""
 # 与或，&& 和 ||，需要[[]]
 b=100
 [[ $b -lt 101 && $b -gt 99 ]] #true
+# 与或，-a 和 -o, []中使用
+[ $b -lt 101 -a $b -gt 99 ] #true
 ```
 
 #### 文件测试
