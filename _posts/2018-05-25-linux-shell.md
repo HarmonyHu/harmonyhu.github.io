@@ -11,19 +11,6 @@ tags: 编程 Shell
 
 * 注释用#
 
-* 脚本执行的三种方式  
-
-  ```bash
-  # 执行方式一，在子shell中执行，结束后变量函数都是消失
-  ./test/test.sh
-  # 执行方式二，同一
-  sh test/test.sh
-  # 执行方式三，脚本中的变量、函数都会在当前shell存在
-  source test/test.sh
-  . test/test.sh
-  # 执行方式四，同三
-  ```
-
 * 标头用#!表明解释器
 
   ```bash
@@ -42,18 +29,6 @@ tags: 编程 Shell
   ```bash
   `expr 1 + 1` #数学运算
   $(expr 1 + 1) #同上
-  ```
-
-* 变量有效范围
-
-  ```bash
-  export VAR="abc" #该变量存在整个shell执行过程中
-  VAR2="123"
-  ./test.sh  #VAR有定义，VAR2无定义
-  . test.sh  #VAR有定义，VAR2有定义
-  source test.sh #VAR有定义，VAR2有定义
-  export -n VAR #删除VAR的定义
-  unset VAR2    #删除VAR2的定义
   ```
 
 * 判断当前是否为管理员
@@ -81,7 +56,7 @@ tags: 编程 Shell
   FOLDER_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   ```
 
-  
+
 
 
 
@@ -107,6 +82,17 @@ unset count
 ```
 
 * 等号两边不能有空格
+
+* 变量有效范围
+
+  ```bash
+  export VAR="abc" #该变量存在整个shell执行过程中
+  VAR2="123"
+  ./test.sh  #VAR有定义，VAR2无定义
+  . test.sh  #VAR有定义，VAR2有定义
+  export -n VAR #删除VAR的定义
+  unset VAR2    #删除VAR2的定义
+  ```
 
 #### 字符串
 
@@ -261,9 +247,25 @@ do
 done
 ```
 
-## 脚本参数
+## 执行方式
 
-#### 基本参数
+#### 四种方式
+
+  ```bash
+  # 执行方式一，在子shell中执行，结束后变量函数都是消失
+  ./test/test.sh
+  # 执行方式二，同一
+  sh test/test.sh
+  # 执行方式三，脚本中的变量、函数都会在当前shell存在
+  source test/test.sh
+  . test/test.sh
+  # 执行方式四，同三
+  ```
+
+
+#### 脚本参数
+
+###### 基本参数
 
 ```bash
 echo "$0" # 执行脚本名
@@ -274,7 +276,7 @@ echo "$@" # 参数排列字符串"$1" "$2" "$3" ... "$n"
 echo "$?" # 最后命令退出状态，0表示没有错误
 ```
 
-#### shift操作
+###### shift操作
 
 ```bash
 # shift实现参数左右，可用于不确定参数时确定参数
