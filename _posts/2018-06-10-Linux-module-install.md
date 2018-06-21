@@ -1,19 +1,14 @@
 ---
 layout: post
-title: Linux Driver的安装
+title: Linux Driver的安装和卸载
 categories: Linux
 tags: Linux module
 ---
 
 * content
 {:toc}
-## Linux发行版本关系
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/linux_tree.jpg) 
-
-## Driver的安装和卸载
-
-#### 安装
+## 安装
 
 ```bash
 # 将ko文件拷贝到目录
@@ -27,7 +22,8 @@ modprobe test
 # 该文件保证设备与driver的安装关系，当系统重启后，如果存在该设备，driver则被自动加载
 ```
 
-#### 卸载
+
+## 卸载
 
 ```bash
 modprobe -r test
@@ -35,7 +31,7 @@ rm -rf $target_folder
 depmod -a
 ```
 
-#### 其它命令
+## 其它命令
 
 ```bash
 insmod test.ko # 单次加载test模块
@@ -48,7 +44,7 @@ lsmod | grep -q test
 if [ $? -eq 0 ]; then echo "Installed" fi
 ```
 
-#### 如何保证每次重启都加载
+## 如何保证每次重启都加载
 
 1. 如果是设备Driver，上文已经说明，不需要特别动作
 2. 如果是其他Driver，与设备无关，则需要以下动作：  
