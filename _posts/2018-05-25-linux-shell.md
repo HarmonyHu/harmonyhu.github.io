@@ -284,5 +284,12 @@ SHA=`git log -1|head -1|grep -E [0-9a-fA-F]{40} -o`
 
 # 随机数
 $RANDOM
+
+# 脚本内生成文件，能够转义或执行当前脚本的变量，
+# 如果不希望转义，则用\
+cat<<EOF > "../test.txt"
+echo $RANDOM #会执行
+echo \$RANDOM #不会执行
+EOF
 ```
 
