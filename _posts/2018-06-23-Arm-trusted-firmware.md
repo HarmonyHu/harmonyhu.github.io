@@ -220,6 +220,6 @@ EL3 runtime services framework如下：
 ## 关于FIP
 
 * Firmware Image Package 
-* 通常BL1被烧录在ROM中，BL2/BL31/BL32/BL33/uboot被打包成fip.bin烧录在flash中 
+* 通常BL1被烧录在ROM中，BL2/BL31/BL32/BL33/uboot被打包成fip.bin烧录在flash中；启动时通过检索UUID找到fip.bin中的各个image，参考`firmware_image_package.h`
 * 通过函数plat_get_image_source()读取数FIP数据
 * `tools/fiptool/fiptool`可以生成和分解fip文件

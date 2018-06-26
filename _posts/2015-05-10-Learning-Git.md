@@ -198,11 +198,11 @@ tags: Git
 #### 日志查看
 
 `git log`：查看历史简要日志  
-├──`git log <filename>`：查看单个文件的修改日志
+├──`git log <filename>`：查看单个文件的修改日志  
 ├──`git log --stat`：查看历史日志，包含被修改文件名  
 ├──`git log -p <SHA>`：查看某次历史日志，包含查看修改文件的内容  
 ├──`git log -p -2`：-p代表查看修改文件的内容，-2代表最近两条  
-└──`git log --pretty=oneline <filename>`: 查看某文件的所有历史日志
+└──`git log --author="author name"`: 查看某作者的所有历史日志
 
 `git show`：查看最近一次日志，包含修改的文件内容  
 ├──`git show <filename>`：查看最近一次某文件的改动  
