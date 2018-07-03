@@ -1,6 +1,6 @@
 ---
 layout: post
-title: arm-trusted-firmware学习整理
+title: 学习整理：arm-trusted-firmware
 categories: Linux
 tags: Linux ARM
 ---
