@@ -29,8 +29,7 @@ tags: Linux ARM
 * class用于对设备进行分类管理
 
 
-
-##/sys目录
+## /sys目录
 
 sysfs挂载点目录，主要用于描述设备驱动模型，包含如下子目录：
 
@@ -120,7 +119,7 @@ bus    dev    firmware  hypervisor  module
   cdrom            mapper              tty1    tty4   ttyS10     userio
   ```
 
- ## Platform驱动模型
+## Platform驱动模型
 
 * 相对USB、PCI等物理总线来说，platform总线是虚拟出来的。在Soc系统中许多外部设备直接挂在CPU的内存空间，不依附任何总线；虚拟出platform总线，用于与驱动模型保持一致。
 * 直接挂在Soc空间的设备，通过dts(Device tree source) 描述资源。linux启动时根据dtb文件，生成platform device设备。
