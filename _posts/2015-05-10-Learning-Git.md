@@ -243,7 +243,7 @@ tags: Git
 
 #### 删除子仓库
 
-* 删除.gitsubmodule里相关部分
+* 删除.gitmodule里相关部分
 
 - 删除.git/config 文件里相关字段
 - 删除子仓库目录`git rm --cached <本地子仓库路径>`

@@ -9,11 +9,11 @@ tags: Linux ARM
 {:toc}
 ## 设备驱动模型
 
-* 由描述设备相关的结构与描述驱动相关的结构组成。如usb总线有`usb_device`和`usb_driver`，`platform_device`和`platform_driver`
+* 由描述设备相关的结构与描述驱动相关的结构组成。如usb总线有`usb_device`和`usb_driver`，dts描述设备有`platform_device`和`platform_driver`
 
-* 通常device由总线生成，然后由相应的driver与其绑定
+* 通常device由总线或者kernel生成，然后由相应的driver与其绑定
 
-* 设备抽象结构体`strcut device`(include\linux\device.h)，具体设备都会包含一个struct device成员，如usb_device定义如下：
+* 设备抽象结构体`strcut device`(include/linux/device.h)，具体设备都会包含一个struct device成员，如`usb_device`定义如下：
 
   ```c++
   // include\linux\usb.h
@@ -24,12 +24,13 @@ tags: Linux ARM
       ......
   ```
 
-* 驱动抽象结构体`struct device_driver`(include\linux\device.h)
+* 驱动抽象结构体`struct device_driver`(include/linux/device.h)
 
 * class用于对设备进行分类管理
 
+## 相关目录
 
-## /sys目录
+#### /sys
 
 sysfs挂载点目录，主要用于描述设备驱动模型，包含如下子目录：
 
@@ -92,6 +93,7 @@ bus    dev    firmware  hypervisor  module
   $ ls /sys/devices
   breakpoint  LNXSYSTM:00  pci0000:00  pnp0      system      virtual
   cpu         msr          platform    software  tracepoint
+  $ ls /sys/devices/system/cpu #cpu信息
   ```
 
 * dev: 包含block和char，存放块设备和字符设备的主次号(major:minor)，指向/sys/devices中的设备，如下：
@@ -106,10 +108,9 @@ bus    dev    firmware  hypervisor  module
   10:227 -> ../../devices/virtual/misc/mcelog/
   ```
 
+#### /dev
 
-## /dev目录
-
-该目录存放设备文件，可以理解成对上层应用提供使用的接口文件，该文件通常由驱动创建，内容参考如下：
+该目录存放**设备文件**，可以理解成对上层应用提供使用的接口文件，该文件通常由驱动创建，内容参考如下：
 
   ```bash
   $ ls /dev
@@ -173,7 +174,7 @@ platform_device {
 };
 ```
 
-## platform_driver
+#### platform_driver的定义
 
 ```c
 struct platform_driver {
@@ -231,8 +232,7 @@ static int my_test_probe(struct platform_device *pdev){
     return 0;
 }
 
-static int my_test_remove(struct platform_device *pdev)
-{
+static int my_test_remove(struct platform_device *pdev) {
 	device_destroy(...); // 释放资源
 	class_destroy(...); // 释放资源
 	return 0;
