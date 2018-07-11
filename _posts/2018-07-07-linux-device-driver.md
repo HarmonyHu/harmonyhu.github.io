@@ -28,6 +28,8 @@ tags: Linux ARM
 
 * class用于对设备进行分类管理
 
+
+
 ## 相关目录
 
 #### /sys
