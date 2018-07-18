@@ -290,6 +290,11 @@ tags: Git
 `git reset --hard origin/mybranch`  
 `git pull origin mybranch`  
 
+#### 从已提交中回退某个文件
+
+`git checkout <old-sha> <file>`  
+`git commit --amend`
+
 #### 管理多个git账号
 
 该方法适用于同一个git服务器的不同账号，也适用于不同git服务器的不同账号  
