@@ -240,6 +240,7 @@ tags: Git
 `git submodule update --rebase --remote`：更新子仓库到最新
 
 * 本地修改子仓库，进入子仓库提交后，再到主仓库提交
+* 如果更新后主仓库仍然显示子仓库有修改，则执行`git submodule update`即可
 
 #### 删除子仓库
 
