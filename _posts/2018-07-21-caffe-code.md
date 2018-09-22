@@ -1,8 +1,8 @@
 ---
 layout: post
-title: ubuntu下使用caffe
+title: caffe代码
 categories: 深度学习
-tags: Caffe
+tags: caffe
 ---
 
 * content
