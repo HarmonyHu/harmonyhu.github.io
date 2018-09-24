@@ -16,6 +16,7 @@ tags: caffe
 $ convert_imageset [FLAGS] ROOTFOLDER/ LISTFILE DB_NAME
 ```
 
+
 * `ROOTFLOLDER`: 为图像集的根目录，必须带`/`结尾
 
 * `LISTFILE`: 文本文件，记录图像路径（该路径是ROOTFOLDER的相对路径）和标注，举例如下：
