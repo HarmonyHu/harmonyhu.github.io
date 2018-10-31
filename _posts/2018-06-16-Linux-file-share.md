@@ -85,5 +85,3 @@ tags: Linux
   # 卸载
   sudo umount -f /mnt/nfs
   ```
-
-  
