@@ -19,6 +19,7 @@ FROM centos
 FROM centos:latest
 ```
 
+
 #### MAINTAINER
 
 指定维护者信息，格式为`MAINTAINER<name>` ，该信息会写入生成镜像的Author属性域中。比如：
