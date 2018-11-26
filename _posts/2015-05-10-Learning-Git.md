@@ -314,10 +314,17 @@ tags: Git
        IdentityFile ~/.ssh/id_rsa
    Host name2
        HostName test2.com
+       Port 1110
        User username2
        IdentityFile ~/.ssh/id_rsa2
    ```
 
-3. 对应远程库路径修改为对应的Host名，参考如下:  
+3. 验证是否正确：
+
+   ```shell
+   $ ssh -T git@github.com
+   ```
+
+4. 对应远程库路径修改为对应的Host名，参考如下:  
    比如原路径为`git@test2.com:test/test.git`  
    修改后路径为`git@name2:test/test.git`  
