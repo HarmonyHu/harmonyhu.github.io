@@ -145,7 +145,8 @@ tags: Git
 └──`git pull -r`：等同于fetch+rebase(不过单个fetch可以下载全部远程分支)  
 
 `git clone`：下载远程仓库到本地  
-└──`git clone git@github.com:abc.git abc`：下载到abc文件夹  
+├──`git clone git@github.com:abc.git abc`：下载到abc文件夹  
+└──`git clone git@github.com:abc.git --depth=1`：只下载1级，当库很大时使用
 
 #### 分支及历史版本操作  
 
