@@ -11,12 +11,8 @@ tags: Linux docker
 ## 一、图 graph
 
 tensorflow是基于graph的并行计算架构。graph是静态的，构建gragh并不会运行。需要启动一个session，运行graph。比如`a=(b+c)*(c+2)` 的graph如下：（其中b+c 和 c+2是并行的）
+
 ![TensorFlow tutorial - simple computational graph](http://adventuresinmachinelearning.com/wp-content/uploads/2017/03/Simple-graph-example-260x300.png)
-
-
-
-展示三层网络的graph如下：
-![TensorFlow tutorial - data flow graph](http://adventuresinmachinelearning.com/wp-content/uploads/2017/03/TensorFlow-data-flow-graph.gif)
 
 
 
@@ -68,7 +64,7 @@ tf.random_normal([2, 3], stddev=1)
 * 相同大小 Tensor 之间的任何算术运算都会将运算应用到元素级
 * 不同大小 Tensor(要求dimension 0 必须相同) 之间的运算叫做广播(broadcasting)
 * Tensor 与 Scalar(0维 tensor) 间的算术运算会将那个标量值传播到各个元素
-* TensorFLow 在进行数学运算时，一定要求各个 Tensor 数据类型一致
+* TensorFlow 在进行数学运算时，一定要求各个 Tensor 数据类型一致
 
 #### 基本数学运算
 
@@ -163,8 +159,7 @@ tf.eye(2) ==> [[1., 0.],[0., 1.]]
 batch_identity = tf.eye(2, batch_shape=[3])
  
 # Construct one 2 x 3 "identity" matrix
-tf.eye(2, num_columns=3)
-==> [[ 1.,  0.,  0.], [ 0.,  1.,  0.]]
+tf.eye(2, num_columns=3) ==> [[ 1.,  0.,  0.], [ 0.,  1.,  0.]]
 
 # 构建一个对角矩阵，rank = 2*rank(diagonal)
 tf.diag(diagonal, name=None)
@@ -290,7 +285,6 @@ tf.placeholder(dtype,shape=None,name=None)
 # name：名称
 
 # 举例如下：
-
 import tensorflow as tf
 import numpy as np
  
