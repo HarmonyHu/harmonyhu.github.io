@@ -1,8 +1,8 @@
 ---
 layout: post
 title: tensorflow入门
-categories: Linux
-tags: Linux docker
+categories: 深度学习
+tags: TensorFlow
 ---
 
 * content
