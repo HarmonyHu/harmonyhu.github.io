@@ -31,11 +31,11 @@ tf.zeros([2,4]) # [[0. 0. 0. 0.] [0. 0. 0. 0.]]
 
 ```python
 tf.constant(value, dtype=None, shape=None, name='Const')
-
-# value 张量数值，可以是1维，可以是多维
-tf.constant(1) #常量1
-tf.constant([1, 2]) #一维数值[1 2]
-tf.constant([[1, 2],[3, 4]]) #二维数值
+# value 张量数值，dtype默认int32
+tf.constant(1) # 0阶张量，标量
+tf.constant([1, 2]) # 1阶张量，一维数组
+tf.constant([[1, 2],[3, 4]]) # 2阶张量，二维数组
+tf.constant([['Apple', 'Orange'], ['Potato', 'Tomato']], dtype=tf.string) # 2阶，字符串
 ```
 
 #### tf.range 序列
@@ -202,11 +202,11 @@ with tf.Session() as sess:
     # ...现在可以运行使用'weights'的op...
 ```
 
-可以使用`tf.initialize_all_variables()`操作完成所有变量初始化，如下：
+可以使用`tf.global_variables_initializer()`操作完成所有变量初始化，如下：
 
 ```python
 # Add an op to initialize the variables.
-init_op = tf.initialize_all_variables()
+init_op = tf.global_variables_initializer()
 
 # Later, when launching the model
 with tf.Session() as sess:
@@ -310,8 +310,8 @@ import tensorflow as tf
 const = tf.constant(2.0, name="const")
     
 # create TensorFlow variables
-b = tf.Variable(2.0, name='b')
-c = tf.Variable(1.0, name='c')
+b = tf.placeholder(tf.float32, name='b')
+c = tf.placeholder(tf.float32, name='c')
 ```
 
 #### 构建操作
@@ -328,10 +328,9 @@ a = tf.multiply(d, e, name='a')
 ```python
 # session
 with tf.Session() as sess:
-    # 2. 运行init operation
-    sess.run(init_op)
-    # 计算
-    a_out = sess.run(a)
+    a_out = sess.run(a, feed_dict={b:[2, 3, 4], c:1})
     print("Variable a is {}".format(a_out))
+# 打印结果如下：
+# Variable a is [ 9. 12. 15.]
 ```
 
