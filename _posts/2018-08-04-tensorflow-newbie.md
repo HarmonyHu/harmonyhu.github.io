@@ -1,6 +1,6 @@
 ---
 layout: post
-title: tensorflow入门
+title: tensorflow的基础使用
 categories: 深度学习
 tags: TensorFlow
 ---

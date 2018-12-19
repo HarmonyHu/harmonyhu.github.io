@@ -1,6 +1,6 @@
 ---
 layout: post
-title: caffe的db解析
+title: caffe如何解析数据库
 categories: 深度学习
 tags: caffe
 ---

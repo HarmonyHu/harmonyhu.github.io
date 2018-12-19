@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 如何使用训练好的模型
+title: caffe如何使用训练好的模型
 categories: 深度学习
 tags: caffe
 ---
