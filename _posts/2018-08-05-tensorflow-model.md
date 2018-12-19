@@ -10,7 +10,7 @@ tags: TensorFlow
 
 ## 一、简单模型设计
 
-如下模型（ 参见：[神经网络反向推导](http://harmonyhu.com/2018/05/23/neural-network/）) )
+如下模型（ 参见：[神经网络反向推导](http://harmonyhu.com/2018/05/23/neural-network/) )
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/neuron.jpg)
 
