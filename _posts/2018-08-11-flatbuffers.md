@@ -18,7 +18,7 @@ tags: flatbuffers google
 
 ## 二、schema语法
 
-  ```ini
+  ```c++
 // Example IDL file for our monster's schema.
 
 namespace MyGame.Sample;
@@ -130,15 +130,15 @@ builder.Finish(orc);
 
 ```c++
 flatbuffers::FlatBufferBuilder builder;
-flatbuffers::Offset<Monster> mlocs[2];
+std::vecotr<flatbuffers::Offset<Monster>> mlocs;
 MonsterBuilder mb1(builder);
 mb1.add_name(builder.CreateString("Fred"));
-mlocs[0] = mb1.Finish();
+mlocs.push_back(mb1.Finish());
 MonsterBuilder mb2(builder);
 mb2.add_name(builder.CreateString("Barney"));
 mb2.add_hp(1000);
-mlocs[1] = mb2.Finish();
-auto vecoftables = builder.CreateVectorOfSortedTables(mlocs, 2);
+mlocs.push_back(mb2.Finish());
+auto vecoftables = builder.CreateVector(mlocs);
 auto mloc = CreateMonster(builder, ......);
 builder.Finish(mloc);
 
