@@ -18,7 +18,7 @@ tags: flatbuffers google
 
 ## 二、schema语法
 
-  ```json
+  ```ini
 // Example IDL file for our monster's schema.
 
 namespace MyGame.Sample;
@@ -101,6 +101,8 @@ root_type Monster;
 
 ## 三、序列化
 
+#### 方式一：Create
+
 ```c++
 flatbuffers::FlatBufferBuilder builder;
 auto weapon_one_name = builder.CreateString("Sword");
@@ -121,6 +123,27 @@ auto orc = CreateMonster(builder, ......);
 builder.Finish(orc);
 
 //save by builder.GetBufferPointer() and builder.GetSize()
+//builder.ReleaseBufferPointer();
+```
+
+#### 方式二：Builder
+
+```c++
+flatbuffers::FlatBufferBuilder builder;
+flatbuffers::Offset<Monster> mlocs[2];
+MonsterBuilder mb1(builder);
+mb1.add_name(builder.CreateString("Fred"));
+mlocs[0] = mb1.Finish();
+MonsterBuilder mb2(builder);
+mb2.add_name(builder.CreateString("Barney"));
+mb2.add_hp(1000);
+mlocs[1] = mb2.Finish();
+auto vecoftables = builder.CreateVectorOfSortedTables(mlocs, 2);
+auto mloc = CreateMonster(builder, ......);
+builder.Finish(mloc);
+
+//save by builder.GetBufferPointer() and builder.GetSize()
+//builder.ReleaseBufferPointer();
 ```
 
 
@@ -136,5 +159,7 @@ for (unsigned int i = 0; i < weps->size(); i++) {
   assert(weps->Get(i)->name()->str() == expected_weapon_names[i]);
   assert(weps->Get(i)->damage() == expected_weapon_damages[i]);
 }
+
+//GetBufferStartFromRootPointer(monster) == buffer_pointer
 ```
 
