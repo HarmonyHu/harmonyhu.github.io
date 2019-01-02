@@ -13,6 +13,7 @@ tags: flatbuffers google
 * 指南：[FlatBuffers Programmer's Guide](https://google.github.io/flatbuffers/)
 * 结构定义文件为`.fbs`，注释使用`//`，可以使用`include "my.fbs"`嵌套包含文件
 * 可以理解为轻量级的protobuf，不会依赖library，但是编码会复杂一些
+* FlatBuffers的特点是先构造成员，再构造父结点；与protobuf相反
 
 
 
@@ -21,7 +22,7 @@ tags: flatbuffers google
   ```c++
 // Example IDL file for our monster's schema.
 
-namespace MyGame.Sample;
+namespace MySample;
 
 enum Color:byte { Red = 0, Green, Blue = 2 }
 
@@ -95,55 +96,68 @@ root_type Monster;
 
 #### 生成代码
 
-* 使用`flatc -cpp mygame.fbs`生成头文件，比如`monster_generate.h`
+* 使用`flatc --cpp monster.fbs`生成头文件，比如`monster_generate.h`
+* 如果需要生成带可修改功能，则使用参数`----gen-mutable`
 
 
 
 ## 三、序列化
 
-#### 方式一：Create
+原则：必须先构建成员，再构建父结点
+
+#### 构建 string
 
 ```c++
-flatbuffers::FlatBufferBuilder builder;
-auto weapon_one_name = builder.CreateString("Sword");
-short weapon_one_damage = 3;
-auto weapon_two_name = builder.CreateString("Axe");
-short weapon_two_damage = 5;
-// Use the `CreateWeapon` shortcut to create Weapons with all fields set.
-auto sword = CreateWeapon(builder, weapon_one_name, weapon_one_damage);
-auto axe = CreateWeapon(builder, weapon_two_name, weapon_two_damage);
-// Create a FlatBuffer's `vector` from the `std::vector`.
-std::vector<flatbuffers::Offset<Weapon>> weapons_vector;
-weapons_vector.push_back(sword);
-weapons_vector.push_back(axe);
-auto weapons = builder.CreateVector(weapons_vector);
-//......
-//......
-auto orc = CreateMonster(builder, ......);
-builder.Finish(orc);
-
-//save by builder.GetBufferPointer() and builder.GetSize()
-//builder.ReleaseBufferPointer();
+flatbuffers::FlatBufferBuilder fbb;
+//注意：sword的类型为flatbuffers::Offset<flatbuffers::String>
+auto sword = fbb.CreateString("Sword");
 ```
 
-#### 方式二：Builder
+#### 构建 table
+flatc会为定义的table生成create方法和build方法，注意table的类和方法都是命令空间MySample下。
+**方式一、使用create方法如下：**
 
 ```c++
-flatbuffers::FlatBufferBuilder builder;
-std::vecotr<flatbuffers::Offset<Monster>> mlocs;
-MonsterBuilder mb1(builder);
-mb1.add_name(builder.CreateString("Fred"));
-mlocs.push_back(mb1.Finish());
-MonsterBuilder mb2(builder);
-mb2.add_name(builder.CreateString("Barney"));
-mb2.add_hp(1000);
-mlocs.push_back(mb2.Finish());
-auto vecoftables = builder.CreateVector(mlocs);
-auto mloc = CreateMonster(builder, ......);
-builder.Finish(mloc);
+// 注意Weapon和CreateWeapon都是在命令空间MySample下
+flatbuffers::Offset<Weapon> CreateWeapon(
+    flatbuffers::FlatBufferBuilder &_fbb,
+    flatbuffers::Offset<flatbuffers::String> name = 0,
+    int16_t damage = 0);
 
-//save by builder.GetBufferPointer() and builder.GetSize()
-//builder.ReleaseBufferPointer();
+// 调用方法如下：
+auto wp1 = MySample::CreateWeapon(fbb, sword, 10);
+```
+
+**方式二、使用build方法如下：**
+
+```c++
+// 注意使用该方法时在`wp_builder.Finish()`之前不能调用任何`fbb.Create`方法
+WeaponBuilder wp_builder(fbb);
+wp_builder.add_name(sword);
+wp_builder.add_damage(10);
+auto wp1 = wp_builder.Finish();
+```
+
+#### 构建 vector
+
+所有用`[]`定义的类型，都需要这种方法构建：
+
+```c++
+flatbuffers::FlatBufferBuilder fbb;
+std::vector<flatbuffers::Offset<Weapon>> weapon_vector;
+weapon_vector.push_back(wp1);
+names.push_back(...);
+//注意： weapons_offse的类型为flatbuffers::Offset<flatbuffers::Vector<flatbuffers::Offset<Weapon>>>
+auto weapons_offset = fbb.CreateVector(weapon_vector);
+```
+
+#### 构建完成
+
+```c++
+auto orc = CreateMonster(builder, ......);
+builder.Finish(orc);
+//构建后的buffer信息： builder.GetBufferPointer() + builder.GetSize()
+//释放buffer: builder.ReleaseBufferPointer();
 ```
 
 
@@ -151,7 +165,8 @@ builder.Finish(mloc);
 ## 四、反序列化
 
 ```c++
-auto monster = GetMonster(buffer_pointer);
+//其中buffer是序列化后的buffer
+auto monster = GetMonster(buffer);
 // monster->hp() == 80
 // monster->name()->str() == "MyMonster"
 auto weps = monster->weapons();
@@ -161,5 +176,58 @@ for (unsigned int i = 0; i < weps->size(); i++) {
 }
 
 //GetBufferStartFromRootPointer(monster) == buffer_pointer
+```
+
+
+
+## 五、序列化转JSON
+
+以上所有功能只需要包含`flatbuffers/include`头文件。但是到了转JSON的功能，就需要包含`flatbuffers/src`下的`code_generators.cpp`、`idl_gen_text.cpp`、`idl_parser.cpp`、`util.cpp`等4个源文件。编码时，头文件需要另外包含`flatbuffers/idl.h`和`flatbuffers/util.h`。
+
+#### 加载schema文件
+
+**方式一、用脚本将fbs文件生成buffer**
+
+```bash
+#!/bin/bash
+
+MONSTER_HEADER="schema_monster.h"
+MONSTER_FBS="monster.fbs"
+
+function generate_text()
+{
+cat<<EOF >"$MONSTER_HEADER"
+#include <string>
+const std::string schema_text = "\\
+EOF
+cat $MONSTER_FBS | while read line; do
+    echo "$line\\n\\">> $MONSTER_HEADER
+done
+echo "\";" >> $MONSTER_HEADER
+}
+
+generate_text
+```
+
+这样就生成了`schema_text`
+
+**方式二、加载fbs文件到buffer中**
+
+```
+std::string schema_text;
+ASSERT(true == flatbuffers::LoadFile("monster_test.fbs",false, &schema_text));
+```
+
+#### 生成json
+
+```c++
+std::string json_text;
+flatbuffers::Parser parser;
+ASSERT(true == parser.Parse(schema_text.c_str()));
+// buffer对应的是序列号的buffer,json形式保存在json_text中
+ASSERT(true == flatbuffers::GenerateText(parser, buffer, &json_text);
+
+// GenerateTextFile直接存到文件中
+// bool GenerateTextFile(const Parser &parser, const std::string &path, const std::string &file_name)
 ```
 
