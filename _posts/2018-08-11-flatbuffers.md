@@ -115,6 +115,7 @@ auto sword = fbb.CreateString("Sword");
 
 #### 构建 table
 flatc会为定义的table生成create方法和build方法，注意table的类和方法都是命令空间MySample下。
+
 **方式一、使用create方法如下：**
 
 ```c++
