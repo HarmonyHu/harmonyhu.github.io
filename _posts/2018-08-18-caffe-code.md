@@ -16,21 +16,9 @@ tags: caffe
 ```protobuf
 message NetParameter {
   optional string name = 1; // consider giving the network a name
-  // Whether the network will force every layer to carry out backward operation.
-  // If set False, then whether to carry out backward is determined
-  // automatically according to the net structure and learning rates.
   optional bool force_backward = 5 [default = false];
-  // The current "state" of the network, including the phase, level, and stage.
-  // Some layers may be included/excluded depending on this state and the states
-  // specified in the layers' include and exclude fields.
   optional NetState state = 6;
-
-  // Print debugging information about results while running Net::Forward,
-  // Net::Backward, and Net::Update.
   optional bool debug_info = 7 [default = false];
-
-  // The layers that make up the net.  Each of their configurations, including
-  // connectivity and behavior, is specified as a LayerParameter.
   repeated LayerParameter layer = 100;  // ID 100 so layers are printed last.
 }
 ```
@@ -107,52 +95,15 @@ message LayerParameter {
   optional string type = 2; // the layer type
   repeated string bottom = 3; // the name of each bottom blob
   repeated string top = 4; // the name of each top blob
-
-  // The train / test phase for computation.
   optional Phase phase = 10;
-
-  // The amount of weight to assign each top blob in the objective.
-  // Each layer assigns a default value, usually of either 0 or 1,
-  // to each top blob.
   repeated float loss_weight = 5;
-
-  // Specifies training parameters (multipliers on global learning constants,
-  // and the name and other settings used for weight sharing).
   repeated ParamSpec param = 6;
-
-  // The blobs containing the numeric parameters of the layer.
   repeated BlobProto blobs = 7;
-
-  // Specifies whether to backpropagate to each bottom. If unspecified,
-  // Caffe will automatically infer whether each input needs backpropagation
-  // to compute parameter gradients. If set to true for some inputs,
-  // backpropagation to those inputs is forced; if set false for some inputs,
-  // backpropagation to those inputs is skipped.
-  //
-  // The size must be either 0 or equal to the number of bottoms.
   repeated bool propagate_down = 11;
-
-  // Rules controlling whether and when a layer is included in the network,
-  // based on the current NetState.  You may specify a non-zero number of rules
-  // to include OR exclude, but not both.  If no include or exclude rules are
-  // specified, the layer is always included.  If the current NetState meets
-  // ANY (i.e., one or more) of the specified rules, the layer is
-  // included/excluded.
   repeated NetStateRule include = 8;
   repeated NetStateRule exclude = 9;
-
-  // Parameters for data pre-processing.
   optional TransformationParameter transform_param = 100;
-
-  // Parameters shared by loss layers.
   optional LossParameter loss_param = 101;
-
-  // Layer type-specific parameters.
-  //
-  // Note: certain layers may have more than one computational engine
-  // for their implementation. These layers include an Engine type and
-  // engine parameter for selecting the implementation.
-  // The default for the engine is set by the ENGINE switch at compile-time.
   optional AccuracyParameter accuracy_param = 102;
   optional AnnotatedDataParameter annotated_data_param = 200;
   optional ArgMaxParameter argmax_param = 103;
@@ -167,3 +118,28 @@ message LayerParameter {
 * `vector<shared_ptr<Blob<Dtype> > > blobs_` : 存储每层网络的训练参数。通常`blobs_[0]`存储该层网络的weight，`blobs_[1]`存储该层网络的bias。
 * `vector<bool> param_propagate_down_` : 标记是否要对param blob计算diff
 * `vector<Dtype> loss_` : 存储该层网络的loss，通常loss layer外都为0
+
+
+
+## 三、Layer衍生类
+
+#### 1、caffe::BaseConvolutionLayer
+
+* `int bottom_dim_` : 输入数据的维度
+* `int top_dim_` : 输出数据的维度
+* `int num_` : batch大小
+* `int out_spatial_dim_` : 经过卷积后的维度
+
+#### 2、caffe::PoolingLayer
+
+* `int height_, width_` : 输入的图像的尺寸
+* `int pooled_height_, pooled_width_` : 输出图像的尺寸
+* `int kernel_h_, kernel_w_` : 采样核的尺寸
+* `int channels_` : 卷积核的数目
+
+#### 3、caffe::InnerProductLayer
+
+* 运算为`output=input*weight+bias`
+* `int M_` 表示input矩阵的行数目
+* `int K_` 表示input矩阵的列数目
+* `int N_` 表示output的列数
