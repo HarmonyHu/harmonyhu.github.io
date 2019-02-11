@@ -5,7 +5,8 @@ categories: 深度学习
 tags: 优化
 ---
 
-
+* content
+{:toc}
 
 参考链接：[Intro to optimization in deep learning: Gradient Descent](https://blog.paperspace.com/intro-to-optimization-in-deep-learning-gradient-descent/)
 
