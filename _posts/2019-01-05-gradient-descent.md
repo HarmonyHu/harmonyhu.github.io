@@ -45,4 +45,4 @@ A点最快的方向是就是其切线方向（2维可以用切平面表示)，�
 
   ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/gradient5.png)
 
-  #### 
+  
