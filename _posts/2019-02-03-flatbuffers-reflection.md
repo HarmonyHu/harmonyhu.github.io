@@ -7,6 +7,14 @@ tags: flatbuffers google
 
 * content
 {:toc}
+基本有三种方式：
+
+1. unpack和pack，可以对某个成员进行操作，可以在多个flatbuffers局部拷贝的时候用到。
+2. parser方式，在做成员细致的修正的时候可以用到
+3. reflection，不推荐使用。
+
+
+
 ## 一、UnPack与Pack
 
 #### 1. 生成方式
