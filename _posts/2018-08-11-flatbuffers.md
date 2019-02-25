@@ -225,6 +225,8 @@ ASSERT(true == flatbuffers::LoadFile("monster_test.fbs",false, &schema_text));
 std::string json_text;
 flatbuffers::Parser parser;
 ASSERT(true == parser.Parse(schema_text.c_str()));
+// 显示默认值
+// parser.opts.output_default_scalars_in_json = true;
 // buffer对应的是序列号的buffer,json形式保存在json_text中
 ASSERT(true == flatbuffers::GenerateText(parser, buffer, &json_text);
 
