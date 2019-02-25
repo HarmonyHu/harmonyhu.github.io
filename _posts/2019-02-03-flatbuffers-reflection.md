@@ -74,7 +74,7 @@ parser.Parse(schema_text);
 #### 2. 根table
 
 ```c++
-auto table = flatbuffers::GetAnyRoot(buffers); // 反序列化成根table
+auto table = flatbuffers::GetRoot<Table>(buffers); // 反序列化成根table
 // table方法描述如下：
 const uint8_t *GetVTable() const; // 得到table的数据指针
 voffset_t GetOptionalFieldOffset(voffset_t field) const； // 得到filed的voffset
@@ -89,13 +89,36 @@ bool CheckField(voffset_t field) const； // 检查filed是否存在
 ```c++
 // 根struct, flatbuffers::StructDef
 auto struct_def = parset.root_struct_def_;
-cout << struct_def->name; // 根table的名称
-auto fileds =  struct_def->fields.vec; // 根table的成员
-for (auto filed : fileds) { // 遍历成员
-    if (false == table->CheckFiled(filed->value.offset)) { //检查是否存在
-        continue;
-    }
-    cout << filed->name << endl; // 成员名称
+// 1) name: table或者struct结构的名称
+cout << struct_def->name;
+// 2) fixed: false为table，true为struct
+cout << struct_def->fixed;
+// 3) fields, 成员
+auto fields =  struct_def->fields.vec;
+for (auto field : fields) { // 遍历成员
+    //......
+}
+```
+
+#### 4. FiledDef
+
+```c++
+// 1) name，成员名称
+cout << field->name;
+// 2) value.offset, 偏移voffset_t
+cout << field->value.offset;
+table->CheckFiled(field->value.offset); //检查是否存在
+// 3) value.type.base_type, 类型
+switch(field->value.type.base_type) {
+case BASE_TYPE_STRUCT: // table 或者struct
+  auto struct_def = filed->value.type.struct_def; // 得到StructDef
+  break;
+case BASE_TYPE_VECTOR: // vector类型
+  auto type = filed->value.type.VectorType();  // vector成员类型
+  auto val = table->GetPointer<const void*>(fd->value.offset);
+  auto val_v = reinterpret_cast<const Vector<Offset<void>> *>(val);
+  for(auto data: val_v) { // 成员buffer
+  }
 }
 ```
 
