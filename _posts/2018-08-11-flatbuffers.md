@@ -97,7 +97,7 @@ root_type Monster;
 #### 生成代码
 
 * 使用`flatc --cpp monster.fbs`生成头文件，比如`monster_generate.h`
-* 如果需要生成带可修改功能，则使用参数`----gen-mutable`
+* 如果需要生成带可修改功能，则使用参数`--gen-mutable`
 
 
 

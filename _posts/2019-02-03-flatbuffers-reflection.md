@@ -7,6 +7,8 @@ tags: flatbuffers google
 
 * content
 {:toc}
+## 概述
+
 基本有三种方式：
 
 1. unpack和pack，可以对某个成员进行操作，可以在多个flatbuffers局部拷贝的时候用到。
@@ -200,3 +202,12 @@ TEST_EQ_STR(hp_string.c_str(), "80");
 flatbuffers::SetField<uint32_t>(&root, hp_filed, 200);
 ```
 
+
+
+## 附：flatc选项
+
+* `--cpp` : 生成`xxxx_generate.h`的c++源文件
+* `--gen-mutable` : 每个table生成可以修改的方法
+* `--gen-name-strings` : 每个table生成`GetFullyQualifiedName`方法，返回路径名，如：`MySample.Monster`
+* `--reflect-names` : 每个table生成`MiniReflectTypeTable`方法，返回`TypeTable *`，包含每个成员名及成员属性
+* `--gen-object-api`: 每个table生成对象类，且生成pack和unpack方法，进行序列化和反序列化
