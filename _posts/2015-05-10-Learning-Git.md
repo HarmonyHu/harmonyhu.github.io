@@ -146,7 +146,7 @@ tags: Git
 
 `git clone`：下载远程仓库到本地  
 ├──`git clone git@github.com:abc.git abc`：下载到abc文件夹  
-└──`git clone git@github.com:abc.git --depth=1`：只下载1级，当库很大时使用
+└──`git clone git@github.com:abc.git --depth=1`：只下载1级，当库很大时使用；如果要恢复则执行`git fetch --unshallow`
 
 #### 分支及历史版本操作  
 
@@ -242,6 +242,8 @@ tags: Git
 
 * 本地修改子仓库，进入子仓库提交后，再到主仓库提交
 * 如果更新后主仓库仍然显示子仓库有修改，则执行`git submodule update`即可
+
+`git submodule sync` :  子模块url刷新
 
 #### 删除子仓库
 
