@@ -199,13 +199,22 @@ for loop in {1..4} #从1到4遍历
 
 # for用法3
 total=100
-for(i=0;i<$total;i++)
+for((i=0;i<$total;i++))
 
 # for用法4
 for loop in "hello world" #以空格为分隔，进行遍历
 for loop in `ls` #遍历命令输出字符串，原理同上
 for loop in $* #遍历入参，原理同上
 for loop in ~/*.h #遍历路径
+
+# 举例1 ： 多进程
+for((i=0;i<10;i++))
+do
+{
+    echo $i
+}&
+done
+wait # 等待前面命令结束后再继续
 ```
 
 #### while do done
