@@ -12,7 +12,9 @@ tags: Git 博客 域名
 近来浏览一些技术性文章，发现大神们都有属于自己的独立域名博客，对大神的专业表示敬畏的同时，也很好奇：搞个独立域名博客很难吗？我是一个喜欢研究新东西的人，于是决定自己也试试整一个出来。于是就整出来了：<http://www.harmonyhu.com>
 
 
+
 ### 过程  
+
 当然这整个过程并非简单，我也并非聪明人，能够这么顺利全靠互联网，具体的说，是靠互联网上各个乐于分享的人们。这里我整个过程参考的链接也罗列出来，希望也能帮到一些人。  
 [理想的写作环境：Git+Github+Markdown+Jekyll](http://www.yangzhiping.com/tech/writing-space.html)  
 [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)  
@@ -26,19 +28,19 @@ tags: Git 博客 域名
 经过同学介绍，域名在[GoDaddy](https://www.godaddy.com/)上购买，可以用支付宝，很方便。在想`域名`上花了一些时间，起初打算用自己的名字，最后还是用了自己的网名HarmonyHu(我姓胡，我想做一个与内外和谐的人)。最后怎么把`harmonyhu.com`绑定到`harmonyhu.github.io`花了一些时间，网上还没有详细的教程，所以我就来写一个。
 首先在GoDaddy网上，在`My Domains`页面选择`Domain Details`，如下图:  
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/godaddy1.jpg)  
-  
-  
+
+
 然后选择`DNS ZONE FILE`，如下图：  
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/godaddy2.jpg)  
-  
-  
+
+
 然后填写`A(Host)`和`CName(Alias)`信息，如下图：  
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/godaddy3.jpg)  
 上图中的ip地址可以在[GitHub Pages Help](https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/)找到。  
 
 最后在[GitHub](https://github.com/)的对应工程根路径加入CNAME文件，并且内容填上`harmonyhu.com`，如下图：  
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/github1.jpg)
-  
+
 这样就大功告成了。
 
 ### 博客写些什么  
