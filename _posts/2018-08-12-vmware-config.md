@@ -7,6 +7,7 @@ tags: vmware
 
 * content
 {:toc}
+
 ## 一、如何扩展磁盘容量
 
 1. 在虚拟机系统下电后，选择`编辑虚拟机设置`->`硬盘`->`扩展`
@@ -27,8 +28,12 @@ tags: vmware
 
 3. `sudo gedit /etc/fstab`，替换swap的uuid
 
-4. 执行`sudo swap off -a`，`sudo swap on -a`
+4. 执行`sudo swapoff -a`，`sudo swapon -a`
 
 5. 执行`reboot`，重启系统
+
+## 二、常见使用
+
+* 按F2进入BIOS，按ESC进入boot menu
 
 
