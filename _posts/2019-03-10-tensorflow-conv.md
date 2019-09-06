@@ -25,6 +25,8 @@ REGISTER_OP("Conv2D")
     .SetShapeFn(shape_inference::Conv2DShape);
 ```
 
+
+
 1. input
 
    输入，类型是其中一个：half、bfloat16、float、double，4维张量，维度顺序由data_format指定，默认是NHWC。
@@ -57,7 +59,7 @@ REGISTER_OP("Conv2D")
 
 8. Conv2DShape
 
-   输出shape的回调函数
+   计算输出shape的回调函数
 
 
 
@@ -66,4 +68,22 @@ REGISTER_OP("Conv2D")
 假如卷积各个参数都是默认的情况下，输出数量如下图：
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/conv2d2.jpg)  
+
+图中按NHWC格式，输入为[1, 32, 32, 3]，filter按HWIO为[5, 5, 3, 10]，输出为[1, 28, 28, 10]
+
+## 三、其他概念
+
+1. 群卷积
+
+   参考[A Tutorial on Filter Groups](https://blog.yani.io/filter-group-tutorial/)
+
+   假如卷积核有N个，群数量为g。群卷积的操作为，将卷积核分为g份，每份N/g个。然后每份与输入做卷积，最后合并。如下对比图：
+
+   ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/conv2d3.jpg)
+
+   ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/conv2d4.jpg)
+
+   
+
+   
 
