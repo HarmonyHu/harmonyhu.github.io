@@ -85,5 +85,49 @@ REGISTER_OP("Conv2D")
 
    
 
+   2. 快速卷积(Winograd)
    
+      winograd算法最早是1980年Terry Winograd提出，Winograd快速卷积算法，出自CVPR 2016的paper：[Fast Algorithms for Convolutional Neural Networks](https://arxiv.org/abs/1509.09308)。此处学习来自：[卷积神经网络中的Winograd快速卷积算法](https://www.cnblogs.com/shine-lee/p/10906535.html)
+   
+      **一维卷积举例**
+   
+      输入是1维数据[d0, d1, d2, d3]，卷积核是[g0, g1, g2]，通常卷积计算如下：
+      $$
+      F(2, 3) = \left[ \begin{array}{lll}{d_{0}} & {d_{1}} & {d_{2}} \\ {d_{1}} & {d_{2}} & {d_{3}}\end{array}\right] \left[ \begin{array}{l}{g_{0}} \\ {g_{1}} \\ {g_{2}}\end{array}\right]=\left[ \begin{array}{c}{r_0} \\ {r_1}\end{array}\right]
+      $$
+   
+      $$
+      \begin{array}{l}{r_{0}=\left(d_{0} \cdot g_{0}\right)+\left(d_{1} \cdot g_{1}\right)+\left(d_{2} \cdot g_{2}\right)} \\ {r_{1}=\left(d_{1} \cdot g_{0}\right)+\left(d_{2} \cdot g_{1}\right)+\left(d_{3} \cdot g_{2}\right)}\end{array}
+      $$
+   
+      需要6次乘法和4次加法。
+   
+      采用Winograd算法，算法如下：
+      $$
+      F(2,3)=\left[ \begin{array}{lll}{d_{0}} & {d_{1}} & {d_{2}} \\ {d_{1}} & {d_{2}} & {d_{3}}\end{array}\right] \left[ \begin{array}{l}{g_{0}} \\ {g_{1}} \\ {g_{2}}\end{array}\right]=\left[ \begin{array}{c}{m_{1}+m_{2}+m_{3}} \\ {m_{2}-m_{3}-m_{4}}\end{array}\right]
+      $$
+   
+      $$
+      \begin{array}{ll}{m_{1}=\left(d_{0}-d_{2}\right) g_{0}} & {m_{2}=\left(d_{1}+d_{2}\right) \frac{g_{0}+g_{1}+g_{2}}{2}} \\ {m_{4}=\left(d_{1}-d_{3}\right) g_{2}} & {m_{3}=\left(d_{2}-d_{1}\right) \frac{g_{0}-g_{1}+g_{2}}{2}}\end{array}
+      $$
+   
+      其中g本身的运算可以提前算好，一共运算次数为8个加减法和4个乘法。
+   
+      Winograd展开后与原始卷积结果相同。但是通常乘法运算时间比较长，所以winograd算法是通过增加加减法减少乘法来实现加速。
+   
+      **二维卷积举例**
+   
+      输入是二维数据，维度为[4, 4]，卷积核为[3, 3]，进行Winograd转换如下：
+   
+      ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/conv2d5.jpg)
+   
+      将卷积核的元素拉成一列，将输入信号每个滑动窗口中的元素拉成一行。注意图中红线划分成的分块矩阵，**每个子矩阵中重复元素的位置与一维时相同，同时重复的子矩阵也和一维时相同**，如下所示：
+   
+      ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/conv2d6.jpg)
+   
+      每个子矩阵再用Winograd算法转换，如下：
+   
+      ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/conv2d7.jpg)
+
+
 
