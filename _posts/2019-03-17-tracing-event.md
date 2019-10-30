@@ -36,6 +36,8 @@ DECLARE_TRACE(sample_event,
 
 
 
+
+
 #### 2. 生成结点和导出
 
 `kernel/trace/trace_sample.c`
@@ -51,7 +53,7 @@ DECLARE_TRACE(sample_event,
 EXPORT_TRACEPOINT_SYMBOL_GPL(sample_event);
 ```
 
-#### 3. 业务代码中调用tracepoint
+#### 3. 代码中调用tracepoint
 
 ```c
 #include <trace/events/smaple.h>
@@ -70,7 +72,7 @@ void somefunc(void)
 
 参考 [Event Tracing]( https://www.kernel.org/doc/html/latest/trace/events.html )
 
-#### 1. 通过set_event使能某个event
+#### 1. 通过set_event使能
 
 ```shell
 # enable
