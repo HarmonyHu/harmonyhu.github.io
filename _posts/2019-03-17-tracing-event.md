@@ -35,7 +35,8 @@ DECLARE_TRACE(sample_event,
 ```
 
 
-#### 2. 生成结点和导出
+
+#### 2. 生成结点和导出
 
 `kernel/trace/trace_sample.c`
 
