@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 序列化之FlatBuffers
-categories: Linux
+categories: 编程
 tags: flatbuffers google
 ---
 
