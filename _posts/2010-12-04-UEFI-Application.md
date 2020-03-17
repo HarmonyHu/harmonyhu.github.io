@@ -14,6 +14,7 @@ tags: BIOS UEFI
 ### 1．VS2008  
 为避免一些奇怪的问题，切记完整安装，我的是安装的默认路径。
 
+<!--more-->
 
 ### 2．UDK    
 下载完UDK(<http://sourceforge.net/projects/edk2/files/>)后，把它放在D:\MyWorkspace目录下面。安装Release Notes里面“HOW TO BUILD NT32”所说方法进行编译，步骤简单，我就翻译过来：  

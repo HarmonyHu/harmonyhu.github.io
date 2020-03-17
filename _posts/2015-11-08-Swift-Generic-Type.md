@@ -31,6 +31,7 @@ tags: Swift 编程
 	var anotherString = "world"
 	swapTwoValues(&someString, &anotherString)
 
+<!--more-->
 
 ## 泛型类型
 

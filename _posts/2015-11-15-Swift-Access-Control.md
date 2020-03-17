@@ -32,6 +32,7 @@ tags: Swift 编程
 	  func somePrivateMethod() {} // 隐式的 private 类成员
 	}
 
+<!--more-->
 
 #### 要点1：只针对模块和源文件  
 模块： Framework或者Application，用import引入，类似C++中lib  

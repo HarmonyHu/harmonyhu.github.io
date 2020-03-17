@@ -28,6 +28,7 @@ tags: Linux
 
 * `service tftpd-hpa status`，查看服务状态
 
+<!--more-->
 
 #### 客户端
 

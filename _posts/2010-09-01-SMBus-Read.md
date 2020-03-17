@@ -15,6 +15,7 @@ tags: BIOS SMBus
 要阅读本文，您可能需要ICH9 spec。要实践本文，您需要纯DOS环境，RU软件或者ADU软件。  
 本打算贴上图片说明问题，但是不知道怎么贴图片，所以就都改用文字描述了。
 
+<!--more-->
 
 ## 1. 简单介绍  
 SMBus主要读取方式有byte data(字节读取)方式和block(块读取)方式。当用byte data读取方式时，涉及到的IO寄存器有HST_STS，HST_CNT，HST_CMD，XMIT_SLVA，HST_D0。如果采用block的读取方式，除了前面需要关注的几个寄存器，还要关注两个寄存器，HOST_BLOCK_DB和AUX_CTL。当然这些只是最需要关注的寄存器，还有其他的寄存器可能也会影响到读取数据的过程，比如SMBUS PCI配置中的I2C_EN以及HST_EN等等（目前测试过程以及对应的程序无法保证百分百的考虑到位）。这里只把它们当成是默认设置。  

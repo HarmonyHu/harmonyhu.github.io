@@ -15,7 +15,7 @@ tags: Linux ARM
 * 使用说明：[user-guide](https://github.com/ARM-software/arm-trusted-firmware/blob/master/docs/user-guide.rst)
 * 框架流程：[firmware-design](https://github.com/ARM-software/arm-trusted-firmware/blob/master/docs/firmware-design.rst)
 
-
+<!--more-->
 
 ## 基本介绍
 

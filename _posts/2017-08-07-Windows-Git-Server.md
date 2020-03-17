@@ -13,6 +13,7 @@ tags: Git gogs
 [git](https://git-scm.com)    
 [gogs](https://gogs.io)   
 
+<!--more-->
 
 #### 搭建过程  
 1. 安装MySQL，并创建gogs数据库:`create database gogs;`。  

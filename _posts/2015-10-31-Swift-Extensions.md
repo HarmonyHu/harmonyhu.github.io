@@ -17,6 +17,7 @@ tags: Swift 编程
 	  // 加到SomeType的新功能
 	}
 
+<!--more-->
 
 ## 扩展计算型属性
 

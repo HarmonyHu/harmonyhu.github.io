@@ -16,6 +16,7 @@ tags: Swift 编程
 	  println("\(index) times 5 is \(index * 5)")
 	}
 
+<!--more-->
 
 2.如果不需要每一项的值，可以用_替代  
 

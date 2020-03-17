@@ -27,7 +27,7 @@ deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security universe
 deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security multiverse
 ```
 
-
+<!--more-->
 
 #### 阿里源
 

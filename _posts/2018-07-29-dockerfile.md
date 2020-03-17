@@ -19,6 +19,7 @@ FROM centos
 FROM centos:latest
 ```
 
+<!--more-->
 
 #### MAINTAINER
 

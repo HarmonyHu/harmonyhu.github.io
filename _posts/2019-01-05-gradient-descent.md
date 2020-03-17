@@ -16,7 +16,7 @@ tags: 优化
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/gradient1.png)
 
-
+<!--more-->
 
 其中B点是损失值最小点，A点是出发点，通过更新权值向B点出发。
 

@@ -30,6 +30,7 @@ tags: Swift 编程
 	print("The width of someResolution is \(someResolution.width)")
 	print("The width of someVideoMode is \(someVideoMode.resolution.width)")
 
+<!--more-->
 
 ## 属性
 

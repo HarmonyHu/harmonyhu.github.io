@@ -17,6 +17,7 @@ tags: Swift 编程
 	  return greeting
 	}
 
+<!--more-->
 
 参数和返回值都可以是元组  
 

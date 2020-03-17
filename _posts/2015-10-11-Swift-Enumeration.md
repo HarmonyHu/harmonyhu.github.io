@@ -20,6 +20,7 @@ tags: Swift 编程
 	  case West
 	}
 
+<!--more-->
 
 也可以定义成一行，用,隔开：
 

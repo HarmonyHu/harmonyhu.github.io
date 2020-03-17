@@ -16,7 +16,7 @@ tags: 深度学习 反向推导
 
 ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/neuron.jpg)  
 
-
+<!--more-->
 
 ## 反向传播过程
 

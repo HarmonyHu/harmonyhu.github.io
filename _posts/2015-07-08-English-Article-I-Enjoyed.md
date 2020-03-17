@@ -17,6 +17,7 @@ tags: 英语 文章
 In a calm sea every man is a pilot.  
 在风平浪静的大海上,每个人都是领航员。
 
+<!--more-->
 
 But all sunshine without shade, all pleasure without pain, is not life at all.Take the lot of the happiest - it is a tangled yarn.Bereavements and blessings,one following another, make us sad and blessed by turns. Even death itself makes life more loving. Men come closest to their true selves in the sober moments of life, under the shadows of sorrow and loss.  
 但只有阳光没有阴影,只有快乐没有痛苦,根本不是真正的生活.就拿最幸福的人来说,他的生活也是一团缠结在一起的乱麻。痛苦与幸福交替出现,使得我们一会悲伤一会高兴。甚至死亡本身都使得生命更加可爱。在人生清醒的时刻,在悲伤与失落的阴影之下,人们与真实的自我最为接近。  

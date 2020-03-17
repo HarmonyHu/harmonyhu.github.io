@@ -22,6 +22,7 @@ tags: Swift 编程
 	`class SomeClass {}`  
 	`struct SomeStructure {}`
 
+<!--more-->
 
 其余包括：变量、常量、结构体或类的成员 等等
 

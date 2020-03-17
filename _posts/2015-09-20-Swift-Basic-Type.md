@@ -23,6 +23,8 @@ Int8与UInt8，Int16与UInt16，Int32与UInt32，Int64与UInt64
 
 ----------
 
+<!--more-->
+
 ### 浮点数-Double  
 
 	125.0  //类型为Double  

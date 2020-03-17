@@ -15,7 +15,7 @@ tags: flatbuffers google
 * 可以理解为轻量级的protobuf，不会依赖library，但是编码会复杂一些
 * FlatBuffers的特点是先构造成员，再构造父结点；与protobuf相反
 
-
+<!--more-->
 
 ## 二、schema语法
 

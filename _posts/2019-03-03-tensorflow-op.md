@@ -11,7 +11,7 @@ tags: TensorFlow
 * REGISTER_KERNEL_BUILDER，注册一个Kernel，其实就是对OP的实现
 * REGISTER_LOCAL_DEVICE_FACTORY，添加设备工厂
 
-
+<!--more-->
 
 ## 一、注册OP
 

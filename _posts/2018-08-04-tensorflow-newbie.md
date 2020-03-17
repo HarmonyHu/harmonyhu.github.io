@@ -14,7 +14,7 @@ tensorflow是基于graph的并行计算架构。graph是静态的，构建gragh�
 
 ![TensorFlow tutorial - simple computational graph](http://adventuresinmachinelearning.com/wp-content/uploads/2017/03/Simple-graph-example-260x300.png)
 
-
+<!--more-->
 
 ## 二、张量 Tensor
 

@@ -28,7 +28,7 @@ tags: Linux ARM
 
 * class用于对设备进行分类管理
 
-
+<!--more-->
 
 ## 相关目录
 
