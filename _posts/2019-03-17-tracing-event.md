@@ -34,7 +34,7 @@ DECLARE_TRACE(sample_event,
 #include <trace/define_trace.h>
 ```
 
-
+<!--more-->
 
 #### 2. 生成结点和导出
 

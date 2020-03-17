@@ -16,13 +16,13 @@ import cv2
 import numpy as np
 ```
 
-
-
 #### imread
 
 ```python
 image = cv2.imread('xxx.jpeg', flags) #读入图片，默认BGR格式，HWC
 ```
+
+<!--more-->
 
 * cv2.IMREAD_COLOER: 读入三通道，忽略alpha通道
 * cv2.IMREAD_GRAYSCALE: 读入灰度图片
