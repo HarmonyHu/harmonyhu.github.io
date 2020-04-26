@@ -108,7 +108,8 @@ tags: Git
 
 `git add`：标记文件，且该文件被管理  
 ├──`git add <filename>`：  标记指定文件  
-├──`git add .`： 标记当前目前所有文件，包括子目录文件  
+├──`git add .`： 标记当前目录所有文件，包括子目录文件  
+├──`git add -u`： 标记当前目录所有跟踪的文件  
 └──`git add *`=`git add .`=`git add -A`  
 
 `git status`：查看工作目录状态
