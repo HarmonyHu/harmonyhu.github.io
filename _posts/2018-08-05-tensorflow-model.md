@@ -1,7 +1,7 @@
 ---
 layout: post
 title: tensorflow的模型设计
-categories: 深度学习
+categories: AI
 tags: TensorFlow
 ---
 

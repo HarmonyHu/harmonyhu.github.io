@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 学习整理：梯度下降(Gradient Descent)
-categories: 深度学习
-tags: 优化
+categories: AI
+tags: 算法
 ---
 
 * content
