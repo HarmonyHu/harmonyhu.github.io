@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 微积分基础
-categories: 深度学习
-tags: 深度学习 数学
+categories: AI
+tags: 数学
 ---
 
 * content
@@ -26,7 +26,8 @@ $$
 2. 可以反映y在x的某点上的变化率
 
 3. 可以表示运动曲线`s=f(t)`在t的某点上的速率
-    
+   
+
 <!--more-->
 
 ## 导数求导法则

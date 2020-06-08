@@ -1,7 +1,7 @@
 ---
 layout: post
 title: tensorflow：Conv2D
-categories: 深度学习
+categories: AI
 tags: TensorFlow
 ---
 

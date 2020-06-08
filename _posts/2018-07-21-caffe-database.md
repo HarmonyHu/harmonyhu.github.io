@@ -1,7 +1,7 @@
 ---
 layout: post
 title: caffe如何解析数据库
-categories: 深度学习
+categories: AI
 tags: caffe
 ---
 

@@ -21,7 +21,7 @@ tags: Linux ARM
 
 #### 权限模型 (Exception Levels)
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/el.jpg) 
+![](https://github.com/HarmonyHu/harmonyhu.github.io/blob/master/_posts/images/el.jpg) 
 
 基本分为EL3-EL0，从高level转低level通过ERET指令，从低level转高level通过exception方式。
 

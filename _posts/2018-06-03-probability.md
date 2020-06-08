@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 概率论基础
-categories: 深度学习
-tags: 深度学习 数学
+categories: AI
+tags: 数学
 ---
 
 * content

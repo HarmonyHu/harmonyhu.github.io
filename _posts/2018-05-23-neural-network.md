@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 学习笔记:神经网络反向推导
-categories: 深度学习
-tags: 深度学习 反向推导
+categories: AI
+tags: 算法
 ---
 
 * content

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: tensorflow：添加新OP和新设备
-categories: 深度学习
+categories: AI
 tags: TensorFlow
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: tensorflow的基础使用
-categories: 深度学习
+categories: AI
 tags: TensorFlow
 ---
 

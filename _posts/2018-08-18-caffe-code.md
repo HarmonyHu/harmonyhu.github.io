@@ -1,7 +1,7 @@
 ---
 layout: post
 title: caffe源码阅读
-categories: 深度学习
+categories: AI
 tags: caffe
 ---
 
