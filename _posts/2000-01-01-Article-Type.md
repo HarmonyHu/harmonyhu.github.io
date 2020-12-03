@@ -2,7 +2,7 @@
 layout: post
 title: 文章样板《心经》
 date: 2000-01-01 00:00
-categories: 个人喜好
+categories: 阅读
 tags: 诗词
 ---
 
