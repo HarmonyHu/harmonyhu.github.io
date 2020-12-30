@@ -7,6 +7,36 @@ tags: python 编程
 
 * content
 {:toc}
+## numpy
+
+```python
+import numpy as np
+
+bin = np.fromfile("abc.bin", dtype=np.uint8) # 读取二进制，按一维数组存放
+bin.tofile("abc.bin") # 按二进制保存
+
+## 数组
+arr = np.array([[1,2],[3,4]], dtype = float) # 创建数组，元素指定，shape为(2,2)
+empty = np.empty((4,3,28,28), dtype = int) # 创建数组，shape为(4,3,28,28)
+zeros = np.zeros((4,3,28,28)) # 创建数组，初始化为全0
+ones = np.ones((4,3,28,28)) # 创建数组，初始化为全1
+x = np.arange(5) # 创建数组[0,1,2,3,4]
+
+ones_2 = np.reshape((2,6,28,28)) # reshape
+ones.size #元素个数
+ones.dtype #元素类型
+ones.shape
+
+a = x[1:3] #从索引1开始，到3为止，不包括索引3. = [1,2]
+a = x[1:]  # = [1,2,3,4]
+
+np.transpose(ones, (0,2,3,1)) #维度转置, shape=(4,28,28,3)
+np.expand_dims(x, axis = 0) #维度扩充，shape=(1, 5)
+
+```
+
+
+
 ## cv2
 
 #### 导入
@@ -37,12 +67,13 @@ image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 * cv2.COLOR_BGR2RGB: 通道转换
 * cv2.COLOR_GRAY2RGB: 灰度转换成彩色
 
-#### 其他
-
 * image.shape: 读出(h,w,c)
 * image = cv2.resize(image, (256,256)): 改变尺寸
-
 * image = np.transpose(image, (2,0,1)): 转换成CHW
 * x = np.expand_dims(image, axis=0): 扩展一个维度
+
+
+
+## 其他
 
 * ipython：进入python交互模式
