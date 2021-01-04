@@ -8,7 +8,7 @@ tags: 阅读
 * content
 {:toc}
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/Buddha.jpg)  
+![](https://harmonyhu.github.io/_posts/images/Buddha.jpg)  
 
 ## 《心经》
 *---玄奘译本*  
