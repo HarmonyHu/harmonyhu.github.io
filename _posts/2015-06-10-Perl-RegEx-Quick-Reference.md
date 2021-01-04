@@ -6,9 +6,9 @@ categories: 编程
 tags: 编程 正则
 ---
 
-这是我见过最好的正则表达式总结，参考起来很方便。感谢原作者Stephen B.Jenkins。  
+这是我见过最好的正则表达式总结，参考起来很方便。感谢原作者Stephen B.Jenkins。
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/Perl.RegEx.Quick.Reference.JPG) 
+![](https://harmonyhu.github.io/img/Perl.RegEx.Quick.Reference.JPG)
 
 [《Perl RegEx Expression Quick Reference 1.05》](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/books/Perl.RegEx.Quick.Reference.pdf)
 

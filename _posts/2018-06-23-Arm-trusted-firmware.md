@@ -21,7 +21,7 @@ tags: Linux ARM
 
 #### 权限模型 (Exception Levels)
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/blob/master/_posts/images/el.jpg) 
+![](https://github.com/HarmonyHu/harmonyhu.github.io/blob/master/_posts/images/el.jpg)
 
 基本分为EL3-EL0，从高level转低level通过ERET指令，从低level转高level通过exception方式。
 
@@ -32,7 +32,7 @@ tags: Linux ARM
 * **Non-secure EL2**: Hypervisors, from vendors such as Citrix, VMWare, or OK-Labs.
 * **Secure EL0**: Trusted OS applications.
 * **Secure EL1**: Trusted OS kernels from Trusted OS vendors such as Trustonic.
-* **Secure EL3:** Secure Monitor, executing secure platform firmware provided by Silicon vendors and OEMs ARM Trusted Firmware 
+* **Secure EL3:** Secure Monitor, executing secure platform firmware provided by Silicon vendors and OEMs ARM Trusted Firmware
 
 
 
@@ -40,7 +40,7 @@ tags: Linux ARM
 
 基本分为BL1->BL2->(BL31/BL32/BL33)这几个阶段，整体框图如下：
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/atf_boot_flow.jpg)
+![](https://harmonyhu.github.io/img/atf_boot_flow.jpg)
 
 #### BL1
 
@@ -86,7 +86,7 @@ tags: Linux ARM
 
 4. CPU初始化，参考函数`reset_hardler`
 
-5. 配置控制寄存器，`SCTLR_EL3`、`SCR_EL3`、`CPTR_EL3`、`DAIF`、`MDCR_EL3`等等 
+5. 配置控制寄存器，`SCTLR_EL3`、`SCR_EL3`、`CPTR_EL3`、`DAIF`、`MDCR_EL3`等等
 
 ###### 平台初始化
 
@@ -101,8 +101,8 @@ tags: Linux ARM
 ###### BL2加载和运行
 
 1. 打印"Booting Trusted Firmware"以表明BL1执行成功
-2. 预判并加载BL2到trusted SRAM，预判参考函数`bl1_plat_handle_pre_image_load`，如果失败则打印"Failed to load BL2 firmware." 
-3. 调用函数`bl1_plat_handle_post_image_load`，传递BL2参数，如memory layout 
+2. 预判并加载BL2到trusted SRAM，预判参考函数`bl1_plat_handle_pre_image_load`，如果失败则打印"Failed to load BL2 firmware."
+3. 调用函数`bl1_plat_handle_post_image_load`，传递BL2参数，如memory layout
 4. 运行BL2
 
 #### BL2
@@ -121,7 +121,7 @@ tags: Linux ARM
 3. 使能MMU，并映射需要访问的memory
 4. 配置平台安全设置，使能访问控制组件
 5. 保留部分memory，用于传递数据给下一个BL EL3 Runtime Software
-6. 定义额外可用的memory，给后面每个BL的加载使用 
+6. 定义额外可用的memory，给后面每个BL的加载使用
 
 ###### 加载Image
 
@@ -129,13 +129,13 @@ tags: Linux ARM
 
 2. `load_bl31`，EL3 Runtime Software image load，从存储设备加载到trusted SRAM
 
-   - 通过提升SMC将控制回到BL1，将BL31的入口提供给BL1     
-   -  BL1关闭MMU，并通过清除SCTLR_EL3.M/I/C，冲掉data cache     
+   - 通过提升SMC将控制回到BL1，将BL31的入口提供给BL1   
+   -  BL1关闭MMU，并通过清除SCTLR_EL3.M/I/C，冲掉data cache   
    - BL1将控制转给BL31的入口
 
 3. `load_bl32` (optional), Secure-EL1 Payload image load
 
-4. `load_bl33`, Non-trusted Firmware image load，从存储设备加载到non-secure memory 
+4. `load_bl33`, Non-trusted Firmware image load，从存储设备加载到non-secure memory
 
 
 
@@ -167,7 +167,7 @@ tags: Linux ARM
 
 6. 检测系统拓扑
 
-###### Runtime services初始化 
+###### Runtime services初始化
 
 EL3 runtime services framework如下：
 
@@ -180,7 +180,7 @@ EL3 runtime services framework如下：
 #### BL33
 
 * Non-trusted Firmware image
-* EL3 Runtime Software使用BL2提供的entrypoint信息跳转到BL33，EL2模式 
+* EL3 Runtime Software使用BL2提供的entrypoint信息跳转到BL33，EL2模式
 
 ## 地址布局
 
@@ -219,7 +219,7 @@ EL3 runtime services framework如下：
 
 ## 关于FIP
 
-* Firmware Image Package 
+* Firmware Image Package
 * 通常BL1被烧录在ROM中，BL2/BL31/BL32/BL33/uboot被打包成fip.bin烧录在flash中；启动时通过检索UUID找到fip.bin中的各个image，参考`firmware_image_package.h`
 * 通过函数plat_get_image_source()读取数FIP数据
 * `tools/fiptool/fiptool`可以生成和分解fip文件

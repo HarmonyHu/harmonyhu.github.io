@@ -14,7 +14,7 @@ tags: 算法
 
 简单网络描述如下：
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/neuron.jpg)  
+![](https://harmonyhu.github.io/img/neuron.jpg)
 
 <!--more-->
 
@@ -64,13 +64,13 @@ $$
 
 
 $$
-w5_{new} = w5 - 0.5 \times \frac{\Delta E_{total}}{\Delta w5}   _{(假如学习率为0.5 )}  
+w5_{new} = w5 - 0.5 \times \frac{\Delta E_{total}}{\Delta w5}   _{(假如学习率为0.5 )}
 $$
 
 
 以此类推，更新所有权值。之后重复。
 
-**注意：**总误差对out_h1求导为  
+**注意：**总误差对out_h1求导为
 $$
 \frac{\Delta E_{total}}{\Delta out_{h1}}  = \frac{\Delta E_{total}}{\Delta net_{o1}}  \times \frac{\Delta net_{o1}}{\Delta out_{h1}} + \frac{\Delta E_{total}}{\Delta net_{o2}}  \times \frac{\Delta net_{o2}}{\Delta out_{h1}}
 $$

@@ -5,8 +5,8 @@ permalink: /about/
 icon: glyphicon-heart
 ---
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/logo.jpg)  
- 
+![](https://harmonyhu.github.io/img/logo.jpg)
+
 [**博客**](http://harmonyhu.com)
 | <a href="mailto:harmonyhu@foxmail.com?subject=Say Hello"><b>Email</b></a>
 

@@ -12,7 +12,7 @@ tags: TensorFlow
 
 如下模型（ 参见：[神经网络反向推导](http://harmonyhu.com/2018/05/23/neural-network/) )
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/neuron.jpg)
+![](https://harmonyhu.github.io/img/neuron.jpg)
 
 <!--more-->
 
@@ -107,7 +107,7 @@ writer.add_summary(train_summary,step)
 
    ```python
    # 跟踪loss信息
-   tf.summary.scalar("loss", loss) 
+   tf.summary.scalar("loss", loss)
    # 定义writer
    merged = tf.summary.merge_all()
    writer = tf.summary.FileWriter('/tmp/mytensor', sess.graph)
@@ -125,6 +125,6 @@ writer.add_summary(train_summary,step)
 
 3. 浏览器中打开<http://localhost:6006>，就可以看到模型数据了，如下图：
 
-   ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/tensorboard.jpg)
+   ![](https://harmonyhu.github.io/img/tensorboard.jpg)
 
-   ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/tensorboard2.jpg)
+   ![](https://harmonyhu.github.io/img/tensorboard2.jpg)

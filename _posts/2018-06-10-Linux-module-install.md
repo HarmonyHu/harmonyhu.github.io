@@ -50,7 +50,7 @@ if [ $? -eq 0 ]; then echo "Installed" fi
 #### 如何保证每次重启都加载
 
 1. 如果是设备Driver，上文已经说明，不需要特别动作
-2. 如果是其他Driver，与设备无关，则需要以下动作：  
+2. 如果是其他Driver，与设备无关，则需要以下动作：
    * 通用做法：将module名称填到文件`/etc/modules-load.d/*.conf`
    * ubuntu：将module名称填到文件`/etc/modules`
 
@@ -60,7 +60,7 @@ if [ $? -eq 0 ]; then echo "Installed" fi
 
 #### Linux发行版本
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/linux_tree.jpg) 
+![](https://harmonyhu.github.io/img/linux_tree.jpg)
 
 #### deb文件 (Debian)
 
