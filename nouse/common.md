@@ -17,6 +17,9 @@ export SET_CHIP_NAME=cv182x
 export TPU_ENABLE_PMU=1
 model_runner --dump-all-tensors --input in.npz --model  test.cvimodel
              --batch-num 4 --output output.npz --reference  out_ref.npz
+cvimodel_tool -a dump -i resnet50.cvimodel
+for name in `ls *.3.2`; do mv $name ${name%.3.2}.3; done #将文件.3.2改名为.3
+ctrl+q+p # 退出但不关闭docker
 ```
 
 ###### vim
@@ -24,14 +27,4 @@ model_runner --dump-all-tensors --input in.npz --model  test.cvimodel
 | 控制快捷键                                                   | 文本操作                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | dd 剪切光标所在行<br/>yy 拷贝光标所在行<br/>p 粘贴到光标所在行<br/>u 撤销上一次操作<br/>ctrl+u 恢复撤销 | /search 从头到为搜索<br/>?search 从尾到头搜索<br/>n表示下一个，shift+n表示上一个<br/>:10 跳转到第10行<br/>gg 跳到文头，shift+g 跳到文尾<br/>^ 跳到行头，$ 跳到行尾 |
-
-###### 其他
-
-退出但不关闭docker：ctrl+q+p
-
-###### 网络地址
-
-* ftp服务器：10.58.65.3
-* 深圳服务器：47.94.147.166
-* 武汉服务器：192.168.0.16
 

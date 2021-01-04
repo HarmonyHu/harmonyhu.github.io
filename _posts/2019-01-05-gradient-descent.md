@@ -14,7 +14,7 @@ tags: 算法
 
 只有2个权值的情况下，理想的损失函数模型如下：
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/gradient1.png)
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/gradient1.jpg)
 
 <!--more-->
 
@@ -26,13 +26,13 @@ A点最快的方向是就是其切线方向（2维可以用切平面表示)，�
 
 下降的幅度大小，即**学习率**。需要适当选取学习率，过小则移动太慢且容易陷入局部最小点；过大则容易出现在最小点周围盘旋，如下图：
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/gradient3.png)
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/gradient3.jpg)
 
 ## 挑战
 
 实际上的损失函数模型如下：
 
-![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/gradient4.png)
+![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/gradient4.jpg)
 
 * 局部最小值。
 * 鞍点。在某个权值维度是最小值，在另一个权值维度是最大值。
@@ -43,6 +43,6 @@ A点最快的方向是就是其切线方向（2维可以用切平面表示)，�
 
 * 调整学习率。随机加权平均方案如下：
 
-  ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/gradient5.png)
+  ![](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/images/gradient5.jpg)
 
   
