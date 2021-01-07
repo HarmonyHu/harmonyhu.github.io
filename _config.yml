@@ -31,12 +31,6 @@ description_footer: HarmonyHu's Blog
 duoshuo_shortname:
 disqus_shortname:
 
-# statistic analysis 统计代码
-# 百度统计 id，将统计代码替换为自己的百度统计id，即
-# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
-# xxxxx字符串
-baidu_tongji_id: 5fb429e98f8f460392dd9b875034990b
-google_analytics_id:
 
 # Build settings
 markdown: kramdown
