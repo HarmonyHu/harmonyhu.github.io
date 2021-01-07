@@ -14,13 +14,13 @@ url: "https://harmonyhu.github.io" # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username: 
-facebook_username: 
+twitter_username:
+facebook_username:
 github_username:  HarmonyHu
 email: harmonyhu@foxmail.com
-weibo_username: 
+weibo_username:
 zhihu_username: harmonyhu-17
-linkedIn_username: 
+linkedIn_username:
 dribbble_username:
 
 description_footer: HarmonyHu's Blog
@@ -35,7 +35,7 @@ disqus_shortname:
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
 # xxxxx字符串
-baidu_tongji_id: 
+baidu_tongji_id: 5fb429e98f8f460392dd9b875034990b
 google_analytics_id:
 
 # Build settings
