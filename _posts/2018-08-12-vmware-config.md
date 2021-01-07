@@ -32,6 +32,8 @@ tags: vmware
 
 5. 执行`reboot`，重启系统
 
+<!--more-->
+
 ## 二、常见使用
 
 * 按F2进入BIOS，按ESC进入boot menu
