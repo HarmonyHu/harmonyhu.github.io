@@ -20,6 +20,7 @@ arr = np.array([[1,2],[3,4]], dtype = float) # 创建数组，元素指定，sha
 empty = np.empty((4,3,28,28), dtype = int) # 创建数组，shape为(4,3,28,28)
 zeros = np.zeros((4,3,28,28)) # 创建数组，初始化为全0
 ones = np.ones((4,3,28,28)) # 创建数组，初始化为全1
+fives = np.fill((4,3,28,28), 5.0) # 创建数组，初始化为全5.0
 x = np.arange(5) # 创建数组[0,1,2,3,4]
 
 ones_2 = np.reshape((2,6,28,28)) # reshape

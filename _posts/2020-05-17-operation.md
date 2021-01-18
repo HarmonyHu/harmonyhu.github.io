@@ -7,7 +7,7 @@ tags: 算法
 
 * content
 {:toc}
-## 元素操作
+## 激活函数
 
 #### Relu
 
@@ -54,13 +54,19 @@ $$
 f'(x) = \frac{e^{-x}}{(1+e^{-x})^2} = f(x)\times (1 - f(x))
 $$
 
+![](https://harmonyhu.github.io/img/sigmoid.png)
+
+
+
 #### Tanh
 
 $$
 f(x) = \frac{sinh(x)}{cosh(x)}=\frac{e^x - e^{-x}}{e^x + e^{-x}}
 $$
 
-将变量映射到(-1,1)，S型曲线
+将变量映射到(-1,1)，S型曲线.
+
+![](https://harmonyhu.github.io/img/tanh.png)
 
 
 
@@ -71,6 +77,12 @@ f(x) = x \times tanh(ς(x)),\quad 其中ς(x) = ln(1 + e ^x)
 $$
 
 YOLOv4网络使用的激活函数，类似relu，但是负值保持光滑非单调。
+
+![](https://harmonyhu.github.io/img/mish.png)
+
+
+
+## 元素操作
 
 #### Scale
 
@@ -113,7 +125,7 @@ $$
 
 
 
-## 矩阵操作
+## 向量操作
 
 #### Pooling
 
@@ -341,9 +353,9 @@ $$
 
 #### InnerProduct (FullyConnected)
 
-可以理解为`kh = ih, kw = iw`的卷积，从而导致参数很多。
+二维矩阵运算，[M N] * [N K] = [M K]
 
-比如`[4, 3, 25, 25] =>[4, 28]`，对应的参数为`[28, 3, 25,25]`。
+比如`[4, 3, 25, 25] * [28, 3, 25, 25] =>[4, 28]`
 
 
 
