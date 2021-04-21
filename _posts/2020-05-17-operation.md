@@ -109,7 +109,7 @@ $$
 
 归一化，将网络层的输入转化到均值为 0方差为1的标准正态分布上，使梯度变化增大，加快训练收敛速度。
 
-caffe中batchnorm，没有第四步，推理运算过程如下：
+caffe中batchnorm，通常没有第四步，推理运算过程如下：
 $$
 mean = blobs_0,\quad variance = blobs_1,\quad scale = blobs_2[0] \\
 y_i = \frac{x_i - \frac{mean_c}{scale}}{\sqrt{\frac{variance_c}{scale} + eps}}\\
@@ -121,7 +121,19 @@ $$
 b^i_{x,y} = a^i_{x,y} / \bigg(k + \alpha \sum^{min(N-1, i + n/2)}_{j = max(0, i- n/2)}(a^j_{x,y})^2\bigg)^\beta
 $$
 
-局部相应归一化，基本上只有googlenet在用。通俗来说就是局部相邻元素归一。
+局部相应归一化，基本上只有googlenet在用。通俗来说就是局部相邻元素归一，分通道间相邻和通道内相邻。
+
+
+
+#### LayerNorm
+
+```python
+torch.nn.LayerNorm(normalized_shape: Union[int, List[int], torch.Size],
+                   eps: float = 1e-05,
+                   elementwise_affine: bool = True)
+```
+
+计算过程与BatchNorm相同，区别在于BatchNorm会在train阶段跟踪统计全局的均值方差；而LayerNorm不受train影响，推理时直接计算指定范围的均值方差。
 
 
 
