@@ -9,7 +9,7 @@ tags: 算法
 {:toc}
 ## 模型结构
 
-![](https://harmonyhu.github.io/img/tansformer.png)
+![](https://harmonyhu.github.io/img/transformer.png)
 
 <!--more-->
 
