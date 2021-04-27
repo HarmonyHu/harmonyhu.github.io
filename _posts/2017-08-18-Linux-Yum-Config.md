@@ -2,7 +2,7 @@
 layout: post
 title: 配置Linux的yum源(RHEL7.3 x64为例)
 categories: Linux
-tags: Linux Yum
+tags: Yum
 ---
 
 * content

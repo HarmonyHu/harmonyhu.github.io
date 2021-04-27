@@ -2,7 +2,7 @@
 layout: post
 title:  Ruby基本数据类型
 categories: 编程
-tags: 编程 Ruby
+tags: Ruby
 ---
 
 * content

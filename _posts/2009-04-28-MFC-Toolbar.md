@@ -3,7 +3,7 @@ layout: post
 title:  MFC 自定义简单的工具栏类
 date:   2009-04-28
 categories: 编程
-tags: 编程 MFC
+tags: MFC
 ---
 >本文最初是2009-04-28发表于[CSDN](http://blog.csdn.net/harmonyhu/article/details/4134476),当时正在用MFC乐此不疲地写各种Windows的小应用。如今出来工作很多年了，几乎很少用到MFC的东西，而且在移动互联网时代的到来，MFC也跟着落伍了。再来回看当时做的事情，真是微不足道，人果真要把时间花在那些亘久不变的事物上。 
 

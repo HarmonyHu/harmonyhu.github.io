@@ -2,7 +2,7 @@
 layout: post
 title: 23种设计模式回顾整理(未完)
 categories: 编程
-tags: 编程 设计模式
+tags: 设计模式
 ---
 
 * content

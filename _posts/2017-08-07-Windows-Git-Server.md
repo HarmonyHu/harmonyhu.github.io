@@ -2,7 +2,7 @@
 layout: post
 title: Windows下用gogs搭建Git服务器
 categories: Git
-tags: Git gogs
+tags: gogs
 ---
 
 * content
@@ -41,7 +41,7 @@ ENABLED = false （注：关闭直接网页上传功能）
 START_SSH_SERVER = true （注：开启内置ssh功能）
 OFFLINE_MODE     = true （注：开启离线模式）
 LANDING_PAGE     = explore （注：主页显示explore页面）
-```  
+```
 4. 如果客户端的ssh连接出现如下错误：  
 ```
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

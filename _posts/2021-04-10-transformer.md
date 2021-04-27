@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 学习Transformer
+title: Transformer
 categories: AI
 tags: 算法
 ---
@@ -24,6 +24,39 @@ $$
 Embedding做的事情就是：将句子中的字转换成向量形式。
 
 每个字对应的向量由`Word2vec`算法而定。
+
+
+
+#### Word2vec
+
+Word2vec由简单的神经网络模型生成，一般分两种：`CBOW(Continuous Bag-of-Words)`与`Skip-Gram`。
+
+* CBOW输入是某个词的上下文词向量，输出是该词的词向量。适合小型数据量。如下图：
+
+```mermaid
+graph LR
+
+W_t-2 --> hidden_layer
+W_t-1 --> hidden_layer
+W_t+1 --> hidden_layer
+W_t+2 --> hidden_layer
+hidden_layer --> W_t
+```
+
+
+
+* Skip-Gram输入是某个词的词向量，输出是上下文的词向量。适合大型数据量。如下图：
+
+```mermaid
+graph LR
+
+W_t --> hidden_layer
+hidden_layer --> W_t-2
+hidden_layer --> W_t-1
+hidden_layer --> W_t+1
+hidden_layer --> W_t+2
+
+```
 
 
 
@@ -52,12 +85,12 @@ Q = Linear(X_{em}) = X_{em}W_Q \\
 K = Linear(X_{em}) = X_{em}W_K \\
 V = Linear(X_{em}) = X_{em}W_V \\
 其中 W_Q \in R^{em\_dim *d_k},W_K \in R^{em\_dim * d_k}, W_V \in R^{em\_dim * d_v} \\
-通常d_k = d_v = em\_dim
+通常d_k = d_v = embedding\_dim
 $$
 
 * Q,K,V对应quary,key,value
 
-* &radic;d<sub>k</sub>用于调节，防止softmax的值非0即1
+* &radic;d<sub>k</sub>用于调节，使softmax输入为标准正态分布。Q和K的各个分量是标准归一化分布，也就是均值为0，方差为1。QK<sup>T </sup>得到的结果，均值为0，方差为d<sub>k</sub>。
 
 * QK<sup>T </sup> 称注意力矩阵，维度为`[batch_size, h, seq_len, seq_len]`，Q与K对应向量越相似值越大，softmax后越大的值百分比越高
 
@@ -68,6 +101,11 @@ $$
 
 
 #### multi head attention
+
+$$
+head_i = Attention(QW_i^Q, KW_i^K, VW_i^V) \\
+MultiHead(Q,K,V) = Concat(head1, ..., head_h)W^O
+$$
 
 将`embedding dim`平均拆分成多份：`head size = embedding dim / num of heads`。
 

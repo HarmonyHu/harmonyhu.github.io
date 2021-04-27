@@ -3,7 +3,7 @@ layout: post
 title:  地址空间布局总结
 date:   2010-11-09
 categories: BIOS
-tags: BIOS 地址空间
+tags: 地址空间
 ---
 
 * content

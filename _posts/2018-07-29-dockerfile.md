@@ -2,7 +2,7 @@
 layout: post
 title: Dockerfile的使用
 categories: Linux
-tags: Linux docker
+tags: docker
 ---
 
 * content

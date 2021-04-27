@@ -2,7 +2,7 @@
 layout: post
 title: Linux Event Tracing
 categories: Linux
-tags: Linux
+tags: Event
 ---
 
 * content

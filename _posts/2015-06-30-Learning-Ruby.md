@@ -3,7 +3,7 @@ layout: post
 title:  Ruby学习整理
 date:   2015-06-30
 categories: 编程
-tags: 编程 Ruby
+tags: Ruby
 ---
 
 * content

@@ -2,13 +2,13 @@
 layout: post
 title:  正则表达式快速参考
 date:   2015-06-10
-categories: 编程
-tags: 编程 正则
+categories: 参考
+tags: 正则 Perl
 ---
 
-这是我见过最好的正则表达式总结，参考起来很方便。感谢原作者Stephen B.Jenkins。
 
-![](https://harmonyhu.github.io/img/Perl.RegEx.Quick.Reference.JPG)
 
-[《Perl RegEx Expression Quick Reference 1.05》](https://github.com/HarmonyHu/harmonyhu.github.io/raw/master/_posts/books/Perl.RegEx.Quick.Reference.pdf)
+![](https://harmonyhu.github.io/img/regexp.png)
+
+[《Perl RegEx Expression Quick Reference 1.05》](http://people.duke.edu/~tkb13/courses/ece560-2020fa/resources/preqr.pdf)
 

@@ -2,7 +2,7 @@
 layout: post
 title:  Git学习整理
 date:   2015-05-10
-categories: Git
+categories: 参考
 tags: Git
 ---
 

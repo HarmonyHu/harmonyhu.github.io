@@ -3,7 +3,7 @@ layout: post
 title: Swift学习之函数与闭包
 date: 2015-10-08 00:00
 categories: 编程
-tags: Swift 编程
+tags: Swift
 ---
 
 * content

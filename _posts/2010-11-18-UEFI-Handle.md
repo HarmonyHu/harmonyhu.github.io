@@ -3,7 +3,7 @@ layout: post
 title:  UEFI Handle的来龙去脉
 date:   2010-11-18
 categories: BIOS
-tags: BIOS UEFI
+tags: UEFI
 ---
 
 * content

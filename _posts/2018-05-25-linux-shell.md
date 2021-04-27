@@ -2,7 +2,7 @@
 layout: post
 title: Bash shell脚本
 categories: 编程
-tags: 编程 Shell
+tags: Shell
 ---
 
 * content

@@ -3,7 +3,7 @@ layout: post
 title:  SMBus读取从设备数据总结
 date:   2010-09-01
 categories: BIOS
-tags: BIOS SMBus
+tags: SMBus
 ---
 
 * content
@@ -19,11 +19,11 @@ tags: BIOS SMBus
 
 ## 1. 简单介绍  
 SMBus主要读取方式有byte data(字节读取)方式和block(块读取)方式。当用byte data读取方式时，涉及到的IO寄存器有HST_STS，HST_CNT，HST_CMD，XMIT_SLVA，HST_D0。如果采用block的读取方式，除了前面需要关注的几个寄存器，还要关注两个寄存器，HOST_BLOCK_DB和AUX_CTL。当然这些只是最需要关注的寄存器，还有其他的寄存器可能也会影响到读取数据的过程，比如SMBUS PCI配置中的I2C_EN以及HST_EN等等（目前测试过程以及对应的程序无法保证百分百的考虑到位）。这里只把它们当成是默认设置。  
-   
+
 在ICH9 spec中有一段关于SMBus执行命令过程中HST_STS变化情况的描述，很重要，如下：  
 
 >In all of the following commands, the Host Status Register (offset 00h) is used to determine the progress of the command. While the command is in operation, the HOST_BUSY bit is set. If the command completes successfully, the INTR bit will be set in the Host Status Register. If the device does not respond with an acknowledge, and the transaction times out, the DEV_ERR bit is set. If software sets the KILL bit in the Host Control Register while the command is running, the transaction will stop and the FAILED bit will be set.
-    
+
 这段话表明，HOST_BUSY被置1可以作为SMBus忙的标志，INTR被置1可以作为命名被成功执行到结束的标志，DEV_ERR可以作为命名执行出错的标志，另外还有其他一些错误标志位都可以作为出错标志。FAILED可以作为命名被KILL中断的标志。  
 
 这里将用两种方式来说明读取数据的过程，一是采用RU软件测试的方式；二是采用汇编代码。  
@@ -56,7 +56,7 @@ SMBus主要读取方式有byte data(字节读取)方式和block(块读取)方式
 **`AUX_CTL`设置为00H**  
 
 前面三步同上。 
- 
+
 * 第四步，将`HST_CNT`(02H)设置为54H，`HST_CNT`变成14H，`HST_STS`变成C1H（注意这里是C1H,即DS被置1），`HST_D0`变成1F，`HOST_BLOCK_DB`变成了08H（注意它并没有闪），本机的SPD数据序列为：7F,08,08,0E,…。这明显的说明`HST_D0`保存的是第一个数据，它也是count。  
 * 第五步，将`HST_STS`设置为C1H（注意`HST_STS`的数据本来就是C1H,用这种方式清掉DS位，清掉之后发现`HST_STS`还是C1，没有变化，其实这一过程是有变化的，`HST_STS`先变成41，然后再变成C1，速度太快，看不到变化，在后面程序中用这一过程作为判断），发现`HST_D0`变为08H（这里还不能说是变化，值一样）。  
 * 第六步，继续第五步，发现`HST_D0`变为0EH。接着重复，可以把这个Block缓存数据读取完。以什么作为结束标志呢？INTR和!`HOST_BUS`。另外也可以将KILL位（在`HST_CNT`中）置1，中断传输。这种方式下可以读取超过32个字节的数据，有多少就能读多少。  
@@ -66,7 +66,7 @@ SMBus主要读取方式有byte data(字节读取)方式和block(块读取)方式
 ## 3. 汇编代码验证过程 
 
 由于代码不同于用RU软件测试，应为代码的执行过程是很快的，需要通过状态位精确地读取数据，而用RU进行设置时这些过程是看不到的，比如在block读取方式中，不采用32-byte buffer，需要通过HST_CNT中的DS位来遍历所有的数据，DS每置1清0一次，HOST_BLOCK_DB就会读取新的数据，那么什么时候读这个数据呢？是在DS由0再一次变为1的时候（当然也可以通过IODELAY，但究竟需要延时多久呢？）。而这一个过程在RU软件测试的时候是看不到的。所以代码需要更加关注标志的变化。  
-   
+
 ### 3.1 Byte读取方式的代码过程 
 
 像Byte数据的读取过程比较简单，仍然强调`HST_STS`的变化，如前面一段英文描述，命名是否成功结束可以用INTR位来得到，命名执行失败可以通过`HST_STS`&1CH是否为0来判断（也就是各种错误标志位）。

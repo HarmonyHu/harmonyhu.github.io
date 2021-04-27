@@ -2,7 +2,7 @@
 layout: post
 title: Linux Yum命令整理
 categories: Linux
-tags: Yum Linux
+tags: Yum
 ---
 
 * content
