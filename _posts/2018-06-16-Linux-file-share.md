@@ -2,7 +2,7 @@
 layout: post
 title: Ubuntu下的文件共享(tftp/nfs)
 categories: Linux
-tags: Linux
+tags: ubuntu
 ---
 
 * content

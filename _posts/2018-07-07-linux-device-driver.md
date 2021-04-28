@@ -2,7 +2,7 @@
 layout: post
 title: Linux Device Driver
 categories: Linux
-tags: Linux ARM
+tags: ARM
 ---
 
 * content

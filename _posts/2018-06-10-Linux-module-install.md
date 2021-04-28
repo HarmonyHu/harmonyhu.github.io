@@ -2,7 +2,7 @@
 layout: post
 title: Linux Driver的安装和卸载
 categories: Linux
-tags: Linux module
+tags: Driver
 ---
 
 * content

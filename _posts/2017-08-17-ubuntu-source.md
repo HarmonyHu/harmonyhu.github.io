@@ -2,7 +2,7 @@
 layout: post
 title: 配置ubuntu的源
 categories: Linux
-tags: Linux
+tags: ubuntu
 ---
 
 * content
