@@ -104,7 +104,7 @@ $$
 
 $$
 head_i = Attention(QW_i^Q, KW_i^K, VW_i^V) \\
-MultiHead(Q,K,V) = Concat(head1, ..., head_h)W^O
+MultiHead(Q,K,V) = Linear(Concat(head1, ..., head_h)W^O)
 $$
 
 将`embedding dim`平均拆分成多份：`head size = embedding dim / num of heads`。
@@ -127,10 +127,11 @@ $$
 ## 前馈网络
 
 $$
-X_{hidden}= Activate(Linear(Linear(X_{attention})))
+FFN(x) = max(0, xW_1 + b_1)W_2 + b_2 \\
+Res\ and\ LayerNorm
 $$
 
-线性映射和激活函数
+线性映射和激活函数Pooling，然后再残差与归一化
 
 
 

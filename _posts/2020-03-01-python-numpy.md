@@ -22,13 +22,13 @@ tags: Numpy
 N维数据对象，成员：
 
 * data，内存地址
-
 * shape，各个维度大小的元组
 * dtype，元素类型
 * size，元素个数
 * ndim，维度的数量
 * strides，各个维度步进字节大小的元组
 * T，ndarray，对象的转置
+* flags, 各种属性标志
 * 其他
 
 <!--more-->
@@ -98,6 +98,7 @@ for e in g.flat:     #元素迭代器
 h = g.flatten() #数组一维化，维度为(20)
 i = g.ravel()   #数组一维化引用，修改i会使g改变
 j = a.transpose((1,0)) #维度从(5,4)变为(4,5),数据内容转置
+k = np.ascontiguousarray(j) #使连续，一般需要存储时使用
 
 k = a.reshape(1,4,1,5).squeeze() # 删除维度为1的维度，最终维度为(4,5)
 l = a.reshape(1,4,1,5).squeeze(0) # 删除第0维，最终维度为(4,1,5)
