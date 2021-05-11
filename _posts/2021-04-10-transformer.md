@@ -2,7 +2,7 @@
 layout: post
 title: Transformer
 categories: AI
-tags: 算法
+tags: 模型
 ---
 
 * content
