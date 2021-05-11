@@ -2,7 +2,7 @@
 layout: post
 title: python调试
 categories: python
-tags: python
+tags: pdb
 ---
 
 * content
