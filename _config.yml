@@ -43,6 +43,23 @@ tag_dir: tag/
 # excerpt
 excerpt_separator: <!--more-->
 
-# paginate
-gems: [jekyll-paginate,jekyll-spaceship]
+# plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-spaceship
+
 paginate: 6
+
+jekyll-spaceship:
+  # default enabled processors
+  processors:
+    - table-processor
+    - mathjax-processor
+    - mermaid-processor
+  mermaid-processor:
+    mode: default
+    css:
+      class: mermaid
+    syntax:
+      code: 'mermaid'
+      custom: ['@startmermaid', '@endmermaid']
