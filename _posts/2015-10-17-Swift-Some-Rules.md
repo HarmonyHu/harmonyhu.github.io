@@ -3,7 +3,7 @@ layout: post
 title: Swift学习之细小规则整理(未完)
 date: 2015-10-17 00:00
 categories: 编程
-tags: Swift
+tags:
 ---
 
 * content
