@@ -51,8 +51,16 @@ plugins:
 paginate: 6
 
 jekyll-spaceship:
-  # default enabled processors
   processors:
     - table-processor
     - mathjax-processor
     - mermaid-processor
+  mermaid-processor:
+    mode: default
+    css:
+      class: mermaid
+    syntax:
+      code: 'mermaid'
+    config:
+      theme: default
+    src: https://mermaid.ink/svg/
