@@ -33,7 +33,7 @@ Word2vec由简单的神经网络模型生成，一般分两种：`CBOW(Continuou
 
 * CBOW输入是某个词的上下文词向量，输出是该词的词向量。适合小型数据量。如下图：
 
-```mermaid
+```mermaid!
 graph LR
 
 W_t-2 --> hidden_layer
@@ -47,7 +47,7 @@ hidden_layer --> W_t
 
 * Skip-Gram输入是某个词的词向量，输出是上下文的词向量。适合大型数据量。如下图：
 
-```mermaid
+```mermaid!
 graph LR
 
 W_t --> hidden_layer
