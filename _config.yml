@@ -47,6 +47,7 @@ excerpt_separator: <!--more-->
 gems:
   - jekyll-paginate
   - jekyll-spaceship
+  - jekyll-sitemap
 
 paginate: 6
 
