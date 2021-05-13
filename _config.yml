@@ -44,7 +44,7 @@ tag_dir: tag/
 excerpt_separator: <!--more-->
 
 # plugins
-plugins:
+gems:
   - jekyll-paginate
   - jekyll-spaceship
 
