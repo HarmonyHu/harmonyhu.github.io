@@ -3,7 +3,7 @@ layout: post
 title: Swift学习之类的构造和析构
 date: 2015-10-25 00:00
 categories: 编程
-tags: Swift
+tags:
 ---
 
 * content
