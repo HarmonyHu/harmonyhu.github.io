@@ -64,3 +64,4 @@ jekyll-spaceship:
     config:
       theme: default
     src: https://mermaid.ink/svg/
+theme: jekyll-theme-modernist
