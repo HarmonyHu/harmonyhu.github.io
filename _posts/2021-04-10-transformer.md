@@ -7,11 +7,20 @@ tags: 模型
 
 * content
 {:toc}
+
+## 概述
+
+**论文地址[2017]**：[Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
+
+**核心运算**：$ Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}})V $
+
+**描述**：查询(Query)到键值(Key-Value)的映射
+
+<!--more-->
+
 ## 模型结构
 
 ![](https://harmonyhu.github.io/img/transformer.png)
-
-<!--more-->
 
 ## Embedding
 
@@ -141,8 +150,6 @@ $$
 
 
 ## 参考
-
-[Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
 
 [硬核图解Transformer](https://mp.weixin.qq.com/s/jx-2Ai2YKbwODW6uJaF3hQ)
 
