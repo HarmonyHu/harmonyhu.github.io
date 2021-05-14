@@ -4,3 +4,4 @@ gem 'kramdown'
 gem 'jekyll-spaceship'
 gem 'jekyll-sitemap'
 gem 'jekyll-paginate'
+gem "webrick"

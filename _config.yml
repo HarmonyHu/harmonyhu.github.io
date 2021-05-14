@@ -43,8 +43,7 @@ tag_dir: tag/
 # excerpt
 excerpt_separator: <!--more-->
 
-# plugins
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-spaceship
   - jekyll-sitemap
