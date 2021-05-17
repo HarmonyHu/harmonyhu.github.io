@@ -14,14 +14,10 @@ url: "https://harmonyhu.github.io" # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username:
-facebook_username:
 github_username:  HarmonyHu
 email: harmonyhu@foxmail.com
 weibo_username:
 zhihu_username:
-linkedIn_username:
-dribbble_username:
 
 description_footer: HarmonyHu's Blog
 

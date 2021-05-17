@@ -1,4 +1,16 @@
-<!-- UY BEGIN -->
-<div id="uyan_frame"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2139878"></script>
-<!-- UY END -->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库:-->
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="comment">Comments</div>
+<script>
+    new Valine({
+        av: AV,
+        el: '.comment',
+        app_id:'RxhC0rvs3KyodDq0wO6SQKd1-gzGzoHsz',
+        app_key:'9MMbphkBJuvvSuImethjLvCb',
+        notify:true,
+        path:'{{ page.url }}',
+        placeholder:'comments'
+    });
+</script>
