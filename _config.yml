@@ -46,20 +46,5 @@ excerpt_separator: <!--more-->
 
 plugins:
   - jekyll-paginate
-  - jekyll-spaceship
-  - jekyll-sitemap
 
 paginate: 6
-
-jekyll-spaceship:
-  processors:
-    - mermaid-processor
-  mermaid-processor:
-    mode: default
-    css:
-      class: mermaid
-    syntax:
-      code: 'mermaid'
-    config:
-      theme: default
-    src: https://mermaid.ink/svg/

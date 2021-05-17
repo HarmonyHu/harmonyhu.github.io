@@ -3,6 +3,7 @@ layout: post
 title: Transformer
 categories: AI
 tags: 模型
+mermaid: true
 ---
 
 * content
