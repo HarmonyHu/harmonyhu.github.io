@@ -1,8 +1,14 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24">
-<style type="text/css">
-	.st0{fill:#515151;}
-</style>
-<path class="st0" d="M1.7,22.3c5.7-5.7,11.3-5.7,17,0c3.3-3.3,3.5-5.3,0.8-6c2.7,0.7,3.5-1.1,2.3-5.6s-3.3-5.2-6.3-2.1
-	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Inkpad (http://www.taptrix.com/) --><svg xmlns:inkpad="http://taptrix.com/inkpad/svg_extensions" height="19pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="19pt" version="1.1" viewBox="0,0,19,19">
+<defs>
+<path id="TextPath" d="M0.39857+13.8554L2000.4+13.8554" transform="matrix(1 -0 -0 1 4 -5)"/>
+</defs>
+<g id="Hu" inkpad:layerName="Hu">
+<text stroke="#000000" font-family="'LiGothicMed'" stroke-width="0" fill="#000000" font-size="18" opacity="1" transform="matrix(1 0 0 1 -4 5)" stroke-linejoin="round">
+<textPath xlink:href="#TextPath" method="align" startOffset="0pt">
+<![CDATA[Hu]]></textPath>
+</text>
+</g>
 </svg>
