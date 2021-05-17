@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  地址空间布局总结
 date:   2010-11-09
 categories: BIOS

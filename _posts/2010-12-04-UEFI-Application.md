@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  UEFI Application入门
 date:   2010-12-04
 categories: BIOS

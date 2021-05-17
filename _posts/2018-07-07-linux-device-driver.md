@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Linux Device Driver
 categories: Linux
 tags: ARM
@@ -171,7 +171,7 @@ platform_device {
 	name = "10000000.test",
 	id = 0,
 	num_resources = 2,
-	resource = {"rega":[0x10000000,0x10001000], 
+	resource = {"rega":[0x10000000,0x10001000],
                 "regb":[0x10002000,0x10003000]}
 };
 ```
@@ -194,11 +194,11 @@ struct platform_driver {
 #### driver与device的匹配
 
 ```c
-static int platform_match(struct device *dev, struct device_driver *drv) 
+static int platform_match(struct device *dev, struct device_driver *drv)
 // 总线下的设备与设备驱动的匹配函数
 {
     if (pdrv->id_table)    //如果pdrv中的id_table表存在，则匹配id_table
-        return platform_match_id(pdrv->id_table, pdev) != NULL;  
+        return platform_match_id(pdrv->id_table, pdev) != NULL;
     //  匹配 pdev->name与drv->name名字是否形同
     return (strcmp(pdev->name, drv->name) == 0);
 }

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 微积分基础
 categories: AI
 tags: 数学
@@ -26,7 +26,7 @@ $$
 2. 可以反映y在x的某点上的变化率
 
 3. 可以表示运动曲线`s=f(t)`在t的某点上的速率
-   
+
 
 <!--more-->
 
@@ -93,7 +93,7 @@ $$
 f(x) = \frac{1}{1+e^{-x}}
 $$
 
-解：依据链式法则，  
+解：依据链式法则，
 
 $$
 (1+e^{-x})^{-1} = (-1)\times  (1+e^{-x})^{-2} \times  (1+e^{-x})'  = (-1)\times  (1+e^{-x})^{-2} \times e^{-x} \times (-1) = \frac{1}{e^x+e^{-x}+2}
@@ -157,7 +157,7 @@ y=x^2
 $$
 所围图形的面积。
 
-解：  
+解：
 $$
 A = \int_0^1(x^\frac{1}{2} - x^2) dx = [\frac{2}{3}x^\frac{3}{2}-\frac{x^3}{3}]_0^1 = \frac{1}{3}
 $$
@@ -191,17 +191,17 @@ $$
 $$
 f(x) = \int  (ax+b)dx
 $$
-解：  
+解：
 $$
 f(x) = \int  (ax+b)dx = \int  (ax+b) \times \frac{1}{a} d(ax+b) \\ 令u = ax+b，\\ 则f(x) = \frac{1}{a}\int udu = \frac{1}{2a}u^2 + C= \frac{(ax+b)^2}{2a}= \frac{a}{2}x^2 + x + C
 $$
 
-**题2： ** 
+**题2： **
 $$
 f(x) = \int  (3x-2)^5dx
 $$
 
-解：  
+解：
 $$
 f(x) = \frac{1}{3}\int (3x-2)^5d(3x-2) +C= \frac{1}{3}\times\frac{1}{6}(3x-2)^6 +C
 $$
@@ -210,7 +210,7 @@ $$
 $$
 f(x) = \int xe^{-x^2}dx
 $$
-解：  
+解：
 $$
 \because xdx=\frac{1}{2}dx^2, \therefore f(x) = -\frac{1}{2}\int e^{-x^2}d(-x^2) = -\frac{1}{2}e^{-x^2} + C
 $$
@@ -220,7 +220,7 @@ $$
 
 ###### 公式：
 
-设x=u(t), 可导且u'(t)不为0，则：  
+设x=u(t), 可导且u'(t)不为0，则：
 $$
 \int f(x)dx = \int f(u(t))u'(t)dt = F(t) + C = F(u^{-1}(x)) + C
 $$
@@ -231,7 +231,7 @@ $$
 f(x) = \int \frac{1}{x(x-1)^{\frac{1}{2}}}dx
 $$
 
-解：  
+解：
 
 $$
 令x=t^2+1，则\\ f(x) = \int \frac{1}{(t^2+1)t}d(t^2+1) = \int \frac{2}{t^2+1}dt = 2 \arctan t +C = 2 \arctan(x-1)^\frac{1}{2} + C
@@ -242,7 +242,7 @@ $$
 ###### 公式：
 
 $$
-由[u(x)v(x)]' = u'(x)v(x) + u(x)v'(x)，得u(x)v'(x) = [u(x)v(x)]'- v(x)u'(x), \\ 
+由[u(x)v(x)]' = u'(x)v(x) + u(x)v'(x)，得u(x)v'(x) = [u(x)v(x)]'- v(x)u'(x), \\
 两边积分得\int u(x)v'(x)dx = u(x)v(x) - \int v(x)u'(x)dx
 $$
 
@@ -254,11 +254,11 @@ $$
 f(x) = \int(x^2+1)e^{-x}dx
 $$
 
-解：  
+解：
 $$
 f(x) = - \int (x^2+1)de^{-x} \\
 =  - (x^2+1)e^{-x} + \int e^{-x}d(x^2+1) \\
-=  - (x^2+1)e^{-x} + 2\int e^{-x}xdx \\ 
+=  - (x^2+1)e^{-x} + 2\int e^{-x}xdx \\
 = - (x^2+1)e^{-x} + 2\int xd(-e^{-x}) \\
 = - (x^2+1)e^{-x} - 2xe^{-x} + 2\int e^{-x}dx \\
 = - (x^2+1)e^{-x} - 2xe^{-x} -2 e^{-x} +C \\

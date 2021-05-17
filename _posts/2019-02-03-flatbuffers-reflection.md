@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: FlatBuffers反射
 categories: 编程
 tags: flatbuffers google

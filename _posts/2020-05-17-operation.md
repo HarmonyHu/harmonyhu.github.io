@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 常见算子操作
 categories: AI
 tags: 算法
@@ -12,7 +12,7 @@ tags: 算法
 #### Relu
 
 $$
-f(x) = 
+f(x) =
 \begin{cases}
 x,\quad & if & x \ge 0 \\
 0,\quad & if & x \lt 0
@@ -22,7 +22,7 @@ $$
 #### LeakyRelu
 
 $$
-f(x) = 
+f(x) =
 \begin{cases}
 x,\quad & if & x \ge 0 \\
 x \times negative\_slope,\quad & if &x \lt 0
@@ -36,7 +36,7 @@ $$
 #### PRelu
 
 $$
-f(x) = 
+f(x) =
 \begin{cases}
 x,\quad & if & x \ge 0 \\
 x \times slope\_data[c],\quad & if &x \lt 0
@@ -144,7 +144,7 @@ torch.nn.LayerNorm(normalized_shape: Union[int, List[int], torch.Size],
 $$
 \begin{bmatrix}
 1 & 2 & 3 & 4\\
-5 & 6 & 7 & 8 
+5 & 6 & 7 & 8
 \end{bmatrix}
 \Rightarrow
 \begin{cases}
@@ -204,7 +204,7 @@ $$
 $$
 \begin{bmatrix}
 1 & 2 & 3 & 4\\
-5 & 6 & 7 & 8 
+5 & 6 & 7 & 8
 \end{bmatrix}
 \Rightarrow
 \begin{bmatrix}
@@ -248,7 +248,7 @@ $$
 $$
 \begin{bmatrix}
 1 & 2 & 3 & 4\\
-5 & 6 & 7 & 8 
+5 & 6 & 7 & 8
 \end{bmatrix}
 \Rightarrow
 \begin{bmatrix}

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: tensorflow：添加新OP和新设备
 categories: AI
 tags: TensorFlow
@@ -188,9 +188,9 @@ REGISTER_GPU(bfloat16);
    public:
     typedef std::vector<std::unique_ptr<typename TTypes<T, 2>::ConstMatrix>>
         ConstMatrixVector;
-  
+
     explicit ConcatBaseOp(OpKernelConstruction* c) : OpKernel(c) {}
-  
+
     void Compute(OpKernelContext* c) override {
       const Tensor* concat_dim_tensor;
       const char* axis_attribute_name = "concat_dim";
@@ -204,7 +204,7 @@ REGISTER_GPU(bfloat16);
 
   这个类需要实现构造函数，和Compute方法
 
-  
+
 
 ## 三、注册新设备
 

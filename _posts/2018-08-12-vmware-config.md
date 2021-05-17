@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: VMware使用
 categories: Linux
 tags: vmware

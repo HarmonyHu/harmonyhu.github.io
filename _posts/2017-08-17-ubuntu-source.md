@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 配置ubuntu的源
 categories: Linux
 tags: ubuntu
@@ -10,7 +10,7 @@ tags: ubuntu
 
 以ubuntu 16.04为例
 
-## 1. 源地址  
+## 1. 源地址
 #### 清华源
 
 ```bash

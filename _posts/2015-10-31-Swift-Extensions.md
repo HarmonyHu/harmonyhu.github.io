@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Swift学习之扩展extension
 date: 2015-10-31 00:00
 categories: 编程
@@ -37,7 +37,7 @@ tags: Swift
 	struct Size {
 	  var width = 0.0, height = 0.0
 	}
-	
+
 	extension Rect {
 	  init(width: Double, area: Double) {
 	    self.init(width:width,height:(area/width))
@@ -60,7 +60,7 @@ tags: Swift
 	// Hello!
 
 也可以修改值类型本身，需要加mutating前缀：
-	
+
 	extension Int {
 	  mutating func square() {
 	    self = self * self
@@ -114,7 +114,7 @@ tags: Swift
 	protocol TextRepresentable {
 	  func asText() -> String
 	}
-	
+
 	//给已有类型增加协议，且实现遵从的所有属性方法
 	extension Int:TextRepresentable {
 	  func asText() -> String {

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Ubuntu下的文件共享(tftp/nfs)
 categories: Linux
 tags: ubuntu
@@ -82,7 +82,7 @@ tags: ubuntu
   mkdir /mnt/nfs
   chmod 777 /mnt/nfs
   sudo mount -t nfs 127.0.0.1:/home/nfs /mnt/nfs
-  
+
   # 卸载
   sudo umount -f /mnt/nfs
   ```

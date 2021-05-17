@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 学习笔记:神经网络反向推导
 categories: AI
 tags: 算法

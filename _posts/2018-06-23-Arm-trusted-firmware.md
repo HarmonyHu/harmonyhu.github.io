@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 学习整理：arm-trusted-firmware
 categories: Linux
 tags: ARM

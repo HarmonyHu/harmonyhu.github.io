@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: caffe如何使用训练好的模型
 categories: AI
 tags: caffe
@@ -75,7 +75,7 @@ Blob<float>* input_layer = net_->input_blobs()[0];
 int num_channels = input_layer->channels();
 int width = input_layer->width();
 int height = input_layer->height();
-Size input_size = Size(width, height); 
+Size input_size = Size(width, height);
 //将input_channels指向模型的输入层相关位置
 vector<Mat> input_channels;
 float* input_data = input_layer->mutable_cpu_data();
@@ -91,7 +91,7 @@ for (int i = 0; i < input_layer->channels(); i++) {
 ```c++
 /// 读取均值文件
 BlobProto blob_proto;
-ReadProtoFromBinaryFileOrDie("mean.binaryproto", &blob_proto); 
+ReadProtoFromBinaryFileOrDie("mean.binaryproto", &blob_proto);
 Blob<float> mean_blob;
 mean_blob.FromProto(blob_proto);
 // 转换成均值图像
@@ -103,7 +103,7 @@ for (int i = 0; i < num_channels; i++)	{
   data += mean_blob.height() * mean_blob.width();
 }
 Mat mean_temp;
-merge(channels, mean_temp); 
+merge(channels, mean_temp);
 Scalar channel_mean = cv::mean(mean_temp);
 Mat mean = Mat(input_size, mean_temp.type(), channel_mean);
 ```

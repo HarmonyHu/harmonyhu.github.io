@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Swift学习之函数与闭包
 date: 2015-10-08 00:00
 categories: 编程
@@ -9,8 +9,8 @@ tags:
 * content
 {:toc}
 
-## 函数的定义  
-关键字func，以sayHello(_:)函数为例，注意参数和返回值的写法  
+## 函数的定义
+关键字func，以sayHello(_:)函数为例，注意参数和返回值的写法
 
 	func sayHello(personName: String) -> String {
 	  let greeting = "Hello, " + personName + "!"
@@ -19,7 +19,7 @@ tags:
 
 <!--more-->
 
-参数和返回值都可以是元组  
+参数和返回值都可以是元组
 
 	func minMax(array: [Int]) -> (min: Int, max: Int) {
 	  var currentMin = array[0]
@@ -39,28 +39,28 @@ tags:
 
 ## 函数的参数
 
-1.通常第一个参数省略外部参数名，之后的参数使用外部参数名  
+1.通常第一个参数省略外部参数名，之后的参数使用外部参数名
 
 	func someFunction(firstParameterName: Int, secondParameterName: Int) {
 	  // function body goes here
 	}
 	someFunction(1, secondParameterName: 2)
 
-2.参数也可以指定两个名词，前者为外部，后者为内部  
+2.参数也可以指定两个名词，前者为外部，后者为内部
 
 	func sayHello(to person: String, and anotherPerson: String) -> String {
 	  return "Hello \(person) and \(anotherPerson)!"
 	}
 	print(sayHello(to: "Bill", and: "Ted"))
 
-3.用下划线忽略外部参数名  
+3.用下划线忽略外部参数名
 
 	func someFunction(firstParameterName: Int, _ secondParameterName: Int) {
 	  // function body goes here
 	}
 	someFunction(1, 2)
 
-4.指定默认参数值，带默认值参数尽量放在参数列表最后  
+4.指定默认参数值，带默认值参数尽量放在参数列表最后
 
 	func someFunction(parameterWithDefault: Int = 12) {
 	  // function body goes here
@@ -68,7 +68,7 @@ tags:
 	someFunction(6) // parameterWithDefault is 6
 	someFunction() // parameterWithDefault is 12
 
-5.可变参数，...表示，函数内部代表该类型的数组  
+5.可变参数，...表示，函数内部代表该类型的数组
 
 	func arithmeticMean(numbers: Double...) -> Double {
 	  var total: Double = 0
@@ -78,9 +78,9 @@ tags:
 	  return total / Double(numbers.count)
 	}
 	arithmeticMean(1, 2, 3, 4, 5)
-	// returns 3.0  
+	// returns 3.0
 	arithmeticMean(3, 8.25, 18.75)
-	// returns 10.0  
+	// returns 10.0
 
 6.参数默认是常量参数，函数内部不可改变；可以在参数名前加var表示函数体内可变，变化后函数体外仍然是不变的
 
@@ -98,7 +98,7 @@ tags:
 	// paddedString is equal to "-----hello"
 	// originalString is still equal to "hello"
 
-7.inout标示表示函数调用结束后参数值被改变，调用时参数加上&前缀，可以理解成c++的引用  
+7.inout标示表示函数调用结束后参数值被改变，调用时参数加上&前缀，可以理解成c++的引用
 
 	func swapTwoInts(inout a: Int, inout _ b: Int) {
 	  let temporaryA = a;a = b;b = temporaryA
@@ -110,21 +110,21 @@ tags:
 ## 函数类型
 
 1.当看到->标志的类型，都是函数类型
-	
+
 	//函数类型为()->void
 	func printHelloWorld() {
 	  print("hello, world")
 	}
-	
+
 	//函数类型为(Int,Int)->Int
 	func addTwoInts(a: Int, _ b: Int) -> Int {
 	  return a + b
 	}
 
-2.使用函数类型，接近于C语言的函数指针的意思  
+2.使用函数类型，接近于C语言的函数指针的意思
 
 	//定义mathFunction的函数变量变量，指向addTwoInts函数
-	var mathFunction: (Int, Int) -> Int = addTwoInts  
+	var mathFunction: (Int, Int) -> Int = addTwoInts
 	print("Result: \(mathFunction(2, 3))")
 	// prints "Result: 5"
 	//还可以赋值成其他同类型的函数类型
@@ -154,7 +154,7 @@ tags:
 
 ## 嵌套函数
 
-可以理解成函数内部定义函数，仅函数内部使用。嵌套函数可以捕获外层函数的值，当作为返回值时，它是一个引用。  
+可以理解成函数内部定义函数，仅函数内部使用。嵌套函数可以捕获外层函数的值，当作为返回值时，它是一个引用。
 
 	func makeIncrementor(forIncrement amount: Int) -> ()->Int {
 	  var runningTotal = 0
@@ -164,12 +164,12 @@ tags:
 	  }
 	  return incrementor
 	}
-	
+
 	let incrementByTen = makeIncrementor(forIncrement: 10)
 	incrementByTen() // 返回的值为10
 	incrementByTen() // 返回的值为20
 	incrementByTen() // 返回的值为30
-	
+
 	let incrementBySeven = makeIncrementor(forIncrement: 7)
 	incrementBySeven() // 返回的值为7
 	incrementByTen() // 返回的值为40
@@ -181,7 +181,7 @@ tags:
 		statements
 	}
 
-比如按照函数参数传递如下： 
+比如按照函数参数传递如下：
 
 	func backwards(s1: String, s2: String) -> Bool {
 	  return s1 > s2
@@ -201,11 +201,11 @@ tags:
 
 3.单行表达式，可以隐藏return，进一步简写如下：
 
-	reversed = names.sort( { s1, s2 in s1 > s2 } )  
+	reversed = names.sort( { s1, s2 in s1 > s2 } )
 
 4.参数名称可以使用$0、$1缩写，进一步简写如下：
 
-	reversed = names.sort( { $0 > $1 } )  
+	reversed = names.sort( { $0 > $1 } )
 
 5.运算符函数可以传入，将>作为函数，简写如下：
 

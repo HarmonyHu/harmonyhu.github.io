@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Bash shell脚本
 categories: 编程
 tags: Shell
@@ -192,7 +192,7 @@ do
   echo "value:$loop"
 done
 
-# for用法2 
+# for用法2
 for loop in `seq 1 $#` #遍历参数个数
 for loop in {1..4} #从1到4遍历
 
@@ -266,10 +266,10 @@ echo "$@" # 参数排列字符串"$1" "$2" "$3" ... "$n"
 echo "$?" # 最后命令退出状态，0表示没有错误
 
 # shift实现参数左右，可用于不确定参数时确定参数
-while [ $# != 0 ]; do  
-  echo "第一个参数为：$1,参数个数为：$#"  
-  shift  
-done 
+while [ $# != 0 ]; do
+  echo "第一个参数为：$1,参数个数为：$#"
+  shift
+done
 ```
 
 

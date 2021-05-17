@@ -1,7 +1,6 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'kramdown'
-gem 'jekyll-spaceship'
-gem 'jekyll-sitemap'
-gem 'jekyll-paginate'
-gem "webrick"
+# gem "github-pages", group: :jekyll_plugins
+gemspec
+
+gem "webrick", "~> 1.7"

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  硬盘SMART检测参数详解[转]
 categories: Linux
 tags: 工具 硬盘

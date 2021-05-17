@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: tensorflow的模型设计
 categories: AI
 tags: TensorFlow

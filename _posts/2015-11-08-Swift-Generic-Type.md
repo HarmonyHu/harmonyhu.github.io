@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Swift学习之泛型
 date: 2015-11-08 00:00
 categories: 编程
@@ -22,11 +22,11 @@ tags:
 	  a = b
 	  b = temporaryA
 	}
-	
+
 	var someInt = 3
 	var anotherInt = 107
 	swapTwoValues(&someInt, &anotherInt)
-	
+
 	var someString = "hello"
 	var anotherString = "world"
 	swapTwoValues(&someString, &anotherString)
@@ -46,7 +46,7 @@ tags:
 	    return items.removeLast()
 	  }
 	}
-	
+
 	var stackOfStrings = Stack<String>()
 	stackOfStrings.push("uno")
 
@@ -61,12 +61,12 @@ tags:
 
 ## 泛型约束
 
-对泛型的类型进行一定的约束条件  
+对泛型的类型进行一定的约束条件
 
 #### 类型遵循协议或继承类
 
-语法：`<T: SomeClass, U: SomeProtocol>`  
-使泛型遵循某协议或者继承某类，比如函数泛型：  
+语法：`<T: SomeClass, U: SomeProtocol>`
+使泛型遵循某协议或者继承某类，比如函数泛型：
 
 	func someFunction<T: SomeClass, U: SomeProtocol>(someT: T, someU: U) {
 	  // 这⾥是函数主体
@@ -115,7 +115,7 @@ tags:
 	  var count: Int { get }
 	  subscript(i: Int) -> ItemType { get }
 	}
-	
+
 	//Stack遵循协议Container
 	struct Stack<T>: Container {
 	  // original Stack<T> implementation

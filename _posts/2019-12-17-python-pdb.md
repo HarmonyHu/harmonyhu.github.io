@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: python调试
 categories: python
 tags: pdb

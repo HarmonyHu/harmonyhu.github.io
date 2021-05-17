@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: python
 categories: python
 tags: python
@@ -156,7 +156,7 @@ class MyClass:
     i = 12345
     def f(self):
         return 'hello world'
- 
+
 # 实例化类
 x = MyClass()
 ```

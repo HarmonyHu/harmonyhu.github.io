@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  正则表达式快速参考
 date:   2015-06-10
 categories: 参考

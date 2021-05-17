@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 概率论基础
 categories: AI
 tags: 数学

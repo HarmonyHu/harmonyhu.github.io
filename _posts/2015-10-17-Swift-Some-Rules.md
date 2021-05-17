@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Swift学习之细小规则整理(未完)
 date: 2015-10-17 00:00
 categories: 编程
@@ -11,15 +11,15 @@ tags:
 
 ## 大小写
 
-类型的定义用UpperCamelCase，其余全用lowerCamelCase。  
+类型的定义用UpperCamelCase，其余全用lowerCamelCase。
 类型定义包括：
 
--  基础类型如Int/String/Set等等  
--  enum定义的枚举类型，**包括其成员**（?为何成员也看做是类型）  
+-  基础类型如Int/String/Set等等
+-  enum定义的枚举类型，**包括其成员**（?为何成员也看做是类型）
 	`enum CompassPoint {case North,South,East,West}`
 
--  struct和class定义的结构体和类  
-	`class SomeClass {}`  
+-  struct和class定义的结构体和类
+	`class SomeClass {}`
 	`struct SomeStructure {}`
 
 <!--more-->

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  UEFI Handle的来龙去脉
 date:   2010-11-18
 categories: BIOS

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  Ruby学习整理
 date:   2015-06-30
 categories: 编程
@@ -9,41 +9,41 @@ tags: Ruby
 * content
 {:toc}
 
-### 执行方式  
-1. 单行执行：`ruby -e 'print "hello,world"'`  
-2. 交互方式：`irb`;使用`exit`退出  
-3. 文件方式：`ruby test.rb`  
+### 执行方式
+1. 单行执行：`ruby -e 'print "hello,world"'`
+2. 交互方式：`irb`;使用`exit`退出
+3. 文件方式：`ruby test.rb`
 
 <!--more-->
 
-### 注释与变量名  
-1. 用#表示单行注释  
-2. 用=begin ... =end表示多行注释  
-3. 全局变量用$前缀；实例变量用@前缀；类变量用@@前缀  
-4. 类名、模块名用大写开头；常量全大写；其他都小写  
+### 注释与变量名
+1. 用#表示单行注释
+2. 用=begin ... =end表示多行注释
+3. 全局变量用$前缀；实例变量用@前缀；类变量用@@前缀
+4. 类名、模块名用大写开头；常量全大写；其他都小写
 
-### 控制语句  
+### 控制语句
 
-1. 条件判断语句  
-`if ... elsif ... else ... end`  
-`(...)if...`  
-`case ... when ... when ... else ...end`  
-`unless = if not`  
+1. 条件判断语句
+`if ... elsif ... else ... end`
+`(...)if...`
+`case ... when ... when ... else ...end`
+`unless = if not`
 
-2. 循环控制语句  
-`while(...) do ... end`  
-`(...) while ...`  
-`until = while not`  
-`for ... in ... end`  *#可以是区间、数组*  
+2. 循环控制语句
+`while(...) do ... end`
+`(...) while ...`
+`until = while not`
+`for ... in ... end`  *#可以是区间、数组*
 `break`: 跳出循环
 `next`: 直接进入下一次循环
 `redo`: 重新进入本次循环
-`retry`: 重新从头开始循环 
+`retry`: 重新从头开始循环
 
-3. 块  
-定义函数，部分实现用yield代替，执行时加入{}取代yield部分代码;  
-通过块可以把函数内部的变量传递出来  
-用local_variables可以查看局部变量 
+3. 块
+定义函数，部分实现用yield代替，执行时加入{}取代yield部分代码;
+通过块可以把函数内部的变量传递出来
+用local_variables可以查看局部变量
 ```ruby
 def test_method(a)
   a + yield(a,b)
@@ -54,17 +54,17 @@ a_method(5,2) {|x,y| (x*y)} #15
 
 ### 方法
 
-* 语法  
+* 语法
 ```ruby
 def method_name [( [arg [= default]]...[, * arg [, &expr ]])]
    expr
 end
 ```
 
-* 返回值  
-最后一个语句作为返回值；  
-return返回1个或多个值;   
-块内不能使用return  
+* 返回值
+最后一个语句作为返回值；
+return返回1个或多个值;
+块内不能使用return
 
 * 举例
 ```ruby
@@ -122,30 +122,30 @@ file.each{|line|
 }
 ```
 
-* 类方法  
+* 类方法
 ```ruby
-File.delete(filename)  #删除文件  
-File.dirname(filename) #返回文件所在目录，字串  
-File.extname(filename) #返回文件的扩展名，字串  
-File.stat(filename)    #返回文件的信息，字串  
-File.size(file.name)   #返回文件大小，数值  
-File.exist?(filename)  #判断文件是否存在，布尔  
-File.rename(oldname,newname) #文件重命名  
-File.open(filename,atr){} #新建/打开文件，支持块操作  
+File.delete(filename)  #删除文件
+File.dirname(filename) #返回文件所在目录，字串
+File.extname(filename) #返回文件的扩展名，字串
+File.stat(filename)    #返回文件的信息，字串
+File.size(file.name)   #返回文件大小，数值
+File.exist?(filename)  #判断文件是否存在，布尔
+File.rename(oldname,newname) #文件重命名
+File.open(filename,atr){} #新建/打开文件，支持块操作
 File.open("hello.txt","w"){|file|
 	file.puts "hello,world"
 }
 #块结束自动关闭file
 ```
 
-#### Dir操作  
+#### Dir操作
 
-* 类方法  
+* 类方法
 ```ruby
-Dir.mkdir("MyDir")  #创建目录MyDir  
+Dir.mkdir("MyDir")  #创建目录MyDir
 Dir.rmdir("MyDir")  #删除目录MyDir
-Dir[pat]            #返回文件名数组  
-Dir["foo.*"] #["foo.c","foo.rb","foo.h"]  
+Dir[pat]            #返回文件名数组
+Dir["foo.*"] #["foo.c","foo.rb","foo.h"]
 Dir["foo.?"] #["foo.c","foo.h"]
 Dir.foreach(foldername) { |filename|
 #遍历目录fordername下的所有文件及文件夹（不包括子目录），包括.和..
@@ -159,7 +159,7 @@ Dir.foreach(foldername) { |filename|
 ```ruby
 #访问某个环境变量
 puts ENV["Path"]
-#C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;D:\Program Files\TortoiseSVN\bin;d:\Program Files 
+#C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;D:\Program Files\TortoiseSVN\bin;d:\Program Files
 ```
 ```ruby
 #查看所有的环境变量
@@ -201,7 +201,7 @@ puts ENV["Path"]
 ```
 
 #### 入参变量
-`puts ARGV[0]` #第一个参数  
+`puts ARGV[0]` #第一个参数
 `puts ARGV[1]` #第二个参数
 
 #### 执行命令
@@ -209,7 +209,7 @@ puts ENV["Path"]
 ```ruby
 file = "tmp.txt"
 `rm -rf #{file}`
-puts $? 
+puts $?
 #结果保存在$?中，此处正常打印pid 10284 exit 0或者错误打印pid 10284 exit 1
 ```
 

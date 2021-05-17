@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Linux Event Tracing
 categories: Linux
 tags: Event
@@ -86,7 +86,7 @@ echo 'irq:*' >> /sys/kernel/debug/tracing/set_event
 #### 2. 通过enable使能
 
 ```shell
-# enable                   
+# enable
 echo 1 > /sys/kernel/debug/tracing/events/sample/enable
 # disable
 echo 0 > /sys/kernel/debug/tracing/events/sample/enable

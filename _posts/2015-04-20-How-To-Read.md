@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  读《如何阅读一本书》
 date:   2015-04-20
 categories: 阅读

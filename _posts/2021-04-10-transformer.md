@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Transformer
 categories: AI
 tags: 模型
@@ -88,14 +88,15 @@ $$
 ## Self-Attention
 
 ![](https://harmonyhu.github.io/img/attention.png)
+
 $$
 Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}})V \\
 Q = Linear(X_{em}) = X_{em}W_Q \\
 K = Linear(X_{em}) = X_{em}W_K \\
-V = Linear(X_{em}) = X_{em}W_V \\
-其中 W_Q \in R^{em\_dim *d_k},W_K \in R^{em\_dim * d_k}, W_V \in R^{em\_dim * d_v} \\
-通常d_k = d_v = embedding\_dim
+V = Linear(X_{em}) = X_{em}W_V
 $$
+
+通常$ d_k = d_v = embedding\_dim $，细节说明如下：
 
 * Q,K,V对应quary,key,value
 

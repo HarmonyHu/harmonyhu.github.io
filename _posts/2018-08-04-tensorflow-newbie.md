@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: tensorflow的基础使用
 categories: AI
 tags: TensorFlow
@@ -79,14 +79,14 @@ tf.random_normal([2, 3], stddev=1)
 
 ```python
 
-# 算术操作符：+ - * / % 
+# 算术操作符：+ - * / %
 tf.add(x, y, name=None)        # 加法(支持 broadcasting)
 tf.subtract(x, y, name=None)   # 减法
 tf.multiply(x, y, name=None)   # 乘法
 tf.divide(x, y, name=None)     # 浮点除法, 返回浮点数(python3 除法)
 tf.mod(x, y, name=None)        # 取余
 
-# 幂指对数操作符：^ ^2 ^0.5 e^ ln 
+# 幂指对数操作符：^ ^2 ^0.5 e^ ln
 tf.pow(x, y, name=None)        # 幂次方
 tf.square(x, name=None)        # 平方
 tf.sqrt(x, name=None)          # 开根号，必须传入浮点数或复数
@@ -101,17 +101,17 @@ tf.abs(x, name=None)           # 求绝对值
 tf.round(x, name=None)         # 四舍五入
 tf.ceil(x, name=None)          # 向上取整
 tf.floor(x, name=None)         # 向下取整
-tf.rint(x, name=None)          # 取最接近的整数 
+tf.rint(x, name=None)          # 取最接近的整数
 tf.maximum(x, y, name=None)    # 返回两tensor中的最大值 (x > y ? x : y)
 tf.minimum(x, y, name=None)    # 返回两tensor中的最小值 (x < y ? x : y)
 
 # 三角函数和反三角函数
-tf.cos(x, name=None)    
-tf.sin(x, name=None)    
-tf.tan(x, name=None)    
+tf.cos(x, name=None)
+tf.sin(x, name=None)
+tf.tan(x, name=None)
 tf.acos(x, name=None)
 tf.asin(x, name=None)
-tf.atan(x, name=None)   
+tf.atan(x, name=None)
 
 # 其它
 tf.div(x, y, name=None)  # python 2.7 除法, x/y-->int or x/float(y)-->float
@@ -162,11 +162,11 @@ tf.norm(tensor, ord='euclidean', axis=None, keep_dims=False, name=None)
 tf.eye(num_rows, num_columns=None, batch_shape=None, dtype=tf.float32, name=None)
 # Construct one identity matrix.
 tf.eye(2) ==> [[1., 0.],[0., 1.]]
- 
+
 # Construct a batch of 3 identity matricies, each 2 x 2.
 # batch_identity[i, :, :] is a 2 x 2 identity matrix, i = 0, 1, 2.
 batch_identity = tf.eye(2, batch_shape=[3])
- 
+
 # Construct one 2 x 3 "identity" matrix
 tf.eye(2, num_columns=3) ==> [[ 1.,  0.,  0.], [ 0.,  1.,  0.]]
 
@@ -296,14 +296,14 @@ tf.placeholder(dtype,shape=None,name=None)
 # 举例如下：
 import tensorflow as tf
 import numpy as np
- 
+
 x = tf.placeholder(tf.float32, shape=(1024, 1024))
 y = tf.matmul(x, x)
- 
+
 with tf.Session() as sess:
     #print(sess.run(y))  # ERROR:此处x还没有赋值
     rand_array = np.random.rand(1024, 1024)
-    print(sess.run(y, feed_dict={x: rand_array})) 
+    print(sess.run(y, feed_dict={x: rand_array}))
 ```
 
 ## 七、简单代码范例
@@ -317,7 +317,7 @@ import tensorflow as tf
 
 # first, create a TensorFlow constant
 const = tf.constant(2.0, name="const")
-    
+
 # create TensorFlow variables
 b = tf.placeholder(tf.float32, name='b')
 c = tf.placeholder(tf.float32, name='c')

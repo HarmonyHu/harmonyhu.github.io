@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Swift学习之协议protocol
 date: 2015-11-01 00:00
 categories: 编程
@@ -16,12 +16,12 @@ tags: Swift
 	protocol SomeProtocol {
 	  // 协议内容
 	}
-	
+
 	//遵从多种协议
 	struct SomeStructure: FirstProtocol, AnotherProtocol {
 	  // 结构体内容
 	}
-	
+
 	//类可以继承父类且遵从多种协议
 	class SomeClass: SomeSuperClass, FirstProtocol{
 	// 类的内容
@@ -31,13 +31,13 @@ tags: Swift
 
 ## 协议属性
 
-1.协议对属性只定义其只读或可读可写，以及是否实例属性或类属性(static)  
-2.属性只读，则遵从者可以为可读可写或只读；属性可读可写，则遵从者必须可读可写  
+1.协议对属性只定义其只读或可读可写，以及是否实例属性或类属性(static)
+2.属性只读，则遵从者可以为可读可写或只读；属性可读可写，则遵从者必须可读可写
 3.遵从者实现属性时既可以是存储属性，也可以是计算属性
 
 语法如下，
 
-	//get表示可读，set表示可写,static表示类属性  
+	//get表示可读，set表示可写,static表示类属性
 	protocol SomeProtocol {
 	  var mustBeSettable : Int { get set }
 	  static var doesNotNeedToBeSettable: Int { get }
@@ -48,7 +48,7 @@ tags: Swift
 	protocol FullyNamed {
 	  var fullName: String { get }
 	}
-	
+
 	struct Person: FullyNamed{
 	  var fullName: String
 	}
@@ -91,7 +91,7 @@ tags: Swift
 	  }
 	}
 
-协议可以添加可失败构造器，则遵从者构造器都可以；  
+协议可以添加可失败构造器，则遵从者构造器都可以；
 如果不是可失败构造器，则遵从者必须是非可失败构造器或者init!
 
 ## 协议作为类型
@@ -112,7 +112,7 @@ tags: Swift
 
 表明一个遵从多个protocol的protocol类型：
 `protocol<SomeProtocol,AnotherProtocol>`
-	
+
 	//举例
 	protocol Named {
 	  var name: String { get }
@@ -132,7 +132,7 @@ tags: Swift
 
 ## 集合中协议类型成员
 
-1.集合中每个成员都遵从某协议。用法等同于继承同一父类的各种子类的集合。  
+1.集合中每个成员都遵从某协议。用法等同于继承同一父类的各种子类的集合。
 2.is用于协议一致性检查，as?返回可选，as用于强制转型。用法等同于类的类型转换。
 
 ## 协议可以继承

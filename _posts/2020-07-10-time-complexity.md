@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 时间复杂度
 categories: AI
 tags: 算法

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 序列化之FlatBuffers
 categories: 编程
 tags: flatbuffers google

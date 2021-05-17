@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Dockerfile的使用
 categories: Linux
 tags: docker
@@ -45,7 +45,7 @@ RUN ["/bin/bash", "-c", "echo hello"]
 
 `CMD ["executable","param1","param2"]` 使用exec执行，是推荐使用的。
 `CMD command param1 param2` 在/bin/sh中执行，提供给需要交互的应用。
-`CMD ["param1" ,"param2"]` 提供给ENTRYPOINT的默认参数。 
+`CMD ["param1" ,"param2"]` 提供给ENTRYPOINT的默认参数。
 
 举例：
 
@@ -58,19 +58,19 @@ CMD ["/bin/bash", "/usr/local/nginx/sbin/nginx", "-c", "/usr/local/nginx/conf/ng
 #### LABEL
 
 指定生成镜像的元数据标签信息，格式为`LABEL <KEY>=<VALUE> .....` ，比如：
-`LABEL version = "1.0"` 
+`LABEL version = "1.0"`
 `LABEL description = "This text illustrates ...."`
 
 #### EXPOSE
 
-声明镜像内服务所监听的端口。 
+声明镜像内服务所监听的端口。
 格式为`EXPOSE <port > [<port> ... ]` ，比如：
-`EXPOSE 22 80 8443` 
+`EXPOSE 22 80 8443`
 **注意：**该指令只能声明作用，并不会自动完成端口映射。
 
 #### ENV
 
-指定环境变量，在镜像生成过程中会被后续RUN指令使用，在镜像启动的容器中也存在。 
+指定环境变量，在镜像生成过程中会被后续RUN指令使用，在镜像启动的容器中也存在。
 格式为：`ENV<key><value>`或`ENV<key> = <value> ...`，比如：
 
 ```dockerfile
@@ -88,8 +88,8 @@ ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
 
 #### ENTRYPOINT
 
-指定镜像的默认入口命令，该入口命令会在启动容器时作为根命令执行，所有传入值作为该命令的参数。 
-支持两种格式： 
+指定镜像的默认入口命令，该入口命令会在启动容器时作为根命令执行，所有传入值作为该命令的参数。
+支持两种格式：
 `ENTRYPOINT ["executable" , "param1" , "param2"]`，由exec调用执行
 
 `ENTRYPOINT command param1 param2`，由shell 执行
@@ -98,7 +98,7 @@ ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
 
 #### VOLUME
 
-创建一个数据卷挂在点。 格式为:`VOLUME ["/data"]` 
+创建一个数据卷挂在点。 格式为:`VOLUME ["/data"]`
 可以从本地主机或其他容器挂载数据卷，一般用来存放数据库和需要保存的数据等。
 
 #### USER
@@ -107,7 +107,7 @@ ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
 
 #### WORKDIR
 
-为后续RUN、CMD和ENTRYPOINT指令配置工作目录。 
+为后续RUN、CMD和ENTRYPOINT指令配置工作目录。
 格式为：`WORKDIR /path/to/workdir`
 
 #### ARG

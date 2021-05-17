@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Swift学习之类与结构体
 date: 2015-10-18 00:00
 categories: 编程
@@ -34,16 +34,16 @@ tags:
 
 ## 属性
 
-基本按照C++理解，以下列举的都是一些特别的地方  
+基本按照C++理解，以下列举的都是一些特别的地方
 
-#### 类是引用类型  
+#### 类是引用类型
 
 	//alsoTenEighty与tenEighty是对同一实例的引用
 	let tenEighty = VideoMode()
 	let alsoTenEighty = tenEighty
-	alsoTenEighty.frameRate = 30.0  
+	alsoTenEighty.frameRate = 30.0
 	//两者的frameRate都成了30.0
-	//注意：虽然都是常量，但属性值可以修改。按照C语言中常量指针来理解。  
+	//注意：虽然都是常量，但属性值可以修改。按照C语言中常量指针来理解。
 
 #### 恒等运算===与!==
 
@@ -60,9 +60,9 @@ tags:
 	//这里importer属性还没有被调用
 	let manager = DataManager()
 
-#### 计算属性get与set  
+#### 计算属性get与set
 
-计算属性没有存储；get需要return；set用newValue表示默认参数；计算属性必须是var；可以只定义get，表示只读计算属性，此时get{}可以去掉；普通存储变量也可以具备计算属性    
+计算属性没有存储；get需要return；set用newValue表示默认参数；计算属性必须是var；可以只定义get，表示只读计算属性，此时get{}可以去掉；普通存储变量也可以具备计算属性
 
 	struct Point {
 	    var x = 0.0, y = 0.0
@@ -93,9 +93,9 @@ tags:
 	// 输出 "square.origin is now at (10.0, 10.0)”
 
 
-#### 属性观察器willSet与didSet  
+#### 属性观察器willSet与didSet
 
-存储属性（除延时属性），可以添加属性观察器，分别在属性值变化前与后被调用，oldVaule在didSet中为默认参数；普通存储变量也可以定义属性观察器  
+存储属性（除延时属性），可以添加属性观察器，分别在属性值变化前与后被调用，oldVaule在didSet中为默认参数；普通存储变量也可以定义属性观察器
 
 	class StepCounter {
 	    var totalSteps: Int = 0 {
@@ -110,23 +110,23 @@ tags:
 	    }
 	}
 
-#### 类型属性static  
+#### 类型属性static
 就按照C++中static成员的理解；既能用于普通存储属性，也能用于计算属性；调用就直接用class调用
 
 ## 方法
 
-基本按照C++理解，以及按照swift的函数理解。以下列举的都是一些特别的地方  
+基本按照C++理解，以及按照swift的函数理解。以下列举的都是一些特别的地方
 
-#### 隐藏属性self  
-等同于C++中的this指针，都是在属性与方法参数同名时很有用  
+#### 隐藏属性self
+等同于C++中的this指针，都是在属性与方法参数同名时很有用
 
 	class Counter {
 	    var count: Int = 0
 	    func increment() {self.count++}
 	}
 
-#### struct变异方法mutating  
-**结构体**的属性不能在方法中被修改，如果要这样做，要加上mutating  
+#### struct变异方法mutating
+**结构体**的属性不能在方法中被修改，如果要这样做，要加上mutating
 
 	//注意：结构体是值类型
 	struct Point {
@@ -138,8 +138,8 @@ tags:
 
 **枚举**的方法也是一样，在枚举的学习中列举出来
 
-#### 类型方法static与class  
-和C++中的理解一样，但是结构体与枚举的关键字是static，类关键字是class  
+#### 类型方法static与class
+和C++中的理解一样，但是结构体与枚举的关键字是static，类关键字是class
 
 	//注意类的类型方法关键字是class
 	class SomeClass {
@@ -148,19 +148,19 @@ tags:
 	SomeClass.someTypeMethod()
 
 ## 下标脚本subscript
-访问数组、集合、列表、字典等等类型，用下表脚本来索引元素，可以理解成重载[]的方法。入参数量可以任意，类型也没有限制。以下是1个入参，Int类型的下标语法格式：  
+访问数组、集合、列表、字典等等类型，用下表脚本来索引元素，可以理解成重载[]的方法。入参数量可以任意，类型也没有限制。以下是1个入参，Int类型的下标语法格式：
 
 	//set中用newValue作为入参
 	subscript(index: Int) -> Int {
 	    get {// 返回与入参匹配的Int类型的值}
 	    set {// 执行赋值操作}
 	}
-	
+
 	//只读索引如下
 	subscript(index: Int) -> Int {
 	    // 返回与⼊参匹配的Int类型的值
 	}
-	
+
 	struct TimesTable {
 	    let multiplier: Int
 	    subscript(index: Int) -> Int {
@@ -184,7 +184,7 @@ tags:
 
 可以重写方法、计算属性/观察器属性、下标脚本，关键字override；子类访问父类用super。
 
-**1.重写方法**  
+**1.重写方法**
 
 	class Train: Vehicle {
 	  override func makeNoise() {
@@ -192,7 +192,7 @@ tags:
 	  }
 	}
 
-**2.重写计算属性getter/setter**  
+**2.重写计算属性getter/setter**
 
 	class Car: Vehicle {
 	  var gear = 1
@@ -201,7 +201,7 @@ tags:
 	  }
 	}
 
-**3.重写观察器属性didSet/willSet**  
+**3.重写观察器属性didSet/willSet**
 
 	class AutomaticCar: Car {
 	  override var currentSpeed: Double {
@@ -219,7 +219,7 @@ tags:
 subscript
 
 
-## 可空链式调用? 
+## 可空链式调用?
 
 	class Person {
 	  var residence: Residence?
@@ -232,7 +232,7 @@ subscript
 
 如上调用，当john.residence为nil时，用!强制展开会有运行时错误；可空链式调用作用就产生了，用?代替!表示可空链展开
 
-**1.可空链调用属性** 
+**1.可空链调用属性**
 
 	if let roomCount = john.residence?.numberOfRooms {
 	  print("John's residence has \(roomCount) room(s).")
@@ -241,21 +241,21 @@ subscript
 虽然numberOfRooms为Int，但经过可空链后，得到的类型为Int?
 
 对可空链最后赋值语法可行，但最终还是nil，如下：
-	
+
 	//赋值无效
 	john.residence?.numberOfRooms = 2
 
 **2.可空链调用方法**
 
 上例反映的是可空链调用属性。下例中printNumberOfRooms返回Void，在可空链中就返回Void?
-	
+
 	if john.residence?.printNumberOfRooms() != nil {
 	  print("It was possible to print the number of rooms.")
 	}
 	// prints "It was not possible to print the number of rooms."
 
-**3.可空链调用下标**  
-	
+**3.可空链调用下标**
+
 	//访问可空链下标
 	if let firstRoomName = john.residence?[0].name {
 	  print("The first room name is \(firstRoomName).")
@@ -263,7 +263,7 @@ subscript
 	//赋值无效
 	john.residence?[0] = Room(name: "Bathroom")
 
-**4.可空链访问可空类型的下标**  
+**4.可空链访问可空类型的下标**
 
 	var testScores = ["Dave": [86, 82, 84], "Bev": [79, 94, 81]]
 	testScores["Dave"]?[0] = 91
@@ -274,8 +274,8 @@ subscript
 
 	if let johnsStreet = john.residence?.address?.street {
 	  print("John's street name is \(johnsStreet).")
-	} 
-	
+	}
+
 	if let buildingIdentifier = john.residence?.address?.buildingIdentifier() {
 	  print("John's building identifier is \(buildingIdentifier).")
 	}

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: tensorflow：Conv2D
 categories: AI
 tags: TensorFlow

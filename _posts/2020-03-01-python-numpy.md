@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Numpy
 categories: python
 tags: Numpy

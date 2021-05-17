@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: caffe源码阅读
 categories: AI
 tags: caffe

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Linux Driver的安装和卸载
 categories: Linux
 tags: Driver

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: caffe如何解析数据库
 categories: AI
 tags: caffe

@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: article
 title: Swift学习之访问控制
 date: 2015-11-15 00:00
 categories: 编程
-tags: 
+tags:
 ---
 
 * content
@@ -17,7 +17,7 @@ tags:
 	public var somePublicVariable = 0
 	internal let someInternalConstant = 0
 	private func somePrivateFunction() {}
-	
+
 	public class SomePublicClass { // 显式的 public 类
 	  public var somePublicProperty = 0 // 显式的 public 类成员
 	  var someInternalProperty = 0 // 隐式的 internal 类成员
@@ -34,21 +34,21 @@ tags:
 
 <!--more-->
 
-#### 要点1：只针对模块和源文件  
-模块： Framework或者Application，用import引入，类似C++中lib  
-源文件：代码文件，类似C++中.cpp文件  
+#### 要点1：只针对模块和源文件
+模块： Framework或者Application，用import引入，类似C++中lib
+源文件：代码文件，类似C++中.cpp文件
 
-#### 要点2：三个级别  
-public: 可以被内部源文件或者被其他模块调用，级别最高  
-internal: 可以被内部源文件调用，不能被其他模块调用，**默认级别**    
+#### 要点2：三个级别
+public: 可以被内部源文件或者被其他模块调用，级别最高
+internal: 可以被内部源文件调用，不能被其他模块调用，**默认级别**
 private: 只能被所在源文件调用，级别最低
 
-#### 要点3：统一性原则  
-例1：变量类型是private或internal，则变量类型不能是public  
-例2：函数参数是private或internal，则函数本身不能是public  
-**个人看法：**总体来说就是不能通过高级别的实体访问到低级别的实体；反之是可以的。而实际开发过程中不用太在意这个原则，比如例1，如果程序员定义了一个private的类型，不大可能会将该类型的变量开放给其他模块或其他源文件调用，本身逻辑上就是行不通的。  
+#### 要点3：统一性原则
+例1：变量类型是private或internal，则变量类型不能是public
+例2：函数参数是private或internal，则函数本身不能是public
+**个人看法：**总体来说就是不能通过高级别的实体访问到低级别的实体；反之是可以的。而实际开发过程中不用太在意这个原则，比如例1，如果程序员定义了一个private的类型，不大可能会将该类型的变量开放给其他模块或其他源文件调用，本身逻辑上就是行不通的。
 
-#### 要点4：单元测试的访问级别  
+#### 要点4：单元测试的访问级别
 外部只能调用模块的public接口，这样单元测试模块就无法访问其他接口，这时接口需要使用@testable注解，测试模块用该方式编译
 
 #### 要点5：private(set)或internal(set)
@@ -63,7 +63,7 @@ private: 只能被所在源文件调用，级别最低
 	    }
 	  }
 	}
-	
+
 	//另一个源文件调用
 	var stringToEdit = TrackedString()
 	stringToEdit.value = "This string will be tracked."
@@ -73,8 +73,8 @@ private: 只能被所在源文件调用，级别最低
 
 访问级别可以控制变量、函数、类型、成员、嵌套类型等等；private类的成员都是private，public和internal成员默认是internal，且可以定义为更低级别。
 
-#### 元组类型 
-以元组中最低级别为控制级别  
+#### 元组类型
+以元组中最低级别为控制级别
 
 #### 函数类型
 默认为internal，以参数级别、返回级别中最低级别为参照，不能高于该级别。如下例就必须显示声明函数为private，不能为默认internal。
@@ -99,9 +99,9 @@ private: 只能被所在源文件调用，级别最低
 	}
 
 #### 协议
-1.  协议的成员与协议级别一致，比如协议是public，则它的函数成员也是public，这一点与其他类型不同  
-2.  协议继承也不得高于父类协议  
-3.  遵从协议的类的访问级别，取两者中最低级别，类的成员也必须不高于该级别  
+1.  协议的成员与协议级别一致，比如协议是public，则它的函数成员也是public，这一点与其他类型不同
+2.  协议继承也不得高于父类协议
+3.  遵从协议的类的访问级别，取两者中最低级别，类的成员也必须不高于该级别
 
 #### 扩展
 扩展保持与被扩展者一致的级别（**注：暂时没看懂**）
