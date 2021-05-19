@@ -1,9 +1,11 @@
 ---
-layout: article
+layout: single
 title:  地址空间布局总结
 date:   2010-11-09
-categories: BIOS
-tags: 地址空间
+categories:
+  - BIOS
+tags:
+  - 地址空间
 ---
 
 * content

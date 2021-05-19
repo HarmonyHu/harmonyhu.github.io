@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: 常见算子操作
-categories: AI
-tags: 算法
+categories:
+  - AI
+tags:
+  - 算法
 ---
 
 * content

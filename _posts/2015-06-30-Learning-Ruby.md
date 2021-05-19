@@ -1,9 +1,11 @@
 ---
-layout: article
+layout: single
 title:  Ruby学习整理
 date:   2015-06-30
-categories: 编程
-tags: Ruby
+categories:
+  - 编程
+tags:
+  - Ruby
 ---
 
 * content

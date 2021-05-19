@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: Linux Device Driver
-categories: Linux
-tags: ARM
+categories:
+  - Linux
+tags:
+  - ARM
 ---
 
 * content

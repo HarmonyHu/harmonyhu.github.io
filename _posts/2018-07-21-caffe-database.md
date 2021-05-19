@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: caffe如何解析数据库
-categories: AI
-tags: caffe
+categories:
+  - AI
+tags:
+  - caffe
 ---
 
 * content

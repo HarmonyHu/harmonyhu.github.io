@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: VMware使用
-categories: Linux
-tags: vmware
+categories:
+  - Linux
+tags:
+  - vmware
 ---
 
 * content

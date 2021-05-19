@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: tensorflow的基础使用
-categories: AI
-tags: TensorFlow
+categories:
+  - AI
+tags:
+  - TensorFlow
 ---
 
 * content

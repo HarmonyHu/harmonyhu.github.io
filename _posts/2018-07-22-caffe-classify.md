@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: caffe如何使用训练好的模型
-categories: AI
-tags: caffe
+categories:
+  - AI
+tags:
+  - caffe
 ---
 
 * content

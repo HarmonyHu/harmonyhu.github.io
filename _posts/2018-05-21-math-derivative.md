@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: 微积分基础
-categories: AI
-tags: 数学
+categories:
+  - AI
+tags:
+  - 数学
 ---
 
 * content

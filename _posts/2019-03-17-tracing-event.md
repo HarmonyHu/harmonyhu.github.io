@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: Linux Event Tracing
-categories: Linux
-tags: Event
+categories:
+  - Linux
+tags:
+  - Event
 ---
 
 * content

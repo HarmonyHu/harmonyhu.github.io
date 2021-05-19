@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: 配置Linux的yum源(RHEL7.3 x64为例)
-categories: Linux
-tags: Yum
+categories:
+  - Linux
+tags:
+  - Yum
 ---
 
 * content

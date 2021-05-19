@@ -1,8 +1,9 @@
 ---
-layout: article
+layout: single
 title: Swift学习之泛型
 date: 2015-11-08 00:00
-categories: 编程
+categories:
+  - 编程
 tags:
 ---
 

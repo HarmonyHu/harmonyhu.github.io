@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: 概率论基础
-categories: AI
-tags: 数学
+categories:
+  - AI
+tags:
+  - 数学
 ---
 
 * content

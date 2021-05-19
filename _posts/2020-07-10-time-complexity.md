@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: 时间复杂度
-categories: AI
-tags: 算法
+categories:
+  - AI
+tags:
+  - 算法
 ---
 
 * content

@@ -1,9 +1,12 @@
 ---
-layout: article
+layout: single
 title:  正则表达式快速参考
 date:   2015-06-10
-categories: 参考
-tags: 正则 Perl
+categories:
+  - 参考
+tags:
+  - 正则
+  - Perl
 ---
 
 

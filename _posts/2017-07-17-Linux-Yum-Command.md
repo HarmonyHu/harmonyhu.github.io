@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: Linux Yum命令整理
-categories: Linux
-tags: Yum
+categories:
+  - Linux
+tags:
+  - Yum
 ---
 
 * content

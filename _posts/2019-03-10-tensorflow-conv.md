@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: tensorflow：Conv2D
-categories: AI
-tags: TensorFlow
+categories:
+  - AI
+tags:
+  - TensorFlow
 ---
 
 * content

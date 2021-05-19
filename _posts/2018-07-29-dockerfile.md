@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: Dockerfile的使用
-categories: Linux
-tags: docker
+categories:
+  - Linux
+tags:
+  - docker
 ---
 
 * content

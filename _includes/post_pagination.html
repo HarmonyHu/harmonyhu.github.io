@@ -1,0 +1,14 @@
+{% if page.previous or page.next %}
+  <nav class="pagination">
+    <div class= "pagination--pager">
+      {% if page.previous %}
+        上篇: <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+      {% endif %}
+    </div>
+    <div class= "pagination--pager">
+      {% if page.next %}
+        下篇: <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
+      {% endif %}
+    </div>
+  </nav>
+{% endif %}

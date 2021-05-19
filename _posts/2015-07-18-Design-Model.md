@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: 23种设计模式回顾整理(未完)
-categories: 编程
-tags: 设计模式
+categories:
+  - 编程
+tags:
+  - 设计模式
 ---
 
 * content

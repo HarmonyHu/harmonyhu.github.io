@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: tensorflow的模型设计
-categories: AI
-tags: TensorFlow
+categories:
+  - AI
+tags:
+  - TensorFlow
 ---
 
 * content

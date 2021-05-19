@@ -1,9 +1,11 @@
 ---
-layout: article
+layout: single
 title:  SMBus读取从设备数据总结
 date:   2010-09-01
-categories: BIOS
-tags: SMBus
+categories:
+  - BIOS
+tags:
+  - SMBus
 ---
 
 * content

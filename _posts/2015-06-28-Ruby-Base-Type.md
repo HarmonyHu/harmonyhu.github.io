@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title:  Ruby基本数据类型
-categories: 编程
-tags: Ruby
+categories:
+  - 编程
+tags:
+  - Ruby
 ---
 
 * content

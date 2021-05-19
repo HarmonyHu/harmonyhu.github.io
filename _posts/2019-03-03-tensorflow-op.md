@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: tensorflow：添加新OP和新设备
-categories: AI
-tags: TensorFlow
+categories:
+  - AI
+tags:
+  - TensorFlow
 ---
 
 * content

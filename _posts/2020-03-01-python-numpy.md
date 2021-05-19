@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: Numpy
-categories: python
-tags: Numpy
+categories:
+  - python
+tags:
+  - Numpy
 ---
 
 * content

@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: Linux Driver的安装和卸载
-categories: Linux
-tags: Driver
+categories:
+  - Linux
+tags:
+  - Driver
 ---
 
 * content

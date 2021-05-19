@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: 文章样板《心经》
-categories: 阅读
-tags: 阅读
+categories:
+  - 阅读
+tags:
+  - 阅读
 ---
 
 * content

@@ -1,8 +1,11 @@
 ---
-layout: article
+layout: single
 title: 序列化之FlatBuffers
-categories: 编程
-tags: flatbuffers google
+categories:
+  - 编程
+tags:
+  - flatbuffers
+  - google
 ---
 
 * content

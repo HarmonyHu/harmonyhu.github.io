@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: Ubuntu下的文件共享(tftp/nfs)
-categories: Linux
-tags: ubuntu
+categories:
+  - Linux
+tags:
+  - ubuntu
 ---
 
 * content

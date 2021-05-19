@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: Windows下用gogs搭建Git服务器
-categories: Git
-tags: gogs
+categories:
+  - Git
+tags:
+  - gogs
 ---
 
 * content

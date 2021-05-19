@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: python调试
-categories: python
-tags: pdb
+categories:
+  - python
+tags:
+  - pdb
 ---
 
 * content

@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: Transformer
-categories: AI
-tags: 模型
+categories:
+  - AI
+tags:
+  - 模型
 mermaid: true
 ---
 

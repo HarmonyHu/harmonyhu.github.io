@@ -1,16 +1,9 @@
-header:
-  - titles:
-      # @start locale config
-      en      : &EN       Home
-      zh-Hans : &ZH_HANS  主页
-      zh      : *ZH_HANS
-      # @end locale config
-    url: /index.html
-  - titles:
-      # @start locale config
-      en      : &EN       Archive
-      zh-Hans : &ZH_HANS  归档
-      zh      : *ZH_HANS
-      # @end locale config
-    url: /archive.html
-
+main:
+  - title: "主页"
+    url: /
+  - title: "分类"
+    url: /categories/
+  - title: "标签"
+    url: /tags/
+  - title: "关于"
+    url: /about/

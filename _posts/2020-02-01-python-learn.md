@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: python
-categories: python
-tags: python
+categories:
+  - python
+tags:
+  - python
 ---
 
 * content

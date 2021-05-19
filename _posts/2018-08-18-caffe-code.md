@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: caffe源码阅读
-categories: AI
-tags: caffe
+categories:
+  - AI
+tags:
+  - caffe
 ---
 
 * content

@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: Bash shell脚本
-categories: 编程
-tags: Shell
+categories:
+  - 编程
+tags:
+  - Shell
 ---
 
 * content

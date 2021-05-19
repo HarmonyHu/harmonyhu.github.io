@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: 配置ubuntu的源
-categories: Linux
-tags: ubuntu
+categories:
+  - Linux
+tags:
+  - ubuntu
 ---
 
 * content

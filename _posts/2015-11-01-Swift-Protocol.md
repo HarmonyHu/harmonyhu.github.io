@@ -1,9 +1,11 @@
 ---
-layout: article
+layout: single
 title: Swift学习之协议protocol
 date: 2015-11-01 00:00
-categories: 编程
-tags: Swift
+categories:
+  - 编程
+tags:
+  - Swift
 ---
 
 * content

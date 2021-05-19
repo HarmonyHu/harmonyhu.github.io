@@ -1,8 +1,10 @@
 ---
-layout: article
+layout: single
 title: 学习整理：arm-trusted-firmware
-categories: Linux
-tags: ARM
+categories:
+  - Linux
+tags:
+  - ARM
 ---
 
 * content
