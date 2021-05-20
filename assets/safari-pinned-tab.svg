@@ -1,63 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Created with Inkpad (http://www.taptrix.com/) --><svg xmlns:inkpad="http://taptrix.com/inkpad/svg_extensions" height="700pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="700pt" version="1.1" viewBox="0,0,700,700">
-<defs>
-<path id="TextPath" d="M38.8584+303.266L2038.86+303.266" transform="matrix(1 -0 -0 1 114 -20)"/>
-<path id="TextPath_2" d="M167.59+375.993L2167.59+375.993" transform="matrix(1 -0 -0 1 -63 -113)"/>
-<path id="TextPath_3" d="M470.457+129.859L2470.46+129.859" transform="matrix(1 -0 -0 1 0 0)"/>
-<path id="TextPath_4" d="M437.23+141.312L2437.23+141.312" transform="matrix(1 -0 -0 1 0 0)"/>
-<path id="TextPath_5" d="M506.693+149.576L2506.69+149.576" transform="matrix(1 -0 -0 1 0 0)"/>
-<path id="TextPath_6" d="M482.05+191.293L2482.05+191.293" transform="matrix(1 -0 -0 1 0 0)"/>
-<path id="TextPath_7" d="M436.717+206.638L2436.72+206.638" transform="matrix(1 -0 -0 1 0 0)"/>
-<path id="TextPath_8" d="M429.397+248.445L2429.4+248.445" transform="matrix(1 -0 -0 1 0 0)"/>
-</defs>
-<g id="" inkpad:layerName="">
-<text font-size="300" font-family="'LiGothicMed'" transform="matrix(1 0 0 1 -114 20)" opacity="1" fill="#ff9e1c">
-<textPath xlink:href="#TextPath" method="align" startOffset="0pt">
-<![CDATA[]]></textPath>
-</text>
-</g>
-<g id="Hu" inkpad:layerName="Hu">
-<text stroke="#000000" font-family="'LiGothicMed'" stroke-width="0" fill="#000000" font-size="300" opacity="1" transform="matrix(1 0 0 1 63 113)" stroke-linejoin="round">
-<textPath xlink:href="#TextPath_2" method="align" startOffset="0pt">
-<![CDATA[Hu]]></textPath>
-</text>
-</g>
-<g id="_2" inkpad:layerName="">
-<text font-size="40" font-family="'ArialMT'" transform="matrix(1 0 0 1 0 0)" opacity="1" fill="#ff9e1c">
-<textPath xlink:href="#TextPath_3" method="align" startOffset="0pt">
-<![CDATA[]]></textPath>
-</text>
-</g>
-<g id=" " inkpad:layerName=" ">
-<text font-size="40" font-family="'ArialMT'" transform="matrix(1 0 0 1 0 0)" opacity="1" fill="#ff9e1c">
-<textPath xlink:href="#TextPath_4" method="align" startOffset="0pt">
-<![CDATA[t]]></textPath>
-</text>
-</g>
-<g id=" _2" inkpad:layerName=" ">
-<text font-size="40" font-family="'ArialMT'" transform="matrix(1 0 0 1 0 0)" opacity="1" fill="#ff9e1c">
-<textPath xlink:href="#TextPath_5" method="align" startOffset="0pt">
-<![CDATA[t]]></textPath>
-</text>
-</g>
-<g id=" _3" inkpad:layerName=" ">
-<text font-size="40" font-family="'ArialMT'" transform="matrix(1 0 0 1 0 0)" opacity="1" fill="#ff9e1c">
-<textPath xlink:href="#TextPath_6" method="align" startOffset="0pt">
-<![CDATA[t]]></textPath>
-</text>
-</g>
-<g id=" _4" inkpad:layerName=" ">
-<text font-size="40" font-family="'ArialMT'" transform="matrix(1 0 0 1 0 0)" opacity="1" fill="#ff9e1c">
-<textPath xlink:href="#TextPath_7" method="align" startOffset="0pt">
-<![CDATA[t]]></textPath>
-</text>
-</g>
-<g id=" _5" inkpad:layerName=" ">
-<text font-size="40" font-family="'ArialMT'" transform="matrix(1 0 0 1 0 0)" opacity="1" fill="#ff9e1c">
-<textPath xlink:href="#TextPath_8" method="align" startOffset="0pt">
-<![CDATA[t]]></textPath>
-</text>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="300.000000pt" height="300.000000pt" viewBox="0 0 300.000000 300.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.14, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M219 2365 c0 -5 -1 -398 -2 -872 -1 -570 1 -863 8 -863 6 -1 72 -2
+147 -3 130 -2 137 -1 140 18 2 11 3 192 3 403 l-1 382 362 0 361 0 -1 -400 -1
+-400 40 -1 c48 -1 213 -1 238 0 16 1 17 50 17 874 l0 872 -145 0 c-122 0 -145
+-2 -146 -15 0 -8 -1 -168 -2 -355 l-2 -340 -350 -1 c-192 0 -355 1 -361 3 -7
+3 -10 112 -9 336 0 183 -1 341 -3 352 -3 19 -11 20 -148 20 -89 0 -144 -4
+-145 -10z"/>
+<path d="M1769 1750 c-4 -63 0 -732 5 -760 18 -111 41 -172 84 -228 48 -63 67
+-78 141 -114 89 -43 167 -57 296 -54 123 4 157 9 229 37 98 39 162 99 207 195
+50 103 55 163 55 569 l-1 369 -137 1 -138 1 0 -71 c-2 -608 -2 -621 -21 -695
+-10 -40 -30 -88 -44 -105 -35 -47 -99 -75 -169 -75 -107 0 -174 52 -208 163
+-20 66 -21 93 -22 426 l-1 355 -137 1 c-117 1 -138 -2 -139 -15z"/>
 </g>
 </svg>
