@@ -73,6 +73,7 @@ $$
 以此类推，更新所有权值。之后重复。
 
 **注意：**总误差对out_h1求导为
+
 $$
 \frac{\Delta E_{total}}{\Delta out_{h1}}  = \frac{\Delta E_{total}}{\Delta net_{o1}}  \times \frac{\Delta net_{o1}}{\Delta out_{h1}} + \frac{\Delta E_{total}}{\Delta net_{o2}}  \times \frac{\Delta net_{o2}}{\Delta out_{h1}}
 $$

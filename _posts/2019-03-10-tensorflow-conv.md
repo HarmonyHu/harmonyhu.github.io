@@ -94,6 +94,7 @@ REGISTER_OP("Conv2D")
    **一维卷积举例**
 
    输入是1维数据[d0, d1, d2, d3]，卷积核是[g0, g1, g2]，通常卷积计算如下：
+
    $$
    F(2, 3) = \left[ \begin{array}{lll}{d_{0}} & {d_{1}} & {d_{2}} \\ {d_{1}} & {d_{2}} & {d_{3}}\end{array}\right] \left[ \begin{array}{l}{g_{0}} \\ {g_{1}} \\ {g_{2}}\end{array}\right]=\left[ \begin{array}{c}{r_0} \\ {r_1}\end{array}\right]
    $$
@@ -105,6 +106,7 @@ REGISTER_OP("Conv2D")
    需要6次乘法和4次加法。
 
    采用Winograd算法，算法如下：
+
    $$
    F(2,3)=\left[ \begin{array}{lll}{d_{0}} & {d_{1}} & {d_{2}} \\ {d_{1}} & {d_{2}} & {d_{3}}\end{array}\right] \left[ \begin{array}{l}{g_{0}} \\ {g_{1}} \\ {g_{2}}\end{array}\right]=\left[ \begin{array}{c}{m_{1}+m_{2}+m_{3}} \\ {m_{2}-m_{3}-m_{4}}\end{array}\right]
    $$

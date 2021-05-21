@@ -55,7 +55,7 @@ ones = np.ones((4,3,28,28))
 fives = np.full((4,3,28,28), 5.0) # 初始化为全5.0
 x = np.arange(5) # 创建数组[0,1,2,3,4]
 y = np.arange(1,5) # 创建数组[1,2,3,4]
-z = y #z是y的引用，创建数组用z = np.array(y)
+z = y #z是y的引用，创建数组用z = np.array(y)，或者z[:] = y
 
 # list或tuple，转数组
 a = [1,2,3]

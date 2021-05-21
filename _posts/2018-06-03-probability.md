@@ -23,26 +23,15 @@ tags:
 
 * **A⊂B**： 称事件B包含事件A
 
-* **A∪B**：A与B的和事件，
-  $$
-  \bigcup_{k=1}^{n}A_k 为A_1、A_2、...A_n的和事件
-  $$
+* **A∪B**：A与B的和事件，$ \bigcup_{k=1}^{n}A_k $ 为 $ A_1、A_2、...A_n $的和事件
 
-* **A∩B**：A与B的积事件，
+* **A∩B**：A与B的积事件，$ \bigcap_{k=1}^{n}A_k $ 为 $ A_1、A_2、...A_n $的积事件
 
-
-$$
-  \bigcap_{k=1}^{n}A_k为A_1、A_2、...A_n的积事件
-$$
-
-* **A - B**：A与B的差事件，`{ x|x∈A且x∉B }`
+* **A - B**：A与B的差事件，$ { x | x \in A 且 x \notin B } $
 
 * **互斥**：A∩B=∅，则称A与B互斥
 
-* **对立**：A∪B=S且A∩B=∅，则称A与B对立，或互称逆事件，A的对立事件也记为
-  $$
-  \bar{A}
-  $$
+* **对立**：A∪B=S且A∩B=∅，则称A与B对立，或互称逆事件，A的对立事件也记为$ \bar{A} $
 
 * **交换律**：A∪B=B∪A，A∩B=B∩A
 
@@ -50,10 +39,7 @@ $$
 
 * **分配率**：A∪(B∩C)=(A∪B)∩(A∪C)，A∩(B∪C)=(A∩B)∪(A∩C)
 
-* **德摩根律**：
-  $$
-  \overline{A∪B}=\overline{A}∩\overline{B}，\overline{A∩B}=\overline{A}∪\overline{B}
-  $$
+* **德摩根律**：$ \overline{A∪B}=\overline{A}∩\overline{B}，\overline{A∩B}=\overline{A}∪\overline{B} $
 
 
 ## 概率
@@ -62,56 +48,30 @@ $$
 
 * P(S)=1, P(∅)=0
 
-* 可列可加性：
-  $$
-  A_1、A_2、...两两互斥，则P(A_1∪A_2∪...)=P(A_1)+P(A_2)+...
-  $$
+* 可列可加性：$ A_1、A_2、...两两互斥，则P(A_1∪A_2∪...)=P(A_1)+P(A_2)+... $
 
-* 逆事件：
-  $$
-  P(\overline A) = 1- P(A)
-  $$
+* 逆事件：$ P(\overline A) = 1- P(A) $
 
-* 加法公式：
-  $$
-  P(A∪B) = P(A) + P(B) - P(AB)
-  $$
+* 加法公式：$ P(A∪B) = P(A) + P(B) - P(AB) $
 
 
 ## 条件概率
 
-* A事件发生情况下B事件的概率，记为P(B|A)，
-  $$
-  P(B|A) = \frac{P(AB)}{P(A)}
-  $$
+* A事件发生情况下B事件的概率，$ P(B|A) = \frac{P(AB)}{P(A)} $
 
-* **乘法定理**：
-  $$
-  P(AB) = P(B|A)P(A)
-  $$
+* **乘法定理**：$ P(AB) = P(B|A)P(A) $
 
-* **划分**：
-  $$
-  B_1、B_2、...、B_n两两互斥，且B_1∪B_2∪...∪B_n=S，则称B_1、B_2、...、B_n是样本空间S的一个划分
-  $$
+* **划分**：$ B_1、B_2、...、B_n两两互斥，且B_1∪B_2∪...∪B_n=S，则称B_1、B_2、...、B_n是样本空间S的一个划分 $
 
-* **全概率公式**：
-  $$
-  P(A)=P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+...+P(A|B_n)P(B_n) = \sum_{k=1}^nP(A|B_k)P(B_k)
-  $$
+* **全概率公式**：$ P(A)=P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+...+P(A|B_n)P(B_n) = \sum_{k=1}^nP(A|B_k)P(B_k) $
 
-* **贝叶斯(Bayes)公式**：
-  $$
-  P(A|B)=P(A)\frac{P(B|A)}{P(B)}=P(A) \frac{P(B|A)}{ \sum_{k=1}^nP(B|A_k)P(A_k)}, (i为1、2...n中的一个)
-  $$
+* **贝叶斯(Bayes)公式**：$ P(A|B)=P(A)\frac{P(B|A)}{P(B)}=P(A) \frac{P(B|A)}{ \sum_{k=1}^nP(B|A_k)P(A_k)}, (i为1、2...n中的一个) $
 
 
 
 ## 贝叶斯定理
 
-$$
-  P(A|B)=P(A)\frac{P(B|A)}{P(B)}
-$$
+$ P(A|B)=P(A)\frac{P(B|A)}{P(B)} $
 
 * `P(A|B)`: 后验概率，B事件已经发生的情况下A事件的概率
 * `P(A)`: 先验概率，A事件发生的概率

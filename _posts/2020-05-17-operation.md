@@ -51,10 +51,7 @@ $$
 f(x) = \frac{1}{1 + e^{-x}}
 $$
 
-将变量映射到(0,1)，S型曲线，求导方便，如下：
-$$
-f'(x) = \frac{e^{-x}}{(1+e^{-x})^2} = f(x)\times (1 - f(x))
-$$
+将变量映射到(0,1)，S型曲线，求导方便，求导过程：$ f'(x) = \frac{e^{-x}}{(1+e^{-x})^2} = f(x)\times (1 - f(x)) $
 
 ![](https://harmonyhu.github.io/img/sigmoid.png)
 
@@ -112,6 +109,7 @@ $$
 归一化，将网络层的输入转化到均值为 0方差为1的标准正态分布上，使梯度变化增大，加快训练收敛速度。
 
 caffe中batchnorm，通常没有第四步，推理运算过程如下：
+
 $$
 mean = blobs_0,\quad variance = blobs_1,\quad scale = blobs_2[0] \\
 y_i = \frac{x_i - \frac{mean_c}{scale}}{\sqrt{\frac{variance_c}{scale} + eps}}\\
@@ -334,6 +332,7 @@ y_i = \frac{e^{x_i}}{\sum^{n}_{j=0}e^{x_j}}
 $$
 
 通常用于分类网络中判断类别的概率。举例如下：
+
 $$
 \begin{bmatrix}
 3 & 1 & -3
