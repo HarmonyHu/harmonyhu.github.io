@@ -57,25 +57,35 @@ tags:
 
 ## 条件概率
 
-* A事件发生情况下B事件的概率，$ P(B|A) = \frac{P(AB)}{P(A)} $
+* A事件发生情况下B事件的概率：
 
-* **乘法定理**：$ P(AB) = P(B|A)P(A) $
+  $ P(B\mid A) = \frac{P(AB)}{P(A)} $
 
-* **划分**：$ B_1、B_2、...、B_n两两互斥，且B_1∪B_2∪...∪B_n=S，则称B_1、B_2、...、B_n是样本空间S的一个划分 $
+* **乘法定理**：
 
-* **全概率公式**：$ P(A)=P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+...+P(A|B_n)P(B_n) = \sum_{k=1}^nP(A|B_k)P(B_k) $
+  $ P(AB) = P(B \mid A)P(A) $
 
-* **贝叶斯(Bayes)公式**：$ P(A|B)=P(A)\frac{P(B|A)}{P(B)}=P(A) \frac{P(B|A)}{ \sum_{k=1}^nP(B|A_k)P(A_k)}, (i为1、2...n中的一个) $
+* **划分**：
+
+  $ B_1、B_2、...、B_n两两互斥，且B_1∪B_2∪...∪B_n=S，则称B_1、B_2、...、B_n是样本空间S的一个划分 $
+
+* **全概率公式**：
+
+  $ P(A)=P(A \mid B_1)P(B_1)+P(A \mid B_2)P(B_2)+...+P(A \mid B_n)P(B_n) = \sum_{k=1}^nP(A \mid B_k)P(B_k) $
+
+* **贝叶斯(Bayes)公式**：
+
+  $ P(A \mid B)=P(A)\frac{P(B \mid A)}{P(B)}=P(A) \frac{P(B \mid A)}{ \sum_{k=1}^nP(B \mid A_k)P(A_k)}, (i为1、2...n中的一个) $
 
 
 
 ## 贝叶斯定理
 
-$ P(A|B)=P(A)\frac{P(B|A)}{P(B)} $
+$ P(A \mid B)=P(A)\frac{P(B \mid A)}{P(B)} $
 
 * `P(A|B)`: 后验概率，B事件已经发生的情况下A事件的概率
 * `P(A)`: 先验概率，A事件发生的概率
-* `P(B|A) / P(B)`: 调整函数，A发生时B的概率 除以 B的概率
+* $ \frac{P(B \mid A)}{P(B)} $: 调整函数，A发生时B的概率 除以 B的概率
 
 意义：可以不断的通过有限信息，作出更进一步预测。
 
