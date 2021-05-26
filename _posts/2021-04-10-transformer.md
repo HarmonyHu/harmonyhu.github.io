@@ -4,7 +4,7 @@ title: Transformer
 categories:
   - AI
 tags:
-  - 模型
+  - 网络模型
 mermaid: true
 ---
 

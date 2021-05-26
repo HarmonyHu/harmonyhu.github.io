@@ -289,7 +289,7 @@ $$
 \end{bmatrix}
 $$
 
-例子中stride = 2，（4,1,2) => (1,2,4)。扩大hw，缩小channel。
+重组，例子中stride = 2，（4,1,2) => (1,2,4)。扩大hw，缩小channel。
 
 #### Eltwise
 
