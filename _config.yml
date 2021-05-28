@@ -28,7 +28,7 @@ teaser                   : # "/assets/apple-touch-icon.png" # path of fallback t
 logo                     : # "/assets/favicon.ico"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 100
+words_per_minute         : 50
 comments:
   provider               : custom # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
 search                   : true # true, false (default)
