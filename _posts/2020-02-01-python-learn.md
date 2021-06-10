@@ -93,6 +93,17 @@ b = ['a','b',
 * key可以是字符串或数字，value可以是任意类型
 * 可以修改
 
+遍历方法如下：
+
+```python
+for key in dict:
+  print(key + ":" + dict[key])
+for key,value in dict.items():
+  print(key + ":" + value)
+```
+
+
+
 #### 集合{}
 
 * 用`{}`或者`set`创建，空集合必须用`set()`
@@ -162,6 +173,20 @@ class MyClass:
 # 实例化类
 x = MyClass()
 ```
+
+## 文件读写
+
+```python
+# 方式一
+fo = open("foo.txt", "w")
+fo.write("abcdefg\n")
+fo.close()
+# 方式二
+with open("foo.txt", 'w') as f:
+	f.write("abcdefg\n")
+```
+
+
 
 ## 常用模块
 
