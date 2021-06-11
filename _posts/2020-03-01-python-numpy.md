@@ -133,11 +133,11 @@ np.dot(a,b) # 内积，点积，矩阵乘积[M,K]*[K,N]
 
 ## random
 
-| Function                           | Explain                   |
-| ---------------------------------- | ------------------------- |
-| rand(d0, d1, ..., dn)              | [0,1) 均匀分布            |
-| randint(low, high=None, size=None) | [low,high) 离散均匀分布   |
-| randn(d0, d1, ..., dn)             | (-inf, +inf) 标准正态分布 |
+| Function                           | Explain                               |
+| ---------------------------------- | ------------------------------------- |
+| rand(d0, d1, ..., dn)              | [0,1) 均匀分布的随机样本值            |
+| randint(low, high=None, size=None) | [low,high) 离散均匀分布的整数值       |
+| randn(d0, d1, ..., dn)             | (-inf, +inf) 标准正态分布的随机样本值 |
 
 
 
