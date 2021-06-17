@@ -291,6 +291,10 @@ $$
 
 重组，例子中stride = 2，（4,1,2) => (1,2,4)。扩大hw，缩小channel。
 
+#### pixelshuffle
+
+与Reorg类似，$ [N,C,H,W] =>[N,\frac{C}{r^2}, H \times r, W \times r] $
+
 #### Eltwise
 
 $$
