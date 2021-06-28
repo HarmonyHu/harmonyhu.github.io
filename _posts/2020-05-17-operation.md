@@ -268,6 +268,13 @@ $$
 $$
 \begin{bmatrix}
 \begin{bmatrix}
+1 & 3 & 2 & 4 \\
+5 & 7 & 6 & 8
+\end{bmatrix}
+\end{bmatrix}
+\Rightarrow
+\begin{bmatrix}
+\begin{bmatrix}
 1 & 2
 \end{bmatrix},
 \begin{bmatrix}
@@ -280,20 +287,19 @@ $$
 7 & 8
 \end{bmatrix}
 \end{bmatrix}
-\Rightarrow
-\begin{bmatrix}
-\begin{bmatrix}
-1 & 3 & 2 & 4 \\
-5 & 7 & 6 & 8
-\end{bmatrix}
-\end{bmatrix}
 $$
 
-重组，例子中stride = 2，（4,1,2) => (1,2,4)。扩大hw，缩小channel。
+重组，stride指定间隔，reverse指定是否反向。令r = stride, 则：
+
+当reverse为false时，$ [N,C,H,W] \Rightarrow [N, r^2 \times C, \frac{H}{r}, \frac{W}{r}] $
+
+当reverse为true时，$ [N,C,H,W] \Rightarrow[N,\frac{C}{r^2}, H \times r, W \times r] $，注意$ C = r^2 \times \frac{C}{r^2} $
 
 #### pixelshuffle
 
-与Reorg类似，$ [N,C,H,W] =>[N,\frac{C}{r^2}, H \times r, W \times r] $
+$ [N,C,H,W] \Rightarrow [N,\frac{C}{r^2}, H \times r, W \times r] $，注意 $ C = \frac{C}{r^2} \times r^2 $
+
+与reorg reverse为true比较类似，区别在于C维降维的次序不同
 
 #### Eltwise
 
@@ -370,9 +376,7 @@ $$
 
 #### InnerProduct (FullyConnected)
 
-二维矩阵运算，[M N] * [N K] = [M K]
-
-比如`[4, 3, 25, 25] * [28, 3, 25, 25] =>[4, 28]`
+二维矩阵运算，$ (M \quad N) \times (N \quad K) \Rightarrow (M \quad K) $
 
 
 
