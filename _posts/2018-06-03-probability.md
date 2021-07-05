@@ -27,7 +27,7 @@ tags:
 
 * **A∩B**：A与B的积事件，$ \bigcap_{k=1}^{n}A_k $ 为 $ A_1、A_2、...A_n $的积事件
 
-* **A - B**：A与B的差事件，$ x | x \in A 且 x \notin B $
+* **A-B**：A与B的差事件，{$ x \mid x \in A 且 x \notin B $}
 
 * **互斥**：A∩B=∅，则称A与B互斥
 
