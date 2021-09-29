@@ -233,6 +233,50 @@ while true; do
 done
 ```
 
+
+
+## 文件读取
+
+#### for
+
+``` shell
+for line in `cat filename`
+do
+  echo $line
+done
+```
+
+#### while
+
+``` shell
+while read -r line
+do
+	echo $line
+done < filename
+```
+
+#### 举例
+
+``` shell
+#拷贝文件
+#!/bin/bash
+count=0
+while read -r line
+do
+	echo $line
+	size=`ls -l $line | awk '{print $5}'`
+	if [ $size -lt 1000000 ]; then
+	       cp $line .
+	       let count++
+	fi
+	if [ $count -eq 100 ]; then
+		exit
+	fi
+done < filelist.txt
+```
+
+
+
 ## 执行方式
 
 #### 四种方式
