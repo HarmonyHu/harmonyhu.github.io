@@ -17,7 +17,7 @@ float共32bit：1bit符号位，8bit指数位，23bit底数位。如下表示：
 `S E8 M23`
 浮点与二进制转换公式如下：
 
-$ Y = (-1)^{s} \times m \times 2^{e}，其中m = 1.M23，e = E8 - 127 $
+$ Y = (-1)^{s} \times 2^{e} \times m，其中m = 1.M23，e = E8 - 127 $
 
 <!--more-->
 

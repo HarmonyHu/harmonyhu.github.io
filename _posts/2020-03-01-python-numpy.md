@@ -129,6 +129,10 @@ s = a.astype(np.float32) #类型变换
 np.sum(a) # 求和，190
 np.sum(a,axis=1) # 指定维度求和，array([ 6, 22, 38, 54, 70])
 
+np.prod(a) #求积
+np.all(a)  #求与
+np.any(a)  #求或
+
 np.mean(a) # 求均值，9.5
 np.var(a)  # 求方差，33.25
 np.std(a)  # 求标准差，5.766281297335398

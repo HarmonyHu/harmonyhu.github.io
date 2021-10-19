@@ -109,69 +109,79 @@ tags:
 `git init`：将当前目录创建成本地仓库
 
 `git add`：标记文件，且该文件被管理
-├──`git add <filename>`：  标记指定文件
-├──`git add .`： 标记当前目录所有文件，包括子目录文件
-├──`git add -u`： 标记当前目录所有跟踪的文件
-└──`git add *`=`git add .`=`git add -A`
+
+* `git add <filename>`：  标记指定文件
+* `git add .`： 标记当前目录所有文件，包括子目录文件
+* `git add -u`： 标记当前目录所有跟踪的文件
+* `git add *`=`git add .`=`git add -A`
 
 `git status`：查看工作目录状态
 
 `git rm --cached <filename>`：取消跟踪的文件
 
 `git commit -m "注释"`：将标记文件的修改提交到本地仓库
-├──`git commit -a -m "注释"`：将所有跟踪的文件的修改提交到本地仓库
-└──`git commit --amend`：修改上一次提交
+
+* `git commit -a -m "注释"`：将所有跟踪的文件的修改提交到本地仓库
+* `git commit --amend`：修改上一次提交
 
 `git stash`：将本地修改临时压栈存放
-├──`git stash list`：临时存放区的列表
-├──`git stash pop`：临时存放区的修改恢复到本地
-└──`git stash clear`：临时存放区清空
+
+* `git stash list`：临时存放区的列表
+* `git stash pop`：临时存放区的修改恢复到本地
+* `git stash clear`：临时存放区清空
 
 #### 远程仓库操作
 
 `git remote`：远程仓库管理
-├──`git remote -v`：查看远程仓库
-├──`git remote add origin git@github.com:abc.git`：添加远程仓库地址
-├──`git remote rm origin`：删除origin地址
-├──`git remote set-url origin git@github.com:abc.git`：设定仓库地址
-└──`git remote rename origin github`：将更改远程库别名为github
+
+* `git remote -v`：查看远程仓库
+* `git remote add origin git@github.com:abc.git`：添加远程仓库地址
+* `git remote rm origin`：删除origin地址
+* `git remote set-url origin git@github.com:abc.git`：设定仓库地址
+* `git remote rename origin github`：将更改远程库别名为github
 
 `git push`：将本地仓库更新到远程仓库
-├──`git push`：将本地的默认分支更新到远程的对应分支
-├──`git push origin master`：将master分支更新到origin仓库的master分支
-├──`git push origin master:mymaster`：将本地master分支更新到origin的mymaster分支
-├──`git push --force`：将分支强制更新到远程库
-└──`git push origin --delete branch1`:删除远程仓库的分支
+
+* `git push`：将本地的默认分支更新到远程的对应分支
+* `git push origin master`：将master分支更新到origin仓库的master分支
+* `git push origin master:mymaster`：将本地master分支更新到origin的mymaster分支
+* `git push --force`：将分支强制更新到远程库
+* `git push origin --delete branch1`:删除远程仓库的分支
 
 `git pull`：将远程仓库更新到本地仓库
-├──`git pull origin`：将origin库所有分支更新到本地
-├──`git pull origin branch1`：将origin库的branch1分支更新到本地
-└──`git pull -r`：等同于fetch+rebase(不过单个fetch可以下载全部远程分支)
+
+* `git pull origin`：将origin库所有分支更新到本地
+* `git pull origin branch1`：将origin库的branch1分支更新到本地
+* `git pull -r`：等同于fetch+rebase(不过单个fetch可以下载全部远程分支)
 
 `git clone`：下载远程仓库到本地
-├──`git clone git@github.com:abc.git abc`：下载到abc文件夹
-└──`git clone git@github.com:abc.git --depth=1`：只下载1级，当库很大时使用；如果要恢复则执行`git fetch --unshallow`
+
+* `git clone git@github.com:abc.git abc`：下载到abc文件夹
+* `git clone git@github.com:abc.git --depth=1`：只下载1级，当库很大时使用；如果要恢复则执行`git fetch --unshallow`
 
 #### 分支及历史版本操作
 
 `git branch`：查看当前本地分支
-├──`git branch -a`：查看本地和远程所有分支
-├──`git branch branch1 origin/branch`：本地创建branch1分支，基于origin/branch分支
-├──`git branch mybranch <SHA>`：基于某个历史版本建立mybranch分支
-├──`git branch -D branch1`:删除本地branch1分支
-├──`git branch -r -d origin/branch`：删除本地仓库的远程分支
-├──`git branch -m branch1 branch2`：将branch1重命名为branch2
-└──`git branch branch1 -u origin/branch`：将本地分支对应到远程分支
+
+* `git branch -a`：查看本地和远程所有分支
+* `git branch branch1 origin/branch`：本地创建branch1分支，基于origin/branch分支
+* `git branch mybranch <SHA>`：基于某个历史版本建立mybranch分支
+* `git branch -D branch1`:删除本地branch1分支
+* `git branch -r -d origin/branch`：删除本地仓库的远程分支
+* `git branch -m branch1 branch2`：将branch1重命名为branch2
+* `git branch branch1 -u origin/branch`：将本地分支对应到远程分支
 
 `git checkout local`：切换到local分支
-├──`git checkout file_name`：放弃file_name的修改
-├──`git checkout -b mybranch origin/mybranch`：新建分支mybranch并切过去
-└──`git checkout --track origin/mybranch`:新建分支mybranch并切过去(`--track==-t`)
+
+* `git checkout file_name`：放弃file_name的修改
+* `git checkout -b mybranch origin/mybranch`：新建分支mybranch并切过去
+* `git checkout --track origin/mybranch`:新建分支mybranch并切过去(`--track==-t`)
 
 `git reset`：恢复操作
-├──`git reset <SHA>`：回退到历史版本  ，新修改处于modified状态
-├──`git reset --soft <SHA>`：回退到历史版本 , 新修改处于staged状态
-└──`git reset --hard <SHA>`：强制回退到历史版本，新修改全部删除
+
+* `git reset <SHA>`：回退到历史版本  ，新修改处于modified状态
+* `git reset --soft <SHA>`：回退到历史版本 , 新修改处于staged状态
+* `git reset --hard <SHA>`：强制回退到历史版本，新修改全部删除
 
 `git merge local`：当前分支合并local分支的修改
 
@@ -181,9 +191,10 @@ tags:
 
 #### 对比和补丁操作
 `git diff`：查看修改但没有staged的文件
-├──`git diff --staged`: 查看修改且staged的文件
-├──`git difftool`: 可以在.gitconfig文件中配置BeyondCompare工具对比差异
-└──`git difftool --staged`: 同理
+
+* `git diff --staged`: 查看修改且staged的文件
+* `git difftool`: 可以在.gitconfig文件中配置BeyondCompare工具对比差异
+* `git difftool --staged`: 同理
 
 `git format-patch -n`: 将前n次的提交分别生成n个patch
 
@@ -203,17 +214,19 @@ tags:
 #### 日志查看
 
 `git log`：查看历史简要日志
-├──`git log <filename>`：查看单个文件的修改日志
-├──`git log --stat`：查看历史日志，包含被修改文件名
-├──`git log -p <SHA>`：查看某次历史日志，包含查看修改文件的内容
-├──`git log -p -2`：-p代表查看修改文件的内容，-2代表最近两条
-├──`git log --pretty=fuller `：可以查看merge时间
-└──`git log --author="author name"`: 查看某作者的所有历史日志
+
+* `git log <filename>`：查看单个文件的修改日志
+* `git log --stat`：查看历史日志，包含被修改文件名
+* `git log -p <SHA>`：查看某次历史日志，包含查看修改文件的内容
+* `git log -p -2`：-p代表查看修改文件的内容，-2代表最近两条
+* `git log --pretty=fuller `：可以查看merge时间
+* `git log --author="author name"`: 查看某作者的所有历史日志
 
 `git show`：查看最近一次日志，包含修改的文件内容
-├──`git show <filename>`：查看最近一次某文件的改动
-├──`git show <SHA>`：查看某次修改的详细信息，包含文件的内容
-└──`git show <SHA> <filename>`: 查看某次修改某文件的改动
+
+* `git show <filename>`：查看最近一次某文件的改动
+* `git show <SHA>`：查看某次修改的详细信息，包含文件的内容
+* `git show <SHA> <filename>`: 查看某次修改某文件的改动
 
 
 
@@ -222,7 +235,8 @@ tags:
 #### 创建
 
 `git submodule add`：添加子仓库
-└──`git submodule add ssh://git@github.com:abc.git abc`: 将远程库添加到本地abc目录中作为子仓库
+
+* `git submodule add ssh://git@github.com:abc.git abc`: 将远程库添加到本地abc目录中作为子仓库
 
 添加成功后父仓库增加了`.gitmodule`文件，内容如下：
 
@@ -275,7 +289,7 @@ tags:
    pick 75e77f0 fix 1 #效果是将fix2和fix3合并到fix1
    s db7596d fix 2
    s 86228b6 fix 3
-
+   
    # Rebase 9004c27..86228b6 onto 9004c27 (3 commands)
    ```
 
