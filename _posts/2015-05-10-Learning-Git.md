@@ -271,6 +271,28 @@ tags:
 - 删除.git/config 文件里相关字段
 - 删除子仓库目录`git rm --cached <本地子仓库路径>`
 
+## LFS
+
+#### 配置
+
+``` shell
+apt-get install git-lfs
+export GIT_SSL_NO_VERIFY=1
+git lfs install --skip-smudge
+git lfs pull *
+# .gitattributes文件中记录需要用lfs存储的文件格式
+```
+
+#### 更新
+
+``` shell
+export GIT_SSL_NO_VERIFY=1
+export GIT_LFS_SKIP_SMUDGE=1
+git pull -r ; git lfs fetch --all ;  git lfs checkout
+# 仅更新某个文件
+git lfs pull --include xxxx.rawfile
+```
+
 
 
 ## 其他处理
