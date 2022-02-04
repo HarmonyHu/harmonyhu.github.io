@@ -39,7 +39,7 @@ search_provider          : # lunr (default), algolia, google
 author:
   name             : "HarmonyHu"
   avatar           : "/img/son.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Software Engineer"
+  bio              : "AI Compiler Engineer"
   location         : "China"
   github           : "HarmonyHu"
   links:
