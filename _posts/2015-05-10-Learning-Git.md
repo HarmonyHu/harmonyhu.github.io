@@ -303,7 +303,17 @@ export GIT_SSL_NO_VERIFY=1
 export GIT_LFS_SKIP_SMUDGE=1
 git pull -r ; git lfs fetch --all ;  git lfs checkout
 # 仅更新某个文件
-git lfs pull --include xxxx.rawfile
+git lfs pull --include xxxx.rawfile --exclude ""
+```
+
+#### 修复
+
+``` shell
+git rm --cached -r .
+git reset --hard
+git rm .gitattributes
+git reset .
+git checkout .
 ```
 
 
