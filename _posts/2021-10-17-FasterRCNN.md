@@ -56,7 +56,17 @@ Region Proposal Network, 寻找预选框网络，分为2部分：
 
 ![](https://harmonyhu.github.io/img/roipooling.png)
 
+### Classification
 
+用全连接层做分类，结合softmax得到分类概率；再利用bounding box回归得到每个proposal位置的偏移量，得到更精确的检测框。
+
+
+
+## 其他
+
+### Roi Pooling与Roi Align区别
+
+Roi Align是对指定区域做Resize linear操作。Roi Pooling是做边界取整后取最大值。
 
 
 
