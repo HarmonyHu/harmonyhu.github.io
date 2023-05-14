@@ -123,6 +123,7 @@ tags:
 
 * `git commit -a -m "注释"`：将所有跟踪的文件的修改提交到本地仓库
 * `git commit --amend`：修改上一次提交
+* `git commit --signoff -m "注视"`: 加上签名
 
 `git stash`：将本地修改临时压栈存放
 
@@ -294,6 +295,11 @@ export GIT_SSL_NO_VERIFY=1
 git lfs install --skip-smudge
 git lfs pull *
 # .gitattributes文件中记录需要用lfs存储的文件格式
+
+# 全局关闭ssl验证
+git config --global http.sslVerify false
+# 当前关闭ssl验证
+git config http.sslVerify false
 ```
 
 #### 更新
