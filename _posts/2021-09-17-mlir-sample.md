@@ -4,7 +4,8 @@ title: 各NN框架的MLIR
 categories:
   - AI
 tags:
-  - Mlir
+  - MLIR
+  - AI编程
 ---
 
 * content

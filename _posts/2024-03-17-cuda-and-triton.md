@@ -4,7 +4,7 @@ title: CUDA与Triton
 categories:
   - AI
 tags:
-  - 编程
+  - AI编程
 ---
 
 * content
@@ -34,7 +34,7 @@ tags:
 
 1) cuda编程与c语言编程大体相同，区别在于SIMT，在GPU上的程序被多个线程执行。如何划分线程，需要理解grid概念。
 
-* Grids: 网格，最上层的概念，一个网格包含多个Blocks。一个Host端函数定义一个Grid。
+* Grids: 网格，最上层的概念，一个网格包含多个Blocks。一个Host端接口调用定义一个Grid。
 * Blocks: 块，一个块由多个Threads组成，块内thread可以通过共享数据和同步执行。
 * Threads: 线程，最小执行单位，每个线程执行相同的操作在不同的数据上。
 
@@ -91,7 +91,7 @@ project(sample LANGUAGES CXX CUDA)
 
 enable_language(CUDA)
 
-set(CMAKE_CUDA_ARCHITECTURES 60;61;70;75;80;86)
+set(CMAKE_CUDA_ARCHITECTURES 70;75;80;86)
 
 set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -Xcompiler -fPIC")
 
@@ -105,7 +105,7 @@ set_target_properties(sample PROPERTIES
                       LINKER_LANGUAGE CUDA)
 ```
 
-
+范例中`__device__`不是必要的，可以直接在`__global__`中实现相应的功能。只有在`__device__`会被多个`__global__`使用时，它才是有必要的。
 
 ## Triton
 
@@ -113,8 +113,8 @@ set_target_properties(sample PROPERTIES
 
 1. 这里Triton指OpenAI的Triton项目，[源码](https://github.com/triton-lang/triton)，[官网](https://triton-lang.org/main/index.html)
 
-2. Trion可以简单的理解为Python版本的Cuda，它的目标是实现Torch到AI芯片的对接，目前主要支持Nvidia芯片。从它编程语言来看，它是SPMD编程，如果要支持其他芯片，最好也是SIMT架构的芯片。
-3. Trion去掉了threads这一层，只保留blocks。每个接口处理多个thread，这样编程更简洁。另外个人认为，并且对于向量化的数据计算性能应该容易优化，因为可以load和store连续的数据，带宽利用更高。
+2. Trion可以简单的理解为Python版本的Cuda，它的目标是实现Torch到AI芯片的对接，目前主要支持Nvidia芯片。从它语言设计来看，它是SPMD编程，如果要支持其他芯片，最好也是SIMT架构的芯片。
+3. Trion去掉了threads这一层，只保留blocks。每个接口处理多个thread，这样编程更简洁。另外个人认为，对于向量化的计算应该容易性能优化，因为可以load和store连续的数据，带宽利用率会更高。
 
 
 
