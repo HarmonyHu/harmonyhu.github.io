@@ -380,3 +380,24 @@ $$
 
 
 
+## 其他操作
+
+#### GridSample
+
+参见[torch.nn.functional.grid_sample](https://pytorch.org/docs/1.12/generated/torch.nn.functional.grid_sample.html)，输入和输出关系如下：
+$$
+Input_{(N, C, H_{in}, W_{in})}, Grid_{(N, H_{out}, W_{out}, 2)} \Rightarrow Output_{(N,C,H_{out},W_{out})}
+$$
+网格在输入中采用，其中2对应Input的H和W坐标。坐标不一定是范围内的整数，
+
+#### ScatterND
+
+参见[ScatterND](https://onnx.ai/onnx/operators/onnx__ScatterND.html#l-onnx-doc-scatternd)，它等同于torch的索引操作，对局部向量进行更新。它对应三个输入，和一个输出。举例如下：
+
+``` python
+data    = [1, 2, 3, 4, 5, 6, 7, 8]
+indices = [[4], [3], [1], [7]]
+updates = [9, 10, 11, 12]
+output  = [1, 11, 3, 10, 9, 6, 7, 12]
+```
+
