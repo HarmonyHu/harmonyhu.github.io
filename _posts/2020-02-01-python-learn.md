@@ -297,3 +297,6 @@ image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 image.shape #(h,w,c)
 image = cv2.resize(image, (256,256)) #改变尺寸
 ```
+
+
+
