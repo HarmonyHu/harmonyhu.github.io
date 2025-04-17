@@ -41,4 +41,7 @@ deactivate
 
 ## jupyter notebook
 
-(待补充)
+集编写/运行/输出于一体，调试python非常方便。
+
+可以直接在vscode中安装jupyter插件，然后直接编写ipynb文件，并且运行该文件。
+
