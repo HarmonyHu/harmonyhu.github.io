@@ -40,9 +40,9 @@ logit, token = torch.topk(logits, 1)
 
 * `top_k`: 选取数值最大的`top_k`个结果，一般为40到100之间
 
-* `top_p`: 指定概率，累计概率超过`top_p`的才会被选择，一般指定为0.7到1.0之间，比如0.8
+* `top_p`: 指定概率，累计概率在`top_p`以内的会被选择，一般指定为0.7到1.0之间，比如0.8。
 
-  比如概率列表`[0.25, 0.20, 0.15, 0.1, 0.07, 0.06, 0.05, 0.04, 0.03, 0.01]`，累计概率为cumsum，得到`[0.25, 0.45, 0.60, 0.70, 0.77, 0.83]`，0.83开始超出了`top_p`
+  举例概率列表`[0.25, 0.20, 0.15, 0.1, 0.07, 0.06, 0.05, 0.04, 0.03, 0.01]`，累计概率为cumsum，得到`[0.25, 0.45, 0.60, 0.70, 0.77, 0.83]`，0.83开始超出了`top_p`，所以只选择`0.83`之前的部分
 
 
 
@@ -64,9 +64,9 @@ def encode_topp(scores):
     scores_processed = scores.masked_fill(indices_to_remove, "-inf")
 
 logits = encode_repetition(input_ids, logits)    # repetition
-logits, indices = torch.topk(logits, top_k)       # top_k
+logits, indices = torch.topk(logits, top_k)      # top_k
 logits = logits/temperature                      # temperature
 logits = encode_top_p(logits)                    # top_p
-scores = logits.softmax(-1)                      # final prob
+probabilities = logits.softmax(-1)               # 
 ```
 
