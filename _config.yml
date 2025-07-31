@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "zh-CN"
-title                    : "HarmonyHu's Blog"
+title                    : "HarmonyHu's Notes"
 title_separator          : "-"
 subtitle                 : "日日行，不怕千万里" # site tagline that appears below site title in masthead
 name                     : "HarmonyHu"
