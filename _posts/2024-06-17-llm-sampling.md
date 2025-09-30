@@ -24,7 +24,7 @@ Greedy Decoding，也就是直接选择数值最大的那个位置的token。示
 logit, token = torch.topk(logits, 1)
 ```
 
-
+<!--more-->
 
 # 随机采样
 
