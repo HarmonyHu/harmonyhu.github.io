@@ -36,13 +36,16 @@ Attention运算公式：$ Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}})V $
 ## Softmax分块计算
 
 比如求Softmax(S)，按照原始Softmax计算逻辑如下：
+
 $$
 x_{max} = max(x_0,...,x_s) \\
 x_i = x_i - x_{max} \\
 l_i = \sum^{s}_{j=0}e^{x_j} \\
 y_i = \frac{e^{x_i}}{l_i}
 $$
+
 分块计算逻辑如下(假如分两块)：
+
 $$
 \begin{align}
 &Step 0 (求块0):&x_{max0} = max(x_0,...,x_{s0}) \\
@@ -59,6 +62,7 @@ $$
 &&y_1 = \frac{l_1e^{x_{max1} - x_{max}}}{l} y1
 \end{align}
 $$
+
 每个块计算完后需要记录下该块的三个值：max、l、和y。最后做修正即可得到最终的softmax。
 
 
