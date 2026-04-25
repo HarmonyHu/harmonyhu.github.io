@@ -5,7 +5,7 @@ date:   2010-11-09
 categories:
   - BIOS
 tags:
-  - 地址空间
+  - AddressSpace
 ---
 
 * content

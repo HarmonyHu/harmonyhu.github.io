@@ -4,7 +4,7 @@ title: 学习整理：梯度下降(Gradient Descent)
 categories:
   - AI
 tags:
-  - 算法
+  - Algorithm
 ---
 
 * content

@@ -2,9 +2,10 @@
 layout: single
 title: 学习笔记:神经网络反向推导
 categories:
-  - AI
+  - DeepLearning
 tags:
-  - 算法
+  - NeuralNetwork
+  - Backpropagation
 ---
 
 * content

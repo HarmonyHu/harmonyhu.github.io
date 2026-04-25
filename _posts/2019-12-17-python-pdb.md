@@ -1,10 +1,12 @@
 ---
 layout: single
-title: python调试
+title: pythonDebug
 categories:
-  - python
+  - Python
 tags:
+  - Python
   - pdb
+  - Debug
 ---
 
 * content

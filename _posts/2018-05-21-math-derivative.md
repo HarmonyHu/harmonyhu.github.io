@@ -4,7 +4,7 @@ title: 微积分基础
 categories:
   - AI
 tags:
-  - 数学
+  - Math
 ---
 
 * content

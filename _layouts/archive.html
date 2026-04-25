@@ -1,26 +1,27 @@
 ---
 layout: default
 ---
+<section class="archive">
+  <header class="page__header">
+    <h1 class="page__title">{{ page.title }}</h1>
+    <p class="page__subtitle">共 {{ site.posts | size }} 篇</p>
+  </header>
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% elsif page.header.video.id and page.header.video.provider %}
-  {% include page__hero_video.html %}
-{% endif %}
-
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title">{{ page.title }}</h1>
-    {% endunless %}
-    {{ content }}
-  </div>
-</div>
+  {% assign posts_by_year = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+  {% for year in posts_by_year %}
+    <section class="archive__year">
+      <h2 class="archive__year-title">{{ year.name }}</h2>
+      <ul class="archive__list">
+        {% for post in year.items %}
+        <li class="archive__item">
+          <span class="archive__date">{{ post.date | date: "%m-%d" }}</span>
+          <a class="archive__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% if post.categories.size > 0 %}
+          <span class="archive__cat">{{ post.categories | join: ' / ' }}</span>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</section>

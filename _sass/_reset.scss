@@ -1,0 +1,9 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, blockquote, pre, hr { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+img, svg, video { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+input, textarea { font: inherit; color: inherit; }
+hr { border: 0; border-top: 1px solid var(--border); }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 4px; }

@@ -2,7 +2,7 @@
 layout: single
 title: FlatBuffers反射
 categories:
-  - 编程
+  - Programming
 tags:
   - flatbuffers
   - google
@@ -101,7 +101,7 @@ bool CheckField(voffset_t field) const； // 检查filed是否存在
 
 ```c++
 // 根struct, flatbuffers::StructDef
-auto struct_def = parset.root_struct_def_;
+auto struct_def = parser.root_struct_def_;
 // 1) name: table或者struct结构的名称
 cout << struct_def->name;
 // 2) fixed: false为table，true为struct
@@ -120,14 +120,14 @@ for (auto field : fields) { // 遍历成员
 cout << field->name;
 // 2) value.offset, 偏移voffset_t
 cout << field->value.offset;
-table->CheckFiled(field->value.offset); //检查是否存在
+table->CheckField(field->value.offset); //检查是否存在
 // 3) value.type.base_type, 类型
 switch(field->value.type.base_type) {
 case BASE_TYPE_STRUCT: // table 或者struct
-  auto struct_def = filed->value.type.struct_def; // 得到StructDef
+  auto struct_def = field->value.type.struct_def; // 得到StructDef
   break;
 case BASE_TYPE_VECTOR: // vector类型
-  auto type = filed->value.type.VectorType();  // vector成员类型
+  auto type = field->value.type.VectorType();  // vector成员类型
   auto val = table->GetPointer<const void*>(fd->value.offset);
   auto val_v = reinterpret_cast<const Vector<Offset<void>> *>(val);
   for(auto data: val_v) { // 成员buffer
@@ -185,7 +185,7 @@ cout << (field->type()->base_type() == reflection::UInt);  // 基本类型
 fields->Get(filed->type()->index()) == filed; // 成员位置
 
 // 查找成员
-auto hp_filed = fileds->LookupByKey("hp");
+auto hp_field = fields->LookupByKey("hp");
 ```
 
 #### 3. 元素反射
@@ -197,12 +197,12 @@ auto &root = *flatbuffers::GetAnyRoot(flatbuf);
 auto hp_value = flatbuffers::GetFieldI<uint16_t>(root, hp_field);
 TEST_EQ(hp_value, 80);
 // 也可以不在乎类型
-auto hp_any = flatbuffers::GetAnyFieldI(root, hp_filed);
+auto hp_any = flatbuffers::GetAnyFieldI(root, hp_field);
 TEST_EQ(hp_any, 80);
 auto hp_string = flatbuffers::GetAnyFieldS(root, hp_field, &schema);
 TEST_EQ_STR(hp_string.c_str(), "80");
 // 可以修改
-flatbuffers::SetField<uint32_t>(&root, hp_filed, 200);
+flatbuffers::SetField<uint32_t>(&root, hp_field, 200);
 ```
 
 

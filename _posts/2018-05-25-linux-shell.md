@@ -2,7 +2,7 @@
 layout: single
 title: Bash shell脚本
 categories:
-  - 编程
+  - Programming
 tags:
   - Shell
 ---
@@ -109,7 +109,7 @@ echo ${#array2[5]} # 单个元素长度，3
 ```bash
 # 判断使用[] 或者 test，注意[]中需要空格
 a=0;b=0
-test $a == $b && echo "ture" #打印true
+test $a == $b && echo "true" #打印true
 [ $a == $b ] && echo "true" #同上
 # 判断中0是true，非0是false
 [ $a == $b ]; echo $? # 0

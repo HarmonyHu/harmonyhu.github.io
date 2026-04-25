@@ -4,7 +4,7 @@ title: Safetensors文件格式
 categories:
   - AI
 tags:
-  - 网络模型
+  - Model
 ---
 
 * content

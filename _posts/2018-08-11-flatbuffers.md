@@ -2,7 +2,7 @@
 layout: single
 title: 序列化之FlatBuffers
 categories:
-  - 编程
+  - Programming
 tags:
   - flatbuffers
   - google
@@ -231,7 +231,7 @@ ASSERT(true == parser.Parse(schema_text.c_str()));
 // 显示默认值
 // parser.opts.output_default_scalars_in_json = true;
 // buffer对应的是序列号的buffer,json形式保存在json_text中
-ASSERT(true == flatbuffers::GenerateText(parser, buffer, &json_text);
+ASSERT(true == flatbuffers::GenerateText(parser, buffer, &json_text));
 
 // GenerateTextFile直接存到文件中
 // bool GenerateTextFile(const Parser &parser, const std::string &path, const std::string &file_name)

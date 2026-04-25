@@ -2,9 +2,10 @@
 layout: single
 title: Python常用工具
 categories:
-  - python
+  - Python
 tags:
-  - python
+  - Python
+  - Tools
 ---
 
 * content

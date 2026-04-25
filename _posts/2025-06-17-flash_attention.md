@@ -2,9 +2,9 @@
 layout: single
 title: FlashAttention学习
 categories:
-  - AI
+  - DeepLearning
 tags:
-  - 网络模型
+  - Model
 ---
 
 * content

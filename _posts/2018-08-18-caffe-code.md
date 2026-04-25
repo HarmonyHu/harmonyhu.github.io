@@ -2,7 +2,7 @@
 layout: single
 title: caffe源码阅读
 categories:
-  - AI
+  - MLFramework
 tags:
   - caffe
 ---

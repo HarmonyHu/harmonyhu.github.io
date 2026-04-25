@@ -55,7 +55,7 @@ RUN ["/bin/bash", "-c", "echo hello"]
 CMD ["/bin/bash", "/usr/local/nginx/sbin/nginx", "-c", "/usr/local/nginx/conf/nginx.conf"]
 ```
 
-注意：每个Dodckerfile 只能有一条CMD命令，如果指定了多条命令，只有最后一条会被执行。另外CMD会被`docker run -it test /bin/bash`中的`/bin/bash`覆盖。
+注意：每个Dockerfile 只能有一条CMD命令，如果指定了多条命令，只有最后一条会被执行。另外CMD会被`docker run -it test /bin/bash`中的`/bin/bash`覆盖。
 
 #### LABEL
 

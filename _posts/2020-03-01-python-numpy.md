@@ -2,9 +2,10 @@
 layout: single
 title: Numpy
 categories:
-  - python
+  - Python
 tags:
-  - Numpy
+  - Python
+  - NumPy
 ---
 
 * content

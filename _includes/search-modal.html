@@ -1,0 +1,14 @@
+<div class="search-modal" id="search-modal" hidden>
+  <div class="search-modal__backdrop" data-close></div>
+  <div class="search-modal__panel" role="dialog" aria-modal="true" aria-label="搜索">
+    <div class="search-modal__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+      <input type="search" id="search-input" placeholder="搜索文章标题、内容、标签…" autocomplete="off">
+      <button class="icon-btn" data-close aria-label="关闭">✕</button>
+    </div>
+    <div class="search-modal__results" id="search-results">
+      <p class="search-modal__hint">输入关键词开始搜索 · 按 ESC 关闭</p>
+    </div>
+  </div>
+</div>
+<script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>

@@ -2,9 +2,9 @@
 layout: single
 title: Transformer
 categories:
-  - AI
+  - DeepLearning
 tags:
-  - 网络模型
+  - Model
 mermaid: true
 ---
 
