@@ -1,9 +1,16 @@
 ---
 permalink: /about/
-layout: single
+layout: page
 title: "关于"
+subtitle: "About me"
 ---
 
-不知道写些什么，
+我是 **HarmonyHu**，一名 AI Compiler 工程师。
 
-写什么也都不重要
+这里仅记录个人的学习笔记。
+
+
+## 联系
+
+- GitHub: [@HarmonyHu](https://github.com/HarmonyHu)
+- Email: [harmonyhu@foxmail.com](mailto:harmonyhu@foxmail.com)

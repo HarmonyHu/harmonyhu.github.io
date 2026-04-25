@@ -1,0 +1,75 @@
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--fg);
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 1200px 600px at 10% -10%, rgba(182, 69, 42, 0.06), transparent 60%),
+    radial-gradient(ellipse 900px 500px at 90% -5%, rgba(31, 111, 163, 0.05), transparent 60%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  transition: background .3s var(--ease), color .3s var(--ease);
+}
+
+[data-theme="dark"] body {
+  background-image:
+    radial-gradient(ellipse 1200px 600px at 10% -10%, rgba(240, 163, 126, 0.07), transparent 60%),
+    radial-gradient(ellipse 900px 500px at 90% -5%, rgba(124, 192, 244, 0.05), transparent 60%);
+}
+
+::selection { background: var(--selection); color: var(--fg); }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color .15s var(--ease);
+}
+a:hover { color: var(--link-hover); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--fg);
+  letter-spacing: -0.012em;
+}
+
+p { hyphens: auto; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; width: 100%; }
+.container--wide { max-width: var(--container-wide); }
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--primary); color: #fff;
+  padding: 10px 18px; z-index: 1000;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  font-weight: 600;
+}
+.skip-link:focus { left: 16px; top: 8px; color: #fff; }
+
+.icon { width: 1em; height: 1em; vertical-align: -0.125em; }
+
+.icon-btn {
+  width: 36px; height: 36px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  color: var(--fg-soft);
+  transition: color .15s var(--ease), background .2s var(--ease), transform .2s var(--ease);
+}
+.icon-btn:hover {
+  color: var(--primary);
+  background: var(--bg-soft);
+}
+.icon-btn:active { transform: scale(0.94); }
+.icon-btn svg { width: 18px; height: 18px; }

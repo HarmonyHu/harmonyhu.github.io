@@ -1,43 +1,28 @@
 ---
-layout: archive
+layout: default
 ---
+<section class="taxonomy">
+  <header class="page__header">
+    <h1 class="page__title">{{ page.title }}</h1>
+  </header>
 
-{{ content }}
+  {% assign tags = site.tags | sort %}
+  <nav class="taxonomy__nav taxonomy__nav--tags">
+    {% for t in tags %}<a class="chip chip--tag" href="#{{ t[0] }}">#{{ t[0] }} <small>({{ t[1] | size }})</small></a>{% endfor %}
+  </nav>
 
-{% assign tags_max = 0 %}
-{% for tag in site.tags %}
-  {% if tag[1].size > tags_max %}
-    {% assign tags_max = tag[1].size %}
-  {% endif %}
-{% endfor %}
-
-<ul class="taxonomy__index">
-  {% for i in (1..tags_max) reversed %}
-    {% for tag in site.tags %}
-      {% if tag[1].size == i %}
-        <li>
-          <a href="#{{ tag[0] | slugify }}">
-            <strong>{{ tag[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
-          </a>
+  {% for t in tags %}
+    <section class="taxonomy__group" id="{{ t[0] }}">
+      <h2 class="taxonomy__group-title">#{{ t[0] }} <span class="taxonomy__count">{{ t[1] | size }}</span></h2>
+      <ul class="archive__list">
+      {% assign sorted = t[1] | sort: 'date' | reverse %}
+      {% for post in sorted %}
+        <li class="archive__item">
+          <span class="archive__date">{{ post.date | date: "%Y-%m-%d" }}</span>
+          <a class="archive__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </li>
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+      </ul>
+    </section>
   {% endfor %}
-</ul>
-
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-{% for i in (1..tags_max) reversed %}
-  {% for tag in site.tags %}
-    {% if tag[1].size == i %}
-      <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle">{{ tag[0] }}</h2>
-        <div class="entries-{{ entries_layout }}">
-          {% for post in tag.last %}
-            {% include archive-single.html type=entries_layout %}
-          {% endfor %}
-        </div>
-        <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-      </section>
-    {% endif %}
-  {% endfor %}
-{% endfor %}
+</section>

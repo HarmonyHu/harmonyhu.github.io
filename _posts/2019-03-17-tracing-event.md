@@ -4,7 +4,8 @@ title: Linux Event Tracing
 categories:
   - Linux
 tags:
-  - Event
+  - tracepoint
+  - kernel
 ---
 
 * content
@@ -56,7 +57,7 @@ EXPORT_TRACEPOINT_SYMBOL_GPL(sample_event);
 #### 3. 代码中调用tracepoint
 
 ```c
-#include <trace/events/smaple.h>
+#include <trace/events/sample.h>
 
 void somefunc(void)
 {
@@ -81,7 +82,7 @@ echo sample_event >> /sys/kernel/debug/tracing/set_event
 echo '!sample_event' >> /sys/kernel/debug/tracing/set_event
 # enable all
 echo *:* >> /sys/kernel/debug/tracing/set_event
-# enable one evnet all sub event
+# enable one event all sub event
 echo 'irq:*' >> /sys/kernel/debug/tracing/set_event
 ```
 

@@ -2,9 +2,10 @@
 layout: single
 title: 学习整理：arm-trusted-firmware
 categories:
-  - Linux
+  - BIOS
 tags:
   - ARM
+  - firmware
 ---
 
 * content

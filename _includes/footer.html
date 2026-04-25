@@ -1,2 +1,17 @@
-
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer__inner">
+    <div class="site-footer__col">
+      <p class="site-footer__name">{{ site.title }}</p>
+      <p class="site-footer__bio">{{ site.author.bio }}</p>
+      <p class="site-footer__copy">© {{ 'now' | date: "%Y" }} {{ site.author.name }}. Made with ♥ &amp; Jekyll.</p>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__links">
+        {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}" rel="me">GitHub</a>{% endif %}
+        {% if site.author.email %}<a href="mailto:{{ site.author.email }}">Email</a>{% endif %}
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        <a href="{{ '/archive/' | relative_url }}">归档</a>
+      </p>
+    </div>
+  </div>
+</footer>

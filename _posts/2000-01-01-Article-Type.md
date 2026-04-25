@@ -2,9 +2,10 @@
 layout: single
 title: 文章样板《心经》
 categories:
-  - 阅读
+  - Reading
 tags:
-  - 阅读
+  - HeartSutra
+  - Template
 ---
 
 * content

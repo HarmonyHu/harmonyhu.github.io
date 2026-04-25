@@ -2,7 +2,7 @@
 layout: single
 title: tensorflow的基础使用
 categories:
-  - AI
+  - MLFramework
 tags:
   - TensorFlow
 ---

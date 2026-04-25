@@ -4,7 +4,7 @@ title: 常见算子操作
 categories:
   - AI
 tags:
-  - 算法
+  - Algorithm
 ---
 
 * content

@@ -2,7 +2,7 @@
 layout: single
 title: tensorflow的模型设计
 categories:
-  - AI
+  - MLFramework
 tags:
   - TensorFlow
 ---
@@ -97,7 +97,7 @@ tf.summary.scalar(tags, values, collections=None, name=None)
 tf.summary.merge_all()
 
 # 将训练数据保存到文件中
-writer = tf.summary.FileWritter(path,sess.graph)
+writer = tf.summary.FileWriter(path,sess.graph)
 
 # 按训练步数保存数据
 writer.add_summary(train_summary,step)

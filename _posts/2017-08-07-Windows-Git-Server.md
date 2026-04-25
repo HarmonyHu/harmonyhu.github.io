@@ -5,6 +5,8 @@ categories:
   - Git
 tags:
   - gogs
+  - Server
+  - Windows
 ---
 
 * content
@@ -21,7 +23,7 @@ tags:
 1. 安装MySQL，并创建gogs数据库:`create database gogs;`。
 2. 安装git，并将git安装路径下的bin和usr/bin路径添加到系统变量Path中。
 3. 解压gogs，cmd命令到gogs目录，执行gogs web。
-4. 浏览器地址输入127.0.1.1:3000，进入配置界面配置。
+4. 浏览器地址输入127.0.0.1:3000，进入配置界面配置。
 5. 将gogs配置为系统服务，如下gogs路径为D:\gogs，
 创建服务：`sc create gogs start= delayed-auto binPath= ""D:\gogs\gogs.exe" web"`
 启动服务：`sc start gogs`

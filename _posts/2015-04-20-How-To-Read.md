@@ -3,9 +3,9 @@ layout: single
 title:  读《如何阅读一本书》
 date:   2015-04-20
 categories:
-  - 阅读
+  - Reading
 tags:
-  - 阅读
+  - ReadingMethod
 ---
 
 ![](https://harmonyhu.github.io/img/read_a_book2.jpg)

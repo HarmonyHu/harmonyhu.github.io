@@ -4,7 +4,8 @@ title: VMware使用
 categories:
   - Linux
 tags:
-  - vmware
+  - VMware
+  - VM
 ---
 
 * content

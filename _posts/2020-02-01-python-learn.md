@@ -2,9 +2,9 @@
 layout: single
 title: python
 categories:
-  - python
+  - Python
 tags:
-  - python
+  - Python
 ---
 
 * content

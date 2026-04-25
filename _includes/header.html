@@ -1,0 +1,43 @@
+<header class="site-header" id="site-header" role="banner">
+  <div class="site-header__inner">
+    <a class="site-brand" href="{{ '/' | relative_url }}">
+      {% if site.author.avatar %}
+      <img class="site-brand__avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+      {% endif %}
+      <span class="site-brand__text">
+        <span class="site-brand__title">{{ site.title }}</span>
+        {% if site.subtitle %}<span class="site-brand__sub">{{ site.subtitle }}</span>{% endif %}
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="切换菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="主导航">
+      <ul class="site-nav__list">
+        {% for item in site.nav %}
+        {% assign cur = page.url | default: '/' %}
+        <li class="site-nav__item{% if cur == item.url %} is-active{% endif %}">
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="site-nav__tools">
+        <button class="icon-btn" id="search-toggle" aria-label="搜索" title="搜索 (按 / 唤起)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <button class="icon-btn" id="theme-toggle" aria-label="切换主题" title="切换浅色/深色">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v3"/><path d="M12 19v3"/><path d="M2 12h3"/><path d="M19 12h3"/><path d="M4.2 4.2l2.1 2.1"/><path d="M17.7 17.7l2.1 2.1"/><path d="M4.2 19.8l2.1-2.1"/><path d="M17.7 6.3l2.1-2.1"/></g></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  {% if page.layout == 'post' or page.layout == 'single' %}
+  <div class="reading-progress" id="reading-progress"></div>
+  {% endif %}
+
+  {% include search-modal.html %}
+</header>

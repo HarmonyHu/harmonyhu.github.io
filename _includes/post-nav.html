@@ -1,0 +1,14 @@
+<nav class="post-nav" aria-label="文章导航">
+  {% if page.previous %}
+    <a class="post-nav__prev" href="{{ page.previous.url | relative_url }}">
+      <span class="post-nav__label">← 上一篇</span>
+      <span class="post-nav__title">{{ page.previous.title }}</span>
+    </a>
+  {% else %}<span></span>{% endif %}
+  {% if page.next %}
+    <a class="post-nav__next" href="{{ page.next.url | relative_url }}">
+      <span class="post-nav__label">下一篇 →</span>
+      <span class="post-nav__title">{{ page.next.title }}</span>
+    </a>
+  {% else %}<span></span>{% endif %}
+</nav>

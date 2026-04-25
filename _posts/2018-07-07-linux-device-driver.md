@@ -4,7 +4,8 @@ title: Linux Device Driver
 categories:
   - Linux
 tags:
-  - ARM
+  - Driver
+  - kernel
 ---
 
 * content

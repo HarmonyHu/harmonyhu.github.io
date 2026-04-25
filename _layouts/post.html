@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post__header">
+    <h1 class="post__title">{{ page.title }}</h1>
+    <div class="post__meta">
+      {% if page.date %}
+        <time datetime="{{ page.date | date_to_xmlschema }}">📅 {{ page.date | date: "%Y-%m-%d" }}</time>
+      {% endif %}
+      {% assign words = content | strip_html | number_of_words %}
+      <span title="阅读时间">⏱ 约 {{ words | divided_by: 350 | plus: 1 }} 分钟</span>
+      {% if page.categories.size > 0 %}
+        <span class="post__cats">📁
+          {% for c in page.categories %}<a href="{{ '/categories/#' | append: c | relative_url }}">{{ c }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
+        </span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post__layout">
+    <div class="post__content prose">
+      {{ content }}
+    </div>
+
+    {% if page.toc != false %}
+    <aside class="post__toc" aria-label="目录">
+      <div class="post__toc-inner">
+        <h3>目录</h3>
+        <div id="toc"></div>
+      </div>
+    </aside>
+    {% endif %}
+  </div>
+
+  {% if page.tags.size > 0 %}
+  <footer class="post__tags">
+    {% for t in page.tags %}<a class="tag" href="{{ '/tags/#' | append: t | relative_url }}">#{{ t }}</a>{% endfor %}
+  </footer>
+  {% endif %}
+
+  {% include post-nav.html %}
+
+  {% if site.comments.enabled and page.comments != false %}
+    <section class="page__comments">
+      <h2 class="page__comments-title">评论</h2>
+      {% include comments.html %}
+    </section>
+  {% endif %}
+</article>

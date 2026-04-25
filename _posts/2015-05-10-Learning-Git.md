@@ -3,9 +3,10 @@ layout: single
 title:  Git学习整理
 date:   2015-05-10
 categories:
-  - 参考
-tags:
   - Git
+tags:
+  - Command
+  - Basics
 ---
 
 * content

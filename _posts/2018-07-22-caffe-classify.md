@@ -2,7 +2,7 @@
 layout: single
 title: caffe如何使用训练好的模型
 categories:
-  - AI
+  - MLFramework
 tags:
   - caffe
 ---
@@ -161,12 +161,12 @@ const float* begin = output_layer->cpu_data();
 const float* end = begin + output_layer->channels();
 vector<float> output = vector<float>(begin, end);
 // 取出概率最大的前5个
-std::vector<int> maxN = Argmax(output, 5)；
+std::vector<int> maxN = Argmax(output, 5);
 // 获取标签
 ifstream label_file("name.labels");
 vector<string> labels;
 string line;
-while (getline(labels, line))
+while (getline(label_file, line))
 	labels.push_back(string(line));
 // 打印结果
 for (auto &i : maxN) {

@@ -2,9 +2,10 @@
 layout: single
 title: 浮点型存储格式
 categories:
-  - AI
+  - Programming
 tags:
-  - 算法
+  - Float
+  - DataRepresentation
 ---
 
 * content

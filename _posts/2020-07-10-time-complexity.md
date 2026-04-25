@@ -1,10 +1,11 @@
 ---
 layout: single
-title: 时间复杂度
+title: TimeComplexity
 categories:
-  - AI
+  - Programming
 tags:
-  - 算法
+  - TimeComplexity
+  - Algorithm
 ---
 
 * content

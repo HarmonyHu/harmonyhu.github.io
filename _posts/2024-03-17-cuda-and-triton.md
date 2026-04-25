@@ -2,9 +2,9 @@
 layout: single
 title: CUDA与Triton
 categories:
-  - AI
+  - AICompiler
 tags:
-  - AI编程
+  - AIProgramming
 ---
 
 * content
@@ -79,7 +79,7 @@ __global__ void global_float_to_int(float * input, T * output, int num, bool rou
 void float_to_int8(void * input, void *output, int num, bool rounding_up) {
   int num_threads = 256;
   int num_blocks = (num + 255)/256;
-  global_float_to_int<<<num_blocks, num_threads>>>((float*)input, (int8_t*)output, num, rouding_up);
+  global_float_to_int<<<num_blocks, num_threads>>>((float*)input, (int8_t*)output, num, rounding_up);
 }
 ```
 

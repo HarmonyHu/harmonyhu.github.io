@@ -2,10 +2,10 @@
 layout: single
 title: 各NN框架的MLIR
 categories:
-  - AI
+  - AICompiler
 tags:
   - MLIR
-  - AI编程
+  - AIProgramming
 ---
 
 * content

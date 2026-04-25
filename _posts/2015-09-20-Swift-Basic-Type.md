@@ -3,7 +3,7 @@ layout: single
 title: Swift学习之基础类型
 date: 2015-09-20 00:00
 categories:
-  - 编程
+  - Swift
 tags:
   - Swift
 ---

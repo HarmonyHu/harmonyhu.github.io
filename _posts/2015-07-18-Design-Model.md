@@ -2,9 +2,9 @@
 layout: single
 title: 23种设计模式回顾整理(未完)
 categories:
-  - 编程
+  - Programming
 tags:
-  - 设计模式
+  - DesignPattern
 ---
 
 * content
@@ -46,7 +46,7 @@ tags:
 * 解释器： Interpreter
 * 中介者： Mediator 封装对象的交互
 * 备忘录： Memento 封装对象信息
-* 观察着： Observer 封装对象通知
+* 观察者： Observer 封装对象通知
 * 状态： State 封装与状态相关行为
 * 策略： Strategy 封装算法
 * 模板方法： Template Method 封装算法中可变部分

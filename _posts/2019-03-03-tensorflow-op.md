@@ -2,7 +2,7 @@
 layout: single
 title: tensorflow：添加新OP和新设备
 categories:
-  - AI
+  - MLFramework
 tags:
   - TensorFlow
 ---
@@ -172,7 +172,7 @@ REGISTER_CONCAT(qint32);
 REGISTER_GPU(bfloat16);
 ```
 
-以上注册了各种类型的基于CPU的kernel，以及基于CUDE的float16的kernel。
+以上注册了各种类型的基于CPU的kernel，以及基于CUDA的float16的kernel。
 
 * `Name("Concat")`，对应OP的名称
 

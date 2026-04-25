@@ -4,7 +4,7 @@ title: LLM的采样策略
 categories:
   - AI
 tags:
-  - AI编程
+  - AIProgramming
 ---
 
 * content
