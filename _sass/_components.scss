@@ -1,40 +1,39 @@
 /* ---------- Home hero ---------- */
 .home__hero {
   position: relative;
-  margin: 8px 0 44px;
-  padding: 1px;
-  border-radius: calc(var(--radius) + 6px);
-  background: linear-gradient(135deg, var(--primary-soft) 0%, var(--border-soft) 45%, transparent 100%);
+  margin: 8px 0 56px;
+  padding: 36px 40px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-elev);
+  border: 1px solid var(--border-soft);
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.home__hero::before {
+  content: "";
+  position: absolute;
+  top: -160px; right: -120px;
+  width: 360px; height: 360px;
+  background: radial-gradient(closest-side, var(--primary-soft), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
 }
 .home__hero-inner {
   position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 26px;
+  gap: 32px;
   align-items: center;
-  padding: 26px 30px;
-  background: var(--bg-elev);
-  border-radius: calc(var(--radius) + 5px);
-  overflow: hidden;
-}
-.home__hero-inner::before {
-  content: "";
-  position: absolute;
-  top: -40%; right: -10%;
-  width: 320px; height: 320px;
-  background: radial-gradient(closest-side, var(--primary-soft), transparent 70%);
-  opacity: 0.55;
-  pointer-events: none;
 }
 .home__avatar-wrap {
   position: relative;
-  padding: 4px;
+  padding: 3px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-soft) 100%);
+  box-shadow: var(--shadow-sm);
 }
 .home__avatar {
-  width: 88px; height: 88px;
+  width: 96px; height: 96px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
@@ -43,61 +42,62 @@
 }
 .home__hero-text { position: relative; z-index: 1; }
 .home__eyebrow {
-  font-family: var(--font-serif);
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--primary);
-  margin: 0 0 6px;
+  margin: 0 0 10px;
   font-weight: 600;
 }
 .home__title {
   font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-size: 1.95rem;
   font-weight: 700;
-  margin: 0 0 6px;
-  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+  letter-spacing: -0.015em;
   line-height: 1.2;
   color: var(--fg);
 }
-.home__bio {
-  color: var(--fg);
-  font-size: 0.98rem;
-  margin: 0 0 6px;
-}
 .home__subtitle {
   color: var(--fg-mute);
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   font-family: var(--font-serif);
   font-style: italic;
+  margin: 0 0 12px;
+}
+.home__bio {
+  color: var(--fg-soft);
+  font-size: 0.94rem;
   margin: 0;
+  line-height: 1.6;
 }
 .home__meta {
-  margin-top: 12px;
+  margin-top: 18px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   color: var(--fg-mute);
-  font-size: 0.84rem;
+  font-size: 0.85rem;
 }
 .home__meta strong {
   color: var(--fg);
   font-weight: 600;
   margin-right: 2px;
 }
-.home__stat-sep { color: var(--border-soft); }
+.home__stat-sep { color: var(--border); }
 .home__socials {
-  display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap;
+  display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap;
 }
 .home__social {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 5px 11px;
+  padding: 6px 13px;
   border-radius: 999px;
   color: var(--fg-soft);
-  background: var(--bg-soft);
-  border: 1px solid var(--border-soft);
-  font-size: 0.8rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
   font-weight: 500;
   transition: all .2s var(--ease);
 }
@@ -110,14 +110,20 @@
 .home__social svg { width: 14px; height: 14px; }
 
 .home__list-title {
-  font-family: var(--font-serif);
-  font-size: 0.78rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
   color: var(--fg-mute);
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  margin-bottom: 24px;
+  letter-spacing: 0.22em;
+  margin-bottom: 20px;
   font-weight: 600;
-  display: flex; align-items: center; gap: 12px;
+  display: flex; align-items: center; gap: 14px;
+}
+.home__list-title::before {
+  content: "";
+  width: 22px; height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
 }
 .home__list-title::after {
   content: ""; flex: 1;
@@ -125,54 +131,46 @@
 }
 
 /* ---------- Post cards ---------- */
-.post-list { display: flex; flex-direction: column; gap: 4px; }
+.post-list { display: flex; flex-direction: column; gap: 14px; }
 .post-card {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 20px;
-  padding: 18px 16px;
+  display: block;
+  padding: 22px 24px;
   border-radius: var(--radius);
-  align-items: baseline;
-  transition: background .2s var(--ease), transform .2s var(--ease);
+  background: var(--bg-elev);
+  border: 1px solid var(--border-soft);
+  transition: transform .2s var(--ease), box-shadow .25s var(--ease), border-color .2s var(--ease);
   position: relative;
 }
-.post-card::before {
-  content: "";
-  position: absolute;
-  left: 12px; top: 0; bottom: 0;
-  width: 0; opacity: 0;
-  background: var(--primary);
-  border-radius: 2px;
-  transition: opacity .2s var(--ease), width .2s var(--ease);
-}
 .post-card:hover {
-  background: var(--bg-soft);
+  transform: translateY(-2px);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
 }
-.post-card:hover::before { width: 3px; opacity: 1; left: 4px; }
 .post-card__date {
+  display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   color: var(--fg-mute);
-  flex-shrink: 0;
-  letter-spacing: 0.02em;
-  padding-top: 2px;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
 }
 .post-card__body { min-width: 0; }
 .post-card__title {
   font-family: var(--font-serif);
-  font-size: 1.18rem;
-  font-weight: 600;
-  margin: 0 0 6px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 8px;
   line-height: 1.35;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
 }
 .post-card__title a { color: var(--fg); }
 .post-card__title a:hover { color: var(--primary); }
 .post-card__excerpt {
-  color: var(--fg-mute);
-  font-size: 0.92rem;
-  line-height: 1.6;
-  margin: 4px 0 8px;
+  color: var(--fg-soft);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  margin: 0 0 12px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -180,7 +178,7 @@
 }
 .post-card__meta {
   display: flex; flex-wrap: wrap; gap: 6px;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
 /* ---------- Chips & Tags ---------- */

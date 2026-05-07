@@ -37,7 +37,7 @@ JavaScript and CSS assets under `assets/js/` and `assets/css/` are served as-is 
 - **Comments** are rendered through [Giscus](https://giscus.app/) in `_includes/comments.html` (GitHub Discussions backed).
 - **Theme switching** (light/dark) is handled in `assets/js/main.js` and persisted in `localStorage`; the initial theme is set inline in `_includes/head.html` to avoid a flash of incorrect theme.
 - **Reading progress bar**, **auto-generated TOC**, and **mobile nav** are implemented in `assets/js/main.js`.
-- **SEO** is handled by `jekyll-seo-tag`; sitemap and RSS feed by `jekyll-sitemap` and `jekyll-feed`.
+- **SEO** is handled by `jekyll-seo-tag`; sitemap by `jekyll-sitemap`.
 
 ## Plugins
 
@@ -45,6 +45,5 @@ Configured in `_config.yml` and `Gemfile`:
 
 - `jekyll-paginate`
 - `jekyll-sitemap`
-- `jekyll-feed`
 - `jekyll-seo-tag`
 - `jekyll-include-cache`
