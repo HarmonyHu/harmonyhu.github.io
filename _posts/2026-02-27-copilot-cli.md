@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Copilot-CLI学习
+title: Copilot-CLI学习整理
 categories:
   - AI
 tags:
@@ -96,6 +96,24 @@ copilot --allow-all -p "Review @myfile.py for issues"
 * `--allow-url=github.com`：允许访问指定域名
 * `--deny-url=github.com`：禁止访问指定域名
 * `--allow-all` == `--allow-all-tools` + `--allow-all-paths` + `allow-all-urls`
+
+### 5. 使用自定义模型
+
+| 环境变量                    | 必需 | 说明                                                         |
+| --------------------------- | ---- | ------------------------------------------------------------ |
+| `COPILOT_PROVIDER_BASE_URL` | 是的 | 模型提供程序 API 终结点的基本 URL。                          |
+| `COPILOT_PROVIDER_TYPE`     | 否   | 提供程序类型： `openai` （默认值）， `azure`或 `anthropic`。 |
+| `COPILOT_PROVIDER_API_KEY`  | 否   | 您的提供程序的 API 密钥。 不需要身份验证的提供程序无需此步骤，例如本地 Ollama 实例。 |
+| `COPILOT_MODEL`             | 是的 | 要使用的模型标识符。 还可以使用 `--model` 命令行标志来设置此设置。 |
+
+参考如下：
+
+``` bash
+COPILOT_PROVIDER_BASE_URL=https://your-api-endpoint.com/v1
+COPILOT_PROVIDER_TYPE=openai
+COPILOT_PROVIDER_API_KEY=sk-your-api-key-here
+COPILOT_MODEL=your-model-name
+```
 
 
 
@@ -276,7 +294,7 @@ Provide issues as a numbered list with severity:
 
 ## MCP(Model Context Protocol)
 
-没有MCP，Copilot只能看到@本地文件；有MCP，它能浏览整个项目。
+MCP可以通过访问网络、APP等等外部接口获取信息，是对模型能力的扩展。
 
 MCP配置在`~/.copilot/mcp-config.json`(全局)；`.mcp.json`项目根目录，用于项目本身。
 
@@ -295,5 +313,7 @@ MCP配置在`~/.copilot/mcp-config.json`(全局)；`.mcp.json`项目根目录，
 }
 ```
 
+MCP相关命令：
 
+* `/mcp show`：列举所有的mcp服务；回车选择一个后可以查看该serve的功能
 
