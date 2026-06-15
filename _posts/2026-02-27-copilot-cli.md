@@ -218,14 +218,16 @@ When reviewing code, always check for:
 
 ## SKILLs
 
+### 1. 基本介绍
+
 Agents用于告诉Copilot如何思考，Skills告诉Copilot具体怎么做。
 
 文件存放目录：
 
-| Location             | Scope                 | Best For                                    |
-| -------------------- | --------------------- | ------------------------------------------- |
-| `.github/skills/`    | Project-specific      | Team-shared skills with project conventions |
-| `~/.copilot/skills/` | Global (all projects) | Personal skills you use everywhere          |
+| Location                                | Scope                 | Best For                                    |
+| --------------------------------------- | --------------------- | ------------------------------------------- |
+| `.github/skills/` 或者 `.agent/skills/` | Project-specific      | Team-shared skills with project conventions |
+| `~/.copilot/skills/`                    | Global (all projects) | Personal skills you use everywhere          |
 
 文件结构：
 
@@ -289,6 +291,22 @@ Provide issues as a numbered list with severity:
 * 触发方式它可以根据prompt自动触发，也可以手动触发，如下：
 
   `/generate-tests Create tests for the user authentication module`，其中`generate-tests`对应skill文件名称
+
+### 2. 安装github现有skill
+
+* 安装github cli: 
+
+```shell
+# github找最新版本
+wget https://github.com/cli/cli/releases/download/v2.93.0/gh_2.93.0_linux_amd64.deb
+sudo dpkg -i gh_2.93.0_linux_amd64.deb
+```
+
+* 安装skill，以[caveman](https://github.com/JuliusBrussee/caveman) (用于减少token消耗)为例：
+
+``` shell
+gh skill install JuliusBrussee/caveman caveman
+```
 
 
 

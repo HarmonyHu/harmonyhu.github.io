@@ -46,3 +46,25 @@ deactivate
 
 可以直接在vscode中安装jupyter插件，然后直接编写ipynb文件，并且运行该文件。
 
+
+
+## markitdown
+
+[markitdown](https://github.com/microsoft/markitdown)
+
+可以将PDF、PowerPoint、Word、Excel、Epubs等等文件转换成Markdown。
+
+安装：
+
+``` shell
+git clone git@github.com:microsoft/markitdown.git
+cd markitdown
+pip install -e 'packages/markitdown[all]'
+```
+
+使用：
+
+``` shell
+markitdown path-to-file.pdf -o document.md
+```
+
