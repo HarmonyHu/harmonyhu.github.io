@@ -69,11 +69,11 @@ cc-switch
 * `claude -p "query"`: 一次查询操作
 * `claude -c`: 当前目录继续上一次会话
 * `claude -r`: 恢复之前的会话
+* `claude --dangerously-skip-permissions`: 允许所有权限启动
 * `/clear`: 清除历史
 * `/help`: 显示可用命令
 * `/exit`: 退出
 * `/model`: 切换模型
-
 * `/init`: 分析项目，在当前项目构建`CLAUDE.md`文件
 * `/memory`: 编辑记忆文件，包括`CLAUDE.md`等文件
 * `/rename`: 给当前会话命令，方便后续打开会话

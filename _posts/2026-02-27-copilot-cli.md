@@ -35,6 +35,9 @@ tags:
 * 执行：`copilot`
 * 登录：`/login`，根据提示在网页打开`https://github.com/login/device`，授权后即可登录
 * 退出登录：`/logout`
+* 常用配置(`~/.copilot/settings.json`)：
+  * `"includeCoAuthoredBy": false`，关闭copilot commit
+
 
 <!--more-->
 
