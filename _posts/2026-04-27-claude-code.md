@@ -50,13 +50,21 @@ vim ~/.claude/setting.json
 
 #### 2) 方法二
 
-采用[cc-switch](https://github.com/farion1231/cc-switch)，安装方法如下：
+采用[cc-switch](https://github.com/farion1231/cc-switch)，GUI版本安装方法如下：
 
 ```shell
 # 官网找最新版安装
 wget https://github.com/farion1231/cc-switch/releases/download/v3.15.0/CC-Switch-v3.15.0-Linux-x86_64.deb
 dpkg -i xxx.deb
 # 运行cc-switch
+cc-switch
+```
+
+CLI版本如下：
+
+``` shell
+curl -fsSL https://github.com/SaladDay/cc-switch-cli/releases/latest/download/install.sh | bash
+# 在.bashrc中添加：	export PATH="/root/.local/bin:$PATH"
 cc-switch
 ```
 
@@ -78,6 +86,7 @@ cc-switch
 * `/memory`: 编辑记忆文件，包括`CLAUDE.md`等文件
 * `/rename`: 给当前会话命令，方便后续打开会话
 * `/resume`: 继续之前的会话
+* `/status`：显示状态信息
 * `@`: 用于指定目录或文件
 
 ## 4. 目录
