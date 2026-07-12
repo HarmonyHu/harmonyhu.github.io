@@ -2,7 +2,7 @@
 layout: single
 title: LLM的采样策略
 categories:
-  - AI
+  - DeepLearning
 tags:
   - AIProgramming
 ---

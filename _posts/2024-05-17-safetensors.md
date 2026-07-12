@@ -2,7 +2,7 @@
 layout: single
 title: Safetensors文件格式
 categories:
-  - AI
+  - MLFramework
 tags:
   - Model
 ---

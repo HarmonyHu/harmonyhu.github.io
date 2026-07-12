@@ -2,7 +2,7 @@
 layout: single
 title: 常见算子操作
 categories:
-  - AI
+  - DeepLearning
 tags:
   - Algorithm
 ---
