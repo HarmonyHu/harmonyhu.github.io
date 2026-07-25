@@ -16,8 +16,6 @@ tags:
 
 ## 学习资料
 
-本文全部内容来自：
-
 [claude code docs](https://code.claude.com/docs/)
 
 ## 使用基础
@@ -27,10 +25,10 @@ tags:
 * Windows安装命令：`irm https://claude.ai/install.ps1 | iex`
 * Linux方法一：`curl -fsSL https://claude.ai/install.sh | bash`
 * Linux方法二：
-  * `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh`，安装brew后按提示命令，添加brew到shell中
+  * `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`，安装brew后按提示命令，添加brew到shell中
   * `brew install --cask claude-code@latest`
 
-* 安装完后`vim ~/.claude.json`中添加配置`"hasCompletedOnboarding": true`
+* 安装完后`vim ~/.claude.json`中添加配置`"hasCompletedOnboarding": true` (表示关闭引导流程)
 
 ### 2. 自定义模型
 
@@ -88,6 +86,10 @@ cc-switch
 * `/resume`: 继续之前的会话
 * `/status`：显示状态信息
 * `@`: 用于指定目录或文件
+* `!`: 直接执行Bash命令
+* `#`: 注入记忆
+* `&`: 异步任务，后台执行
+* `shift+tag`: 切换模式，切换`auto mode` 、`edit mode`、 `plan mode`、`default mode`
 
 ## 4. 目录
 
@@ -96,9 +98,37 @@ cc-switch
 * `./CLAUDE.local.md`：个人使用，用`.gitignore`屏蔽掉
 * `.claude/skills`：存放skill
 * `.claude/agents`：存放agent
-* `.claude/settings.json`：存放配置
+* `.claude/settings.json`：存放配置，私人配置对应`.claude/settings.local.json`,
+  *   `"permissions": { "defaultMode": "bypassPermissions"}`：避免反复询问Yes/No，全部pass
+  * `"skipDangerousModePermissionPrompt": true`：允许所有权限
 
-## 5. 工作流
+## 5. 项目积累
+
+### SKILLs
+
+* `/plugin`: 浏览和安装skill
+* 将常见的操作编写成SKILL.md，存放到`.claude/skills/`目录
+
+### Claude.md
+
+* 用`/init`构建初始化的`./Claude.md`文件，涵盖项目架构、关键文件和常用命令。用`@路径`导入项目中的其他文件，避免臃肿，比如`@docs/arch.md`。
+* 在`~/.claude/CLAUDE.md`中填写个人全局的偏好
+* 在`.claude/rules`中按模块添加规则
+* 项目中claude犯错需要记录，比如`Save it to Claude.md`
+* 如果claude没有遵守规则时，问它`Why don't you follow rule: xxxx`
+
+### SKILLs与Claude.md区分
+
+|          | CLAUDE.md                      | Skills (SKILL.md)               |
+| -------- | ------------------------------ | ------------------------------- |
+| 加载时机 | 每次对话始终加载（常驻上下文） | 按需加载（AI 判断相关时才注入） |
+| 本质     | 项目的"宪法" / 背景知识        | 可插拔的"专业技能包"            |
+| 类比     | 员工入职手册（人人必读）       | 专项操作手册（用到才翻）        |
+| 特点     | 流程 + 专业知识 + 按需激活     | 身份 + 规则 + 始终在线          |
+
+
+
+## 6. 工作流
 
 `探索 -> 规划 -> 实现 -> 提交`
 
