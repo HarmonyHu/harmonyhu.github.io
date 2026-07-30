@@ -107,7 +107,18 @@ cc-switch
 ### SKILLs
 
 * `/plugin`: 浏览和安装skill
+
 * 将常见的操作编写成SKILL.md，存放到`.claude/skills/`目录
+
+* 一些有用的skills记录：
+
+  | SKILLs                                          | 用途     |
+  | ----------------------------------------------- | -------- |
+  | https://github.com/cathrynlavery/diagram-design | 画流程图 |
+  |                                                 |          |
+  |                                                 |          |
+
+  
 
 ### Claude.md
 
