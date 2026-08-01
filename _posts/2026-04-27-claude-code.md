@@ -30,6 +30,8 @@ tags:
 
 * 安装完后`vim ~/.claude.json`中添加配置`"hasCompletedOnboarding": true` (表示关闭引导流程)
 
+* 安装`ccstatusline`，使状态更清晰
+
 ### 2. 自定义模型
 
 #### 1) 方法一
@@ -101,24 +103,14 @@ cc-switch
 * `.claude/settings.json`：存放配置，私人配置对应`.claude/settings.local.json`,
   *   `"permissions": { "defaultMode": "bypassPermissions"}`：避免反复询问Yes/No，全部pass
   * `"skipDangerousModePermissionPrompt": true`：允许所有权限
+* 通过`export CLAUDE_CONFIG_DIR=~/claude-config`，可以指定配置目录，取代`~/.claude`
 
 ## 5. 项目积累
 
 ### SKILLs
 
 * `/plugin`: 浏览和安装skill
-
 * 将常见的操作编写成SKILL.md，存放到`.claude/skills/`目录
-
-* 一些有用的skills记录：
-
-  | SKILLs                                          | 用途     |
-  | ----------------------------------------------- | -------- |
-  | https://github.com/cathrynlavery/diagram-design | 画流程图 |
-  |                                                 |          |
-  |                                                 |          |
-
-  
 
 ### Claude.md
 
